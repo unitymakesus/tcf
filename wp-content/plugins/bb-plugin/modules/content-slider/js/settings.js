@@ -1,5 +1,20 @@
 (function($){
 
+	FLBuilder.registerModuleHelper('content-slider', {
+
+		submit: function() {
+			var form   = $('.fl-builder-settings'),
+			transition = parseInt( form.find('input[name=speed]').val() ),
+			delay      = parseInt( form.find('input[name=delay]').val() )
+
+			if ( transition > delay ) {
+				FLBuilder.alert( FLBuilderStrings.contentSliderTransitionWarn )
+				return false;
+			}
+			return true;
+		}
+	})
+
 	FLBuilder.registerModuleHelper('content_slider_slide', {
 
 		init: function()
@@ -13,10 +28,6 @@
 			contentLayout.on('change', this._toggleMobileTab);
 			contentLayout.on('change', this._toggleTextAndCtaTabs);
 			contentLayout.trigger('change');
-
-			// Button background color change
-			$( 'input[name=btn_bg_color]' ).on( 'change', this._bgColorChange );
-			this._bgColorChange();
 		},
 
 		submit: function()
@@ -45,11 +56,11 @@
 			}
 
 			if(show) {
-				$('a[href*=fl-builder-settings-tab-style]').show();
+				$('[data-form-id=content_slider_slide] a[href*=fl-builder-settings-tab-style]').show();
 				$('a[href*=fl-builder-settings-tab-cta]').show();
 			}
 			else {
-				$('a[href*=fl-builder-settings-tab-style]').hide();
+				$('[data-form-id=content_slider_slide] a[href*=fl-builder-settings-tab-style]').hide();
 				$('a[href*=fl-builder-settings-tab-cta]').hide();
 			}
 		},
@@ -99,20 +110,6 @@
 				$('#fl-builder-settings-section-r_photo').hide();
 			}
 		},
-
-		_bgColorChange: function()
-		{
-			var bgColor = $( 'input[name=btn_bg_color]' ),
-				style   = $( '#fl-builder-settings-section-btn_style' );
-
-
-			if ( '' == bgColor.val() ) {
-				style.hide();
-			}
-			else {
-				style.show();
-			}
-		}
 	});
 
 })(jQuery);

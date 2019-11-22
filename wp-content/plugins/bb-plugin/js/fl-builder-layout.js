@@ -32,14 +32,14 @@
 			// Only init if the builder isn't active.
 			if ( 0 === $('.fl-builder-edit').length ) {
 
+				// Init module animations.
+				FLBuilderLayout._initModuleAnimations();
+
 				// Init anchor links.
 				FLBuilderLayout._initAnchorLinks();
 
 				// Init the browser hash.
 				FLBuilderLayout._initHash();
-
-				// Init module animations.
-				FLBuilderLayout._initModuleAnimations();
 
 				// Init forms.
 				FLBuilderLayout._initForms();
@@ -191,6 +191,23 @@
 				YUI().use('node-event-simulate', function(Y) {
 					Y.one(window).simulate("resize");
 				});
+			}
+		},
+
+		/**
+		 * Public method for reloading an embedded Google Map within the tabs or hidden element.
+		 *
+		 * @since 2.2
+		 * @method reloadGoogleMap
+		 */
+		reloadGoogleMap: function(element){
+			var $element  = 'undefined' == typeof element ? $( 'body' ) : $( element ),
+			    googleMap = $element.find( 'iframe[src*="google.com/maps"]' );
+
+			if ( googleMap.length ) {
+			    googleMap.attr( 'src', function(i, val) {
+			        return val;
+			    });
 			}
 		},
 
@@ -405,6 +422,7 @@
 				webmType    = wrap.data( 'webm-type' ),
 				fallback    = wrap.data( 'fallback' ),
 				loaded      = wrap.data( 'loaded' ),
+				videoMobile = wrap.data( 'video-mobile' ),
 				fallbackTag = '',
 				videoTag    = null,
 				mp4Tag      = null,
@@ -446,14 +464,21 @@
 				videoTag.append( webmTag );
 			}
 
-			// Check what video player we are going to load in a row
-			if ( 'undefined' != typeof youtube && ! FLBuilderLayout._isMobile() ) {
-				FLBuilderLayout._initYoutubeBgVideo.apply( this );
-			}
-			else if ( 'undefined' != typeof vimeo && ! FLBuilderLayout._isMobile() ) {
-				FLBuilderLayout._initVimeoBgVideo.apply( this );
+			// This is either desktop, or mobile is enabled.
+			if ( ! FLBuilderLayout._isMobile() || ( FLBuilderLayout._isMobile() && "yes" == videoMobile ) ) {
+				if ( 'undefined' != typeof youtube ) {
+					FLBuilderLayout._initYoutubeBgVideo.apply( this );
+				}
+				else if ( 'undefined' != typeof vimeo ) {
+					FLBuilderLayout._initVimeoBgVideo.apply( this );
+				}
+				else {
+					wrap.append( videoTag );
+				}
 			}
 			else {
+				// if we are here, it means we are on mobile and NO is set so remove video src and use fallback
+				videoTag.attr('src', '')
 				wrap.append( videoTag );
 			}
 
@@ -470,15 +495,14 @@
 		 */
 		_initYoutubeBgVideo: function()
 		{
-			var playerWrap	= $(this),
-				videoId 	= playerWrap.data('video-id'),
+			var playerWrap  = $(this),
+				videoId     = playerWrap.data('video-id'),
 				videoPlayer = playerWrap.find('.fl-bg-video-player'),
 				enableAudio = playerWrap.data('enable-audio'),
 				audioButton = playerWrap.find('.fl-bg-video-audio'),
-				startTime 	= 'undefined' !== typeof playerWrap.data('t') ? playerWrap.data('t') : 0,
-				loop 		= 'undefined' !== typeof playerWrap.data('loop') ? playerWrap.data('loop') : 1,
-				vidPlayed   = false,
-				didUnmute   = false,
+				startTime   = 'undefined' !== typeof playerWrap.data('start') ? playerWrap.data('start') : 0,
+				endTime     = 'undefined' !== typeof playerWrap.data('end') ? playerWrap.data('end') : 0,
+				loop        = 'undefined' !== typeof playerWrap.data('loop') ? playerWrap.data('loop') : 1,
 				stateCount  = 0,
 				player;
 
@@ -490,10 +514,10 @@
 							videoId: videoId,
 							events: {
 								onReady: function(event) {
-									if ( "no" === enableAudio ) {
+									if ( "no" === enableAudio || FLBuilderLayout._isMobile() ) {
 										event.target.mute();
 									}
-									else if ("yes" === enableAudio && event.target.isMuted ) {
+									else if ( "yes" === enableAudio && event.target.isMuted ) {
 										event.target.unMute();
 									}
 
@@ -504,7 +528,7 @@
 									// Queue the video.
 									event.target.playVideo();
 
-									if ( audioButton.length > 0 ) {
+									if ( audioButton.length > 0 && ! FLBuilderLayout._isMobile() ) {
 										audioButton.on( 'click', {button: audioButton, player: player}, FLBuilderLayout._toggleBgVideoAudio );
 									}
 								},
@@ -516,7 +540,7 @@
 									}
 
 									// Comply with the audio policy in some browsers like Chrome and Safari.
-									if ( stateCount > 1 && -1 === event.data && "yes" === enableAudio ) {
+									if ( stateCount > 1 && (-1 === event.data || 2 === event.data) && "yes" === enableAudio ) {
 										player.mute();
 										player.playVideo();
 										audioButton.show();
@@ -537,10 +561,12 @@
 								}
 							},
 							playerVars: {
+								playsinline: FLBuilderLayout._isMobile() ? 1 : 0,
 								controls: 0,
 								showinfo: 0,
 								rel : 0,
 								start: startTime,
+								end: endTime,
 							}
 						} );
 					}, 1 );
@@ -874,7 +900,7 @@
 		 */
 		_initModuleAnimations: function()
 		{
-			if(typeof jQuery.fn.waypoint !== 'undefined' && !FLBuilderLayout._isMobile()) {
+			if(typeof jQuery.fn.waypoint !== 'undefined') {
 				$('.fl-animation').each( function() {
 					var node = $( this ),
 						nodeTop = node.offset().top,
@@ -909,15 +935,21 @@
 		_doModuleAnimation: function()
 		{
 			var module = 'undefined' == typeof this.element ? $(this) : $(this.element),
-				delay  = parseFloat(module.data('animation-delay'));
+				delay = parseFloat(module.data('animation-delay')),
+				duration = parseFloat(module.data('animation-duration'));
+
+			if ( ! isNaN( duration ) ) {
+				module.css( 'animation-duration', duration + 's' );
+			}
 
 			if(!isNaN(delay) && delay > 0) {
 				setTimeout(function(){
 					module.addClass('fl-animated');
 				}, delay * 1000);
-			}
-			else {
-				module.addClass('fl-animated');
+			} else {
+				setTimeout(function(){
+					module.addClass('fl-animated');
+				}, 1);
 			}
 		},
 
