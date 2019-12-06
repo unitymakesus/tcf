@@ -1,0 +1,41 @@
+.wp-search {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+
+  input[type="search"] {
+    border-color: #B8AEA3;
+    background-color: white;
+    color: #5A4F42;
+    height: 30px;
+    width: 100%;
+    max-width: 275px;
+    padding-right: 40px;
+    margin: 0;
+
+    &::placeholder {
+      color: #5A4F42;
+      text-transform: uppercase;
+    }
+  }
+
+  button[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    padding: 0;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    color: #5A4F42;
+
+    .material-icons {
+      font-size: 24px;
+      line-height: 0;
+    }
+  }
+}

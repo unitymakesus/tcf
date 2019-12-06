@@ -1,0 +1,15 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+// Beaver Builder
+@media #{$medium-and-down} {
+  .fl-col-small:not(.fl-col-small-full-width) {
+    max-width: 100%;
+  }
+}

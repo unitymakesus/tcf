@@ -1,0 +1,55 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Open Sans Condensed", $sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-transform-none {
+  text-transform: none;
+}
+
+// Font size utility classes.
+$sizes: (
+  'h1': 3rem,
+  'h2': 1.5rem,
+  'h3': 1.25rem,
+  'h4': 1.125rem
+);
+
+@each $heading, $size in $sizes {
+  #{$heading},
+  .#{$heading} {
+    font-size: $size;
+  }
+}
+
+// Font weight utility classes.
+$weights: (400, 600, 700);
+
+@each $weight in $weights {
+  .fw-#{$weight} {
+    font-weight: $weight;
+  }
+}

@@ -1,0 +1,86 @@
+.page-footer {
+  background-color: #847461;
+  padding: 0;
+}
+
+.page-footer .footer-call-to-action {
+  position: relative;
+  background-color: $brand-primary;
+  padding: 180px 0 1.5rem 0;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 20vw;
+    width: 250px;
+    height: 160px;
+    background-image: url('../images/textures/texture-triangles.svg');
+    background-size: 250px 160px;
+    background-repeat: no-repeat;
+    content: '';
+  }
+}
+
+.page-footer .footer-content {
+  padding: 3rem 0;
+}
+
+.page-footer .footer-logo img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+
+.page-footer .footer-copyright {
+  background-color: #5A4F42;
+  text-align: center;
+  height: auto;
+  padding: 1.5rem 0;
+
+  &__text {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+
+// Utility Navigation
+.page-footer .menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  li {
+    margin: 0.5rem;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .page-footer .footer-call-to-action {
+    padding-top: 2.5rem;
+  }
+
+  .page-footer .menu {
+    flex-direction: row;
+
+    li {
+      margin: 0;
+    }
+
+    li:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

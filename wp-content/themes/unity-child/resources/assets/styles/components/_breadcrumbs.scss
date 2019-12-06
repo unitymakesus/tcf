@@ -1,0 +1,24 @@
+.breadcrumbs {
+  color: $color-grey;
+  font-size: 14px;
+  padding: 1rem;
+}
+
+.breadcrumbs.breadcrumbs .trail-browse {
+  display: none;
+}
+
+.breadcrumbs.breadcrumbs .trail-items a {
+  display: inline-block;
+  padding: 0;
+  color: inherit;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.breadcrumbs .trail-items .trail-item:not(:last-of-type)::after {
+  display: inline-block;
+  margin: 0 5px;
+  color: inherit;
+  content: '\003E';
+}

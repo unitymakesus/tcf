@@ -1,0 +1,90 @@
+.home-hero {
+  position: relative;
+  background-color: #F1F1F1;
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url('../images/textures/texture-triangles.svg');
+    background-repeat: no-repeat;
+    background-size: 350px 260px;
+    background-position: 0 5vh;
+    content: '';
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+
+  .fl-col-content {
+    position: relative;
+    min-height: 215px;
+    z-index: 10;
+  }
+}
+
+.list-partnerships-data {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 300px;
+
+  li {
+    display: flex;
+    padding: 0.15rem !important;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    justify-content: space-around;
+
+    &::before {
+      display: none !important;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 4px;
+    }
+
+    &.data-orange {
+      background-color: #F9E2D2;
+      color: #E56E00;
+    }
+
+    &.data-teal {
+      background-color: #CCE3E6;
+      color: $brand-primary;
+    }
+
+    &.data-green {
+      background-color: #EFF1D2;
+      color: #AFBD00;
+    }
+
+    &.data-grey {
+      background-color: rgb(222, 222, 222);
+      color: #897966;
+    }
+  }
+}
+
+.home .fl-module-info-box {
+  max-width: 390px;
+  margin-left: auto;
+  color: #AFBD00;
+}
+
+.stat-card {
+  max-width: 350px;
+  width: 100%;
+  line-height: 1.75;
+  text-align: center;
+}

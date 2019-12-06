@@ -1,0 +1,30 @@
+body {
+  color: $color-grey;
+  font-family: $sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  overflow-x: hidden;
+
+  @include antialiased();
+
+  // Skip to content link.
+  > a[href="#content"] {
+    @extend .btn;
+    @extend .btn--skip;
+  }
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+address {
+  font-style: normal;
+}
+
+dt,
+dd {
+  margin: 0;
+}

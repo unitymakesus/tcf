@@ -1,10 +1,9 @@
-// Web Font Loader
-var WebFont = require('webfontloader');
+import WebFont from 'webfontloader';
 
-var fontFamilies = ['Bitter:700', 'Source Sans Pro:400,400i,700,700i', 'Material Icons'];
+const fontFamilies = ['Open Sans:400,400i,600,700', 'Open Sans Condensed:700', 'Material Icons'];
 
 WebFont.load({
- google: {
-   families: fontFamilies
- }
+  google: {
+    families: fontFamilies
+  }
 });

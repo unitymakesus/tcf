@@ -1,0 +1,90 @@
+.impact-figures {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+
+  figure {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    > div {
+      max-width: 325px;
+      width: 100%;
+      padding: 0.25rem 1.5rem;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      text-decoration: none !important;
+      color: white;
+
+      &:hover,
+      &:focus {
+        text-decoration: none !important;
+      }
+
+      &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+      }
+    }
+
+    img {
+      margin-left: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      width: 140px;
+    }
+  }
+}
+
+.figure-environmental-conservation {
+  background-color: #007486;
+
+  > div {
+    background-color: #00525F;
+  }
+}
+
+.figure-youth-education {
+  background-color: #AFBD00;
+
+  > div {
+    background-color: #859002;
+  }
+}
+
+.figure-cultural-arts {
+  background-color: #E56E00;
+
+  > div {
+    background-color: #C75300;
+  }
+}
+
+.figure-community-development {
+  background-color: #897966;
+
+  > div {
+    background-color: #716557;
+  }
+}
+
+.figure-building-capacity {
+  background-color: #585D58;
+
+  > div {
+    background-color: #414141;
+  }
+}

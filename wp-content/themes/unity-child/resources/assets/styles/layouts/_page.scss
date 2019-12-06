@@ -1,0 +1,160 @@
+.page .main {
+  margin-bottom: 0;
+}
+
+.page-header {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 1rem;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url('../images/textures/texture-triangles.svg');
+    background-repeat: no-repeat;
+    background-size: 350px 260px;
+    background-position: right top;
+    content: '';
+  }
+
+  .container {
+    position: relative;
+    background-color: rgba(137, 121, 102, 0.9);
+    color: white;
+    padding: 2rem;
+    text-align: left;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+}
+
+.page-header__impact .container {
+  display: flex;
+  align-items: center;
+  background-color: $brand-primary;
+
+  .icon {
+    width: 100%;
+    max-width: 140px;
+    text-align: center;
+
+    h1 {
+      font-size: 1.2rem;
+      font-family: "Open Sans Condensed", $sans-serif;
+      text-transform: uppercase;
+      color: #98C7CF;
+      margin-top: 0.25rem;
+    }
+  }
+
+  .headline {
+    width: 100%;
+    max-width: 625px;
+    margin-left: 70px;
+
+    .h1 {
+      font-family: "Open Sans", $sans-serif;
+      font-weight: 300;
+      line-height: 1.25;
+    }
+  }
+}
+
+.tri-stats .fl-rich-text {
+  background-color: #F1F1F1;
+  padding: 0.75rem;
+  text-align: center;
+
+  .h1 {
+    font-family: 'Open Sans';
+  }
+
+  small {
+    line-height: 1.1;
+  }
+}
+
+.list-partners {
+  list-style-type: none;
+
+  li::before {
+    display: inline-block;
+    content: '>' !important;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@media #{$medium-and-up} {
+  .list-partners {
+    column-count: 2;
+  }
+}
+
+.small-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 390px;
+  margin-left: auto;
+  background-color: white;
+  color: #AFBD00;
+  padding: 1rem;
+
+  &__text {
+    padding: 1.5rem;
+    text-align: center;
+    font-family: 'Open Sans Condensed';
+    font-weight: 700;
+    text-transform: uppercase;
+
+    + p {
+      margin: 0;
+    }
+  }
+
+  img {
+    width: 115px;
+  }
+}
+
+.fl-module-info-box,
+.fl-module-info-box > .fl-module-content,
+.fl-module-info-box > .fl-module-content > .uabb-infobox {
+  height: 100%;
+}
+
+.fl-module-info-box > .fl-module-content > .uabb-infobox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 82, 95, 0.9);
+
+  .uabb-infobox-text {
+    color: white;
+  }
+}
+
+// BB Number Counter
+.fl-number {
+  background-color: #F1F1F1;
+  color: rgba(112, 112, 112, 1);
+}

@@ -3,6 +3,19 @@
 namespace App;
 
 /**
+ * Helper function for prettying up errors
+ * @param string $message
+ * @param string $subtitle
+ * @param string $title
+ */
+$sage_error = function ($message, $subtitle = '', $title = '') {
+  $title = $title ?: __('Sage &rsaquo; Error', 'sage');
+  $footer = '<a href="https://roots.io/sage/docs/">roots.io/sage/docs/</a>';
+  $message = "<h1>{$title}<br><small>{$subtitle}</small></h1><p>{$message}</p><p>{$footer}</p>";
+  wp_die($message, $title);
+};
+
+/**
  * Theme assets
  */
 add_action('wp_enqueue_scripts', function () {
@@ -33,8 +46,10 @@ add_theme_support('title-tag');
  * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
  */
 register_nav_menus([
-    'primary_navigation' => __('Primary Navigation', 'sage'),
-    'social_links' => __('Social Links', 'sage')
+  'primary_navigation'   => __('Primary Navigation', 'sage'),
+  'secondary_navigation' => __('Secondary Navigation', 'sage'),
+  'footer_navigation'    => __('Footer Navigation', 'sage'),
+  'social_links'         => __('Social Links', 'sage'),
 ]);
 
 /**
@@ -112,25 +127,54 @@ add_filter( 'image_size_names_choose', function( $sizes ) {
  */
 add_action('widgets_init', function () {
   $config = [
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
+    'before_widget' => '<div class="widget %1$s %2$s">',
+    'after_widget'  => '</div>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
   ];
+  // register_sidebar([
+  //   'name'          => __('Footer-Social-Left', 'sage'),
+  //   'id'            => 'footer-social-left'
+  // ] + $config);
+  // register_sidebar([
+  //   'name'          => __('Footer-Social-Right', 'sage'),
+  //   'id'            => 'footer-social-right'
+  // ] + $config);
+  // register_sidebar([
+  //   'name'          => __('Footer-Utility-Left', 'sage'),
+  //   'id'            => 'footer-utility-left'
+  // ] + $config);
   register_sidebar([
-    'name'          => __('Footer-Social-Left', 'sage'),
-    'id'            => 'footer-social-left'
-  ] + $config);
-  register_sidebar([
-    'name'          => __('Footer-Social-Right', 'sage'),
-    'id'            => 'footer-social-right'
-  ] + $config);
-  register_sidebar([
-    'name'          => __('Footer-Utility-Left', 'sage'),
-    'id'            => 'footer-utility-left'
-  ] + $config);
-  register_sidebar([
-    'name'          => __('Footer-Utility-Right', 'sage'),
-    'id'            => 'footer-utility-right'
+    'name' => __('Footer-Utility', 'sage'),
+    'id'   => 'footer-utility'
   ] + $config);
 });
+
+/**
+ * Sage required files
+ *
+ * The mapped array determines the code library included in your theme.
+ * Add or remove files to the array as needed. Supports child theme overrides.
+ */
+array_map(function ($file) use ($sage_error) {
+  $file = "../app/{$file}.php";
+  if (!locate_template($file, true, true)) {
+    $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
+  }
+}, ['nav']);
+
+function my_bb_custom_fonts ( $system_fonts ) {
+
+}
+
+//Add to Page Builder modules
+add_filter( 'fl_builder_font_families_system', function( $system_fonts ) {
+  $system_fonts['Open Sans'] = [
+    'fallback' => 'Verdana, Arial, sans-serif',
+    'weights' => [
+      '400',
+    ],
+  ];
+
+  return $system_fonts;
+}, 10, 2 );

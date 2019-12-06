@@ -1,0 +1,56 @@
+.btn {
+  box-shadow: none;
+  border-color: currentColor;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0;
+  background-color: transparent;
+  color: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  &:not(.btn-small) {
+    padding: 0.5rem 2rem;
+  }
+}
+
+.btn--skip {
+  background-color: #E36F1E;
+  color: white;
+
+  &:hover,
+  &:focus {
+    background-color: #E36F1E;
+  }
+}
+
+.btn--orange {
+  color: #E36F1E;
+
+  &:hover,
+  &:focus {
+    background-color: #E36F1E;
+    color: white;
+  }
+}
+
+.btn--white {
+  color: white;
+}
+
+// Beaver Builder
+.fl-builder-content.fl-builder-content a.fl-button.fl-button {
+  @extend .btn;
+  @extend .btn--orange;
+
+  border-color: currentColor;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 1rem;
+}
