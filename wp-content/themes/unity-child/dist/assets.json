@@ -3,11 +3,16 @@
   "images/icon-contrast.svg": "images/icon-contrast_e8cb0e0d.svg",
   "images/icon-search-white.svg": "images/icon-search-white_bea31f83.svg",
   "images/icon-search.svg": "images/icon-search_366987c5.svg",
-  "images/icons/icon-building-capacity-white.svg": "images/icons/icon-building-capacity-white_c622a961.svg",
+  "images/icons/icon-capacity-building-white.svg": "images/icons/icon-capacity-building-white_c622a961.svg",
   "images/icons/icon-community-development-white.svg": "images/icons/icon-community-development-white_5634c56a.svg",
-  "images/icons/icon-cultural-arts-white.svg": "images/icons/icon-cultural-arts-white_fd15dc91.svg",
+  "images/icons/icon-education-white.svg": "images/icons/icon-education-white_03579c11.svg",
   "images/icons/icon-environmental-conservation-white.svg": "images/icons/icon-environmental-conservation-white_c173ab70.svg",
-  "images/icons/icon-youth-education-white.svg": "images/icons/icon-youth-education-white_03579c11.svg",
+  "images/icons/icon-regional-cultural-arts-white.svg": "images/icons/icon-regional-cultural-arts-white_fd15dc91.svg",
+  "images/impact-areas/impact-area-capacity-building.jpg": "images/impact-areas/impact-area-capacity-building_10246fc8.jpg",
+  "images/impact-areas/impact-area-community-development.jpg": "images/impact-areas/impact-area-community-development_f836faf3.jpg",
+  "images/impact-areas/impact-area-education.jpg": "images/impact-areas/impact-area-education_0fce67c7.jpg",
+  "images/impact-areas/impact-area-environmental-conservation.jpg": "images/impact-areas/impact-area-environmental-conservation_540c74ec.jpg",
+  "images/impact-areas/impact-area-regional-cultural-arts.jpg": "images/impact-areas/impact-area-regional-cultural-arts_ec2dde42.jpg",
   "images/logos/logo-footer.svg": "images/logos/logo-footer_2dea1336.svg",
   "images/simple-by-unity.svg": "images/simple-by-unity_38dc21c0.svg",
   "images/socialicons/behance.svg": "images/socialicons/behance_cc36254f.svg",
@@ -23,6 +28,6 @@
   "images/socialicons/yelp.svg": "images/socialicons/yelp_add935d3.svg",
   "images/socialicons/youtube.svg": "images/socialicons/youtube_47c2665f.svg",
   "images/textures/texture-triangles.svg": "images/textures/texture-triangles_ab1cf46c.svg",
-  "styles/main.css": "styles/main_8942e68b.css",
-  "scripts/main.js": "scripts/main_8942e68b.js"
+  "styles/main.css": "styles/main_0d8a78b2.css",
+  "scripts/main.js": "scripts/main_0d8a78b2.js"
 }

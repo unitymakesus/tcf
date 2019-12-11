@@ -44,11 +44,10 @@
           </div>
           <div class="navbar-menu">
             {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'container' => FALSE, 'menu_class' => 'nav nav__primary flex']) !!}
-
+            @include('partials/searchform', [
+              'context' => 'header',
+            ])
             <div class="utility-wrapper">
-              <div class="utility-wrapper__search">
-                @include('partials/searchform')
-              </div>
               <div class="utility-wrapper__nav">
                 {!! wp_nav_menu(['theme_location' => 'secondary_navigation', 'container' => FALSE, 'menu_class' => 'nav nav__secondary flex']) !!}
                 @if (!empty($cta_text) && !empty($cta_link))

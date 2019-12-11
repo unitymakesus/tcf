@@ -10,7 +10,7 @@
         <div class="col s12 m7 push-m5">
           <h2 class="h3 text-uppercase">{{ __('Stay informed with our newsletter', 'sage') }}</h2>
           <p>{{ __('Receive the latest news about grants, stories, and how to make an impact in you community.', 'sage') }}</p>
-          <a class="btn btn--white" href="#">{{ __('Sign up for the Triangle CF Newsletter', 'sage') }}</a>
+          <a class="btn btn--white" href="#">{{ __('Sign up for our e-newsletter', 'sage') }}</a>
         </div>
       </div>
     </div>

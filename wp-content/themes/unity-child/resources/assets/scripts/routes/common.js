@@ -21,6 +21,25 @@ export default {
         $(this).children('a').attr('aria-current', 'page');
       }
     });
+
+    // Search "dropdown"
+    let expanded = false;
+    $('#js-search-toggle').on('click', function(e) {
+      e.preventDefault();
+
+      // Toggle aria-expanded for open / close
+      expanded = !expanded;
+      $(this).attr('aria-expanded', expanded ? 'true' : 'false');
+      $(this).find('i').text(expanded ? 'close' : 'search');
+
+      // Activate search "popover"
+      let searchWrap = $('.search-wrapper__inner');
+      searchWrap.toggleClass('is-active');
+
+      if (expanded === true) {
+        searchWrap.find('input[type="search"]').focus();
+      }
+    });
   },
   finalize() {
     // Media query
@@ -139,35 +158,5 @@ export default {
         }
       });
     });
-
-    /**
-     * Form label controls
-     */
-    // $('.wpcf7-form-control-wrap').children('input[type="text"], input[type="email"], input[type="tel"], textarea').each(function() {
-    //   // Remove br
-    //   $(this).parent().prevAll('br').remove();
-
-    //   // Set field wrapper to active
-    //   $(this).on('focus', function() {
-    //     $(this).parent().prev('label').addClass('active');
-    //   });
-
-    //   // Remove field wrapper active state
-    //   $(this).on('blur', function() {
-    //     var val = $.trim($(this).val());
-
-    //     if (!val) {
-    //       $(this).parent().prev('label').removeClass('active');
-    //     }
-    //   });
-    // });
-
-    // $('.wpcf7-form-control-wrap').find('.has-free-text').each(function() {
-    //   var $input = $(this).find('input[type="radio"], input[type="checkbox"]');
-
-    //   $input.on('focus', function() {
-    //     $input.parent().addClass('active');
-    //   })
-    // });
   },
 };

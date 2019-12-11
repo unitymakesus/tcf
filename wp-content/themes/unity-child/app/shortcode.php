@@ -6,10 +6,10 @@ namespace App;
 add_shortcode('impact-area-figures', function($atts) {
   $impact_areas = [
     'environmental-conservation' => 'Environmental Conservation',
-    'youth-education'            => 'Youth Education',
-    'cultural-arts'              => 'Cultural Arts',
+    'education'                  => 'Education',
+    'regional-cultural-arts'     => 'Regional Cultural Arts',
     'community-development'      => 'Community Development',
-    'building-capacity'          => 'Building Capacity',
+    'capacity-building'          => 'Capacity Building',
   ];
 
 
@@ -17,9 +17,13 @@ add_shortcode('impact-area-figures', function($atts) {
   ?>
   <section class="impact-figures">
     <?php foreach ($impact_areas as $area => $title) : ?>
-      <?php $icon_path = "images/icons/icon-{$area}-white.svg"; ?>
+      <?php
+        $icon_path = "images/icons/icon-{$area}-white.svg";
+        $img_path = "images/impact-areas/impact-area-{$area}.jpg";
+      ?>
       <figure class="figure-<?= $area; ?>">
-        <div>
+        <div class="cover" style="background-image:url(<?= asset_path($img_path); ?>);"></div>
+        <div class="title">
           <a href="#" class="h4">
             <?= $title; ?>
           </a>

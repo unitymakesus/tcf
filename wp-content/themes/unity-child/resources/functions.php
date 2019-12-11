@@ -112,7 +112,7 @@ update_option( 'medium_size_h', 600 );
 add_image_size('tiny-thumbnail', 80, 80, true);
 add_image_size('small-thumbnail', 150, 150, true);
 add_image_size('medium-square-thumbnail', 400, 400, true);
-
+add_image_size('x-large', 1600);
 
 add_filter( 'image_size_names_choose', function( $sizes ) {
   return array_merge( $sizes, array(
@@ -162,19 +162,3 @@ array_map(function ($file) use ($sage_error) {
     $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
   }
 }, ['nav']);
-
-function my_bb_custom_fonts ( $system_fonts ) {
-
-}
-
-//Add to Page Builder modules
-add_filter( 'fl_builder_font_families_system', function( $system_fonts ) {
-  $system_fonts['Open Sans'] = [
-    'fallback' => 'Verdana, Arial, sans-serif',
-    'weights' => [
-      '400',
-    ],
-  ];
-
-  return $system_fonts;
-}, 10, 2 );

@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: #847461;
+  background-color: darken($brand-primary, 5);
   padding: 0;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .page-footer .footer-copyright {
-  background-color: #5A4F42;
+  // background-color: $brand-primary;
   text-align: center;
   height: auto;
   padding: 1.5rem 0;
@@ -80,7 +80,7 @@
     }
 
     a {
-      text-decoration: none;
+      font-weight: 600;
     }
   }
 }

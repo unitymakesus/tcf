@@ -5,7 +5,7 @@
 @endif
 
 @php
-  $feat_img = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'large')
+  $feat_img = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'x-large')
 @endphp
 
 <header class="page-header" style="background-image: url('<?= $feat_img[0]; ?>')">

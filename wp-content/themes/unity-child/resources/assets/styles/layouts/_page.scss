@@ -9,7 +9,7 @@
   padding: 0 1rem;
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: 450px;
 
   &::after {
     display: block;
@@ -19,7 +19,7 @@
     right: 0;
     bottom: 0;
     width: 100%;
-    max-width: 1200px;
+    max-width: calc(1200px);
     height: 100%;
     margin: 0 auto;
     background-image: url('../images/textures/texture-triangles.svg');
@@ -44,6 +44,10 @@
   }
 }
 
+.page-header__impact {
+  height: 575px;
+}
+
 .page-header__impact .container {
   display: flex;
   align-items: center;
@@ -65,8 +69,7 @@
 
   .headline {
     width: 100%;
-    max-width: 625px;
-    margin-left: 70px;
+    margin-left: 60px;
 
     .h1 {
       font-family: "Open Sans", $sans-serif;

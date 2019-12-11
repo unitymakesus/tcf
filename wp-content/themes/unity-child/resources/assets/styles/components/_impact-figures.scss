@@ -1,19 +1,30 @@
 .impact-figures {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: 1fr 1fr;
-
   figure {
     position: relative;
     display: flex;
     align-items: center;
     padding: 0;
     margin: 0;
+    z-index: 0;
 
-    > div {
+    .title {
       max-width: 325px;
       width: 100%;
       padding: 0.25rem 1.5rem;
+    }
+
+    .cover {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
     }
 
     a {
@@ -37,54 +48,95 @@
         width: 100%;
         height: 100%;
         content: '';
+        z-index: -1;
       }
     }
 
     img {
+      position: relative;
       margin-left: 2rem;
       margin-top: 3rem;
       margin-bottom: 3rem;
       width: 140px;
+      z-index: 10;
     }
   }
 }
 
 .figure-environmental-conservation {
-  background-color: #007486;
+  .cover {
+    background-color: #007486;
+  }
 
-  > div {
+  .title {
     background-color: #00525F;
+
+    a::after {
+      background-color: transparentize(#00525F, 0.25);
+    }
   }
 }
 
-.figure-youth-education {
-  background-color: #AFBD00;
+.figure-education {
+  .cover {
+    background-color: #AFBD00;
+  }
 
-  > div {
+  .title {
     background-color: #859002;
+
+    a::after {
+      background-color: transparentize(#859002, 0.25);
+    }
   }
 }
 
-.figure-cultural-arts {
-  background-color: #E56E00;
+.figure-regional-cultural-arts {
+  .cover {
+    background-color: #E56E00;
+  }
 
-  > div {
+  .title {
     background-color: #C75300;
+
+    a::after {
+      background-color: transparentize(#C75300, 0.25);
+    }
   }
 }
 
 .figure-community-development {
-  background-color: #897966;
+  .cover {
+    background-color: #897966;
+  }
 
-  > div {
+  .title {
     background-color: #716557;
+
+    a::after {
+      background-color: transparentize(#716557, 0.25);
+    }
   }
 }
 
-.figure-building-capacity {
-  background-color: #585D58;
+.figure-capacity-building {
+  .cover {
+    background-color: #585D58;
+  }
 
-  > div {
+  .title {
     background-color: #414141;
+
+    a::after {
+      background-color: transparentize(#414141, 0.25);
+    }
+  }
+}
+
+@media #{$medium-and-up} {
+  .impact-figures {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
   }
 }
