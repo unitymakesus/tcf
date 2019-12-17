@@ -1,6 +1,6 @@
 <div class="search-wrapper">
   @if ($context === 'header')
-    <a href="#" role="button" id="js-search-toggle" class="btn btn-small show-on-medium-and-up" aria-expanded="false" aria-haspopup="true">
+    <a href="#" role="button" id="js-search-toggle" class="btn btn-small show-on-large-and-up" aria-expanded="false" aria-haspopup="true">
       <span class="screen-reader-text">{{ __('Toggle Search', 'sage') }}</span>
       <i class="material-icons" aria-hidden="true">search</i>
     </a>

@@ -35,7 +35,9 @@ $sizes: (
   'h1': 3rem,
   'h2': 1.5rem,
   'h3': 1.25rem,
-  'h4': 1.125rem
+  'h4': 1.125rem,
+  'h5': 1.0725rem,
+  'h6': 1rem,
 );
 
 @each $heading, $size in $sizes {
