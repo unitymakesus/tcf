@@ -1,0 +1,69 @@
+/* line 2, stdin */
+
+.flex-grid .flex-item .figure-card.figure-card-people {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+/* line 9, stdin */
+
+.flex-grid .flex-item .figure-card.figure-card-people a.mega-link:hover ~ .figure-card-img img,
+.flex-grid .flex-item .figure-card.figure-card-people:focus-within .figure-card-img img {
+  -webkit-transform: scale(1.03);
+       -o-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+/* line 14, stdin */
+
+.flex-grid .flex-item .figure-card.figure-card-people .figure-card-img {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 19, stdin */
+
+.flex-grid .flex-item .figure-card.figure-card-people img,
+.flex-grid .flex-item .figure-card.figure-card-people .placeholder {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* line 27, stdin */
+
+.flex-grid .flex-item .figure-card.figure-card-people .card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 10px;
+  height: auto;
+  margin: 0;
+}
+
+/* line 37, stdin */
+
+.flex-grid .flex-item .figure-card.figure-card-people .card-title {
+  margin: 0 0 0.25em;
+  font-size: 1em;
+}
+
+/* line 42, stdin */
+
+.flex-grid .flex-item .figure-card.figure-card-people .card-subtitle {
+  margin: 0;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+
+/*# sourceMappingURL=cbb-people-card.css.map*/

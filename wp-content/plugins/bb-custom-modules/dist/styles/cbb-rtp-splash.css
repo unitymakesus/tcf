@@ -1,0 +1,56 @@
+/* line 1, stdin */
+
+.landing-graphic-pin {
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  height: calc(90vh - 200px);
+  min-height: 504px;
+  z-index: 1;
+}
+
+/* line 11, stdin */
+
+#svg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -49%, 0);
+          transform: translate3d(-50%, -49%, 0);
+  z-index: 1;
+  max-width: 90%;
+  width: 1260px;
+}
+
+/* line 21, stdin */
+
+.landing-graphic-swipe {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 25, stdin */
+
+.landing-graphic-swipe img {
+  max-width: 100%;
+}
+
+/* line 29, stdin */
+
+.landing-graphic-swipe .home-banner-wrapper {
+  opacity: 0;
+  max-height: 0;
+  top: 0;
+  bottom: auto;
+}
+
+/* line 35, stdin */
+
+.landing-graphic-swipe .home-banner-wrapper.open {
+  opacity: 1;
+  max-height: 500px;
+}
+
+
+/*# sourceMappingURL=cbb-rtp-splash.css.map*/
