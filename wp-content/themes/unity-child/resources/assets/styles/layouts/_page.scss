@@ -79,6 +79,31 @@
   }
 }
 
+.page-header__staff {
+  position: relative;
+  background-color: $brand-primary;
+  color: white;
+  padding: 1rem 0;
+
+  &::after {
+    display: block;
+    position: absolute;
+    top: -48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url('../images/textures/texture-triangles.svg');
+    background-repeat: no-repeat;
+    background-size: 350px 260px;
+    background-position: calc(100% - 1rem) top;
+    content: '';
+  }
+}
+
 .tri-stats .fl-rich-text {
   background-color: #F1F1F1;
   padding: 0.75rem;

@@ -20,7 +20,7 @@ class CbbImpactAreaModule extends FLBuilderModule {
 		/**
 		 * Enqueue assets.
 		 */
-		$this->add_css( 'cbb-impact-area', CBB_MODULES_URL . 'dist/styles/cbb-impact-area.css' );
+		// $this->add_css( 'cbb-impact-area', CBB_MODULES_URL . 'dist/styles/cbb-impact-area.css' );
 	}
 }
 

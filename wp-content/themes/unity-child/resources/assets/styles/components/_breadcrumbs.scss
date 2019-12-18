@@ -1,11 +1,32 @@
-.breadcrumbs {
-  color: $color-grey;
+.breadcrumbs-wrap {
+  background-color: #EBF4F7;
+  color: $brand-primary;
   font-size: 14px;
-  padding: 1rem;
+  padding: 1rem 0;
+  text-transform: uppercase;
+
+  a {
+    color: inherit;
+  }
+
+  &__dark {
+    background-color: darken($brand-primary, 10);
+    color: #CCE3E9;
+  }
+}
+
+.breadcrumbs {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .breadcrumbs.breadcrumbs .trail-browse {
   display: none;
+}
+
+.breadcrumbs.breadcrumbs .trail-item,
+.breadcrumbs.breadcrumbs .trail-items a {
+  font-weight: 700 !important;
 }
 
 .breadcrumbs.breadcrumbs .trail-items a {
