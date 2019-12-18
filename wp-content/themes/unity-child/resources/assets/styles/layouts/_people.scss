@@ -1,0 +1,134 @@
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+
+  .person {
+    position: relative;
+    margin: 0 0 1.5rem 0;
+    width: 50%;
+
+    &__image {
+      position: relative;
+      overflow: hidden;
+      line-height: 0;
+
+      img {
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    &:hover {
+      .details {
+        background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+      }
+
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    .details {
+      padding: 0.5rem;
+      background-image: none;
+      transition: background-image 0.3s ease-in-out;
+
+      &__name {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: $brand-primary;
+      }
+
+      &__bio-link {
+        position: relative;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        pointer-events: none;
+
+        &::after {
+          margin-left: 0.25rem;
+          content: "\00bb";
+        }
+      }
+    }
+  }
+}
+
+.single-person {
+  .col {
+    padding: 0;
+  }
+
+  .content-wrap {
+    max-width: 450px;
+  }
+
+  .content-wrap-l {
+    max-width: 160px;
+    margin: 1rem 5rem 1rem auto;
+
+    figure {
+      margin: 0 0 1rem 0;
+    }
+  }
+
+  dl {
+    > dt {
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  &__details,
+  &__about {
+    padding: 3rem 2rem;
+    color: white;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &__details {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0;
+    }
+
+    position: relative;
+    padding-top: 240px;
+    background-color: $brand-primary;
+
+    &::after {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 1rem;
+      bottom: 0;
+      width: 100%;
+      max-width: 580px;
+      height: 100%;
+      margin: 0 auto;
+      background-image: url('../images/textures/texture-triangles.svg');
+      background-repeat: no-repeat;
+      background-size: 350px 260px;
+      background-position: right top;
+      content: '';
+    }
+  }
+
+  &__about {
+    background-color: darken($brand-primary, 10);
+  }
+}
+
+@media #{$large-and-up} {
+  .people {
+    .person {
+      width: 25%;
+    }
+  }
+}

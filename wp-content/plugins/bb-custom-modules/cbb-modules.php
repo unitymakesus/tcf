@@ -48,8 +48,8 @@ add_action( 'admin_init', 'cbb_check_required_plugins' );
 
 function load_custom_modules() {
   if ( class_exists( 'FLBuilder' ) ) {
-    // Impact Area
     require_once 'modules/cbb-impact-area/cbb-impact-area.php';
+    require_once 'modules/cbb-people-feed/cbb-people-feed.php';
   }
 }
 add_action( 'init', 'load_custom_modules' );
