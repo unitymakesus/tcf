@@ -40,6 +40,41 @@ function create_post_type() {
     )
   );
   register_post_type( 'simple-team', $argsTeam );
+
+  $argsEvents = array(
+    'labels' => array(
+				'name' => 'Events',
+				'singular_name' => 'Event',
+				'add_new' => 'Add New',
+				'add_new_item' => 'Add New Event',
+				'edit' => 'Edit',
+				'edit_item' => 'Edit Event',
+				'new_item' => 'New Event',
+				'view_item' => 'View Event',
+				'search_items' => 'Search Events',
+				'not_found' =>  'Nothing found in the Database.',
+				'not_found_in_trash' => 'Nothing found in Trash',
+				'parent_item_colon' => ''
+    ),
+    'public' => true,
+    'exclude_from_search' => false,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_nav_menus' => false,
+    'menu_position' => 20,
+    'menu_icon' => 'dashicons-calendar',
+    'capability_type' => 'page',
+    'hierarchical' => false,
+    'supports' => array(
+      'title',
+      'editor',
+      'revisions',
+      'page-attributes',
+      'thumbnail',
+    ),
+    'has_archive' => false,
+  );
+  register_post_type( 'event', $argsEvents );
 }
 add_action( 'init', __NAMESPACE__.'\\create_post_type' );
 
@@ -57,7 +92,20 @@ function create_taxonomies() {
 		'hierarchical' => true,
 		'rewrite' => false
 	);
-	register_taxonomy('simple-team-category', 'simple-team', $argsTeamCategories);
+  register_taxonomy('simple-team-category', 'simple-team', $argsTeamCategories);
 
+  $argsEventCategories = array(
+		'labels' => array(
+			'name' => __( 'Categories' ),
+			'singular_name' => __( 'Category' )
+		),
+		'publicly_queryable' => true,
+		'show_ui' => true,
+    'show_admin_column' => true,
+		'show_in_nav_menus' => false,
+		'hierarchical' => true,
+		'rewrite' => false
+	);
+	register_taxonomy('event_category', 'event', $argsEventCategories);
 }
 add_action( 'init', __NAMESPACE__.'\\create_taxonomies' );

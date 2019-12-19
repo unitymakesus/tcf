@@ -1,6 +1,4 @@
 .breadcrumbs-wrap {
-  background-color: #EBF4F7;
-  color: $brand-primary;
   font-size: 14px;
   padding: 1rem 0;
   text-transform: uppercase;
@@ -9,9 +7,20 @@
     color: inherit;
   }
 
+  &__light {
+    background-color: #EBF4F7;
+
+    .breadcrumb-trail {
+      color: $brand-primary;
+    }
+  }
+
   &__dark {
     background-color: darken($brand-primary, 10);
-    color: #CCE3E9;
+
+    .breadcrumb-trail {
+      color: #CCE3E9;
+    }
   }
 }
 

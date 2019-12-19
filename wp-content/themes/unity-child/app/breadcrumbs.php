@@ -16,7 +16,10 @@ add_filter('breadcrumb_trail_object', function($args) {
     array_splice($breadcrumbs->items, 1, 0, '<a href="/team/">Team</a>');
   }
 
-  // var_dump($breadcrumbs);
+  if ($post_type == "event") {
+    array_splice($breadcrumbs->items, 1, 0, '<a href="/events/">Events</a>');
+  }
+
   return $breadcrumbs;
 
  function __construct( $args = array() ) {

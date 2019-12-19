@@ -28,3 +28,8 @@ dt,
 dd {
   margin: 0;
 }
+
+*:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 4px lightBlue;
+}
