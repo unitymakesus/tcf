@@ -1,0 +1,55 @@
+[role="tablist"] {
+  padding: 0;
+  margin: 0;
+}
+
+[role="tablist"] li,
+[role="tablist"] a {
+  display: inline-block;
+}
+
+[role="tablist"] a {
+  text-decoration: none;
+  padding: 0.5rem 1em;
+}
+
+[role="tablist"] [aria-selected] {
+  position: relative;
+  background-color: #FFF;
+  border-bottom: 0;
+}
+
+[role="tabpanel"] {
+  padding: 4rem 2rem;
+}
+
+[role="tabpanel"] * + * {
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  [role="tablist"] li, [role="tablist"] a {
+    display: block;
+    position: static;
+  }
+
+  // [role="tablist"] a {
+  //   border: 2px solid #222 !important;
+  // }
+
+  // [role="tablist"] li + li a {
+  //   border-top: 0 !important;
+  // }
+
+  [role="tablist"] [aria-selected] {
+    position: static;
+  }
+
+  [role="tablist"] [aria-selected]::after {
+    content: '\0020⬅';
+  }
+
+  // [role="tabpanel"] {
+  //   border-top: 0;
+  // }
+}

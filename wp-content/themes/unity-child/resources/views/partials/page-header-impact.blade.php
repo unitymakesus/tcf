@@ -3,6 +3,14 @@
   $impact_icon = get_field('impact_icon');
 @endphp
 
+@if ( !is_front_page() && function_exists( 'breadcrumb_trail' ) )
+  <div class="breadcrumbs-wrap breadcrumbs-wrap__light">
+    <div class="container">
+      @php breadcrumb_trail() @endphp
+    </div>
+  </div>
+@endif
+
 <header class="page-header page-header__impact" style="background-image: url('<?= $feat_img[0]; ?>')">
   <div class="container">
     <div class="icon">
@@ -14,11 +22,3 @@
     </div>
   </div>
 </header>
-
-@if ( !is_front_page() && function_exists( 'breadcrumb_trail' ) )
-  <div class="breadcrumbs">
-    <div class="container">
-      @php breadcrumb_trail() @endphp
-    </div>
-  </div>
-@endif
