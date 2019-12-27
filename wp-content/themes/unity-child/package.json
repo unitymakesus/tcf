@@ -37,7 +37,14 @@
     "node": ">= 8.0.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.7.7",
     "autoprefixer": "~8.2.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "browser-sync": "~2.24.7",
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
@@ -50,6 +57,7 @@
     "eslint": "~4.19.1",
     "eslint-loader": "~1.9",
     "eslint-plugin-import": "~2.14.0",
+    "eslint-plugin-react": "^7.17.0",
     "extract-text-webpack-plugin": "~3.0.2",
     "file-loader": "^1.1.6",
     "friendly-errors-webpack-plugin": "^1.6.1",
@@ -76,9 +84,13 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "jquery": "^3.3.1",
     "macy": "^2.3.1",
     "materialize-css": "^1.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "webfontloader": "^1.6.28"
   }
 }
