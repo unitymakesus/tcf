@@ -1,0 +1,71 @@
+table {
+  table-layout: fixed;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+tr {
+  border-bottom: 0;
+}
+
+th,
+td {
+  vertical-align: top;
+}
+
+th {
+  padding: 0.5rem 1rem;
+  color: $color-orange;
+  font-size: 14px;
+  letter-spacing: 0.64px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+td {
+  padding: 1rem;
+}
+
+tbody {
+  tr:nth-child(odd) {
+    background-color: #F5F4F3;
+  }
+
+  tr > td:not(:last-child) {
+    border-right: 2px solid #BCBEBC;
+  }
+}
+
+th button {
+  background-color: #FFF;
+  color: $color-orange;
+  border: 0;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-left: 0.333rem;
+
+  &:focus {
+    background-color: #FFF;
+  }
+}
+
+th svg {
+  stroke: currentColor;
+  stroke-width: 20;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  width: 0.5rem;
+  height: 1.5em;
+}
+
+@media #{$medium-and-up} {
+  th {
+    &.description,
+    &.eligibility {
+      width: 60%;
+    }
+  }
+}

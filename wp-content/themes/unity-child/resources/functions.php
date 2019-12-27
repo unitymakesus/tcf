@@ -23,6 +23,11 @@ add_action('wp_enqueue_scripts', function () {
   wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
   wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
 
+  // Grants app.
+  if (basename(get_page_template()) == 'template-awards.blade.php') {
+    wp_enqueue_script('sage/grants.js', asset_path('scripts/grants.js'), [], null, true);
+  }
+
   // Set array of theme customizations for JS
   wp_localize_script( 'sage/main.js', 'simple_options', array('fonts' => get_theme_mod('theme_fonts'), 'colors' => get_theme_mod('theme_color')) );
 }, 100);
@@ -161,4 +166,4 @@ array_map(function ($file) use ($sage_error) {
   if (!locate_template($file, true, true)) {
     $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
   }
-}, ['admin', 'nav']);
+}, ['admin', 'nav', 'wp-api']);
