@@ -8,6 +8,7 @@ namespace App;
 function ea_disable_editor( $id = false ) {
 
 	$excluded_templates = [
+		'views/template-awards.blade.php',
 		'views/template-events.blade.php',
   ];
 

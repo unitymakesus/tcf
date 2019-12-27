@@ -39,3 +39,23 @@
     }
   }
 }
+
+#award-search {
+  color: #414141;
+
+  label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: inherit;
+  }
+
+  input[type="text"] {
+    border-color: #98C7CF;
+    color: #414141;
+    margin-top: 1rem;
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+}

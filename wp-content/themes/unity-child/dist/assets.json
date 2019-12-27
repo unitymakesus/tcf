@@ -29,6 +29,7 @@
   "images/socialicons/youtube.svg": "images/socialicons/youtube_47c2665f.svg",
   "images/textures/texture-triangles-gray.svg": "images/textures/texture-triangles-gray_e5b67cc3.svg",
   "images/textures/texture-triangles.svg": "images/textures/texture-triangles_ab1cf46c.svg",
-  "styles/main.css": "styles/main_9bafe9d9.css",
-  "scripts/main.js": "scripts/main_9bafe9d9.js"
+  "scripts/grants.js": "scripts/grants_299e19be.js",
+  "styles/main.css": "styles/main_299e19be.css",
+  "scripts/main.js": "scripts/main_299e19be.js"
 }

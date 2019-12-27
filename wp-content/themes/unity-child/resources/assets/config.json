@@ -3,6 +3,9 @@
     "main": [
       "./scripts/main.js",
       "./styles/main.scss"
+    ],
+    "grants": [
+      "./scripts/GrantsList.jsx"
     ]
   },
   "publicPath": "/wp-content/themes/unity-child",
