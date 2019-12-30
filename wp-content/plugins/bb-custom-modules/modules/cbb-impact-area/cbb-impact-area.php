@@ -11,7 +11,7 @@ class CbbImpactAreaModule extends FLBuilderModule {
 		parent::__construct([
 			'name'        => __( 'Impact Area', 'cbb' ),
 			'description' => __( 'Display a special call to action for an impact area.', 'cbb' ),
-			'category'    => __( 'Layout', 'cbb' ),
+			'category'    => __( 'Custom', 'cbb' ),
 			'dir'         => CBB_MODULES_DIR . 'modules/cbb-impact-area/',
 			'url'         => CBB_MODULES_URL . 'modules/cbb-impact-area/',
 			'icon'        => 'card.svg',
@@ -21,6 +21,25 @@ class CbbImpactAreaModule extends FLBuilderModule {
 		 * Enqueue assets.
 		 */
 		// $this->add_css( 'cbb-impact-area', CBB_MODULES_URL . 'dist/styles/cbb-impact-area.css' );
+	}
+
+
+	/**
+	 * Function to get the icon for the Figure Card module
+	 *
+	 * @method get_icons
+	 * @param string $icon gets the icon for the module.
+	 */
+	public function get_icon( $icon = '' ) {
+		// check if $icon is referencing an included icon.
+		if ( '' != $icon && file_exists( CBB_MODULES_DIR . 'assets/icons/' . $icon ) ) {
+			$path = CBB_MODULES_DIR . 'assets/icons/' . $icon;
+		}
+		if ( file_exists( $path ) ) {
+			return file_get_contents( $path );
+		} else {
+			return '';
+		}
 	}
 }
 
@@ -34,7 +53,7 @@ FLBuilder::register_module( 'CbbImpactAreaModule', [
 			'cbb-figure-card-style' => [
 				'title' => __('Style', 'cbb'),
 				'fields' => [
-					'structure' => [
+					'color_palette' => [
 						'type'    => 'select',
 						'label'   => __('Color Palette', 'cbb'),
 						'default' => 'teal',

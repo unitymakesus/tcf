@@ -11,10 +11,10 @@ class CbbPeopleFeedModule extends FLBuilderModule {
 		parent::__construct([
 			'name'        => __( 'People Feed', 'cbb' ),
 			'description' => __( 'Display a feed of people bios by category.', 'cbb' ),
-			'category'    => __( 'Layout', 'cbb' ),
+			'category'    => __( 'Custom', 'cbb' ),
 			'dir'         => CBB_MODULES_DIR . 'modules/cbb-people-feed/',
 			'url'         => CBB_MODULES_URL . 'modules/cbb-people-feed/',
-			'icon'        => 'card.svg',
+			'icon'        => 'people.svg',
 		]);
   }
 
@@ -43,7 +43,26 @@ class CbbPeopleFeedModule extends FLBuilderModule {
     }
 
     return get_posts($args);
-  }
+	}
+
+
+	/**
+	 * Function to get the icon for the Figure Card module
+	 *
+	 * @method get_icons
+	 * @param string $icon gets the icon for the module.
+	 */
+	public function get_icon( $icon = '' ) {
+		// check if $icon is referencing an included icon.
+		if ( '' != $icon && file_exists( CBB_MODULES_DIR . 'assets/icons/' . $icon ) ) {
+			$path = CBB_MODULES_DIR . 'assets/icons/' . $icon;
+		}
+		if ( file_exists( $path ) ) {
+			return file_get_contents( $path );
+		} else {
+			return '';
+		}
+	}
 }
 
 /**

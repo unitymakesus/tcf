@@ -57,8 +57,9 @@ add_action( 'init', 'load_custom_modules' );
 // Disable modules we don't ever want to use
 function cbb_disable_modules( $enabled, $instance ) {
   $disable = array(
-    'photo',
+    'audio',
     'content-slider',
+    'countdown',
     'cbb-editorial-cards',
     'gallery',
     'icon',
@@ -74,7 +75,7 @@ function cbb_disable_modules( $enabled, $instance ) {
     'subscribe-form',
     'pricing-table',
     'sidebar',
-    // 'tabs',
+    'tabs',
     'numbers',
     'post-grid',
     'post-carousel',
@@ -88,7 +89,7 @@ function cbb_disable_modules( $enabled, $instance ) {
     'list-icon',
     'uabb-separator',
     'team',
-    // 'uabb-video',
+    'uabb-video',
     'uabb-advanced-menu',
     'advanced-separator',
     'creative-link',
@@ -113,4 +114,4 @@ function cbb_disable_modules( $enabled, $instance ) {
   }
   return $enabled;
 }
-// add_filter( 'fl_builder_register_module', 'cbb_disable_modules', 10, 2 );
+add_filter( 'fl_builder_register_module', 'cbb_disable_modules', 10, 2 );
