@@ -1,20 +1,19 @@
-@php
-  $footer_color = get_theme_mod( 'footer_color' );
-  $text_color = get_theme_mod( 'footer_text_color' );
-@endphp
-
-<footer class="content-info page-footer" role="contentinfo" style="background-color: {{ $footer_color }}">
+<footer class="content-info page-footer" role="contentinfo">
+  @if (get_field('global_footer_cta_enable', 'option'))
   <div class="footer-call-to-action">
     <div class="container">
       <div class="row">
         <div class="col s12 m7 push-m5">
-          <h2 class="h3 text-uppercase">{{ __('Stay informed with our newsletter', 'sage') }}</h2>
-          <p>{{ __('Receive the latest news about grants, stories, and how to make an impact in you community.', 'sage') }}</p>
-          <a class="btn btn--white" href="#">{{ __('Sign up for our e-newsletter', 'sage') }}</a>
+          <h2 class="h3 text-uppercase">{{ get_field('global_footer_cta_heading', 'option') }}</h2>
+          {!! get_field('global_footer_cta_text', 'option') !!}
+          @if ($link = get_field('global_footer_cta_link', 'option'))
+          <a class="btn btn--white" href="{{ $link['url'] }}" target="{{ $link['target'] }}">{{ $link['title'] }}</a>
+          @endif
         </div>
       </div>
     </div>
   </div>
+  @endif
 
   <div class="footer-content">
     <div class="container">
@@ -25,31 +24,37 @@
           </div>
         </div>
         <div class="col s12 m9 l7">
+          @if ($address = get_field('footer_address', 'option'))
           <address>
-            <strong>TRIANGLE COMMUNITY FOUNDATION</strong><br />
-            PO Box 12729 Durham, NC 27709<br />
-            800 Park Offices Dr, Suite 201, Research Triangle Park, NC 27709
+            {!! $address !!}
           </address>
+          @endif
 
           <div class="row">
+            @if ($phone = get_field('footer_phone', 'option'))
+              <div class="col s6 m4">
+                <dl>
+                  <dt class="text-uppercase">{{ __('Phone', 'sage') }}</dt>
+                  <dd><a href="tel:{{ $phone }}">{{ $phone }}</a></dd>
+                </dl>
+              </div>
+            @endif
+            @if ($donor_services = get_field('footer_donor_services', 'option'))
             <div class="col s6 m4">
               <dl>
-                <dt class="text-uppercase">Phone</dt>
-                <dd><a href="tel:919.474.8370">919.474.8370</a></dd>
+                <dt class="text-uppercase">{{ __('Donor Services', 'sage') }}</dt>
+                <dd><a href="tel:{{ $donor_services }}">{{ $donor_services }}</a></dd>
               </dl>
             </div>
+            @endif
+            @if ($fax = get_field('footer_fax', 'option'))
             <div class="col s6 m4">
               <dl>
-                <dt class="text-uppercase">Donor Services</dt>
-                <dd><a href="tel:919.474.8363">919.474.8363</a></dd>
+                <dt class="text-uppercase">{{ __('Fax', 'sage') }}</dt>
+                <dd><a href="tel:{{ $fax }}">{{ $fax }}</a></dd>
               </dl>
             </div>
-            <div class="col s6 m4">
-              <dl>
-                <dt class="text-uppercase">Fax</dt>
-                <dd><a href="tel:919.941.9208">919.941.9208</a></dd>
-              </dl>
-            </div>
+            @endif
           </div>
         </div>
       </div>
@@ -62,11 +67,13 @@
         <div class="col s12 m9 push-m3">
           @php dynamic_sidebar('footer-utility') @endphp
         </div>
-        <div class="col s12">
-          <span class="footer-copyright__text">
-            {!! sprintf(__('Copyright &copy; %s %s. All Rights Reserved. Site by Unity Web Agency'), current_time('Y'), get_bloginfo('name', 'display')) !!}
-          </span>
-        </div>
+        @if ($copyright = get_field('footer_copyright_text', 'option'))
+          <div class="col s12">
+            <span class="footer-copyright__text">
+              {!! str_replace('#year#', date('Y'), $copyright) !!}
+            </span>
+          </div>
+        @endif
       </div>
     </div>
   </div>

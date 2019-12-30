@@ -29,9 +29,7 @@ function create_post_type() {
     'hierarchical' => false,
     'supports' => array(
       'title',
-      'editor',
       'revisions',
-      'page-attributes',
       'thumbnail'
     ),
     'has_archive' => false,
@@ -69,7 +67,6 @@ function create_post_type() {
       'title',
       'editor',
       'revisions',
-      'page-attributes',
       'thumbnail',
     ),
     'has_archive' => false,
@@ -102,7 +99,8 @@ function create_post_type() {
 		'hierarchical' => false,
 		'show_in_rest' => true,
     'supports' => array(
-      'title',
+			'title',
+			'editor',
       'revisions',
     ),
     'has_archive' => false,

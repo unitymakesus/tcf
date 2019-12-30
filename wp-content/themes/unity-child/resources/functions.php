@@ -137,18 +137,6 @@ add_action('widgets_init', function () {
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
   ];
-  // register_sidebar([
-  //   'name'          => __('Footer-Social-Left', 'sage'),
-  //   'id'            => 'footer-social-left'
-  // ] + $config);
-  // register_sidebar([
-  //   'name'          => __('Footer-Social-Right', 'sage'),
-  //   'id'            => 'footer-social-right'
-  // ] + $config);
-  // register_sidebar([
-  //   'name'          => __('Footer-Utility-Left', 'sage'),
-  //   'id'            => 'footer-utility-left'
-  // ] + $config);
   register_sidebar([
     'name' => __('Footer-Utility', 'sage'),
     'id'   => 'footer-utility'

@@ -1,11 +1,3 @@
-@if ( !is_front_page() && function_exists( 'breadcrumb_trail' ) )
-  <div class="breadcrumbs-wrap breadcrumbs-wrap__light">
-    <div class="container">
-      @php breadcrumb_trail() @endphp
-    </div>
-  </div>
-@endif
-
 @if ($hero = get_field('hero_image'))
 <figure class="text-center">
   <img src="{{ $hero['sizes']['large'] }}" alt="{{ $hero['alt'] }}" />

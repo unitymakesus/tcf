@@ -41,7 +41,7 @@ class Table extends Component {
             <tbody>
               {this.props.rows.map((row, i) => (
                 <tr key={i}>
-                  <td role="rowheader" scope="row"><a className="fw-600" href={row.url}>{row.title}</a></td>
+                  <td role="rowheader" scope="row" className="fw-600">{row.title}</td>
                   <td>{row.eligibility}</td>
                   <td>{row.amount}</td>
                 </tr>

@@ -55,3 +55,16 @@ $weights: (400, 600, 700);
     font-weight: $weight;
   }
 }
+
+.entry-content ul:not(.select-dropdown) {
+  margin-bottom: 2rem;
+}
+
+.entry-content ul:not(.select-dropdown) li::before {
+  display: block;
+  position: absolute;
+  font-size: 16px;
+  color: $color-orange;
+  left: 8px;
+  content: '\25b6';
+}

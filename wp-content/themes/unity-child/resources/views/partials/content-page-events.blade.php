@@ -43,6 +43,9 @@
               @if ($content = get_sub_field('event_grouping_content'))
                 <div>{!! $content !!}</div>
               @endif
+              @if ($cta = get_sub_field('event_grouping_cta'))
+                <a class="btn btn--orange" href="{{ $cta['url'] }}" target="{{ $cta['target'] }}">{{ $cta['title'] }}</a>
+              @endif
             </div>
             <div class="event-grouping__image">
               <img src="@asset('images/textures/texture-triangles-gray.svg')" alt="" />

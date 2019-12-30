@@ -90,3 +90,29 @@ add_filter( 'use_block_editor_for_post_type', __NAMESPACE__.'\\ea_disable_gutenb
 
 // }
 // add_action( 'admin_head', __NAMESPACE__.'\\ea_disable_classic_editor' );
+
+/**
+ * Init TinyMCE with "paste as text" enabled
+ */
+function paste_as_text($init) {
+	$init['paste_as_text'] = true;
+
+  return $init;
+}
+add_filter('tiny_mce_before_init', __NAMESPACE__ . '\\paste_as_text');
+
+/**
+ * Remove dashboard widgets
+ */
+function cleanup_dashboard_widgets() {
+  remove_meta_box('dashboard_primary', 'dashboard', 'side');
+  remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+	remove_meta_box('dashboard_recent_drafts', 'dashboard', 'side');
+	remove_meta_box('dashboard_activity', 'dashboard', 'normal');
+}
+add_action('wp_dashboard_setup', __NAMESPACE__ . '\\cleanup_dashboard_widgets');
+
+/**
+ * Remove welcome panel.
+ */
+remove_action('welcome_panel', 'wp_welcome_panel');

@@ -1,0 +1,19 @@
+// Saved rows / columns
+.bb-cta-resources {
+  .fl-col-content {
+    max-width: 470px;
+  }
+
+  a.fl-button {
+    font-size: rem-calc(14);
+    width: 100%;
+  }
+}
+
+@media #{$large-and-up} {
+  .bb-cta-resources {
+    .fl-button-wrap {
+      padding-right: 3rem;
+    }
+  }
+}

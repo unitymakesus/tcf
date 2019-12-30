@@ -7,6 +7,11 @@
   margin-bottom: 0;
 }
 
+.row.no-gutters > [class^="col"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 // Beaver Builder
 @media #{$medium-and-down} {
   .fl-col-small:not(.fl-col-small-full-width) {

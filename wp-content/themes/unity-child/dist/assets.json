@@ -8,11 +8,6 @@
   "images/icons/icon-education-white.svg": "images/icons/icon-education-white_03579c11.svg",
   "images/icons/icon-environmental-conservation-white.svg": "images/icons/icon-environmental-conservation-white_c173ab70.svg",
   "images/icons/icon-regional-cultural-arts-white.svg": "images/icons/icon-regional-cultural-arts-white_fd15dc91.svg",
-  "images/impact-areas/impact-area-capacity-building.jpg": "images/impact-areas/impact-area-capacity-building_10246fc8.jpg",
-  "images/impact-areas/impact-area-community-development.jpg": "images/impact-areas/impact-area-community-development_f836faf3.jpg",
-  "images/impact-areas/impact-area-education.jpg": "images/impact-areas/impact-area-education_0fce67c7.jpg",
-  "images/impact-areas/impact-area-environmental-conservation.jpg": "images/impact-areas/impact-area-environmental-conservation_540c74ec.jpg",
-  "images/impact-areas/impact-area-regional-cultural-arts.jpg": "images/impact-areas/impact-area-regional-cultural-arts_ec2dde42.jpg",
   "images/logos/logo-footer.svg": "images/logos/logo-footer_2dea1336.svg",
   "images/simple-by-unity.svg": "images/simple-by-unity_38dc21c0.svg",
   "images/socialicons/behance.svg": "images/socialicons/behance_cc36254f.svg",
@@ -29,7 +24,7 @@
   "images/socialicons/youtube.svg": "images/socialicons/youtube_47c2665f.svg",
   "images/textures/texture-triangles-gray.svg": "images/textures/texture-triangles-gray_e5b67cc3.svg",
   "images/textures/texture-triangles.svg": "images/textures/texture-triangles_ab1cf46c.svg",
-  "scripts/grants.js": "scripts/grants_299e19be.js",
-  "styles/main.css": "styles/main_299e19be.css",
-  "scripts/main.js": "scripts/main_299e19be.js"
+  "scripts/grants.js": "scripts/grants_9c417d8a.js",
+  "styles/main.css": "styles/main_9c417d8a.css",
+  "scripts/main.js": "scripts/main_9c417d8a.js"
 }
