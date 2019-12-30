@@ -83,12 +83,6 @@
   }
 }
 
-.template-audience .page-header {
-  > .container {
-    max-width: 940px;
-  }
-}
-
 .page-header--w-intro {
   position: relative;
   background-color: $brand-primary;
@@ -118,6 +112,65 @@
     background-position: calc(100% - 1rem) top;
     content: '';
     pointer-events: none;
+  }
+}
+
+.template-audience .page-header,
+.template-funds .page-header {
+  > .container {
+    max-width: 940px;
+  }
+}
+
+.template-funds .page-header {
+  margin-bottom: 0;
+}
+
+.template-funds {
+  main {
+    background-color: #E7E4E0;
+  }
+
+  article {
+    padding-bottom: 4rem;
+  }
+
+  .entry-content,
+  .entry-footer {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  .entry-content {
+    background-color: white;
+  }
+
+  .entry-footer {
+    background-color: #F5F4F3;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    &__image {
+      line-height: 0;
+    }
+
+    &__details {
+      padding: 48px 36px;
+
+      h2 {
+        color: $brand-primary;
+        font-family: "Open Sans Condensed", $sans-serif;
+      }
+    }
+  }
+
+  @media #{$large-and-up} {
+    .entry-content {
+      padding: 60px 80px;
+    }
   }
 }
 

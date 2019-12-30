@@ -60,6 +60,13 @@
                 "operator": "==",
                 "value": "views\/template-audience.blade.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "views\/template-funds.blade.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -70,5 +77,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1577671571
+    "modified": 1577675797
 }
