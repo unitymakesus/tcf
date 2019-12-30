@@ -1,0 +1,46 @@
+{
+    "key": "group_55d720448df08",
+    "title": "Award Settings",
+    "fields": [
+        {
+            "key": "field_55d72065a8e96",
+            "label": "Award Category",
+            "name": "award_category",
+            "type": "taxonomy",
+            "instructions": "Select the type of awards to pull into the table.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "award_category",
+            "field_type": "select",
+            "allow_null": 0,
+            "add_term": 1,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "object",
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "views\/template-awards.blade.php"
+            }
+        ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1577672224
+}
