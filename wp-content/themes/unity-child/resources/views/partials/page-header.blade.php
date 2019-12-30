@@ -8,16 +8,13 @@
   $feat_img = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'x-large')
 @endphp
 
-@if ( !is_front_page() && function_exists( 'breadcrumb_trail' ) )
-  <div class="breadcrumbs-wrap breadcrumbs-wrap__light">
-    <div class="container">
-      @php breadcrumb_trail() @endphp
-    </div>
-  </div>
-@endif
-
-<header class="page-header" style="background-image: url('<?= $feat_img[0]; ?>')">
+<header class="page-header {{ $feat_img ? 'page-header__bg' : '' }}" style="background-image: url('<?= $feat_img[0]; ?>')">
   <div class="container">
-    <h1 class="mb-0">{!! App::title() !!}</h1>
+    <h1 class="page-header__title mb-0">{!! App::title() !!}</h1>
+    @if ($tagline = get_field('page-header-tagline'))
+      <div class="page-header__tagline">
+        {{ $tagline }}
+      </div>
+    @endif
   </div>
 </header>

@@ -76,3 +76,11 @@
     </nav>
   </div>
 </header>
+
+@if ( !is_front_page() && function_exists( 'breadcrumb_trail' ) )
+  <div class="breadcrumbs-wrap">
+    <div class="container">
+      @php breadcrumb_trail() @endphp
+    </div>
+  </div>
+@endif
