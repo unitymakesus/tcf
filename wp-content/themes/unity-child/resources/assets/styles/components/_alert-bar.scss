@@ -1,0 +1,13 @@
+.alert-bar {
+  background-color: #C75300;
+  color: white;
+  padding: 1rem 0;
+
+  a {
+    color: inherit;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}

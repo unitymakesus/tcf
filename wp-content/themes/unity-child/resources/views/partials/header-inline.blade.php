@@ -11,6 +11,19 @@
     $cta_target = 'target="_blank" rel="noopener"';
   }
 @endphp
+
+@if (get_field('global_alert_bar_enable', 'options'))
+  <div class="alert-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 text-center">
+          {!! get_field('global_alert_bar_message', 'option') !!}
+        </div>
+      </div>
+    </div>
+  </div>
+@endif
+
 <header class="banner header-inline" role="banner" style="background-color: {{ $header_color }}">
   <div class="container">
     <nav class="nav-primary" role="navigation">
