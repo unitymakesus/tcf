@@ -6446,7 +6446,14 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-jquery@^3.3.1:
+jquery-accessible-accordion-aria@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/jquery-accessible-accordion-aria/-/jquery-accessible-accordion-aria-2.6.1.tgz#8bda19cb27237a540848f647e16663aca1383211"
+  integrity sha512-L0UczIXKQ3JrOx5UKSUOeNdm7Ls13NImdF5/JUhDNJ3QnPAaIhLS8+2gN++9tXQeUp6B7fh9IDZzUA8l/mmyXg==
+  dependencies:
+    jquery ">=1.0.0"
+
+jquery@>=1.0.0, jquery@^3.3.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
   integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
