@@ -11,6 +11,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import archive from './routes/archive';
 import templateEvents from './routes/templateEvents';
+import whyTheTriangle from './routes/whyTheTriangle';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -19,6 +20,7 @@ const routes = new Router({
   aboutUs,
   archive,
   templateEvents,
+  whyTheTriangle,
 });
 
 /** Load Events */

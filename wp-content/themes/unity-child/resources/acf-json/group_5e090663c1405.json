@@ -35,30 +35,6 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_5e0908a35e266",
-                    "label": "Background Image",
-                    "name": "background_image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "medium_large",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
                     "key": "field_5e0908a35e267",
                     "label": "Percentage",
                     "name": "percentage",
@@ -165,7 +141,7 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "preview_size": "medium_large",
+                    "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -281,9 +257,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "",
-                    "preview_size": "medium_large",
-                    "library": "",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
@@ -398,9 +374,9 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "",
-                    "preview_size": "medium_large",
-                    "library": "",
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
                     "min_width": "",
                     "min_height": "",
                     "min_size": "",
@@ -516,7 +492,7 @@
                         "id": ""
                     },
                     "return_format": "array",
-                    "preview_size": "medium_large",
+                    "preview_size": "thumbnail",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -605,5 +581,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1577650747
+    "modified": 1577804672
 }
