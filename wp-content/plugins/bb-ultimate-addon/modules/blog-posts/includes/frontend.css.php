@@ -119,7 +119,9 @@ if ( 'background' == $settings->blog_image_position ) {
 if ( 'button' == $settings->cta_type ) {
 	if ( ! $version_bb_check ) {
 		FLBuilder::render_module_css(
-			'uabb-button', $id, array(
+			'uabb-button',
+			$id,
+			array(
 				/* General Section */
 				'text'                        => $settings->btn_text,
 
@@ -164,11 +166,20 @@ if ( 'button' == $settings->cta_type ) {
 				'line_height_unit_responsive' => $settings->btn_line_height_unit_responsive,
 
 				'font_family'                 => $settings->btn_font_family,
+				'button_padding_dimension'    => ( isset( $settings->button_padding_dimension ) ) ? $settings->button_padding_dimension : '',
+				'button_border_style'         => ( isset( $settings->button_border_style ) ) ? $settings->button_border_style : '',
+				'button_border_width'         => ( isset( $settings->button_border_width ) ) ? $settings->button_border_width : '',
+				'button_border_radius'        => ( isset( $settings->button_border_radius ) ) ? $settings->button_border_radius : '',
+				'button_border_color'         => ( isset( $settings->button_border_color ) ) ? $settings->button_border_color : '',
+
+				'border_hover_color'          => ( isset( $settings->border_hover_color ) ) ? $settings->border_hover_color : '',
 			)
 		);
 	} else {
 		FLBuilder::render_module_css(
-			'uabb-button', $id, array(
+			'uabb-button',
+			$id,
+			array(
 				/* General Section */
 				'text'                       => $settings->btn_text,
 
@@ -206,8 +217,9 @@ if ( 'button' == $settings->cta_type ) {
 				'button_typo'                => ( isset( $settings->btn_font_typo ) ) ? $settings->btn_font_typo : '',
 				'button_typo_medium'         => ( isset( $settings->btn_font_typo_medium ) ) ? $settings->btn_font_typo_medium : '',
 				'button_typo_responsive'     => ( isset( $settings->btn_font_typo_responsive ) ) ? $settings->btn_font_typo_responsive : '',
-
-
+				'button_padding_dimension'   => ( isset( $settings->button_padding_dimension ) ) ? $settings->button_padding_dimension : '',
+				'button_border'              => ( isset( $settings->button_border ) ) ? $settings->button_border : '',
+				'border_hover_color'         => ( isset( $settings->border_hover_color ) ) ? $settings->border_hover_color : '',
 			)
 		);
 	}
@@ -328,16 +340,16 @@ if ( 'masonary' == $settings->is_carousel ) {
 		<?php
 } else {
 	if ( class_exists( 'FLBuilderCSS' ) ) {
-		FLBuilderCSS::typography_field_rule(
-			array(
-				'settings'     => $settings,
-				'setting_name' => 'taxonomy_filter_font_typo',
-				'selector'     => ".fl-node-$id select.uabb-masonary-filters",
-			)
-		);
+			FLBuilderCSS::typography_field_rule(
+				array(
+					'settings'     => $settings,
+					'setting_name' => 'taxonomy_filter_font_typo',
+					'selector'     => ".fl-node-$id select.uabb-masonary-filters",
+				)
+			);
 	}
 }
-?>
+	?>
 .fl-node-<?php echo $id; ?> select.uabb-masonary-filters {
 	width: <?php echo ( '' != $settings->selfilter_width ) ? $settings->selfilter_width : '200'; ?>px;
 	<?php
@@ -374,16 +386,16 @@ if ( 'masonary' == $settings->is_carousel ) {
 		<?php
 } else {
 	if ( class_exists( 'FLBuilderCSS' ) ) {
-		FLBuilderCSS::typography_field_rule(
-			array(
-				'settings'     => $settings,
-				'setting_name' => 'taxonomy_filter_font_typo',
-				'selector'     => ".fl-node-$id ul.uabb-masonary-filters",
-			)
-		);
+			FLBuilderCSS::typography_field_rule(
+				array(
+					'settings'     => $settings,
+					'setting_name' => 'taxonomy_filter_font_typo',
+					'selector'     => ".fl-node-$id ul.uabb-masonary-filters",
+				)
+			);
 	}
 }
-?>
+	?>
 .fl-node-<?php echo $id; ?> ul.uabb-masonary-filters li {
 	<?php echo ( '' != uabb_theme_text_color( $settings->taxonomy_filter_select_color ) ) ? 'color: ' . uabb_theme_text_color( $settings->taxonomy_filter_select_color ) . ';' : ''; ?>
 }
@@ -607,16 +619,16 @@ if ( 'yes' == $settings->show_meta ) {
 		<?php
 } else {
 	if ( class_exists( 'FLBuilderCSS' ) ) {
-		FLBuilderCSS::typography_field_rule(
-			array(
-				'settings'     => $settings,
-				'setting_name' => 'meta_font_typo',
-				'selector'     => ".fl-node-$id .uabb-post-meta a,.fl-node-$id .uabb-blog-post-content .uabb-post-meta",
-			)
-		);
+			FLBuilderCSS::typography_field_rule(
+				array(
+					'settings'     => $settings,
+					'setting_name' => 'meta_font_typo',
+					'selector'     => ".fl-node-$id .uabb-post-meta a,.fl-node-$id .uabb-blog-post-content .uabb-post-meta",
+				)
+			);
 	}
 }
-?>
+	?>
 	<?php
 }
 ?>
@@ -848,16 +860,16 @@ if ( 'carousel' == $settings->is_carousel ) {
 		<?php
 } else {
 	if ( class_exists( 'FLBuilderCSS' ) ) {
-		FLBuilderCSS::typography_field_rule(
-			array(
-				'settings'     => $settings,
-				'setting_name' => 'desc_font_typo',
-				'selector'     => ".fl-node-$id .uabb-text-editor",
-			)
-		);
+			FLBuilderCSS::typography_field_rule(
+				array(
+					'settings'     => $settings,
+					'setting_name' => 'desc_font_typo',
+					'selector'     => ".fl-node-$id .uabb-text-editor",
+				)
+			);
 	}
 }
-?>
+	?>
 <?php
 if ( isset( $settings->post_layout ) && 'custom' != $settings->post_layout ) {
 	?>
@@ -914,16 +926,16 @@ if ( isset( $settings->post_layout ) && 'custom' != $settings->post_layout ) {
 			<?php
 } else {
 	if ( class_exists( 'FLBuilderCSS' ) ) {
-		FLBuilderCSS::typography_field_rule(
-			array(
-				'settings'     => $settings,
-				'setting_name' => 'title_font_typo',
-				'selector'     => ".fl-node-$id $settings->title_tag_selection.uabb-post-heading,.fl-node-$id $settings->title_tag_selection.uabb-post-heading a,.fl-node-$id $settings->title_tag_selection.uabb-post-heading a:hover,.fl-node-$id $settings->title_tag_selection.uabb-post-heading a:focus,.fl-node-$id $settings->title_tag_selection.uabb-post-heading a:visited",
-			)
-		);
+				FLBuilderCSS::typography_field_rule(
+					array(
+						'settings'     => $settings,
+						'setting_name' => 'title_font_typo',
+						'selector'     => ".fl-node-$id $settings->title_tag_selection.uabb-post-heading,.fl-node-$id $settings->title_tag_selection.uabb-post-heading a,.fl-node-$id $settings->title_tag_selection.uabb-post-heading a:hover,.fl-node-$id $settings->title_tag_selection.uabb-post-heading a:focus,.fl-node-$id $settings->title_tag_selection.uabb-post-heading a:visited",
+					)
+				);
 	}
 }
-?>
+		?>
 	<?php
 } else {
 	?>
@@ -977,16 +989,16 @@ if ( isset( $settings->post_layout ) && 'custom' != $settings->post_layout ) {
 			<?php
 } else {
 	if ( class_exists( 'FLBuilderCSS' ) ) {
-		FLBuilderCSS::typography_field_rule(
-			array(
-				'settings'     => $settings,
-				'setting_name' => 'title_font_typo',
-				'selector'     => ".fl-node-$id .uabb-post-heading,.fl-node-$id .uabb-post-heading a,.fl-node-$id .uabb-post-heading a:hover,.fl-node-$id .uabb-post-heading a:focus,.fl-node-$id .uabb-post-heading a:visited",
-			)
-		);
+				FLBuilderCSS::typography_field_rule(
+					array(
+						'settings'     => $settings,
+						'setting_name' => 'title_font_typo',
+						'selector'     => ".fl-node-$id .uabb-post-heading,.fl-node-$id .uabb-post-heading a,.fl-node-$id .uabb-post-heading a:hover,.fl-node-$id .uabb-post-heading a:focus,.fl-node-$id .uabb-post-heading a:visited",
+					)
+				);
 	}
 }
-?>
+		?>
 <?php } ?>
 
 <?php
