@@ -22,7 +22,7 @@ class CbbPeopleFeedModule extends FLBuilderModule {
    * Retrieve people posts.
    */
   public function query_people($settings) {
-		if (!$settings->type) {
+		if (empty($settings->category)) {
 			return;
 		}
 
@@ -34,13 +34,15 @@ class CbbPeopleFeedModule extends FLBuilderModule {
       'posts_per_page' => -1,
     ];
 
-    if ($settings->type) {
+    if (!empty($settings->category)) {
       $args['tax_query'] = [
-        'taxonomy' => 'simple-team-category',
-        'field'    => 'id',
-        'terms'    => $settings->type,
+				[
+					'taxonomy' => 'simple-team-category',
+					'field'    => 'term_id',
+					'terms'    => $settings->category,
+				]
       ];
-    }
+		}
 
     return get_posts($args);
 	}
