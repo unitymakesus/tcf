@@ -1,4 +1,4 @@
-@if ($hero = get_field('hero_image'))
+@if ($hero = get_field('event_hero_image'))
 <figure class="text-center">
   <img src="{{ $hero['sizes']['large'] }}" alt="{{ $hero['alt'] }}" />
 </figure>
@@ -8,14 +8,17 @@
   <div class="row">
     <div class="col">
       <header class="mt-6 mb-6">
-        <span class="kicker h3">{{ __('Save The Date', 'sage') }}</span>
+        @if ($kicker = get_field('event_kicker_text'))
+          <span class="kicker h3">{{ $kicker }}</span>
+        @endif
         <h1 class="mb-2">{!! get_the_title() !!}</h1>
-        <div class="details fw-700">March 2020, 4:00pm—7:00pm | Raleigh Convention Center</div>
+        @if ($details = App\get_event_full_details(get_the_ID()))
+          <div class="details fw-700">{{ $details }}</div>
+        @endif
       </header>
       <div class="entry-content">
         @php the_content() @endphp
       </div>
-      <a href="#" class="btn btn--orange mb-6 mt-6">{{ __('Call To Action', 'sage') }}</a>
     </div>
   </div>
 </article>

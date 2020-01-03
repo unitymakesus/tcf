@@ -3,45 +3,9 @@
     "title": "Event Info",
     "fields": [
         {
-            "key": "field_5dfaf67ebe0d6",
-            "label": "Event Date",
-            "name": "event_date",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "F j, Y",
-            "return_format": "d\/m\/Y",
-            "first_day": 1
-        },
-        {
-            "key": "field_5dfaf786c2453",
-            "label": "Event Date Display",
-            "name": "event_date_display",
-            "type": "text",
-            "instructions": "Handy override for the event date. Allows for flexible text such as \"March 2020\".",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5dfbe89c6ed70",
             "label": "Hero Image",
-            "name": "hero_image",
+            "name": "event_hero_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -61,6 +25,114 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5e0f64faece6f",
+            "label": "Event Kicker Text",
+            "name": "event_kicker_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Save The Date",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5dfaf67ebe0d6",
+            "label": "Event Date",
+            "name": "event_date",
+            "type": "date_picker",
+            "instructions": "Required to assist with ordering on the main Event page. Can be overridden visually with the \"Event Date Display\" field.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
+            "first_day": 0
+        },
+        {
+            "key": "field_5dfaf786c2453",
+            "label": "Event Date Display",
+            "name": "event_date_display",
+            "type": "text",
+            "instructions": "Handy override for the event date. Allows for flexible text such as \"March 2020\". Can also be used to include times such as \"7pm–8pm\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e0f59967faaf",
+            "label": "Event Location",
+            "name": "event_location",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e0f59f77fab0",
+            "label": "Event Summary",
+            "name": "event_summary",
+            "type": "wysiwyg",
+            "instructions": "Provide a basic summary to override the auto-excerpts generated on the main Event page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_5e0f5a2a7fab1",
+            "label": "Event CTA",
+            "name": "event_cta",
+            "type": "link",
+            "instructions": "Provide a call to action when the event is displayed on the main Event page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
@@ -80,5 +152,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1577651550
+    "modified": 1578067214
 }

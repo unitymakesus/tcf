@@ -117,6 +117,7 @@ update_option( 'medium_size_h', 600 );
 add_image_size('tiny-thumbnail', 80, 80, true);
 add_image_size('small-thumbnail', 150, 150, true);
 add_image_size('medium-square-thumbnail', 400, 400, true);
+add_image_size('staff-headshot', 530, 717, true);
 add_image_size('x-large', 1600);
 
 add_filter( 'image_size_names_choose', function( $sizes ) {
@@ -154,4 +155,4 @@ array_map(function ($file) use ($sage_error) {
   if (!locate_template($file, true, true)) {
     $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
   }
-}, ['admin', 'nav', 'wp-api']);
+}, ['admin', 'child-helpers', 'nav', 'wp-api']);

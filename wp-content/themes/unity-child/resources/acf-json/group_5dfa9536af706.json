@@ -3,6 +3,28 @@
     "title": "Events List",
     "fields": [
         {
+            "key": "field_5e0f58a52b7ff",
+            "label": "Featured Event",
+            "name": "main_featured_event",
+            "type": "post_object",
+            "instructions": "Select an event post to feature at the top of the page. The event's details will be pulled in automatically.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "event"
+            ],
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "ui": 1
+        },
+        {
             "key": "field_5dfa95b7f9354",
             "label": "Donor Only Events",
             "name": "",
@@ -127,6 +149,30 @@
                         "id": ""
                     },
                     "return_format": "array"
+                },
+                {
+                    "key": "field_5e0f5e3d6b0d2",
+                    "label": "Event Grouping Image",
+                    "name": "event_grouping_image",
+                    "type": "image",
+                    "instructions": "Optional: falls back to Triangles pattern if no image is provided.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
                 },
                 {
                     "key": "field_5dfac977f09b2",
@@ -279,6 +325,30 @@
                     "return_format": ""
                 },
                 {
+                    "key": "field_5e0f5e906b0d3",
+                    "label": "Event Grouping Image",
+                    "name": "event_grouping_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
                     "key": "field_5e091e537441c",
                     "label": "Upcoming Events",
                     "name": "event_grouping_upcoming_events",
@@ -429,6 +499,30 @@
                     "return_format": "array"
                 },
                 {
+                    "key": "field_5e0f5eb66b0d4",
+                    "label": "Event Grouping Image",
+                    "name": "event_grouping_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
                     "key": "field_5e091f1374423",
                     "label": "Upcoming Events",
                     "name": "event_grouping_upcoming_events",
@@ -472,5 +566,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1577656188
+    "modified": 1578067914
 }

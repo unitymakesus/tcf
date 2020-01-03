@@ -31,26 +31,14 @@
 
     .details {
       padding: 0.5rem;
+      font-size: 1rem;
       background-image: none;
       transition: background-image 0.3s ease-in-out;
 
       &__name {
-        font-size: 1.125rem;
+        font-size: 1.25rem;
         font-weight: 600;
         color: $brand-primary;
-      }
-
-      &__bio-link {
-        position: relative;
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase;
-        pointer-events: none;
-
-        &::after {
-          margin-left: 0.25rem;
-          content: "\00bb";
-        }
       }
     }
   }
@@ -66,11 +54,14 @@
   }
 
   .content-wrap-l {
-    max-width: 160px;
-    margin: 1rem 5rem 1rem auto;
+    margin: 1rem 4rem 1rem 4rem;
 
     figure {
       margin: 0 0 1rem 0;
+    }
+
+    img {
+      max-width: 125px;
     }
   }
 
@@ -125,6 +116,13 @@
   }
 }
 
+@media #{$small-and-up} {
+  .people {
+    .person {
+      width: 33.333%;
+    }
+  }
+}
 @media #{$large-and-up} {
   .people {
     .person {

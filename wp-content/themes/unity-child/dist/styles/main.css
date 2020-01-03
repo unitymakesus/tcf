@@ -18433,12 +18433,10 @@ body.search-wrapper > a[href="#content"] {
 /* line 32, resources/assets/styles/layouts/_events.scss */
 
 .template-events .tabbed h2 {
-  font-size: 14px;
   text-transform: uppercase;
-  color: #007485;
 }
 
-/* line 38, resources/assets/styles/layouts/_events.scss */
+/* line 36, resources/assets/styles/layouts/_events.scss */
 
 .template-events .tabbed h3,
 .template-events .tabbed .h3 {
@@ -18446,13 +18444,13 @@ body.search-wrapper > a[href="#content"] {
   color: #007485;
 }
 
-/* line 44, resources/assets/styles/layouts/_events.scss */
+/* line 42, resources/assets/styles/layouts/_events.scss */
 
 .template-events [role="tabpanel"] {
   background-color: white;
 }
 
-/* line 48, resources/assets/styles/layouts/_events.scss */
+/* line 46, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping {
   position: relative;
@@ -18460,7 +18458,7 @@ body.search-wrapper > a[href="#content"] {
   padding: 1rem 0;
 }
 
-/* line 53, resources/assets/styles/layouts/_events.scss */
+/* line 51, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping__subhead {
   color: #E56E00;
@@ -18468,24 +18466,45 @@ body.search-wrapper > a[href="#content"] {
   font-weight: bold;
 }
 
-/* line 59, resources/assets/styles/layouts/_events.scss */
+/* line 57, resources/assets/styles/layouts/_events.scss */
+
+.template-events .event-grouping__content {
+  width: 100%;
+}
+
+/* line 61, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping__image {
   max-width: 250px;
   width: 100%;
-  margin-left: 2rem;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
 }
 
-/* line 69, resources/assets/styles/layouts/_events.scss */
+@media only screen and (min-width: 769px) {
+  /* line 70, resources/assets/styles/layouts/_events.scss */
+
+  .event-grouping__content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+
+  /* line 74, resources/assets/styles/layouts/_events.scss */
+
+  .event-grouping__image {
+    margin-left: 2rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
+/* line 82, resources/assets/styles/layouts/_events.scss */
 
 .featured-event {
   background-color: #414141;
   color: #FFF;
 }
 
-/* line 73, resources/assets/styles/layouts/_events.scss */
+/* line 86, resources/assets/styles/layouts/_events.scss */
 
 .featured-event .row,
 .featured-event .sidebar-primary .wrap,
@@ -18494,41 +18513,49 @@ body.search-wrapper > a[href="#content"] {
   margin-right: -0.75rem;
 }
 
-/* line 78, resources/assets/styles/layouts/_events.scss */
+/* line 91, resources/assets/styles/layouts/_events.scss */
 
 .featured-event .content-wrap {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
 
-/* line 82, resources/assets/styles/layouts/_events.scss */
+@media only screen and (min-width: 769px) {
+  /* line 98, resources/assets/styles/layouts/_events.scss */
 
-.featured-event .image-wrap {
-  position: relative;
-  height: 100%;
+  .featured-event .content-wrap {
+    padding: 2rem 0;
+  }
+
+  /* line 102, resources/assets/styles/layouts/_events.scss */
+
+  .featured-event .image-wrap {
+    position: relative;
+    height: 100%;
+  }
+
+  /* line 106, resources/assets/styles/layouts/_events.scss */
+
+  .featured-event .image-wrap img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
-/* line 86, resources/assets/styles/layouts/_events.scss */
-
-.featured-event .image-wrap img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-/* line 100, resources/assets/styles/layouts/_events.scss */
+/* line 121, resources/assets/styles/layouts/_events.scss */
 
 .single-event main {
   position: relative;
   padding-bottom: 280px;
 }
 
-/* line 104, resources/assets/styles/layouts/_events.scss */
+/* line 125, resources/assets/styles/layouts/_events.scss */
 
 .single-event main::after {
   position: absolute;
@@ -18545,14 +18572,14 @@ body.search-wrapper > a[href="#content"] {
   content: '';
 }
 
-/* line 120, resources/assets/styles/layouts/_events.scss */
+/* line 141, resources/assets/styles/layouts/_events.scss */
 
 .single-event article {
   max-width: 768px;
   margin: 0 auto;
 }
 
-/* line 125, resources/assets/styles/layouts/_events.scss */
+/* line 146, resources/assets/styles/layouts/_events.scss */
 
 .single-event h1 {
   font-size: 2rem;
@@ -18560,13 +18587,13 @@ body.search-wrapper > a[href="#content"] {
   font-weight: 400;
 }
 
-/* line 131, resources/assets/styles/layouts/_events.scss */
+/* line 152, resources/assets/styles/layouts/_events.scss */
 
 .single-event .kicker {
   color: #E36F1E;
 }
 
-/* line 135, resources/assets/styles/layouts/_events.scss */
+/* line 156, resources/assets/styles/layouts/_events.scss */
 
 .single-event .details {
   color: #E36F1E;
@@ -18633,38 +18660,22 @@ body.search-wrapper > a[href="#content"] {
 
 .people .person .details {
   padding: 0.5rem;
+  font-size: 1rem;
   background-image: none;
   -webkit-transition: background-image 0.3s ease-in-out;
   -o-transition: background-image 0.3s ease-in-out;
   transition: background-image 0.3s ease-in-out;
 }
 
-/* line 37, resources/assets/styles/layouts/_people.scss */
+/* line 38, resources/assets/styles/layouts/_people.scss */
 
 .people .person .details__name {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #007485;
 }
 
-/* line 43, resources/assets/styles/layouts/_people.scss */
-
-.people .person .details__bio-link {
-  position: relative;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  pointer-events: none;
-}
-
-/* line 50, resources/assets/styles/layouts/_people.scss */
-
-.people .person .details__bio-link::after {
-  margin-left: 0.25rem;
-  content: "\BB";
-}
-
-/* line 60, resources/assets/styles/layouts/_people.scss */
+/* line 48, resources/assets/styles/layouts/_people.scss */
 
 .single-person .col,
 .single-person .sidebar-primary .wrap .main,
@@ -18674,33 +18685,38 @@ body.search-wrapper > a[href="#content"] {
   padding: 0;
 }
 
-/* line 64, resources/assets/styles/layouts/_people.scss */
+/* line 52, resources/assets/styles/layouts/_people.scss */
 
 .single-person .content-wrap {
   max-width: 450px;
 }
 
-/* line 68, resources/assets/styles/layouts/_people.scss */
+/* line 56, resources/assets/styles/layouts/_people.scss */
 
 .single-person .content-wrap-l {
-  max-width: 160px;
-  margin: 1rem 5rem 1rem auto;
+  margin: 1rem 4rem 1rem 4rem;
 }
 
-/* line 72, resources/assets/styles/layouts/_people.scss */
+/* line 59, resources/assets/styles/layouts/_people.scss */
 
 .single-person .content-wrap-l figure {
   margin: 0 0 1rem 0;
 }
 
-/* line 78, resources/assets/styles/layouts/_people.scss */
+/* line 63, resources/assets/styles/layouts/_people.scss */
+
+.single-person .content-wrap-l img {
+  max-width: 125px;
+}
+
+/* line 69, resources/assets/styles/layouts/_people.scss */
 
 .single-person dl > dt {
   font-weight: 700;
   text-transform: uppercase;
 }
 
-/* line 84, resources/assets/styles/layouts/_people.scss */
+/* line 75, resources/assets/styles/layouts/_people.scss */
 
 .single-person__details,
 .single-person__about {
@@ -18708,14 +18724,14 @@ body.search-wrapper > a[href="#content"] {
   color: white;
 }
 
-/* line 89, resources/assets/styles/layouts/_people.scss */
+/* line 80, resources/assets/styles/layouts/_people.scss */
 
 .single-person__details a,
 .single-person__about a {
   color: inherit;
 }
 
-/* line 94, resources/assets/styles/layouts/_people.scss */
+/* line 85, resources/assets/styles/layouts/_people.scss */
 
 .single-person__details {
   position: relative;
@@ -18723,14 +18739,14 @@ body.search-wrapper > a[href="#content"] {
   background-color: #007485;
 }
 
-/* line 95, resources/assets/styles/layouts/_people.scss */
+/* line 86, resources/assets/styles/layouts/_people.scss */
 
 .single-person__details h1 {
   font-size: 2rem;
   margin-bottom: 0;
 }
 
-/* line 104, resources/assets/styles/layouts/_people.scss */
+/* line 95, resources/assets/styles/layouts/_people.scss */
 
 .single-person__details::after {
   display: block;
@@ -18750,14 +18766,22 @@ body.search-wrapper > a[href="#content"] {
   content: '';
 }
 
-/* line 123, resources/assets/styles/layouts/_people.scss */
+/* line 114, resources/assets/styles/layouts/_people.scss */
 
 .single-person__about {
   background-color: #004852;
 }
 
+@media only screen and (min-width: 601px) {
+  /* line 121, resources/assets/styles/layouts/_people.scss */
+
+  .people .person {
+    width: 33.333%;
+  }
+}
+
 @media only screen and (min-width: 993px) {
-  /* line 130, resources/assets/styles/layouts/_people.scss */
+  /* line 128, resources/assets/styles/layouts/_people.scss */
 
   .people .person {
     width: 25%;
