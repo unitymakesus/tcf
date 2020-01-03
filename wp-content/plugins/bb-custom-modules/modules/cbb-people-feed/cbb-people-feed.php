@@ -28,9 +28,9 @@ class CbbPeopleFeedModule extends FLBuilderModule {
 
     $args = [
       'post_type'      => 'simple-team',
-      'order'          => 'DESC',
-      'orderby'        => 'meta_key',
-      'meta_value_num' => 'last_name',
+      'order'          => 'ASC',
+      'orderby'        => 'meta_value',
+      'meta_key'       => 'last_name',
       'posts_per_page' => -1,
     ];
 
