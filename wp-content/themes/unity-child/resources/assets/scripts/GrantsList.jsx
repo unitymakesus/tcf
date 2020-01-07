@@ -8,9 +8,14 @@ class GrantsList extends Component {
     super(props);
 
     const headers = {
-      scholarship: [
+      scholarships: [
         ['title', 'Scholarships'],
         ['eligibility', 'Eligibility'],
+        ['amount', 'Amount']
+      ],
+      grants: [
+        ['title', 'Grants'],
+        ['eligibility', 'Description'],
         ['amount', 'Amount']
       ],
     };

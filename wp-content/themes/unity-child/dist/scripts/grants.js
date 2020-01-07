@@ -1432,7 +1432,8 @@ var GrantsList = function (_Component) {
     var _this = _possibleConstructorReturn(this, (GrantsList.__proto__ || Object.getPrototypeOf(GrantsList)).call(this, props));
 
     var headers = {
-      scholarship: [['title', 'Scholarships'], ['eligibility', 'Eligibility'], ['amount', 'Amount']]
+      scholarships: [['title', 'Scholarships'], ['eligibility', 'Eligibility'], ['amount', 'Amount']],
+      grants: [['title', 'Grants'], ['eligibility', 'Description'], ['amount', 'Amount']]
     };
 
     _this.state = {
