@@ -16655,7 +16655,7 @@ a.btn--white {
 .county-map {
   position: relative;
   background-color: #BCBEBC;
-  min-height: 450px;
+  min-height: 440px;
 }
 
 /* line 6, resources/assets/styles/components/_county-map.scss */
@@ -16664,42 +16664,50 @@ a.btn--white {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1200px;
+  padding: 3rem 0;
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  margin: 0 auto;
-  max-width: 1200px;
   width: 100%;
   height: 100%;
+  margin: 0 auto;
 }
 
-/* line 18, resources/assets/styles/components/_county-map.scss */
+/* line 19, resources/assets/styles/components/_county-map.scss */
 
 .county-map .js-map svg {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
-/* line 24, resources/assets/styles/components/_county-map.scss */
+/* line 25, resources/assets/styles/components/_county-map.scss */
 
 .county-map .js-accordion {
   position: relative;
   width: 100%;
-  max-width: 350px;
-  margin-left: 10vw;
-  z-index: 10;
 }
 
-/* line 35, resources/assets/styles/components/_county-map.scss */
+@media only screen and (min-width: 769px) {
+  /* line 46, resources/assets/styles/components/_county-map.scss */
+
+  .county-map .js-accordion {
+    max-width: 350px;
+    margin-left: 10vw;
+    z-index: 10;
+  }
+}
+
+/* line 56, resources/assets/styles/components/_county-map.scss */
 
 .counties__inactive path {
   fill: #F5F4F3;
   stroke: #9A9D9A;
 }
 
-/* line 42, resources/assets/styles/components/_county-map.scss */
+/* line 63, resources/assets/styles/components/_county-map.scss */
 
 .a,
 .b,
@@ -16711,7 +16719,7 @@ a.btn--white {
   stroke-width: 0.521px;
 }
 
-/* line 52, resources/assets/styles/components/_county-map.scss */
+/* line 73, resources/assets/styles/components/_county-map.scss */
 
 .b,
 .c,
@@ -16720,81 +16728,81 @@ a.btn--white {
   stroke: #1A1818;
 }
 
-/* line 59, resources/assets/styles/components/_county-map.scss */
+/* line 80, resources/assets/styles/components/_county-map.scss */
 
 [data-county="chatham"] {
   fill: #585D58;
 }
 
-/* line 63, resources/assets/styles/components/_county-map.scss */
+/* line 84, resources/assets/styles/components/_county-map.scss */
 
 [data-county="durham"] {
   fill: #AFBD00;
 }
 
-/* line 67, resources/assets/styles/components/_county-map.scss */
+/* line 88, resources/assets/styles/components/_county-map.scss */
 
 [data-county="orange"] {
   fill: #E56E00;
 }
 
-/* line 71, resources/assets/styles/components/_county-map.scss */
+/* line 92, resources/assets/styles/components/_county-map.scss */
 
 [data-county="wake"] {
   fill: #00525F;
 }
 
-/* line 75, resources/assets/styles/components/_county-map.scss */
+/* line 96, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected] {
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   border: 0;
   width: 100%;
 }
 
-/* line 81, resources/assets/styles/components/_county-map.scss */
+/* line 102, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected]:nth-of-type(1) {
   background-color: #262926;
 }
 
-/* line 86, resources/assets/styles/components/_county-map.scss */
+/* line 107, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected]:nth-of-type(2) {
   background-color: #5A4F42;
 }
 
-/* line 91, resources/assets/styles/components/_county-map.scss */
+/* line 112, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected]:nth-of-type(3) {
   background-color: #7A7B0C;
 }
 
-/* line 96, resources/assets/styles/components/_county-map.scss */
+/* line 117, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected]:nth-of-type(4) {
   background-color: #C75300;
 }
 
-/* line 101, resources/assets/styles/components/_county-map.scss */
+/* line 122, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected]:nth-of-type(5) {
   background-color: #00525F;
 }
 
-/* line 106, resources/assets/styles/components/_county-map.scss */
+/* line 127, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel[aria-hidden="true"] {
   display: none;
 }
 
-/* line 110, resources/assets/styles/components/_county-map.scss */
+/* line 131, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel[role="tabpanel"] {
   padding: 0;
 }
 
-/* line 114, resources/assets/styles/components/_county-map.scss */
+/* line 135, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap {
   position: relative;
@@ -16814,9 +16822,18 @@ a.btn--white {
   text-align: center;
   padding: 2rem 1rem;
   color: white;
+  z-index: 0;
 }
 
-/* line 124, resources/assets/styles/components/_county-map.scss */
+/* line 146, resources/assets/styles/components/_county-map.scss */
+
+.js-accordion__panel-wrap a {
+  color: inherit;
+  text-decoration: underline;
+  margin-top: 1rem;
+}
+
+/* line 152, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap .percentage {
   font-family: "Open Sans Condensed", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -16826,14 +16843,22 @@ a.btn--white {
   line-height: 1.25;
 }
 
-/* line 131, resources/assets/styles/components/_county-map.scss */
+/* line 159, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap .percentage sup {
   font-size: 2.88889rem;
   top: -1.5rem;
 }
 
-/* line 141, resources/assets/styles/components/_county-map.scss */
+/* line 168, resources/assets/styles/components/_county-map.scss */
+
+.js-accordion__panel-wrap .amount sub {
+  top: 0;
+  margin-left: 0.15rem;
+  font-size: 1.5rem;
+}
+
+/* line 175, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap::after {
   position: absolute;
@@ -16847,43 +16872,43 @@ a.btn--white {
   z-index: -1;
 }
 
-/* line 153, resources/assets/styles/components/_county-map.scss */
+/* line 187, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap--all::after {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* line 157, resources/assets/styles/components/_county-map.scss */
+/* line 191, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap--chatham::after {
   background-color: rgba(90, 79, 66, 0.6);
 }
 
-/* line 161, resources/assets/styles/components/_county-map.scss */
+/* line 195, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap--durham::after {
   background-color: rgba(122, 123, 12, 0.6);
 }
 
-/* line 165, resources/assets/styles/components/_county-map.scss */
+/* line 199, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap--orange::after {
   background-color: rgba(199, 83, 0, 0.6);
 }
 
-/* line 169, resources/assets/styles/components/_county-map.scss */
+/* line 203, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap--wake::after {
   background-color: rgba(0, 82, 95, 0.6);
 }
 
-/* line 174, resources/assets/styles/components/_county-map.scss */
+/* line 208, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel[role="tabpanel"] .js-accordion__header {
   display: none;
 }
 
-/* line 178, resources/assets/styles/components/_county-map.scss */
+/* line 212, resources/assets/styles/components/_county-map.scss */
 
 button.js-accordion__header {
   display: block !important;
@@ -16895,7 +16920,7 @@ button.js-accordion__header {
   color: white;
 }
 
-/* line 188, resources/assets/styles/components/_county-map.scss */
+/* line 222, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__header::after {
   position: absolute;
@@ -16906,13 +16931,13 @@ button.js-accordion__header {
   right: 1rem;
 }
 
-/* line 195, resources/assets/styles/components/_county-map.scss */
+/* line 229, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__header[aria-expanded="true"]::after {
   content: " -";
 }
 
-/* line 199, resources/assets/styles/components/_county-map.scss */
+/* line 233, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__header[aria-expanded="false"]::after {
   content: " +";
@@ -17337,8 +17362,50 @@ th svg {
   height: 1.5em;
 }
 
+/* line 64, resources/assets/styles/components/_tables.scss */
+
+.table-container {
+  display: none;
+}
+
+/* line 69, resources/assets/styles/components/_tables.scss */
+
+.lists-container__item {
+  padding: 1.25rem;
+}
+
+/* line 72, resources/assets/styles/components/_tables.scss */
+
+.lists-container__item dl {
+  margin: 0;
+}
+
+/* line 76, resources/assets/styles/components/_tables.scss */
+
+.lists-container__item dt {
+  margin-top: 1rem;
+}
+
+/* line 80, resources/assets/styles/components/_tables.scss */
+
+.lists-container__item:nth-of-type(even) {
+  background-color: #F5F4F3;
+}
+
 @media only screen and (min-width: 769px) {
-  /* line 66, resources/assets/styles/components/_tables.scss */
+  /* line 87, resources/assets/styles/components/_tables.scss */
+
+  .table-container {
+    display: block;
+  }
+
+  /* line 91, resources/assets/styles/components/_tables.scss */
+
+  .lists-container {
+    display: none;
+  }
+
+  /* line 96, resources/assets/styles/components/_tables.scss */
 
   th.description,
   th.eligibility {
@@ -18222,44 +18289,45 @@ body.search-wrapper > a[href="#content"] {
 /* line 148, resources/assets/styles/layouts/_page.scss */
 
 .template-funds .entry-footer {
+  padding: 2rem;
   background-color: #F5F4F3;
 }
 
-/* line 151, resources/assets/styles/layouts/_page.scss */
+/* line 152, resources/assets/styles/layouts/_page.scss */
+
+.template-funds .entry-footer h2 {
+  color: #007485;
+  font-family: "Open Sans Condensed", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* line 157, resources/assets/styles/layouts/_page.scss */
 
 .template-funds .entry-footer a {
   color: inherit;
   text-decoration: underline;
 }
 
-/* line 156, resources/assets/styles/layouts/_page.scss */
+/* line 162, resources/assets/styles/layouts/_page.scss */
 
 .template-funds .entry-footer__image {
   line-height: 0;
 }
 
-/* line 160, resources/assets/styles/layouts/_page.scss */
+/* line 166, resources/assets/styles/layouts/_page.scss */
 
 .template-funds .entry-footer__details {
   padding: 48px 36px;
 }
 
-/* line 163, resources/assets/styles/layouts/_page.scss */
-
-.template-funds .entry-footer__details h2 {
-  color: #007485;
-  font-family: "Open Sans Condensed", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-}
-
 @media only screen and (min-width: 993px) {
-  /* line 171, resources/assets/styles/layouts/_page.scss */
+  /* line 172, resources/assets/styles/layouts/_page.scss */
 
   .template-funds .entry-content {
     padding: 60px 80px;
   }
 }
 
-/* line 177, resources/assets/styles/layouts/_page.scss */
+/* line 178, resources/assets/styles/layouts/_page.scss */
 
 .tri-stats .fl-rich-text {
   background-color: #F1F1F1;
@@ -18267,39 +18335,39 @@ body.search-wrapper > a[href="#content"] {
   text-align: center;
 }
 
-/* line 182, resources/assets/styles/layouts/_page.scss */
+/* line 183, resources/assets/styles/layouts/_page.scss */
 
 .tri-stats .fl-rich-text .h1 {
   font-family: 'Open Sans';
 }
 
-/* line 186, resources/assets/styles/layouts/_page.scss */
+/* line 187, resources/assets/styles/layouts/_page.scss */
 
 .tri-stats .fl-rich-text small {
   line-height: 1.1;
 }
 
-/* line 191, resources/assets/styles/layouts/_page.scss */
+/* line 192, resources/assets/styles/layouts/_page.scss */
 
 .list-partners {
   list-style-type: none;
 }
 
-/* line 194, resources/assets/styles/layouts/_page.scss */
+/* line 195, resources/assets/styles/layouts/_page.scss */
 
 .list-partners li::before {
   display: inline-block;
   content: '>' !important;
 }
 
-/* line 199, resources/assets/styles/layouts/_page.scss */
+/* line 200, resources/assets/styles/layouts/_page.scss */
 
 .list-partners a {
   color: inherit;
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 205, resources/assets/styles/layouts/_page.scss */
+  /* line 206, resources/assets/styles/layouts/_page.scss */
 
   .list-partners {
     -webkit-column-count: 2;
@@ -18308,7 +18376,7 @@ body.search-wrapper > a[href="#content"] {
   }
 }
 
-/* line 210, resources/assets/styles/layouts/_page.scss */
+/* line 211, resources/assets/styles/layouts/_page.scss */
 
 .small-card {
   display: -webkit-box;
@@ -18326,7 +18394,7 @@ body.search-wrapper > a[href="#content"] {
   padding: 1rem;
 }
 
-/* line 220, resources/assets/styles/layouts/_page.scss */
+/* line 221, resources/assets/styles/layouts/_page.scss */
 
 .small-card__text {
   padding: 1.5rem;
@@ -18336,19 +18404,19 @@ body.search-wrapper > a[href="#content"] {
   text-transform: uppercase;
 }
 
-/* line 227, resources/assets/styles/layouts/_page.scss */
+/* line 228, resources/assets/styles/layouts/_page.scss */
 
 .small-card__text + p {
   margin: 0;
 }
 
-/* line 232, resources/assets/styles/layouts/_page.scss */
+/* line 233, resources/assets/styles/layouts/_page.scss */
 
 .small-card img {
   width: 115px;
 }
 
-/* line 237, resources/assets/styles/layouts/_page.scss */
+/* line 238, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box,
 .fl-module-info-box > .fl-module-content,
@@ -18356,7 +18424,7 @@ body.search-wrapper > a[href="#content"] {
   height: 100%;
 }
 
-/* line 243, resources/assets/styles/layouts/_page.scss */
+/* line 244, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box > .fl-module-content > .uabb-infobox {
   display: -webkit-box;
@@ -18372,13 +18440,13 @@ body.search-wrapper > a[href="#content"] {
   background-color: rgba(0, 82, 95, 0.9);
 }
 
-/* line 249, resources/assets/styles/layouts/_page.scss */
+/* line 250, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box > .fl-module-content > .uabb-infobox .uabb-infobox-text {
   color: white;
 }
 
-/* line 255, resources/assets/styles/layouts/_page.scss */
+/* line 256, resources/assets/styles/layouts/_page.scss */
 
 .fl-number {
   background-color: #F1F1F1;
@@ -18432,25 +18500,19 @@ body.search-wrapper > a[href="#content"] {
 
 /* line 32, resources/assets/styles/layouts/_events.scss */
 
-.template-events .tabbed h2 {
-  text-transform: uppercase;
-}
-
-/* line 36, resources/assets/styles/layouts/_events.scss */
-
 .template-events .tabbed h3,
 .template-events .tabbed .h3 {
   text-transform: none;
   color: #007485;
 }
 
-/* line 42, resources/assets/styles/layouts/_events.scss */
+/* line 38, resources/assets/styles/layouts/_events.scss */
 
 .template-events [role="tabpanel"] {
   background-color: white;
 }
 
-/* line 46, resources/assets/styles/layouts/_events.scss */
+/* line 42, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping {
   position: relative;
@@ -18458,7 +18520,7 @@ body.search-wrapper > a[href="#content"] {
   padding: 1rem 0;
 }
 
-/* line 51, resources/assets/styles/layouts/_events.scss */
+/* line 47, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping__subhead {
   color: #E56E00;
@@ -18466,13 +18528,13 @@ body.search-wrapper > a[href="#content"] {
   font-weight: bold;
 }
 
-/* line 57, resources/assets/styles/layouts/_events.scss */
+/* line 53, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping__content {
   width: 100%;
 }
 
-/* line 61, resources/assets/styles/layouts/_events.scss */
+/* line 57, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping__image {
   max-width: 250px;
@@ -18480,7 +18542,7 @@ body.search-wrapper > a[href="#content"] {
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 70, resources/assets/styles/layouts/_events.scss */
+  /* line 66, resources/assets/styles/layouts/_events.scss */
 
   .event-grouping__content {
     -webkit-box-flex: 1;
@@ -18488,7 +18550,7 @@ body.search-wrapper > a[href="#content"] {
             flex-grow: 1;
   }
 
-  /* line 74, resources/assets/styles/layouts/_events.scss */
+  /* line 70, resources/assets/styles/layouts/_events.scss */
 
   .event-grouping__image {
     margin-left: 2rem;
@@ -18497,14 +18559,14 @@ body.search-wrapper > a[href="#content"] {
   }
 }
 
-/* line 82, resources/assets/styles/layouts/_events.scss */
+/* line 78, resources/assets/styles/layouts/_events.scss */
 
 .featured-event {
   background-color: #414141;
   color: #FFF;
 }
 
-/* line 86, resources/assets/styles/layouts/_events.scss */
+/* line 82, resources/assets/styles/layouts/_events.scss */
 
 .featured-event .row,
 .featured-event .sidebar-primary .wrap,
@@ -18513,27 +18575,27 @@ body.search-wrapper > a[href="#content"] {
   margin-right: -0.75rem;
 }
 
-/* line 91, resources/assets/styles/layouts/_events.scss */
+/* line 87, resources/assets/styles/layouts/_events.scss */
 
 .featured-event .content-wrap {
   padding: 2rem 1rem;
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 98, resources/assets/styles/layouts/_events.scss */
+  /* line 94, resources/assets/styles/layouts/_events.scss */
 
   .featured-event .content-wrap {
     padding: 2rem 0;
   }
 
-  /* line 102, resources/assets/styles/layouts/_events.scss */
+  /* line 98, resources/assets/styles/layouts/_events.scss */
 
   .featured-event .image-wrap {
     position: relative;
     height: 100%;
   }
 
-  /* line 106, resources/assets/styles/layouts/_events.scss */
+  /* line 102, resources/assets/styles/layouts/_events.scss */
 
   .featured-event .image-wrap img {
     position: absolute;
@@ -18548,14 +18610,14 @@ body.search-wrapper > a[href="#content"] {
   }
 }
 
-/* line 121, resources/assets/styles/layouts/_events.scss */
+/* line 117, resources/assets/styles/layouts/_events.scss */
 
 .single-event main {
   position: relative;
   padding-bottom: 280px;
 }
 
-/* line 125, resources/assets/styles/layouts/_events.scss */
+/* line 121, resources/assets/styles/layouts/_events.scss */
 
 .single-event main::after {
   position: absolute;
@@ -18572,14 +18634,14 @@ body.search-wrapper > a[href="#content"] {
   content: '';
 }
 
-/* line 141, resources/assets/styles/layouts/_events.scss */
+/* line 137, resources/assets/styles/layouts/_events.scss */
 
 .single-event article {
   max-width: 768px;
   margin: 0 auto;
 }
 
-/* line 146, resources/assets/styles/layouts/_events.scss */
+/* line 142, resources/assets/styles/layouts/_events.scss */
 
 .single-event h1 {
   font-size: 2rem;
@@ -18587,13 +18649,13 @@ body.search-wrapper > a[href="#content"] {
   font-weight: 400;
 }
 
-/* line 152, resources/assets/styles/layouts/_events.scss */
+/* line 148, resources/assets/styles/layouts/_events.scss */
 
 .single-event .kicker {
   color: #E36F1E;
 }
 
-/* line 156, resources/assets/styles/layouts/_events.scss */
+/* line 152, resources/assets/styles/layouts/_events.scss */
 
 .single-event .details {
   color: #E36F1E;
@@ -18802,6 +18864,58 @@ body.search-wrapper > a[href="#content"] {
 }
 
 /* line 11, resources/assets/styles/layouts/_awards.scss */
+
+.template-awards .search-wrap {
+  color: #585D58;
+}
+
+/* line 14, resources/assets/styles/layouts/_awards.scss */
+
+.template-awards .search-wrap label {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* line 19, resources/assets/styles/layouts/_awards.scss */
+
+.template-awards .search-wrap label,
+.template-awards .search-wrap input {
+  color: inherit;
+}
+
+/* line 24, resources/assets/styles/layouts/_awards.scss */
+
+.template-awards .search-wrap input {
+  margin-top: 0.5rem;
+  border-color: #007485;
+}
+
+/* line 28, resources/assets/styles/layouts/_awards.scss */
+
+.template-awards .search-wrap input::-webkit-input-placeholder {
+  color: inherit !important;
+}
+
+.template-awards .search-wrap input::-moz-placeholder {
+  color: inherit !important;
+}
+
+.template-awards .search-wrap input::-ms-input-placeholder {
+  color: inherit !important;
+}
+
+.template-awards .search-wrap input::placeholder {
+  color: inherit !important;
+}
+
+/* line 32, resources/assets/styles/layouts/_awards.scss */
+
+.template-awards .search-wrap input:focus {
+  -webkit-box-shadow: 0 2px 0 0 #007485 !important;
+          box-shadow: 0 2px 0 0 #007485 !important;
+}
+
+/* line 38, resources/assets/styles/layouts/_awards.scss */
 
 .template-awards .page-footer {
   margin-top: 4rem;

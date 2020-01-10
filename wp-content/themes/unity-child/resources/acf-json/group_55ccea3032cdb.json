@@ -28,7 +28,7 @@
             "label": "Staff Member Contact",
             "name": "staff_member_contact",
             "type": "post_object",
-            "instructions": "This section will not display unless a staff member is selected. Staff member must first be created <a href=\"\/wp-admin\/edit.php?post_type=simple-team\">here<\/a>.",
+            "instructions": "This section will not display unless a staff member is selected. Staff member(s) must first be created <a href=\"\/wp-admin\/edit.php?post_type=simple-team\">here<\/a>.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -41,7 +41,7 @@
             ],
             "taxonomy": "",
             "allow_null": 1,
-            "multiple": 0,
+            "multiple": 1,
             "return_format": "id",
             "ui": 1
         }
@@ -63,5 +63,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1577676476
+    "modified": 1578628750
 }

@@ -3,7 +3,11 @@
     <?php foreach ($people as $person) : ?>
       <div class="person">
         <div class="person__image">
-          <?= get_the_post_thumbnail($person, 'staff-headshot'); ?>
+          <?php if (has_post_thumbnail($person)) : ?>
+            <?php echo get_the_post_thumbnail($person, 'staff-headshot'); ?>
+          <?php else : ?>
+            <img src="<?php echo CBB_MODULES_URL . 'assets/images/placeholder-staff.jpg'; ?>" alt="Photo coming soon." />
+          <?php endif; ?>
         </div>
         <div class="details">
           <a class="link-wrap" href="<?= get_the_permalink($person); ?>">
@@ -17,5 +21,5 @@
     <?php endforeach; ?>
   </div>
 <?php else : ?>
-  <span><?= __( 'No people posts found in this category.', 'cbb' ); ?></span>
+  <span><?= __( 'No people found in this category.', 'cbb' ); ?></span>
 <?php endif; ?>

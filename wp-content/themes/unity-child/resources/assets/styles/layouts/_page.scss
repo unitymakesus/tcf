@@ -146,7 +146,13 @@
   }
 
   .entry-footer {
+    padding: 2rem;
     background-color: #F5F4F3;
+
+    h2 {
+      color: $brand-primary;
+      font-family: "Open Sans Condensed", $sans-serif;
+    }
 
     a {
       color: inherit;
@@ -159,11 +165,6 @@
 
     &__details {
       padding: 48px 36px;
-
-      h2 {
-        color: $brand-primary;
-        font-family: "Open Sans Condensed", $sans-serif;
-      }
     }
   }
 
