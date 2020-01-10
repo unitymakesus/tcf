@@ -27,7 +27,7 @@ class Table extends Component {
               <tr>
                 {this.props.headers.map((header, i) => (
                   <th role="columnheader" scope="col" key={i} className={header[0]} aria-sort="">
-                    {header[0]}
+                    {header[1]}
                     {header[0] === 'title' && (
                     <button onClick={() => this.props.handleTableSort(header[0])}>
                       <Arrow sortDir={this.props.sortDir} isCurrent={this.props.sortedBy === header[0]} />
@@ -48,6 +48,23 @@ class Table extends Component {
               ))}
             </tbody>
           </table>
+        </div>
+        <div className="lists-container">
+          {this.props.rows.map((row, i) => (
+            <div className="lists-container__item" key={`list-item` + i}>
+              <h3>{row.title}</h3>
+              <dl>
+                {this.props.headers.map((header, i) =>
+                  header[0] !== 'title' && (
+                    <Fragment key={`dt` + i}>
+                      <dt>{header[1]}</dt>
+                      <dd>{row[header[0]] ? row[header[0]] : `N/A`}</dd>
+                    </Fragment>
+                  )
+                )}
+              </dl>
+            </div>
+          ))}
         </div>
       </Fragment>
     );

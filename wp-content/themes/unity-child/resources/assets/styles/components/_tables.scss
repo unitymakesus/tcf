@@ -61,7 +61,37 @@ th svg {
   height: 1.5em;
 }
 
+.table-container {
+  display: none;
+}
+
+.lists-container {
+  &__item {
+    padding: 1.25rem;
+
+    dl {
+      margin: 0;
+    }
+
+    dt {
+      margin-top: 1rem;
+    }
+
+    &:nth-of-type(even) {
+      background-color: #F5F4F3;
+    }
+  }
+}
+
 @media #{$medium-and-up} {
+  .table-container {
+    display: block;
+  }
+
+  .lists-container {
+    display: none;
+  }
+
   th {
     &.description,
     &.eligibility {

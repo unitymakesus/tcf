@@ -8,6 +8,33 @@
     margin: 0 auto;
   }
 
+  .search-wrap {
+    color: $color-grey;
+
+    label {
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    label,
+    input {
+      color: inherit;
+    }
+
+    input {
+      margin-top: 0.5rem;
+      border-color: $brand-primary;
+
+      &::placeholder {
+        color: inherit !important;
+      }
+
+      &:focus {
+        box-shadow: 0 2px 0 0 $brand-primary !important;
+      }
+    }
+  }
+
   .page-footer {
     margin-top: 4rem;
   }

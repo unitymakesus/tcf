@@ -1,9 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import { render } from 'react-dom';
 import axios from 'axios';
+
+import Search from './components/Search';
 import Table from './components/Table';
 
-class GrantsList extends Component {
+class AwardsList extends Component {
   constructor(props) {
     super(props);
 
@@ -25,6 +27,7 @@ class GrantsList extends Component {
       headers: headers[params.award_category],
       isLoading: false,
       rows: [],
+      search: '',
       sortedBy: null,
       sortDir: 'none',
     };
@@ -36,10 +39,13 @@ class GrantsList extends Component {
    * Retrieve data from WP REST API endpoint.
    * (params is set in blade template)
    */
-  fetchGrants() {
+  fetchAwards() {
     this.setState({
       isLoading: true,
     });
+
+    let { search } = this.state;
+    params.s = search;
 
     axios
       .get('/wp-json/tcf/v1/awards', {
@@ -56,6 +62,16 @@ class GrantsList extends Component {
         this.setState({ isLoading: false });
       });
   }
+
+
+  /**
+   * State management event handlers.
+   */
+  handleSearchQuery = query => {
+    this.setState({ search: query }, () => {
+      this.fetchAwards();
+    });
+  };
 
   handleTableSort(header) {
     let sortDir;
@@ -83,7 +99,7 @@ class GrantsList extends Component {
    * Fetches grant data for initial render.
    */
   componentDidMount() {
-    this.fetchGrants();
+    this.fetchAwards();
   }
 
   render() {
@@ -91,6 +107,7 @@ class GrantsList extends Component {
 
     return (
       <Fragment>
+        <Search category={params.award_category} onSearch={this.handleSearchQuery} />
         <Table
           headers={headers}
           rows={rows}
@@ -103,4 +120,4 @@ class GrantsList extends Component {
   }
 }
 
-render(<GrantsList />, document.getElementById('root'));
+render(<AwardsList />, document.getElementById('root'));

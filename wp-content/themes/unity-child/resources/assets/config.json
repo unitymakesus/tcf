@@ -4,8 +4,8 @@
       "./scripts/main.js",
       "./styles/main.scss"
     ],
-    "grants": [
-      "./scripts/GrantsList.jsx"
+    "awards": [
+      "./scripts/AwardsList.jsx"
     ]
   },
   "publicPath": "/wp-content/themes/unity-child",

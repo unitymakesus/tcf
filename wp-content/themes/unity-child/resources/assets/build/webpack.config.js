@@ -62,9 +62,6 @@ let webpackConfig = {
         test: /\.jsx$/,
         exclude: [/(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/],
         loader: 'babel',
-        query: {
-          presets: ['es2015', 'react'],
-        },
       },
       {
         test: /\.css$/,
