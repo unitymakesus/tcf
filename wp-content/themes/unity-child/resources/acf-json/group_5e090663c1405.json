@@ -78,8 +78,8 @@
                     "key": "field_5e0908a35e269",
                     "label": "Amount",
                     "name": "amount",
-                    "type": "text",
-                    "instructions": "",
+                    "type": "number",
+                    "instructions": "Please provide a number without commas. The county map will do the heavy lifting and convert it into a rounded number with suffix.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -89,9 +89,26 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "$",
+                    "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5e17e5029fe34",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         },
@@ -195,8 +212,8 @@
                     "key": "field_5e0907a1c0077",
                     "label": "Amount",
                     "name": "amount",
-                    "type": "text",
-                    "instructions": "",
+                    "type": "number",
+                    "instructions": "Please provide a number without commas. The county map will do the heavy lifting and convert it into a rounded number with suffix.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -206,9 +223,26 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "$",
+                    "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5e17e4c89fe30",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         },
@@ -312,8 +346,8 @@
                     "key": "field_5e0907c61b10d",
                     "label": "Amount",
                     "name": "amount",
-                    "type": "text",
-                    "instructions": "",
+                    "type": "number",
+                    "instructions": "Please provide a number without commas. The county map will do the heavy lifting and convert it into a rounded number with suffix.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -323,9 +357,26 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "$",
+                    "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5e17e4d89fe31",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         },
@@ -429,8 +480,8 @@
                     "key": "field_5e0907d81b112",
                     "label": "Amount",
                     "name": "amount",
-                    "type": "text",
-                    "instructions": "",
+                    "type": "number",
+                    "instructions": "Please provide a number without commas. The county map will do the heavy lifting and convert it into a rounded number with suffix.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -440,9 +491,26 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "$",
+                    "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5e17e4e69fe32",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         },
@@ -546,8 +614,8 @@
                     "key": "field_5e0907f11b117",
                     "label": "Amount",
                     "name": "amount",
-                    "type": "text",
-                    "instructions": "",
+                    "type": "number",
+                    "instructions": "Please provide a number without commas. The county map will do the heavy lifting and convert it into a rounded number with suffix.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -557,9 +625,26 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "prepend": "$",
+                    "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_5e17e4f19fe33",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         }
@@ -581,5 +666,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1577804672
+    "modified": 1578627365
 }
