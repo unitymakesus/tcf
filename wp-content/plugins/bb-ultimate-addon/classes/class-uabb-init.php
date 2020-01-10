@@ -540,7 +540,7 @@ In case your existing login form is not displaying Facebook login option, adding
 				form[class*="fl-builder-spacer-gap"] .fl-lightbox-header h1:before,
 				form[class*="fl-builder-team"] .fl-lightbox-header h1:before,
 				form[class*="fl-builder-uabb-"] .fl-lightbox-header h1:before {
-					content: "<?php echo $branding_name; ?> ";
+					content: "<?php echo $branding_name; ?> " !important;
 					position: relative;
 					display: inline-block;
 					margin-right: 5px;

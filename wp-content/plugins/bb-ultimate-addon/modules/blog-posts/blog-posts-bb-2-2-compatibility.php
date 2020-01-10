@@ -113,7 +113,7 @@ FLBuilder::register_module(
 							'slider'      => array(
 								'' => array(
 									'min'  => 0,
-									'max'  => 1000,
+									'max'  => 100,
 									'step' => 10,
 								),
 							),
@@ -169,6 +169,21 @@ FLBuilder::register_module(
 							'options' => array(
 								'yes' => __( 'Yes', 'uabb' ),
 								'no'  => __( 'No', 'uabb' ),
+							),
+						),
+						'enable_dots'            => array(
+							'type'    => 'select',
+							'label'   => __( 'Enable Dots', 'uabb' ),
+							'help'    => __( 'Enable Dots for the navigation', 'uabb' ),
+							'default' => 'no',
+							'options' => array(
+								'yes' => __( 'Yes', 'uabb' ),
+								'no'  => __( 'No', 'uabb' ),
+							),
+							'toggle'  => array(
+								'yes' => array(
+									'fields' => array( 'post_dots_size', 'post_dots_color' ),
+								),
 							),
 						),
 						'arrow_position'         => array(
@@ -252,6 +267,36 @@ FLBuilder::register_module(
 									'max'  => 1000,
 									'step' => 10,
 								),
+							),
+						),
+						'post_dots_size'         => array(
+							'type'    => 'unit',
+							'label'   => __( 'Dots Size', 'uabb' ),
+							'units'   => array( 'px' ),
+							'preview' => array(
+								'type'     => 'css',
+								'selector' => '.uabb-blog-posts .slick-dots li button:before',
+								'property' => 'font-size',
+								'unit'     => 'px',
+							),
+							'slider'  => array(
+								'px' => array(
+									'min'  => 0,
+									'max'  => 1000,
+									'step' => 10,
+								),
+							),
+						),
+						'post_dots_color'        => array(
+							'type'        => 'color',
+							'label'       => __( 'Dots Color', 'uabb' ),
+							'show_alpha'  => 'true',
+							'show_reset'  => 'true',
+							'connections' => array( 'color' ),
+							'preview'     => array(
+								'type'     => 'css',
+								'selector' => '.uabb-blog-posts ul.slick-dots li button:before, .uabb-blog-post ul.slick-dots li.slick-active button:before',
+								'property' => 'color',
 							),
 						),
 					),
@@ -1110,6 +1155,19 @@ FLBuilder::register_module(
 								'type'      => 'css',
 								'selector'  => '.uabb-blog-posts-shadow',
 								'property'  => 'background',
+								'important' => true,
+							),
+						),
+						'content_border'            => array(
+							'type'    => 'border',
+							'label'   => __( 'Border', 'uabb' ),
+							'slider'  => true,
+							'units'   => array( 'px' ),
+							'preview' => array(
+								'type'      => 'css',
+								'selector'  => '.uabb-blog-posts-shadow',
+								'property'  => 'border-radius',
+								'unit'      => 'px',
 								'important' => true,
 							),
 						),

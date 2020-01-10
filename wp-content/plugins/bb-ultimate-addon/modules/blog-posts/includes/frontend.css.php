@@ -31,6 +31,7 @@ $settings->masonary_text_color          = UABB_Helper::uabb_colorpicker( $settin
 $settings->taxonomy_filter_select_color = UABB_Helper::uabb_colorpicker( $settings, 'taxonomy_filter_select_color' );
 $settings->selfilter_background_color   = UABB_Helper::uabb_colorpicker( $settings, 'selfilter_background_color' );
 $settings->selfilter_color_border       = UABB_Helper::uabb_colorpicker( $settings, 'selfilter_color_border' );
+$settings->post_dots_color              = UABB_Helper::uabb_colorpicker( $settings, 'post_dots_color' );
 
 $settings->masonary_background_color        = UABB_Helper::uabb_colorpicker( $settings, 'masonary_background_color', true );
 $settings->masonary_text_hover_color        = UABB_Helper::uabb_colorpicker( $settings, 'masonary_text_hover_color' );
@@ -643,6 +644,41 @@ if ( 'yes' == $settings->show_meta ) {
 }
 
 <?php
+if ( ! $version_bb_check ) {
+	$settings->content_border_color = UABB_Helper::uabb_colorpicker( $settings, 'content_border_color', true );
+	?>
+	.fl-node-<?php echo $id; ?> .uabb-blog-posts-shadow {
+	<?php
+	if ( isset( $settings->content_border_type ) ) {
+		echo ( '' !== $settings->content_border_type ) ? 'border-style:' . $settings->content_border_type . ';' : '';
+	}
+	if ( isset( $settings->content_border_width ) ) {
+		echo ( '' !== $settings->content_border_width ) ? 'border-width:' . $settings->content_border_width . 'px;' : '';
+	}
+	if ( isset( $settings->content_border_radius ) ) {
+		echo ( '' !== $settings->content_border_radius ) ? 'border-radius:' . $settings->content_border_radius . 'px;' : '';
+	}
+	if ( isset( $settings->content_border_color ) ) {
+		echo ( '' !== $settings->content_border_color ) ? 'border-color:' . $settings->content_border_color . ';' : '';
+	}
+	?>
+	}
+<?php
+} else {
+	if ( class_exists( 'FLBuilderCSS' ) ) {
+		// Border - Settings.
+		FLBuilderCSS::border_field_rule(
+			array(
+				'settings'     => $settings,
+				'setting_name' => 'content_border',
+				'selector'     => ".fl-node-$id .uabb-blog-posts-shadow",
+			)
+		);
+	}
+}
+?>
+
+<?php
 if ( 'grid' == $settings->is_carousel ) {
 	?>
 @media all and ( min-width: <?php echo $global_settings->medium_breakpoint; ?>px ) {
@@ -751,9 +787,31 @@ if ( 'carousel' == $settings->is_carousel ) {
 		<?php
 	}
 	?>
-}
+}   
 
 	<?php
+
+	if ( 'yes' === $settings->enable_dots ) {
+		if ( '' !== $settings->post_dots_size && isset( $settings->post_dots_size ) ) {
+			?>
+		.fl-node-<?php echo $id; ?> .uabb-blog-posts .slick-dots li button:before {
+			<?php echo ( '' !== $settings->post_dots_size ) ? 'font-size:' . $settings->post_dots_size . 'px;' : ''; ?>
+		}
+			<?php
+		}
+
+		if ( '' !== $settings->post_dots_color && isset( $settings->post_dots_color ) ) {
+			?>
+		.fl-node-<?php echo $id; ?> .uabb-blog-posts ul.slick-dots li button:before {
+			<?php echo ( '' !== $settings->post_dots_color ) ? 'color:' . $settings->post_dots_color . ';' : ''; ?>
+		}
+		.fl-node-<?php echo $id; ?> .uabb-blog-posts ul.slick-dots li.slick-active button:before {
+			<?php echo ( '' !== $settings->post_dots_color ) ? 'color:' . $settings->post_dots_color . ';' : ''; ?>
+			opacity:1;
+		}
+			<?php
+		}
+	}
 }
 ?>
 

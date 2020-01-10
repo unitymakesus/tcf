@@ -214,12 +214,14 @@ $settings->icon_color                = UABB_Helper::uabb_colorpicker( $settings,
 <?php } ?>
 
 <?php if ( ! empty( $settings->bg_hover_color ) && 'gradient' !== $settings->style && 'default' !== $settings->style ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-marketing-button-wrap .uabb-button:hover {
+	.fl-node-<?php echo $id; ?> .uabb-marketing-button-wrap .uabb-button:hover,
+	.fl-node-<?php echo $id; ?> .uabb-marketing-button.uabb-marketing-button-wrap-before.uabb-marketing-btn__link:hover {
 		background: <?php echo $settings->bg_hover_color; ?>;
 	}
 <?php } ?>
 <?php if ( 'default' === $settings->style ) { ?>
-	.fl-node-<?php echo $id; ?> .uabb-marketing-button-wrap .uabb-button:hover {
+	.fl-node-<?php echo $id; ?> .uabb-marketing-button-wrap .uabb-button:hover,
+	.fl-node-<?php echo $id; ?> .uabb-marketing-button.uabb-marketing-button-wrap-before.uabb-marketing-btn__link:hover {
 		background: <?php echo uabb_theme_default_button_bg_hover_color( $settings->bg_hover_color ); ?>;
 	}
 <?php } ?>
