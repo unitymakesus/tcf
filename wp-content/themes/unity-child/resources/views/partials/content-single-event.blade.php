@@ -1,6 +1,6 @@
-@if ($hero = get_field('event_hero_image'))
+@if (has_post_thumbnail())
 <figure class="text-center">
-  <img src="{{ $hero['sizes']['large'] }}" alt="{{ $hero['alt'] }}" />
+  {!! the_post_thumbnail('large') !!}
 </figure>
 @endif
 
