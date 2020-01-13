@@ -147,7 +147,7 @@ jQuery(document).ready(function () { return routes.loadEvents(); });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_webfontloader___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_webfontloader__);
 
 
-var fontFamilies = ['Open Sans:400,400i,600,700', 'Open Sans Condensed:700', 'Material Icons'];
+var fontFamilies = ['Open Sans:400,400i,600,700', 'Open Sans Condensed:700', 'PT Serif:400', 'Material Icons'];
 
 __WEBPACK_IMPORTED_MODULE_0_webfontloader___default.a.load({
   google: {

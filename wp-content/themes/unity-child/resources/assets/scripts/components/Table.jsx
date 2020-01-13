@@ -41,7 +41,9 @@ class Table extends Component {
             <tbody>
               {this.props.rows.map((row, i) => (
                 <tr key={i}>
-                  <td role="rowheader" scope="row" className="fw-600">{row.title}</td>
+                  <td role="rowheader" scope="row" className="fw-600">
+                    <a href={row.url}>{row.title}</a>
+                  </td>
                   <td>{row.eligibility}</td>
                   <td>{row.amount}</td>
                 </tr>
@@ -52,7 +54,9 @@ class Table extends Component {
         <div className="lists-container">
           {this.props.rows.map((row, i) => (
             <div className="lists-container__item" key={`list-item` + i}>
-              <h3>{row.title}</h3>
+              <h3>
+                <a href={row.url}>{row.title}</a>
+              </h3>
               <dl>
                 {this.props.headers.map((header, i) =>
                   header[0] !== 'title' && (

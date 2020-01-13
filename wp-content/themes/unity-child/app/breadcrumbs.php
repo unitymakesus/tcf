@@ -20,6 +20,18 @@ add_filter('breadcrumb_trail_object', function($args) {
     array_splice($breadcrumbs->items, 1, 0, '<a href="/events/">Events</a>');
   }
 
+  if ($post_type == "post") {
+    if (is_singular()) {
+      // Add the blog permalink.
+      $title = get_the_title( get_option('page_for_posts', true) );
+      array_splice($breadcrumbs->items, 1, 0, '<a href="' . get_post_type_archive_link( 'post' ) . '">' . $title . '</a>');
+
+      // Add primary category.
+      $primary_term = the_seo_framework()->get_primary_term($post->ID, 'category');
+      array_splice($breadcrumbs->items, 2, 1, '<a href="' . get_term_link($primary_term) . '">' . $primary_term->name . '</a>');
+    }
+  }
+
   return $breadcrumbs;
 
  function __construct( $args = array() ) {

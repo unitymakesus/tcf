@@ -65,7 +65,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "views\/template-funds.blade.php"
+                "value": "views\/template-narrow-w-footer-contact.blade.php"
             }
         ]
     ],
@@ -77,5 +77,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1577675797
+    "modified": 1578882255
 }

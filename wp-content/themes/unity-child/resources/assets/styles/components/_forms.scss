@@ -1,3 +1,46 @@
+label {
+  font-size: 1rem;
+
+  @media #{$medium-and-up} {
+    font-size: 0.8rem;
+  }
+}
+
+textarea {
+  font-size: 1rem;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  min-height: 150px;
+}
+
+select:not(.browser-default) {
+  display: block;
+  font-size: 1rem;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 100%;
+  max-width: 100%;
+  height: rem-calc(56);
+  margin: 0;
+  border-radius: 0;
+  border-color: $brand-primary;
+  appearance: none;
+  background-color: #FFF;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%CCCCCC%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat, repeat;
+  // arrow icon position (1em from the right, 50% vertical) , then gradient position
+  background-position: right 0.7em top 50%, 0 0;
+  // icon size, then gradient
+  background-size: 0.65em auto, 100%;
+
+  // Hide arrow icon in IE
+  ::-ms-expand {
+    display: none;
+  }
+
+  option {
+    font-weight: normal;
+  }
+}
+
 .wp-search {
   position: relative;
   display: flex;
@@ -57,5 +100,257 @@
     &::placeholder {
       color: inherit;
     }
+  }
+}
+
+// Gravity Forms
+.gform_body {
+  label {
+    color: inherit;
+  }
+}
+
+.gfield_html {
+  margin-bottom: 0 !important;
+}
+
+.gsection {
+  margin-top: 40px;
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.gform_fields li {
+  padding-left: 0 !important;
+  margin-bottom: 1rem;
+
+  &::before {
+    display: none !important;
+  }
+}
+
+.gfield {
+  legend {
+    @extend .h3;
+  }
+
+  label {
+    font-weight: 600;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"],
+  textarea {
+    border-color: $brand-primary;
+    color: inherit;
+    margin: 0;
+
+    &:focus {
+      border-bottom-width: 1px;
+      box-shadow: $focus-box-shadow !important;
+    }
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+}
+
+.gsection_title {
+  color: $color-orange;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.gform_footer input[type="submit"] {
+  @extend .btn;
+  @extend .btn--orange;
+}
+
+.gfield_required {
+  color: $error-color;
+}
+
+.gfield_error .validation_message,
+.gform_validation_error #error {
+  padding: 1rem;
+  background-color: #FFEBEE;
+  color: #B71C1C;
+
+  a {
+    color: inherit;
+  }
+}
+
+.gfield_error input,
+.gfield_error textarea,
+.gfield_error select {
+  border-color: #B71C1C !important;
+}
+
+.gfield_radio, .gfield_checkbox {
+  margin-bottom: 0 !important;
+
+  li {
+    margin-bottom: 0.25rem;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    + label {
+      color: $color-grey;
+      position: relative;
+      padding-left: 35px;
+      cursor: pointer;
+      display: inline-block;
+      height: 25px;
+      line-height: 25px;
+      font-size: 0.8rem;
+      font-weight: normal;
+      transition: 0.3s ease;
+      user-select: none;
+
+      &::before,
+      &::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 4px;
+        width: 16px;
+        height: 16px;
+        z-index: 0;
+        transition: 0.28s ease;
+        border-radius: 50%;
+        border: 2px solid transparentize($brand-primary, 0.4);
+        content: '';
+      }
+    }
+
+    // &:focus {
+    //   + label {
+    //     font-weight: 400;
+    //   }
+    // }
+
+    &:not(:checked):focus {
+      + label {
+        &::before {
+          @extend .z-depth-1;
+        }
+      }
+    }
+  }
+
+  input[type="radio"] {
+    &:not(:checked) {
+      + label {
+        &::after {
+          transform: scale(0);
+        }
+      }
+    }
+
+    &:checked {
+      + label {
+        &::before {
+          border: 2px solid $brand-primary;
+        }
+
+        &::after {
+          border: $brand-primary;
+          background-color: $brand-primary;
+          transform: scale(0.5);
+        }
+      }
+    }
+  }
+
+  input[type="checkbox"] {
+    + label {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        width: 18px;
+        height: 18px;
+        border-radius: 1px;
+        margin: 3px 0 0 0;
+      }
+    }
+
+    &:checked {
+      + label {
+        &::before {
+          top: -4px;
+          left: -5px;
+          width: 12px;
+          height: 22px;
+          border-top: 2px solid transparent;
+          border-left: 2px solid transparent;
+          border-right-color: $brand-primary;
+          border-bottom-color: $brand-primary;
+          transform: rotate(40deg);
+          backface-visibility: hidden;
+          transform-origin: 100% 100%;
+        }
+      }
+    }
+  }
+}
+
+// Donate Form
+#gform_1 {
+  .ginput_complex {
+    > * {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    @media #{$medium-and-up} {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -0.5rem;
+
+      .gf_clear_complex {
+        display: none;
+      }
+
+      > * {
+        flex-grow: 1;
+        padding: 0 0.5rem;
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    .name_prefix,
+    .name_middle,
+    .name_suffix {
+      flex-basis: 15%;
+    }
+
+    .address_line_1,
+    .address_line_2 {
+      flex-basis: 50%;
+    }
+
+    .address_zip {
+      flex-basis: 0;
+    }
+  }
+
+  .gift-amount .instruction {
+    @extend .screen-reader-text;
+  }
+
+  .gfield_calculation {
+    display: none;
   }
 }

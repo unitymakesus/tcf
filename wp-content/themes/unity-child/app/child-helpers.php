@@ -3,6 +3,17 @@
 namespace App;
 
 /**
+ *
+ */
+function get_the_primary_term($post_id, $taxonomy) {
+  if ($primary_term = the_seo_framework()->get_primary_term($post_id, $taxonomy)) {
+    return $primary_term;
+  }
+
+	return the_seo_framework()->get_primary_term($post_id, $taxonomy);
+}
+
+/**
  * Retrieve the event's date or date override text.
  */
 function get_event_date($event) {
@@ -61,4 +72,84 @@ function number_format_short($n, $precision = 1) {
   }
 
 	return $num_format . $suffix;
+}
+
+/**
+ *
+ */
+function get_award_deadline_text($award) {
+  // Use the override text if we have it.
+  if ($override = get_field('deadline_override', $award)) {
+    return $override;
+  }
+
+  $deadline = get_field('deadline', $award);
+  $deadline = \DateTime::createFromFormat('Ymd', $deadline);
+  return $deadline->format('M j, Y');
+}
+
+/**
+ * Displays a Twitter feed from oAuth plugin
+ * @param string $username
+ * @param int $count
+ */
+function displayTweets($username, $count) {
+	if (!function_exists('getTweets')) {
+		return;
+	}
+
+  $tweets = getTweets($username, $count);
+
+  if ($tweets) {
+    foreach ($tweets as $tweet) {
+      if (isset($tweet['text'])) {
+        $tweet_text = $tweet['text'];
+      }
+
+      // add links to shortlinks
+      if (isset($tweet['entities']['urls'])) {
+        foreach ($tweet['entities']['urls'] as $key => $link) {
+          $tweet_text = preg_replace('`'.$link['url'].'`', '<a href="'.$link['url'].'" target="_blank">'.$link['url'].'</a>',
+          $tweet_text);
+        }
+      }
+
+      // add link to hashtags
+      if (isset($tweet['entities']['hashtags'])) {
+        foreach ($tweet['entities']['hashtags'] as $key => $hashtag) {
+          $tweet_text = preg_replace('/#'.$hashtag['text'].'/i', '<a href="https://twitter.com/hashtag/'.$hashtag['text'].'" target="_blank">#'.$hashtag['text'].'</a>', $tweet_text);
+        }
+      }
+
+      // Photo media
+      $photo_text = '';
+      if (isset($tweet['quoted_status']['entities']['media'])) {
+        foreach ($tweet['quoted_status']['entities']['media'] as $key => $media) {
+          if ($media['type'] === 'photo') {
+            $photo_url = $media['media_url_https'];
+            $photo_url .= ':thumb';
+            $photo_text = '<div class="media-left pull-left"><img class="media-object" src="'.$photo_url.'" alt=""/></div>';
+          }
+        }
+      }
+
+      // Retweets & Favorites
+      $count_text = '';
+      if (isset($tweet['retweet_count']) || isset($tweet['favorite_count'])) {
+        $count_text = '<div>';
+
+        if (isset($tweet['retweet_count'])) {
+          $count_text .= '<span class="twitter-stat twitter-stat--retweet"><span class="screen-reader-text">Retweeted</span>'.$tweet['favorite_count'].'<span class="screen-reader-text">times.</span></span>';
+        }
+
+        if (isset($tweet['favorite_count'])) {
+          $count_text .= '<span class="twitter-stat twitter-stat--like"><span class="screen-reader-text">Favorited </span>'.$tweet['favorite_count'].'<span class="screen-reader-text"> times.</span></span>';
+        }
+
+        $count_text .= '</div>';
+      }
+
+      echo "<div class='tweets__item'>{$photo_text}<div class='media-body'>{$tweet_text} {$count_text}</div></div>";
+    }
+  }
 }

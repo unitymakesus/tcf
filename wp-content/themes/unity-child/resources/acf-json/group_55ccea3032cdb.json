@@ -51,7 +51,14 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "views\/template-funds.blade.php"
+                "value": "views\/template-narrow-w-footer-contact.blade.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "award"
             }
         ]
     ],
@@ -63,5 +70,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578628750
+    "modified": 1578889530
 }

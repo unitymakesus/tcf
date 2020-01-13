@@ -9,7 +9,6 @@
   padding: 0 1rem;
   background-size: cover;
   background-position: center;
-  height: 450px;
 
   &__title {
     font-size: rem-calc(32);
@@ -47,6 +46,8 @@
     background-size: 350px 260px;
     background-position: right top;
     content: '';
+    z-index: 5;
+    pointer-events: none;
   }
 
   .container {
@@ -66,12 +67,11 @@
 
 .page-header--w-icon {
   min-height: 390px;
-  margin-bottom: 4rem;
 
   .container {
     display: flex;
     align-items: center;
-    background-color: #007384;
+    background-color: $brand-primary;
   }
 
   &__title {
@@ -88,7 +88,6 @@
   background-color: $brand-primary;
   color: white;
   padding: 3rem 0;
-  margin-bottom: 3rem;
 
   .container {
     padding: 0;
@@ -104,7 +103,7 @@
     bottom: 0;
     width: 100%;
     max-width: 1200px;
-    height: 100%;
+    height: auto;
     margin: 0 auto;
     background-image: url('../images/textures/texture-triangles.svg');
     background-repeat: no-repeat;
@@ -116,17 +115,18 @@
 }
 
 .template-audience .page-header,
-.template-funds .page-header {
+.template-narrow-w-footer-contact .page-header {
   > .container {
     max-width: 940px;
   }
 }
 
-.template-funds .page-header {
+.template-narrow-w-footer-contact .page-header {
   margin-bottom: 0;
 }
 
-.template-funds {
+.single-award,
+.template-narrow-w-footer-contact {
   main {
     background-color: #E7E4E0;
   }
@@ -142,6 +142,7 @@
   }
 
   .entry-content {
+    padding: 2rem 0;
     background-color: white;
   }
 
@@ -170,7 +171,7 @@
 
   @media #{$large-and-up} {
     .entry-content {
-      padding: 60px 80px;
+      padding: 80px 98px;
     }
   }
 }
@@ -256,4 +257,57 @@
 .fl-number {
   background-color: #F1F1F1;
   color: rgba(112, 112, 112, 1);
+}
+
+// Tweets
+.tweets {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  &__heading {
+    @extend .h2;
+
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__wrap {
+    padding: 2rem;
+    background-color: $color-beige;
+  }
+
+  &__item {
+    padding: 0 0.5rem;
+  }
+
+  .twitter-stat {
+    margin-right: 2rem;
+
+    &::before {
+      display: inline-block;
+      position: relative;
+      top: 2px;
+      margin-right: 0.5rem;
+      background-size: 18px 18px;
+      width: 18px;
+      height: 18px;
+      content: '';
+    }
+
+    &--like::before {
+      background-image: url('../images/icons/icon-twitter-like.svg');
+    }
+
+    &--retweet::before {
+      background-image: url('../images/icons/icon-twitter-retweet.svg');
+    }
+  }
+
+  @media #{$medium-and-up} {
+    &__wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
 }

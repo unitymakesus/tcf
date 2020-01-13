@@ -1,5 +1,5 @@
 {{--
-  Template Name: Funds
+  Template Name: Narrow w/ Footer Contact
  --}}
 @extends('layouts.app')
 

@@ -105,7 +105,41 @@ function create_post_type() {
     ),
     'has_archive' => false,
   );
-  register_post_type( 'award', $argsAwards );
+	register_post_type( 'award', $argsAwards );
+
+	$argsPress = array(
+    'labels' => array(
+				'name' => 'Press',
+				'singular_name' => 'Press',
+				'add_new' => 'Add New',
+				'add_new_item' => 'Add New Press',
+				'edit' => 'Edit',
+				'edit_item' => 'Edit Press',
+				'new_item' => 'New Press',
+				'view_item' => 'View Press',
+				'search_items' => 'Search Press',
+				'not_found' =>  'Nothing found in the Database.',
+				'not_found_in_trash' => 'Nothing found in Trash',
+				'parent_item_colon' => ''
+    ),
+    'public' => true,
+    'exclude_from_search' => false,
+    'publicly_queryable' => true,
+    'show_ui' => true,
+    'show_in_nav_menus' => false,
+    'menu_position' => 20,
+    'menu_icon' => 'dashicons-clipboard',
+    'capability_type' => 'page',
+		'hierarchical' => false,
+		'show_in_rest' => true,
+    'supports' => array(
+			'title',
+			'editor',
+      'revisions',
+    ),
+    'has_archive' => false,
+  );
+  register_post_type( 'press', $argsPress );
 }
 add_action( 'init', __NAMESPACE__.'\\create_post_type' );
 
@@ -166,5 +200,19 @@ function create_taxonomies() {
 		'rewrite' => false
 	);
 	register_taxonomy('award_category', 'award', $argsAwardCategories);
+
+	$argsPressCategories = array(
+		'labels' => array(
+			'name' => __( 'Categories' ),
+			'singular_name' => __( 'Category' )
+		),
+		'publicly_queryable' => true,
+		'show_ui' => true,
+    'show_admin_column' => true,
+		'show_in_nav_menus' => false,
+		'hierarchical' => true,
+		'rewrite' => false
+	);
+	register_taxonomy('press_category', 'press', $argsPressCategories);
 }
 add_action( 'init', __NAMESPACE__.'\\create_taxonomies' );
