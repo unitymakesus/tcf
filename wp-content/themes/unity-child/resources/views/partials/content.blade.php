@@ -15,6 +15,10 @@ $cat_slug = $primary->slug ?? '';
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, perferendis, laudantium nulla necessitatibus eos quisquam enim corrupti possimus a cumque odit voluptatem nisi quia ipsam vel. Ad, nam cumque. Earum... <a href="#">Continued</a>
   </div>
   <div class="single-entry__image">
-    {!! the_post_thumbnail('thumbnail') !!}
+    @if (has_post_thumbnail())
+      {!! the_post_thumbnail('thumbnail') !!}
+    @else
+      <img src="@asset('images/textures/texture-triangles-gray.svg')" alt="" />
+    @endif
   </div>
 </article>

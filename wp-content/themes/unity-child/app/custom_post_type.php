@@ -135,9 +135,10 @@ function create_post_type() {
     'supports' => array(
 			'title',
 			'editor',
-      'revisions',
+			'revisions',
+			'thumbnail',
     ),
-    'has_archive' => false,
+    'has_archive' => true,
   );
   register_post_type( 'press', $argsPress );
 }

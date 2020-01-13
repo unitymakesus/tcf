@@ -38,8 +38,14 @@ if ( function_exists('acf_add_options_page') ) {
 
   acf_add_options_sub_page([
     'page_title' 	=> 'Blog / Stories Settings',
-    'menu_title'	=> 'Settings',
+    'menu_title'	=> 'Blog / Stories Settings',
     'parent_slug'	=> 'edit.php',
+  ]);
+
+  acf_add_options_sub_page([
+    'page_title' 	=> 'Press Settings',
+    'menu_title'	=> 'Press Settings',
+    'parent_slug'	=> 'edit.php?post_type=press',
   ]);
 }
 
