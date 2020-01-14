@@ -1,4 +1,5 @@
-.btn {
+.btn,
+a.btn {
   box-shadow: none;
   border-color: currentColor;
   border-style: solid;
@@ -9,6 +10,7 @@
   font-size: rem-calc(14);
   font-weight: 700;
   line-height: 1.5;
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -21,27 +23,19 @@
   }
 }
 
-.btn--skip {
-  background-color: #E36F1E;
-  color: white;
+.btn--orange,
+a.btn--orange {
+  color: $color-orange;
 
   &:hover,
   &:focus {
-    background-color: #E36F1E;
-  }
-}
-
-.btn--orange {
-  color: #E36F1E;
-
-  &:hover,
-  &:focus {
-    background-color: #E36F1E;
+    background-color: $color-orange;
     color: white;
   }
 }
 
-.btn--white {
+.btn--white,
+a.btn--white {
   color: white;
 }
 

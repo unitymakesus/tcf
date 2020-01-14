@@ -11,7 +11,7 @@ body {
   // Skip to content link.
   > a[href="#content"] {
     @extend .btn;
-    @extend .btn--skip;
+    @extend .btn--orange;
   }
 }
 

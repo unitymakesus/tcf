@@ -14,7 +14,7 @@
     @endif
     <div class="col s12">
       @php the_content() @endphp
-      <a class="btn" href="#">{{ __('Apply Now', 'sage') }}</a>
+      <a class="btn btn--orange" href="#">{{ __('Apply Now', 'sage') }}</a>
     </div>
   </div>
 </div>
