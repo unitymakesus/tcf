@@ -7,7 +7,7 @@
           <h2 class="h2">{{ get_field('global_footer_cta_heading', 'option') }}</h2>
           {!! get_field('global_footer_cta_text', 'option') !!}
           @if ($link = get_field('global_footer_cta_link', 'option'))
-          <a class="btn btn--white" href="{{ $link['url'] }}" target="{{ $link['target'] }}">{{ $link['title'] }}</a>
+            <a class="btn btn--white btn--footer-cta" href="{{ $link['url'] }}" target="{{ $link['target'] }}">{{ $link['title'] }}</a>
           @endif
         </div>
       </div>

@@ -64,7 +64,7 @@
             "label": "Link",
             "name": "global_footer_cta_link",
             "type": "link",
-            "instructions": "",
+            "instructions": "Note: If you would like to use this as a trigger for a pop-up, please set the link's destination as \"#\" instead of a URL.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -92,5 +92,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1577652986
+    "modified": 1579729997
 }

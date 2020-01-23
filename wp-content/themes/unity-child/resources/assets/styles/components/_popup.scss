@@ -1,0 +1,36 @@
+// Popup Maker
+.pum-theme-lightbox {
+  .pum-container {
+    border: 0;
+    border-radius: 0;
+    padding: 1.5rem;
+
+    h2 {
+      @extend .h2;
+
+      color: $brand-primary;
+    }
+  }
+
+  .pum-content {
+    color: $color-grey;
+
+    + .pum-close {
+      top: 6px;
+      right: 6px;
+      border: 0;
+      color: $brand-primary;
+      background-color: transparent;
+      box-shadow: none;
+      border-radius: 0;
+      text-shadow: none;
+      transition: all 0.3s ease-in-out;
+
+      &:hover,
+      &:focus {
+        background-color: $brand-primary;
+        color: $color-white;
+      }
+    }
+  }
+}
