@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col s12">
           <h2>{{ get_field('contact_cta_title') }}</h2>
-          <p>Grantmaking: Arts, Community Development, Education, and the Environment</p>
+          {!! get_field('contact_cta_text') !!}
         </div>
       </div>
       @foreach ($staff_members as $staff)
@@ -19,6 +19,15 @@
               <div class="row">
                 <div class="col s12">
                   <h3 class="mb-0">{{ get_the_title($staff) }}</h3>
+                  @if (have_rows('job_titles', $staff))
+                  <dl class="mt-2">
+                    <dt class="screen-reader-text">{{ __('Job Title(s)', 'sage') }}</dt>
+                    @while (have_rows('job_titles', $staff))
+                      @php the_row(); @endphp
+                      <dd class="fw-600" itemprop="jobTitle">{{ get_sub_field('job_title') }}</dd>
+                    @endwhile
+                  </dl>
+                  @endif
                 </div>
                 @if ($email = get_field('email', $staff))
                   <div class="col s12 m6">

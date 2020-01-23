@@ -23,22 +23,18 @@ function modify_blog_query($query) {
     }
 
     /**
-     * Main blog (stories).
+     * Main blog (+ stories).
      */
-    if ($query->is_home()) {
-      if (isset($_GET['filter'])) {
-        $stories = get_field('stories_taxonomies', 'options');
-        $tax_query = [
-          [
-            'taxonomy' => 'category',
-            'field'    => 'id',
-            'terms'    => $stories,
-            'operator' => $_GET['filter'] === 'stories' ? 'IN' : 'NOT IN',
-          ]
-        ];
+    if ($query->is_home() && isset($_GET['filter'])) {
+      $tax_query = [
+        [
+          'taxonomy' => 'tcf_post_type',
+          'field'    => 'slug',
+          'terms'    => $_GET['filter'],
+        ]
+      ];
 
-        $query->set('tax_query', $tax_query);
-      }
+      $query->set('tax_query', $tax_query);
     }
 
     /**

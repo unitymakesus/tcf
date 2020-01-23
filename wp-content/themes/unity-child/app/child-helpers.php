@@ -3,7 +3,7 @@
 namespace App;
 
 /**
- *
+ * Returns primary term based on The SEO Framework.
  */
 function get_the_primary_term($post_id, $taxonomy) {
   if ($primary_term = the_seo_framework()->get_primary_term($post_id, $taxonomy)) {
@@ -14,14 +14,17 @@ function get_the_primary_term($post_id, $taxonomy) {
 }
 
 /**
- * Retrieve the event's date or date override text.
+ * Retrieve the content's date or date override text.
+ *
+ * @param string $post_type
+ * @param int $id
  */
-function get_event_date($event) {
-  if ($date_display = get_field('event_date_display', $event)) {
+function get_custom_date($post_type, $id) {
+  if ($date_display = get_field("{$post_type}_date_display", $id)) {
     return $date_display;
   }
 
-  return get_field('event_date', $event);
+  return get_field("{$post_type}_date", $id);
 }
 
 /**
@@ -75,7 +78,7 @@ function number_format_short($n, $precision = 1) {
 }
 
 /**
- *
+ * Returns the deadline text (or override text) for a Scholarship or Grant.
  */
 function get_award_deadline_text($award) {
   // Use the override text if we have it.

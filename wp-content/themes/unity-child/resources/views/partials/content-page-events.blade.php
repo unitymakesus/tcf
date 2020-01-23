@@ -9,7 +9,7 @@
       <div class="col m6">
         <div class="content-wrap">
           <h2 class="mb-0">{{ $featured_event->post_title }}</h2>
-          <div class="fw-700 mb-3">{{ App\get_event_date($featured_event->ID) }}</div>
+          <div class="fw-700 mb-3">{{ App\get_custom_date('event', $featured_event->ID) }}</div>
           @if ($location = get_field('event_location', $featured_event->ID))
             <p>{{ $location }}</p>
           @endif

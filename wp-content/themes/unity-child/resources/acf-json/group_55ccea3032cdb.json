@@ -24,6 +24,25 @@
             "disabled": 0
         },
         {
+            "key": "field_5e28b3a5073d7",
+            "label": "Contact CTA Text",
+            "name": "contact_cta_text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "wpautop"
+        },
+        {
             "key": "field_55cceaaeb82dc",
             "label": "Staff Member Contact",
             "name": "staff_member_contact",
@@ -70,5 +89,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578889530
+    "modified": 1579726152
 }

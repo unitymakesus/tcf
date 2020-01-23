@@ -92,7 +92,7 @@ function create_post_type() {
     'exclude_from_search' => false,
     'publicly_queryable' => true,
     'show_ui' => true,
-    'show_in_nav_menus' => false,
+    'show_in_nav_menus' => true,
     'menu_position' => 20,
     'menu_icon' => 'dashicons-awards',
     'capability_type' => 'page',
@@ -126,7 +126,7 @@ function create_post_type() {
     'exclude_from_search' => false,
     'publicly_queryable' => true,
     'show_ui' => true,
-    'show_in_nav_menus' => false,
+    'show_in_nav_menus' => true,
     'menu_position' => 20,
     'menu_icon' => 'dashicons-clipboard',
     'capability_type' => 'page',
@@ -154,7 +154,8 @@ function create_taxonomies() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
     'show_admin_column' => true,
-		'show_in_nav_menus' => false,
+		'show_in_nav_menus' => true,
+		'show_in_rest' => true,
 		'hierarchical' => true,
 		'rewrite' => false
 	);
@@ -169,6 +170,7 @@ function create_taxonomies() {
 		'show_ui' => true,
     'show_admin_column' => true,
 		'show_in_nav_menus' => false,
+		'show_in_rest' => true,
 		'hierarchical' => true,
 		'rewrite' => false
 	);
@@ -183,6 +185,7 @@ function create_taxonomies() {
 		'show_ui' => true,
     'show_admin_column' => true,
 		'show_in_nav_menus' => false,
+		'show_in_rest' => true,
 		'hierarchical' => true,
 		'rewrite' => false
 	);
@@ -197,6 +200,7 @@ function create_taxonomies() {
 		'show_ui' => true,
     'show_admin_column' => true,
 		'show_in_nav_menus' => false,
+		'show_in_rest' => true,
 		'hierarchical' => true,
 		'rewrite' => false
 	);
@@ -211,9 +215,25 @@ function create_taxonomies() {
 		'show_ui' => true,
     'show_admin_column' => true,
 		'show_in_nav_menus' => false,
+		'show_in_rest' => true,
 		'hierarchical' => true,
 		'rewrite' => false
 	);
 	register_taxonomy('press_category', 'press', $argsPressCategories);
+
+	$argsTypes = array(
+		'labels' => array(
+			'name' => __( 'Types' ),
+			'singular_name' => __( 'Type' )
+		),
+		'publicly_queryable' => true,
+		'show_ui' => true,
+    'show_admin_column' => true,
+		'show_in_nav_menus' => false,
+		'show_in_rest' => true,
+		'hierarchical' => true,
+		'rewrite' => false,
+	);
+	register_taxonomy('tcf_post_type', 'post', $argsTypes);
 }
 add_action( 'init', __NAMESPACE__.'\\create_taxonomies' );

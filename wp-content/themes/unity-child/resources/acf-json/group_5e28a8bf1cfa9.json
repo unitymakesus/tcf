@@ -1,11 +1,11 @@
 {
-    "key": "group_5e1cb19cbd388",
-    "title": "Blog \/ Stories Settings",
+    "key": "group_5e28a8bf1cfa9",
+    "title": "Press Settings",
     "fields": [
         {
-            "key": "field_5e288fd043694",
+            "key": "field_5e28a8bf21805",
             "label": "Header Intro",
-            "name": "stories_header_intro",
+            "name": "press_header_intro",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -27,7 +27,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-blog-stories-settings"
+                "value": "acf-options-press-settings"
             }
         ]
     ],
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1579723108
+    "modified": 1579723072
 }

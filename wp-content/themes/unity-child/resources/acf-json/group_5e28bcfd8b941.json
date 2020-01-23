@@ -1,0 +1,60 @@
+{
+    "key": "group_5e28bcfd8b941",
+    "title": "Press Info",
+    "fields": [
+        {
+            "key": "field_5e28bcfd9121e",
+            "label": "Press Date",
+            "name": "press_date",
+            "type": "date_picker",
+            "instructions": "Required to assist with ordering on the main Press page. Can be overridden visually with the \"Press Date Display\" field.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e28bcfd91244",
+            "label": "Press Date Display",
+            "name": "press_date_display",
+            "type": "text",
+            "instructions": "Handy override for the press date field. Allows for flexible text such as \"March 2020\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "press"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1579728369
+}

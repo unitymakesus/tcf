@@ -1,12 +1,12 @@
 {
-    "key": "group_5e1cb19cbd388",
-    "title": "Blog \/ Stories Settings",
+    "key": "group_5e28bbeeda472",
+    "title": "Author",
     "fields": [
         {
-            "key": "field_5e288fd043694",
-            "label": "Header Intro",
-            "name": "stories_header_intro",
-            "type": "wysiwyg",
+            "key": "field_5e28bbf386c19",
+            "label": "Author Name",
+            "name": "author_name",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,28 +16,28 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 1
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf-options-blog-stories-settings"
+                "value": "post"
             }
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "side",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1579723108
+    "modified": 1579727881
 }

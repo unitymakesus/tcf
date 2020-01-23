@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header-w-intro')
+  @include('partials.page-header-w-intro', [
+    'archive_intro' => is_home() ? get_field('stories_header_intro', 'option') : ''
+  ])
   <div class="archive-wrap">
     @if (is_home())
     <div class="archive-filters">
@@ -22,13 +24,12 @@
 
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col s12">
           <div class="archive-wrap__inner">
             @if (!have_posts())
               <div class="alert alert-warning">
-                {{ __('Sorry, no results were found.', 'sage') }}
+                {{ __('Sorry, no results were found. Please check back again soon!', 'sage') }}
               </div>
-              {!! get_search_form(false) !!}
             @endif
 
             @while (have_posts()) @php the_post() @endphp
@@ -47,9 +48,9 @@
       </div>
     </div>
   </div>
-  <div class="">
+  @if (is_home())
     <div class="container">
       @include('partials.twitter-feed')
     </div>
-  </div>
+  @endif
 @endsection

@@ -2,7 +2,7 @@
   <div class="row">
     @if ($amount = get_field('amount'))
       <div class="col s6">
-        <h2 class="h3">{{ __('Amount & use of funds', 'sage') }}</h2>
+        <h2 class="h3">{{ __('Amount', 'sage') }}</h2>
         <p class="award-detail-text">{{ $amount }}</p>
       </div>
     @endif
@@ -12,9 +12,8 @@
         <p class="award-detail-text">{{ App\get_award_deadline_text(get_the_ID()) }}</p>
       </div>
     @endif
-    <div class="col s12">
+    <div class="col s12 mt-6">
       @php the_content() @endphp
-      <a class="btn btn--orange" href="#">{{ __('Apply Now', 'sage') }}</a>
     </div>
   </div>
 </div>

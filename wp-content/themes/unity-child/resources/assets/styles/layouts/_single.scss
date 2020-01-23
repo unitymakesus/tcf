@@ -21,6 +21,10 @@
 
     color: inherit;
     text-transform: none;
+
+    a {
+      color: inherit;
+    }
   }
 
   &__image {
@@ -70,7 +74,7 @@
     }
   }
 
-  @media #{$small-and-up} {
+  @media #{$medium-and-up} {
     display: flex;
 
     &__summary {
@@ -78,6 +82,7 @@
     }
 
     &__image {
+      flex-shrink: 0;
       padding-left: 2rem;
       padding-top: 0;
       max-width: 320px;
