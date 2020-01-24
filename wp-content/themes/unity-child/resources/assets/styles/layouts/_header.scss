@@ -54,7 +54,7 @@ nav {
 
   .sub-menu a {
     padding: 0.25rem 0.5rem;
-    font-size: 12px;
+    font-size: rem-calc(15);
 
     + .sub-menu {
       position: relative;
@@ -75,6 +75,12 @@ nav {
     background-color: $color-orange;
     border-color: $color-orange;
     color: white;
+
+    &:hover,
+    &:focus {
+      background-color: white;
+      color: $color-orange;
+    }
   }
 }
 
@@ -119,18 +125,33 @@ nav {
   > .menu-item:nth-of-type(1) > a {
     background-color: #E56E00;
     color: white;
+
+    &:hover,
+    &:focus {
+      background-color: darken(#E56E00, 5%);
+    }
   }
 
   // Impact
   > .menu-item:nth-of-type(2) > a {
     background-color: #AFBD00;
     color: white;
+
+    &:hover,
+    &:focus {
+      background-color: darken(#AFBD00, 5%);
+    }
   }
 
   // Stories
   > .menu-item:nth-of-type(3) > a {
-    background-color: #63ABB7;
+    background-color: $color-teal;
     color: white;
+
+    &:hover,
+    &:focus {
+      background-color: darken($color-teal, 5%);
+    }
   }
 }
 

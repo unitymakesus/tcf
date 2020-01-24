@@ -17,7 +17,14 @@
 }
 
 .archive-filters {
-  a {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__filter {
     @extend .h2;
 
     display: inline-block;
@@ -28,6 +35,10 @@
     &.active {
       background-color: white;
     }
+  }
+
+  .btn {
+    margin-right: 0;
   }
 }
 

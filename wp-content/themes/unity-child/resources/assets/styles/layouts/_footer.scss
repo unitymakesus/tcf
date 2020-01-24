@@ -31,6 +31,11 @@
   margin-bottom: 2rem;
 }
 
+.page-footer .footer-content,
+.page-footer .footer-copyright {
+  font-size: rem-calc(15);
+}
+
 .page-footer .footer-copyright {
   background-color: rgba(0, 0, 0, 0.3);
   text-align: center;

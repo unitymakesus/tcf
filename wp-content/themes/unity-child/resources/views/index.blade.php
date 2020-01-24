@@ -9,12 +9,19 @@
     <div class="archive-filters">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col archive-filters__inner">
             <div class="flex">
               @php $active_filter = array_key_exists('filter', $_GET); @endphp
-              <a href="{{ get_post_type_archive_link('post') }}" class="{{ $active_filter ? '' : 'active' }}">All</a>
-              <a href="{{ get_post_type_archive_link('post') . '?filter=stories' }}"  class="{{ $active_filter && $_GET['filter'] === 'stories' ? 'active' : '' }}">Stories</a>
-              <a href="{{ get_post_type_archive_link('post') . '?filter=blog' }}" class="{{ $active_filter && $_GET['filter'] === 'blog' ? 'active' : '' }}">Blog</a>
+              <a href="{{ get_post_type_archive_link('post') }}" class="archive-filters__filter {{ $active_filter ? '' : 'active' }}">All</a>
+              <a href="{{ get_post_type_archive_link('post') . '?filter=stories' }}"  class="archive-filters__filter {{ $active_filter && $_GET['filter'] === 'stories' ? 'active' : '' }}">Stories</a>
+              <a href="{{ get_post_type_archive_link('post') . '?filter=blog' }}" class="archive-filters__filter {{ $active_filter && $_GET['filter'] === 'blog' ? 'active' : '' }}">Blog</a>
+            </div>
+            <div>
+              @include('partials.category-nav', [
+                'categories' => get_categories([
+                  'hide_empty' => false,
+                ])
+              ])
             </div>
           </div>
         </div>
