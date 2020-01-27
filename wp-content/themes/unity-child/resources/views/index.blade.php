@@ -19,7 +19,8 @@
             <div>
               @include('partials.category-nav', [
                 'categories' => get_categories([
-                  'hide_empty' => false,
+                  'exclude' => 1,
+                  'hide_empty' => true,
                 ])
               ])
             </div>
