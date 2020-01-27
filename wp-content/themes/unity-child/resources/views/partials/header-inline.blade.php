@@ -63,9 +63,9 @@
             <div class="utility-wrapper">
               <div class="utility-wrapper__nav">
                 {!! wp_nav_menu(['theme_location' => 'secondary_navigation', 'container' => FALSE, 'menu_class' => 'nav nav__secondary flex']) !!}
-                @if (!empty($cta_text) && !empty($cta_link))
+                @if ($cta_link = get_field('header_cta_link', 'options'))
                   <div class="cta-link">
-                    <a href="{{ $cta_link }}" class="btn" {{ $cta_target }}>{{ $cta_text }}</a>
+                    <a href="{{ $cta_link['url'] }}" class="btn" target="{{ $cta_link['target'] }}">{{ $cta_link['title'] }}</a>
                   </div>
                 @endif
               </div>
