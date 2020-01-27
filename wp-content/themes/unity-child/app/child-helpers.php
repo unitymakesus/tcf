@@ -81,14 +81,12 @@ function number_format_short($n, $precision = 1) {
  * Returns the deadline text (or override text) for a Scholarship or Grant.
  */
 function get_award_deadline_text($award) {
-  // Use the override text if we have it.
   if ($override = get_field('deadline_override', $award)) {
     return $override;
+  } elseif ($deadline = get_field('deadline', $award)) {
+    $deadline = \DateTime::createFromFormat('Ymd', $deadline);
+    return $deadline->format('F j, Y');
   }
-
-  $deadline = get_field('deadline', $award);
-  $deadline = \DateTime::createFromFormat('Ymd', $deadline);
-  return $deadline->format('M j, Y');
 }
 
 /**

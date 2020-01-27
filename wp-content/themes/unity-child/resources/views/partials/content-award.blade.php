@@ -6,14 +6,23 @@
         <p class="award-detail-text">{{ $amount }}</p>
       </div>
     @endif
-    @if ($deadline = get_field('deadline'))
+    @if ($deadline = App\get_award_deadline_text(get_the_ID()))
       <div class="col s6">
         <h2 class="h3">{{ __('Application Deadline', 'sage') }}</h2>
-        <p class="award-detail-text">{{ App\get_award_deadline_text(get_the_ID()) }}</p>
+        <p class="award-detail-text">{{ $deadline }}</p>
       </div>
     @endif
     <div class="col s12 mt-6">
       @php the_content() @endphp
+      @if (have_rows('cta_buttons'))
+        @while (have_rows('cta_buttons'))
+          @php
+            the_row();
+            $link = get_sub_field('cta_button')
+          @endphp
+          <a class="btn btn--orange" href="{{ $link['url'] }}" target="{{ $link['target'] }}">{{ $link['title'] }}</a>
+        @endwhile
+      @endif
     </div>
   </div>
 </div>
