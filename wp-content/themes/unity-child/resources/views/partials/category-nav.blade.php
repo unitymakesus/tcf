@@ -6,7 +6,7 @@
       <ul class="dropdown__submenu" aria-label="submenu">
         @foreach ($categories as $category)
           <li>
-            <a href="{{ get_category_link($category) }}">{{ $category->name }}</a>
+            <a href="{{ get_category_link($category) }}">{!! ($category->name) !!}</a>
           </li>
         @endforeach
       </ul>

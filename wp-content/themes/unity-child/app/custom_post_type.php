@@ -122,7 +122,7 @@ function create_post_type() {
 				'not_found_in_trash' => 'Nothing found in Trash',
 				'parent_item_colon' => ''
     ),
-    'public' => true,
+    'public' => false,
     'exclude_from_search' => false,
     'publicly_queryable' => true,
     'show_ui' => true,

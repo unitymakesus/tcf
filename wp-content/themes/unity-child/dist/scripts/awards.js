@@ -35462,11 +35462,7 @@ var Table = function (_Component) {
                   _react2.default.createElement(
                     'td',
                     { role: 'rowheader', scope: 'row', className: 'fw-600' },
-                    _react2.default.createElement(
-                      'a',
-                      { href: row.url },
-                      row.title
-                    )
+                    _react2.default.createElement('a', { href: row.url, dangerouslySetInnerHTML: { __html: row.title } })
                   ),
                   _react2.default.createElement(
                     'td',
@@ -35493,11 +35489,7 @@ var Table = function (_Component) {
               _react2.default.createElement(
                 'h3',
                 null,
-                _react2.default.createElement(
-                  'a',
-                  { href: row.url },
-                  row.title
-                )
+                _react2.default.createElement('a', { href: row.url, dangerouslySetInnerHTML: { __html: row.title } })
               ),
               _react2.default.createElement(
                 'dl',

@@ -42,7 +42,7 @@ class Table extends Component {
               {this.props.rows.map((row, i) => (
                 <tr key={i}>
                   <td role="rowheader" scope="row" className="fw-600">
-                    <a href={row.url}>{row.title}</a>
+                    <a href={row.url} dangerouslySetInnerHTML={{__html: row.title}}></a>
                   </td>
                   <td>{row.eligibility}</td>
                   <td>{row.amount}</td>
@@ -55,7 +55,7 @@ class Table extends Component {
           {this.props.rows.map((row, i) => (
             <div className="lists-container__item" key={`list-item` + i}>
               <h3>
-                <a href={row.url}>{row.title}</a>
+                <a href={row.url} dangerouslySetInnerHTML={{__html: row.title}}></a>
               </h3>
               <dl>
                 {this.props.headers.map((header, i) =>

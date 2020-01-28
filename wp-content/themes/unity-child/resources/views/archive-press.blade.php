@@ -11,8 +11,9 @@
           <div class="col s12">
             <div class="flex">
               @php $active_filter = array_key_exists('filter', $_GET); @endphp
-              <a href="{{ get_post_type_archive_link('press') . '?filter=press-releases' }}"  class="{{ $active_filter && $_GET['filter'] === 'press-releases' ? 'active' : '' }}">Press</a>
-              <a href="{{ get_post_type_archive_link('press') . '?filter=media' }}" class="{{ $active_filter && $_GET['filter'] === 'media' ? 'active' : '' }}">Media</a>
+              <a href="{{ get_post_type_archive_link('press') }}" class="archive-filters__filter {{ $active_filter ? '' : 'active' }}">All</a>
+              <a href="{{ get_post_type_archive_link('press') . '?filter=press-releases' }}" class="archive-filters__filter {{ $active_filter && $_GET['filter'] === 'press-releases' ? 'active' : '' }}">Press</a>
+              <a href="{{ get_post_type_archive_link('press') . '?filter=media' }}" class="archive-filters__filter {{ $active_filter && $_GET['filter'] === 'media' ? 'active' : '' }}">Media</a>
             </div>
           </div>
         </div>

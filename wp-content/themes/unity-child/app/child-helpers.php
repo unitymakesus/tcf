@@ -22,9 +22,11 @@ function get_the_primary_term($post_id, $taxonomy) {
 function get_custom_date($post_type, $id) {
   if ($date_display = get_field("{$post_type}_date_display", $id)) {
     return $date_display;
+  } elseif ($date = get_field("{$post_type}_date", $id)) {
+    return $date;
   }
 
-  return get_field("{$post_type}_date", $id);
+  return get_the_date('F j, Y', $id);
 }
 
 /**
