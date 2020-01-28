@@ -14,7 +14,7 @@
         <h1 class="page-header--w-icon__title">{!! App::title() !!}</h1>
         <span class="page-header__tagline">{{ $tagline }}</span>
       @else
-        <h1 class="mb-0">{!! App::title() !!}</h1>
+        <h1 class="mb-0 page-header__title">{!! App::title() !!}</h1>
       @endif
     </div>
   </div>

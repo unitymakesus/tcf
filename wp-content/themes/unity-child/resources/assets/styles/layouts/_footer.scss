@@ -8,6 +8,11 @@
   background-color: #9FA739;
   padding: 180px 0 1.5rem 0;
 
+  h2 {
+    color: white;
+    text-transform: uppercase;
+  }
+
   &::after {
     position: absolute;
     top: 0;

@@ -1,31 +1,34 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: 0;
-  margin-top: 0;
+// Font size utility classes.
+$sizes: (
+  'h1': 3rem,
+  'h2': 1.5rem,
+  'h3': 1.25rem,
+  'h4': 1.125rem,
+  'h5': 1.0725rem,
+  'h6': 1rem,
+);
 
-  a {
-    text-decoration: none;
+@each $heading, $size in $sizes {
+  #{$heading},
+  .#{$heading} {
+    font-size: $size;
+    font-family: $sans-condensed;
+    font-weight: bold;
+    letter-spacing: 0;
 
-    &:hover,
-    &:focus {
-      text-decoration: underline;
+    a {
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
     }
   }
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: "Open Sans Condensed", $sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
+h2 {
+  color: $color-blue;
 }
 
 blockquote {
@@ -38,6 +41,26 @@ blockquote {
   p:last-of-type() {
     margin: 0;
     padding: 0;
+  }
+}
+
+.uabb-testimonial.uabb-testimonial {
+  padding: 0;
+  background: none;
+}
+
+.uabb-testimonial-author-description {
+  font-size: rem-calc(36);
+  color: $color-green-a11y;
+  line-height: 1.3em;
+  margin-bottom: 0.3em;
+}
+
+.uabb-testimonial-author {
+  @extend h6;
+
+  .uabb-testimonial-author-name::before {
+    content: '\2014';
   }
 }
 
@@ -72,23 +95,6 @@ blockquote {
 
 .text-orange {
   color: $color-orange;
-}
-
-// Font size utility classes.
-$sizes: (
-  'h1': 3rem,
-  'h2': 1.5rem,
-  'h3': 1.25rem,
-  'h4': 1.125rem,
-  'h5': 1.0725rem,
-  'h6': 1rem,
-);
-
-@each $heading, $size in $sizes {
-  #{$heading},
-  .#{$heading} {
-    font-size: $size;
-  }
 }
 
 // Font weight utility classes.
