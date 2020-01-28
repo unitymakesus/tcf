@@ -1,5 +1,5 @@
 .breadcrumbs-wrap {
-  font-size: 14px;
+  font-size: rem-calc(14px);
   padding: 1rem 0;
   line-height: 1;
   text-transform: uppercase;
@@ -33,7 +33,7 @@
   padding: 0;
   color: inherit;
   text-decoration: underline;
-  font-size: 14px;
+  font-size: rem-calc(14px);
 }
 
 .breadcrumbs .trail-items .trail-item:not(:last-of-type)::after {

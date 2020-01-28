@@ -16,7 +16,7 @@ td {
 th {
   padding: 0.5rem 1rem;
   color: $color-orange;
-  font-size: 14px;
+  font-size: rem-calc(14px);
   letter-spacing: 0.64px;
   font-weight: 700;
   text-transform: uppercase;

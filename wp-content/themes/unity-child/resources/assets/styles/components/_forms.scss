@@ -87,7 +87,7 @@ select:not(.browser-default) {
     color: #5A4F42;
 
     .material-icons {
-      font-size: 24px;
+      font-size: rem-calc(24px);
       line-height: 0;
     }
   }
