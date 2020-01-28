@@ -1,20 +1,21 @@
-@if (is_home() || is_archive() || is_search())
-  @php $post_id = get_option('page_for_posts'); @endphp
-@else
-  @php $post_id = $post->ID; @endphp
-@endif
-
 @php
-  $feat_img = wp_get_attachment_image_src( get_post_thumbnail_id($post_id), 'x-large')
+  $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'x-large');
 @endphp
 
-<header class="page-header {{ $feat_img ? 'page-header__bg' : '' }}" style="background-image: url('<?= $feat_img[0]; ?>')">
+<header class="page-header page-header--w-icon {{ $bg_img ? 'page-header--has-img' : '' }}" style="background-image: url('<?= $bg_img[0]; ?>')">
   <div class="container">
-    <h1 class="page-header__title mb-0">{!! App::title() !!}</h1>
-    @if ($tagline = get_field('page-header-tagline'))
-      <div class="page-header__tagline">
-        {{ $tagline }}
+    @if ($icon = get_field('page_header_icon'))
+      <div class="page-header__icon">
+        <img src="{{ $icon['url'] }}" alt="" />
       </div>
     @endif
+    <div>
+      @if ($tagline = get_field('page_header_tagline'))
+        <h1 class="page-header--w-icon__title">{!! App::title() !!}</h1>
+        <span class="page-header__tagline">{{ $tagline }}</span>
+      @else
+        <h1 class="mb-0">{!! App::title() !!}</h1>
+      @endif
+    </div>
   </div>
 </header>

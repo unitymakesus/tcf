@@ -64,16 +64,14 @@
   <div class="footer-copyright">
     <div class="container">
       <div class="row">
-        <div class="col s12 m9 push-m3">
+        <div class="col s12">
           @php dynamic_sidebar('footer-utility') @endphp
-        </div>
-        @if ($copyright = get_field('footer_copyright_text', 'option'))
-          <div class="col s12">
+          @if ($copyright = get_field('footer_copyright_text', 'option'))
             <span class="footer-copyright__text">
               {!! str_replace('#year#', date('Y'), $copyright) !!}
             </span>
-          </div>
-        @endif
+          @endif
+        </div>
       </div>
     </div>
   </div>

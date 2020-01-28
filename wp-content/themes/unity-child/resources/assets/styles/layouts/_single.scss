@@ -1,5 +1,6 @@
 .single-entry {
   background-color: #F5F4F3;
+  border: 2px solid transparent;
   margin-bottom: 1.5rem;
   padding: 1.5rem;
 
@@ -35,7 +36,12 @@
     margin-bottom: 1rem;
   }
 
-  &--environmental-conservation {
+  &[data-type="blog"] {
+    background-color: white;
+    border: 2px solid #F5F4F3;
+  }
+
+  &[data-cat="environmental-conservation"] {
     background-color: transparentize(#CCE3E8, 0.4);
 
     h2 {
@@ -48,7 +54,20 @@
     }
   }
 
-  &--youth-literacy {
+  &[data-cat="regional-cultural-arts"] {
+    background-color: #F9E2D2;
+
+    h2 {
+      color: #E56E00;
+    }
+
+    .single-entry__label {
+      background-color: #E56E00;
+      color: #F9E2D2;
+    }
+  }
+
+  &[data-cat="youth-literacy"] {
     background-color: transparentize(#DFE5A3, 0.4);
 
     h2 {
@@ -61,7 +80,7 @@
     }
   }
 
-  &--community-development {
+  &[data-cat="community-development"] {
     background-color: #E7E4E0;
 
     h2 {

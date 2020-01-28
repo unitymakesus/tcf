@@ -108,6 +108,12 @@ function cbb_disable_modules( $enabled, $instance ) {
     'modal-popup',
     'ribbon',
     'mailchimp-subscribe-form',
+    'uuab-image-separator',
+    'uuab-marketing-button',
+    'uabb-how-to',
+    'uabb-off-canvas',
+    'uabb-social-share',
+    'uabb-beforeafterslider',
   );
   if ( in_array( $instance->slug, $disable ) ) {
     return false;

@@ -22,9 +22,11 @@ function get_the_primary_term($post_id, $taxonomy) {
 function get_custom_date($post_type, $id) {
   if ($date_display = get_field("{$post_type}_date_display", $id)) {
     return $date_display;
+  } elseif ($date = get_field("{$post_type}_date", $id)) {
+    return $date;
   }
 
-  return get_field("{$post_type}_date", $id);
+  return get_the_date('F j, Y', $id);
 }
 
 /**
@@ -81,14 +83,12 @@ function number_format_short($n, $precision = 1) {
  * Returns the deadline text (or override text) for a Scholarship or Grant.
  */
 function get_award_deadline_text($award) {
-  // Use the override text if we have it.
   if ($override = get_field('deadline_override', $award)) {
     return $override;
+  } elseif ($deadline = get_field('deadline', $award)) {
+    $deadline = \DateTime::createFromFormat('Ymd', $deadline);
+    return $deadline->format('F j, Y');
   }
-
-  $deadline = get_field('deadline', $award);
-  $deadline = \DateTime::createFromFormat('Ymd', $deadline);
-  return $deadline->format('M j, Y');
 }
 
 /**

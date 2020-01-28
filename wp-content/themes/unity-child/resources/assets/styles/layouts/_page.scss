@@ -30,29 +30,34 @@
     opacity: 0.5;
   }
 
-  &::after {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: calc(1200px);
-    height: 100%;
-    margin: 0 auto;
-    background-image: url('../images/textures/texture-triangles.svg');
-    background-repeat: no-repeat;
-    background-size: 350px 260px;
-    background-position: right top;
-    content: '';
-    z-index: 5;
-    pointer-events: none;
+  &--has-img {
+    background-color: darken($brand-primary, 5%);
+    min-height: 300px;
+
+    &::after {
+      display: block;
+      position: absolute;
+      top: -1rem;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: calc(1200px + 2rem);
+      height: 100%;
+      margin: 0 auto;
+      background-image: url('../images/textures/texture-triangles.svg');
+      background-repeat: no-repeat;
+      background-size: 35vw;
+      background-position: right 1rem top;
+      content: '';
+      z-index: 5;
+      pointer-events: none;
+    }
   }
 
   .container {
     position: relative;
-    background-color: rgba(137, 121, 102, 0.9);
+    background-color: $brand-primary;
     color: white;
     padding: 2rem;
     text-align: left;
@@ -66,13 +71,12 @@
 }
 
 .page-header--w-icon {
-  min-height: 390px;
+  padding-top: 3rem;
   margin-bottom: 3rem;
 
   .container {
     display: flex;
     align-items: center;
-    background-color: $brand-primary;
   }
 
   &__title {
@@ -99,39 +103,47 @@
     padding: 0;
     background-color: transparent;
   }
-
-  &::after {
-    display: block;
-    position: absolute;
-    top: -48px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    margin: 0 auto;
-    background-image: url('../images/textures/texture-triangles.svg');
-    background-repeat: no-repeat;
-    background-size: 350px 260px;
-    background-position: calc(100% - 1rem) top;
-    content: '';
-    pointer-events: none;
-  }
 }
 
-.template-audience .page-header,
-.template-narrow-w-footer-contact .page-header {
+.page-template-default .page-header,
+.template-narrow-w-footer-contact .page-header,
+.template-audience .page-header {
   > .container {
     max-width: 940px;
   }
 }
 
+.template-impact-landing .page-header {
+  > .container {
+    background-color: rgba(137, 121, 102, 0.9);
+  }
+}
+
+@media #{$medium-and-up} {
+  .page-header {
+    &--has-img {
+      min-height: 390px;
+
+      &::after {
+        background-size: 350px;
+      }
+    }
+  }
+
+  .template-impact-landing .page-header {
+    &--has-img {
+      min-height: 450px;
+    }
+  }
+}
+
+.page-template-default .page-header,
 .template-narrow-w-footer-contact .page-header {
   margin-bottom: 0;
 }
 
 .single-award,
+.page-template-default,
 .template-narrow-w-footer-contact {
   main {
     background-color: #E7E4E0;
@@ -148,7 +160,7 @@
   }
 
   .entry-content {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     background-color: white;
   }
 

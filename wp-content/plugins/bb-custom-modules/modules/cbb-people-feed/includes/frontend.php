@@ -10,9 +10,13 @@
           <?php endif; ?>
         </div>
         <div class="details">
+          <?php if (get_field('about', $person)) : ?>
           <a class="link-wrap" href="<?= get_the_permalink($person); ?>">
             <div class="details__name"><?= $person->post_title; ?></div>
           </a>
+          <?php else : ?>
+            <div class="details__name"><?= $person->post_title; ?></div>
+          <?php endif; ?>
           <?php if (have_rows('job_titles', $person)) : while (have_rows('job_titles', $person)) : the_row(); ?>
             <div class="details__title"><?= get_sub_field('job_title', $person); ?></div>
           <?php endwhile; endif; ?>
