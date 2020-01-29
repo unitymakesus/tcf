@@ -4,7 +4,7 @@ nav {
 }
 
 .banner {
-  background-color: #E7E4E0;
+  background-color: $color-beige;
   z-index: 10;
 
   .nav-primary {
@@ -40,7 +40,7 @@ nav {
   }
 
   .navbar-menu {
-    background-color: #414141;
+    background-color: $color-grey-dark;
   }
 
   nav ul a {
@@ -72,14 +72,14 @@ nav {
   }
 
   .cta-link a {
-    background-color: $color-orange;
-    border-color: $color-orange;
-    color: white;
+    background-color: $color-orange-a11y;
+    border-color: $color-orange-a11y;
+    color: $color-white;
 
     &:hover,
     &:focus {
-      background-color: white;
-      color: $color-orange;
+      background-color: $color-white;
+      color: $color-orange-a11y;
     }
   }
 }
@@ -105,7 +105,7 @@ nav {
       display: flex;
       align-items: center;
       height: 100%;
-      color: white;
+      color: $color-white;
       padding: 0.5rem 25px;
       line-height: 1.5;
       text-align: center;
@@ -122,35 +122,35 @@ nav {
   }
 
   // Giving
-  > .menu-item:nth-of-type(1) > a {
-    background-color: #E56E00;
+  > .menu-item.bg-orange > a {
+    background-color: $color-orange-a11y;
     color: white;
 
     &:hover,
     &:focus {
-      background-color: darken(#E56E00, 5%);
+      background-color: darken($color-orange-a11y, 8%);
     }
   }
 
   // Impact
-  > .menu-item:nth-of-type(2) > a {
-    background-color: #AFBD00;
-    color: white;
+  > .menu-item.bg-green > a {
+    background-color: $color-green-a11y;
+    color: $color-white;
 
     &:hover,
     &:focus {
-      background-color: darken(#AFBD00, 5%);
+      background-color: darken($color-green-a11y, 8%);
     }
   }
 
   // Stories
-  > .menu-item:nth-of-type(3) > a {
-    background-color: $color-teal;
+  > .menu-item.bg-blue > a {
+    background-color: $color-teal-a11y;
     color: white;
 
     &:hover,
     &:focus {
-      background-color: darken($color-teal, 5%);
+      background-color: darken($color-teal-a11y, 8%);
     }
   }
 }
@@ -223,7 +223,7 @@ nav {
         right: -100vw;
         z-index: -1;
         user-select: none;
-        background-color: #414141;
+        background-color: $color-grey-dark;
         content: '';
       }
     }
@@ -255,7 +255,7 @@ nav {
       top: calc(100% + 12px);
       right: 0;
       width: 350px;
-      background-color: $brand-primary;
+      background-color: $color-teal;
       padding: 1rem;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
@@ -286,7 +286,7 @@ nav {
         height: 0;
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
-        border-bottom: 8px solid $brand-primary;
+        border-bottom: 8px solid $color-teal;
         content: '';
       }
     }

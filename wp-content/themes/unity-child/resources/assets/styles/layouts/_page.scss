@@ -82,7 +82,7 @@
 
     text-transform: uppercase;
     font-size: 1.125rem !important;
-    color: #98C7CF;
+    color: lighten($color-teal, 15);
   }
 }
 
@@ -113,7 +113,7 @@
 
 .template-impact-landing .page-header {
   > .container {
-    background-color: rgba(137, 121, 102, 0.9);
+    background-color: rgba($color-beige-dark, 0.9);
   }
 }
 
@@ -138,7 +138,7 @@
 .page-template-default,
 .template-narrow-w-footer-contact {
   main {
-    background-color: #E7E4E0;
+    background-color: $color-beige;
   }
 
   article {
@@ -158,7 +158,7 @@
 
   .entry-footer {
     padding: 1rem;
-    background-color: #F5F4F3;
+    background-color: $color-beige-light;
 
     h2 {
       color: $brand-primary;
@@ -195,7 +195,7 @@
 }
 
 .tri-stats .fl-rich-text {
-  background-color: #F1F1F1;
+  background-color: $color-beige-light;
   padding: 0.75rem;
   text-align: center;
 
@@ -233,8 +233,8 @@
   align-items: center;
   max-width: 390px;
   margin-left: auto;
-  background-color: white;
-  color: #AFBD00;
+  background-color: $color-white;
+  color: $color-green-a11y;
   padding: 1rem;
 
   &__text {
@@ -264,17 +264,17 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(0, 82, 95, 0.9);
+  background-color: rgba($color-blue, 0.9);
 
   .uabb-infobox-text {
-    color: white;
+    color: $color-white;
   }
 }
 
 // BB Number Counter
 .fl-number {
-  background-color: #F1F1F1;
-  color: rgba(112, 112, 112, 1);
+  background-color: $color-grey-light;
+  color: $color-beige-darker;
 }
 
 // Accordions

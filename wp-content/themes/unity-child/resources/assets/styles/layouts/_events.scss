@@ -1,6 +1,6 @@
 .template-events {
   .page-header {
-    background-color: #FFF;
+    background-color: $color-white;
     background-image: none !important;
     height: auto;
 
@@ -21,7 +21,7 @@
   }
 
   .main {
-    background-color: #DDD;
+    background-color: $color-beige;
   }
 
   .tabbed {
@@ -36,12 +36,12 @@
   }
 
   [role="tabpanel"] {
-    background-color: white;
+    background-color: $color-white;
   }
 
   .event-grouping {
     position: relative;
-    border-top: 1px solid #98C7CF;
+    border-top: 1px solid $color-teal;
     padding: 1rem 0;
 
     &__subhead {
@@ -76,8 +76,8 @@
 
 // Featured Event
 .featured-event {
-  background-color: #414141;
-  color: #FFF;
+  background-color: $color-grey-dark;
+  color: $color-white;
 
   .row {
     margin-left: -0.75rem;
@@ -146,10 +146,10 @@
   }
 
   .kicker {
-    color: $color-orange;
+    color: $color-orange-a11y;
   }
 
   .details {
-    color: $color-orange;
+    color: $color-orange-a11y;
   }
 }

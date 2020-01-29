@@ -15,7 +15,7 @@ td {
 
 th {
   padding: 0.5rem 1rem;
-  color: $color-orange;
+  color: $color-orange-a11y;
   font-size: rem-calc(14px);
   letter-spacing: 0.64px;
   font-weight: 700;
@@ -28,17 +28,17 @@ td {
 
 tbody {
   tr:nth-child(odd) {
-    background-color: #F5F4F3;
+    background-color: $color-beige-light;
   }
 
   tr > td:not(:last-child) {
-    border-right: 2px solid #BCBEBC;
+    border-right: 2px solid $color-beige-med;
   }
 }
 
 th button {
-  background-color: #FFF;
-  color: $color-orange;
+  background-color: $color-white;
+  color: $color-orange-a11y;
   border: 0;
   padding: 0.125rem 0.5rem;
   border-radius: 0.25rem;
@@ -47,7 +47,7 @@ th button {
   margin-left: 0.333rem;
 
   &:focus {
-    background-color: #FFF;
+    background-color: $color-white;
   }
 }
 
@@ -78,7 +78,7 @@ th svg {
     }
 
     &:nth-of-type(even) {
-      background-color: #F5F4F3;
+      background-color: $color-beige-light;
     }
   }
 }

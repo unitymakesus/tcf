@@ -16176,29 +16176,34 @@ h2 {
 
 /* line 34, resources/assets/styles/common/_typography.scss */
 
+a {
+  color: #007485;
+}
+
+/* line 38, resources/assets/styles/common/_typography.scss */
+
 blockquote {
   font-size: 1.11111rem;
   line-height: 1.55556rem;
-  font-family: 'PT Serif', sans-serif;
-  color: #007485;
+  color: #8F9D10;
   margin: 1.5rem 0;
 }
 
-/* line 41, resources/assets/styles/common/_typography.scss */
+/* line 44, resources/assets/styles/common/_typography.scss */
 
 blockquote p:last-of-type {
   margin: 0;
   padding: 0;
 }
 
-/* line 47, resources/assets/styles/common/_typography.scss */
+/* line 50, resources/assets/styles/common/_typography.scss */
 
 .uabb-testimonial.uabb-testimonial {
   padding: 0;
   background: none;
 }
 
-/* line 52, resources/assets/styles/common/_typography.scss */
+/* line 55, resources/assets/styles/common/_typography.scss */
 
 .uabb-testimonial-author-description {
   font-size: 2rem;
@@ -16207,91 +16212,97 @@ blockquote p:last-of-type {
   margin-bottom: 0.3em;
 }
 
-/* line 62, resources/assets/styles/common/_typography.scss */
+/* line 65, resources/assets/styles/common/_typography.scss */
 
 .uabb-testimonial-author .uabb-testimonial-author-name::before {
   content: '\2014';
 }
 
-/* line 67, resources/assets/styles/common/_typography.scss */
+/* line 70, resources/assets/styles/common/_typography.scss */
 
 .wp-block-quote {
   max-width: 550px;
 }
 
-/* line 70, resources/assets/styles/common/_typography.scss */
+/* line 73, resources/assets/styles/common/_typography.scss */
 
 .wp-block-quote.has-text-align-left,
 .wp-block-quote.has-text-align-right {
   border: 0;
 }
 
-/* line 75, resources/assets/styles/common/_typography.scss */
+/* line 78, resources/assets/styles/common/_typography.scss */
 
 .wp-block-quote.has-text-align-left {
   margin-right: auto;
 }
 
-/* line 79, resources/assets/styles/common/_typography.scss */
+/* line 82, resources/assets/styles/common/_typography.scss */
 
 .wp-block-quote.has-text-align-right {
   margin-left: auto;
 }
 
-/* line 84, resources/assets/styles/common/_typography.scss */
+/* line 87, resources/assets/styles/common/_typography.scss */
 
 .text-center {
   text-align: center;
 }
 
-/* line 88, resources/assets/styles/common/_typography.scss */
+/* line 91, resources/assets/styles/common/_typography.scss */
 
 .text-uppercase {
   text-transform: uppercase;
 }
 
-/* line 92, resources/assets/styles/common/_typography.scss */
+/* line 95, resources/assets/styles/common/_typography.scss */
 
 .text-transform-none {
   text-transform: none;
 }
 
-/* line 96, resources/assets/styles/common/_typography.scss */
+/* line 99, resources/assets/styles/common/_typography.scss */
 
 .text-orange {
-  color: #E36F1E;
+  color: #C75300;
 }
 
-/* line 104, resources/assets/styles/common/_typography.scss */
+/* line 107, resources/assets/styles/common/_typography.scss */
 
 .fw-400 {
   font-weight: 400;
 }
 
-/* line 104, resources/assets/styles/common/_typography.scss */
+/* line 107, resources/assets/styles/common/_typography.scss */
 
 .fw-600 {
   font-weight: 600;
 }
 
-/* line 104, resources/assets/styles/common/_typography.scss */
+/* line 107, resources/assets/styles/common/_typography.scss */
 
 .fw-700 {
   font-weight: 700;
 }
 
-/* line 109, resources/assets/styles/common/_typography.scss */
+/* line 112, resources/assets/styles/common/_typography.scss */
 
 .entry-content ul:not(.select-dropdown):not(.gform_fields) {
   margin-bottom: 2rem;
 }
 
-/* line 112, resources/assets/styles/common/_typography.scss */
+/* line 115, resources/assets/styles/common/_typography.scss */
 
 .entry-content ul  li {
   list-style: none;
   position: relative;
   padding-left: 30px;
+}
+
+/* line 121, resources/assets/styles/common/_typography.scss */
+
+.entry-content ul  ul {
+  margin-bottom: 0 !important;
 }
 
 /* line 1, resources/assets/styles/common/_utility.scss */
@@ -16459,7 +16470,7 @@ blockquote p:last-of-type {
 
 .alert-bar {
   background-color: #C75300;
-  color: white;
+  color: #FFF;
   padding: 1rem 0;
 }
 
@@ -16479,7 +16490,7 @@ blockquote p:last-of-type {
 
 .breadcrumbs-wrap {
   font-size: 0.77778rem;
-  padding: 1rem 0;
+  padding: 0.75em 0;
   line-height: 1;
   text-transform: uppercase;
   background-color: #004852;
@@ -16500,8 +16511,8 @@ blockquote p:last-of-type {
 /* line 17, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* line 22, resources/assets/styles/components/_breadcrumbs.scss */
@@ -16514,7 +16525,7 @@ blockquote p:last-of-type {
 
 .breadcrumbs.breadcrumbs .trail-item,
 .breadcrumbs.breadcrumbs .trail-items a {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 /* line 31, resources/assets/styles/components/_breadcrumbs.scss */
@@ -16527,7 +16538,15 @@ blockquote p:last-of-type {
   font-size: 0.77778rem;
 }
 
-/* line 39, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 38, resources/assets/styles/components/_breadcrumbs.scss */
+
+.breadcrumbs.breadcrumbs .trail-items a:hover,
+.breadcrumbs.breadcrumbs .trail-items a:focus {
+  -webkit-text-decoration-style: double;
+          text-decoration-style: double;
+}
+
+/* line 43, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs .trail-items .trail-item:not(:last-of-type)::after {
   display: inline-block;
@@ -16633,7 +16652,7 @@ body > a[href="#content"],
 a.btn--orange,
 body > a[href="#content"],
 .fl-builder-content.fl-builder-content a.fl-button {
-  color: #E36F1E;
+  color: #C75300;
 }
 
 /* line 37, resources/assets/styles/components/_buttons.scss */
@@ -16652,15 +16671,15 @@ body > a:hover[href="#content"],
 a.btn--orange:focus,
 body > a:focus[href="#content"],
 .fl-builder-content.fl-builder-content a.fl-button:focus {
-  background-color: #E36F1E;
-  color: white;
+  background-color: #C75300;
+  color: #FFF;
 }
 
 /* line 44, resources/assets/styles/components/_buttons.scss */
 
 .btn--white,
 a.btn--white {
-  color: white;
+  color: #FFF;
 }
 
 /* line 48, resources/assets/styles/components/_buttons.scss */
@@ -16669,7 +16688,7 @@ a.btn--white {
 .btn--white:focus,
 a.btn--white:hover,
 a.btn--white:focus {
-  background-color: white;
+  background-color: #FFF;
   color: #007485;
 }
 
@@ -16687,7 +16706,7 @@ a.btn--grey {
 a.btn--grey:hover,
 a.btn--grey:focus {
   background-color: #585D58;
-  color: white;
+  color: #FFF;
 }
 
 /* line 67, resources/assets/styles/components/_buttons.scss */
@@ -17061,7 +17080,7 @@ button.js-accordion__header {
   min-width: 300px;
   right: 0;
   opacity: 0;
-  background-color: white;
+  background-color: #FFF;
   visibility: hidden;
   z-index: 100;
 }
@@ -17117,7 +17136,7 @@ select:not(.browser-default) {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-color: white;
+  background-color: #FFF;
   color: #585D58;
   background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007485%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
   background-repeat: no-repeat, repeat;
@@ -17165,7 +17184,7 @@ select:not(.browser-default):focus {
 
 .wp-search input[type="search"] {
   border-color: #B8AEA3;
-  background-color: white;
+  background-color: #FFF;
   color: #5A4F42;
   height: 30px;
   width: 100%;
@@ -17225,90 +17244,50 @@ select:not(.browser-default):focus {
   line-height: 0;
 }
 
-/* line 96, resources/assets/styles/components/_forms.scss */
-
-#award-search {
-  color: #414141;
-}
-
-/* line 99, resources/assets/styles/components/_forms.scss */
-
-#award-search label {
-  font-size: 1rem;
-  font-weight: 600;
-  color: inherit;
-}
-
-/* line 105, resources/assets/styles/components/_forms.scss */
-
-#award-search input[type="text"] {
-  border-color: #98C7CF;
-  color: #414141;
-  margin-top: 1rem;
-}
-
-/* line 110, resources/assets/styles/components/_forms.scss */
-
-#award-search input[type="text"]::-webkit-input-placeholder {
-  color: inherit;
-}
-
-#award-search input[type="text"]::-moz-placeholder {
-  color: inherit;
-}
-
-#award-search input[type="text"]::-ms-input-placeholder {
-  color: inherit;
-}
-
-#award-search input[type="text"]::placeholder {
-  color: inherit;
-}
-
-/* line 118, resources/assets/styles/components/_forms.scss */
+/* line 98, resources/assets/styles/components/_forms.scss */
 
 .gform_body label {
   color: inherit;
 }
 
-/* line 123, resources/assets/styles/components/_forms.scss */
+/* line 103, resources/assets/styles/components/_forms.scss */
 
 .gfield_html {
   margin-bottom: 0 !important;
 }
 
-/* line 127, resources/assets/styles/components/_forms.scss */
+/* line 107, resources/assets/styles/components/_forms.scss */
 
 .gsection {
   margin-top: 40px;
 }
 
-/* line 130, resources/assets/styles/components/_forms.scss */
+/* line 110, resources/assets/styles/components/_forms.scss */
 
 .gsection h2 {
   margin: 0;
 }
 
-/* line 135, resources/assets/styles/components/_forms.scss */
+/* line 115, resources/assets/styles/components/_forms.scss */
 
 .gform_fields li {
   padding-left: 0 !important;
   margin-bottom: 1.5rem;
 }
 
-/* line 139, resources/assets/styles/components/_forms.scss */
+/* line 119, resources/assets/styles/components/_forms.scss */
 
 .gform_fields li::before {
   display: none !important;
 }
 
-/* line 149, resources/assets/styles/components/_forms.scss */
+/* line 129, resources/assets/styles/components/_forms.scss */
 
 .gfield label {
   font-weight: 600;
 }
 
-/* line 153, resources/assets/styles/components/_forms.scss */
+/* line 133, resources/assets/styles/components/_forms.scss */
 
 .gfield input[type="text"],
 .gfield input[type="email"],
@@ -17327,7 +17306,7 @@ select:not(.browser-default):focus {
   padding-right: 0;
 }
 
-/* line 169, resources/assets/styles/components/_forms.scss */
+/* line 149, resources/assets/styles/components/_forms.scss */
 
 .gfield input[type="text"]:focus,
 .gfield input[type="email"]:focus,
@@ -17339,7 +17318,7 @@ select:not(.browser-default):focus {
           box-shadow: 0 1px 0 0 #63ABB7 !important;
 }
 
-/* line 174, resources/assets/styles/components/_forms.scss */
+/* line 154, resources/assets/styles/components/_forms.scss */
 
 .gfield input[type="text"]::-webkit-input-placeholder,
 .gfield input[type="email"]::-webkit-input-placeholder,
@@ -17373,14 +17352,14 @@ select:not(.browser-default):focus {
   color: inherit;
 }
 
-/* line 180, resources/assets/styles/components/_forms.scss */
+/* line 160, resources/assets/styles/components/_forms.scss */
 
 .gsection_title {
-  color: #E36F1E;
+  color: #C75300;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
-/* line 190, resources/assets/styles/components/_forms.scss */
+/* line 170, resources/assets/styles/components/_forms.scss */
 
 .gform_validation_container {
   display: none;
@@ -17388,58 +17367,58 @@ select:not(.browser-default):focus {
   left: -9000px;
 }
 
-/* line 196, resources/assets/styles/components/_forms.scss */
+/* line 176, resources/assets/styles/components/_forms.scss */
 
 .gfield_required {
   color: #A3320B;
 }
 
-/* line 200, resources/assets/styles/components/_forms.scss */
+/* line 180, resources/assets/styles/components/_forms.scss */
 
 .gfield_error .validation_message,
 .gform_validation_error #error {
   padding: 1rem;
-  background-color: #FFEBEE;
-  color: #B71C1C;
+  background-color: #fbd7cb;
+  color: #A3320B;
 }
 
-/* line 206, resources/assets/styles/components/_forms.scss */
+/* line 186, resources/assets/styles/components/_forms.scss */
 
 .gfield_error .validation_message a,
 .gform_validation_error #error a {
   color: inherit;
 }
 
-/* line 211, resources/assets/styles/components/_forms.scss */
+/* line 191, resources/assets/styles/components/_forms.scss */
 
 .gfield_error input,
 .gfield_error textarea,
 .gfield_error select {
-  border-color: #B71C1C !important;
+  border-color: #A3320B !important;
 }
 
-/* line 217, resources/assets/styles/components/_forms.scss */
+/* line 197, resources/assets/styles/components/_forms.scss */
 
 .gfield_radio,
 .gfield_checkbox {
   margin-bottom: 0 !important;
 }
 
-/* line 220, resources/assets/styles/components/_forms.scss */
+/* line 200, resources/assets/styles/components/_forms.scss */
 
 .gfield_radio li,
 .gfield_checkbox li {
   margin-bottom: 0.25rem;
 }
 
-/* line 223, resources/assets/styles/components/_forms.scss */
+/* line 203, resources/assets/styles/components/_forms.scss */
 
 .gfield_radio li::before,
 .gfield_checkbox li::before {
   display: none;
 }
 
-/* line 230, resources/assets/styles/components/_forms.scss */
+/* line 210, resources/assets/styles/components/_forms.scss */
 
 .gfield_radio input[type="radio"] + label,
 .gfield_radio input[type="checkbox"] + label,
@@ -17463,7 +17442,7 @@ select:not(.browser-default):focus {
           user-select: none;
 }
 
-/* line 243, resources/assets/styles/components/_forms.scss */
+/* line 223, resources/assets/styles/components/_forms.scss */
 
 .gfield_radio input[type="radio"] + label::before,
 .gfield_radio input[type="radio"] + label::after,
@@ -17488,7 +17467,7 @@ select:not(.browser-default):focus {
   content: '';
 }
 
-/* line 271, resources/assets/styles/components/_forms.scss */
+/* line 251, resources/assets/styles/components/_forms.scss */
 
 .gfield_radio input[type="radio"]:not(:checked) + label::after,
 .gfield_checkbox input[type="radio"]:not(:checked) + label::after {
@@ -17497,14 +17476,14 @@ select:not(.browser-default):focus {
           transform: scale(0);
 }
 
-/* line 279, resources/assets/styles/components/_forms.scss */
+/* line 259, resources/assets/styles/components/_forms.scss */
 
 .gfield_radio input[type="radio"]:checked + label::before,
 .gfield_checkbox input[type="radio"]:checked + label::before {
   border: 2px solid #007485;
 }
 
-/* line 283, resources/assets/styles/components/_forms.scss */
+/* line 263, resources/assets/styles/components/_forms.scss */
 
 .gfield_radio input[type="radio"]:checked + label::after,
 .gfield_checkbox input[type="radio"]:checked + label::after {
@@ -17515,14 +17494,14 @@ select:not(.browser-default):focus {
           transform: scale(0.5);
 }
 
-/* line 294, resources/assets/styles/components/_forms.scss */
+/* line 274, resources/assets/styles/components/_forms.scss */
 
 .gfield_radio input[type="checkbox"] + label::after,
 .gfield_checkbox input[type="checkbox"] + label::after {
   display: none;
 }
 
-/* line 298, resources/assets/styles/components/_forms.scss */
+/* line 278, resources/assets/styles/components/_forms.scss */
 
 .gfield_radio input[type="checkbox"] + label::before,
 .gfield_checkbox input[type="checkbox"] + label::before {
@@ -17532,7 +17511,7 @@ select:not(.browser-default):focus {
   margin: 3px 0 0 0;
 }
 
-/* line 308, resources/assets/styles/components/_forms.scss */
+/* line 288, resources/assets/styles/components/_forms.scss */
 
 .gfield_radio input[type="checkbox"]:checked + label::before,
 .gfield_checkbox input[type="checkbox"]:checked + label::before {
@@ -17554,7 +17533,7 @@ select:not(.browser-default):focus {
           transform-origin: 100% 100%;
 }
 
-/* line 329, resources/assets/styles/components/_forms.scss */
+/* line 309, resources/assets/styles/components/_forms.scss */
 
 #gform_1 .ginput_complex > * {
   display: block;
@@ -17562,7 +17541,7 @@ select:not(.browser-default):focus {
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 328, resources/assets/styles/components/_forms.scss */
+  /* line 308, resources/assets/styles/components/_forms.scss */
 
   #gform_1 .ginput_complex {
     display: -webkit-box;
@@ -17573,13 +17552,13 @@ select:not(.browser-default):focus {
     margin: 0 -0.5rem;
   }
 
-  /* line 339, resources/assets/styles/components/_forms.scss */
+  /* line 319, resources/assets/styles/components/_forms.scss */
 
   #gform_1 .ginput_complex .gf_clear_complex {
     display: none;
   }
 
-  /* line 343, resources/assets/styles/components/_forms.scss */
+  /* line 323, resources/assets/styles/components/_forms.scss */
 
   #gform_1 .ginput_complex > * {
     -webkit-box-flex: 1;
@@ -17590,7 +17569,7 @@ select:not(.browser-default):focus {
   }
 }
 
-/* line 350, resources/assets/styles/components/_forms.scss */
+/* line 330, resources/assets/styles/components/_forms.scss */
 
 #gform_1 .ginput_complex .name_prefix,
 #gform_1 .ginput_complex .name_middle,
@@ -17599,7 +17578,7 @@ select:not(.browser-default):focus {
       flex-basis: 15%;
 }
 
-/* line 356, resources/assets/styles/components/_forms.scss */
+/* line 336, resources/assets/styles/components/_forms.scss */
 
 #gform_1 .ginput_complex .address_line_1,
 #gform_1 .ginput_complex .address_line_2 {
@@ -17607,14 +17586,14 @@ select:not(.browser-default):focus {
       flex-basis: 50%;
 }
 
-/* line 361, resources/assets/styles/components/_forms.scss */
+/* line 341, resources/assets/styles/components/_forms.scss */
 
 #gform_1 .ginput_complex .address_zip {
   -ms-flex-preferred-size: 0;
       flex-basis: 0;
 }
 
-/* line 370, resources/assets/styles/components/_forms.scss */
+/* line 350, resources/assets/styles/components/_forms.scss */
 
 #gform_1 .gfield_calculation {
   display: none;
@@ -17911,7 +17890,7 @@ td {
 
 th {
   padding: 0.5rem 1rem;
-  color: #E36F1E;
+  color: #C75300;
   font-size: 0.77778rem;
   letter-spacing: 0.64px;
   font-weight: 700;
@@ -17933,14 +17912,14 @@ tbody tr:nth-child(odd) {
 /* line 34, resources/assets/styles/components/_tables.scss */
 
 tbody tr > td:not(:last-child) {
-  border-right: 2px solid #BCBEBC;
+  border-right: 2px solid #B8AEA3;
 }
 
 /* line 39, resources/assets/styles/components/_tables.scss */
 
 th button {
   background-color: #FFF;
-  color: #E36F1E;
+  color: #C75300;
   border: 0;
   padding: 0.125rem 0.5rem;
   border-radius: 0.25rem;
@@ -18124,17 +18103,17 @@ nav {
 /* line 74, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .cta-link a {
-  background-color: #E36F1E;
-  border-color: #E36F1E;
-  color: white;
+  background-color: #C75300;
+  border-color: #C75300;
+  color: #FFF;
 }
 
 /* line 79, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .cta-link a:hover,
 .header-inline .cta-link a:focus {
-  background-color: white;
-  color: #E36F1E;
+  background-color: #FFF;
+  color: #C75300;
 }
 
 /* line 87, resources/assets/styles/layouts/_header.scss */
@@ -18174,7 +18153,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  color: white;
+  color: #FFF;
   padding: 0.5rem 25px;
   line-height: 1.5;
   text-align: center;
@@ -18195,44 +18174,44 @@ nav {
 
 /* line 125, resources/assets/styles/layouts/_header.scss */
 
-.nav__primary > .menu-item:nth-of-type(1) > a {
-  background-color: #E56E00;
+.nav__primary > .menu-item.bg-orange > a {
+  background-color: #C75300;
   color: white;
 }
 
 /* line 129, resources/assets/styles/layouts/_header.scss */
 
-.nav__primary > .menu-item:nth-of-type(1) > a:hover,
-.nav__primary > .menu-item:nth-of-type(1) > a:focus {
-  background-color: #cc6200;
+.nav__primary > .menu-item.bg-orange > a:hover,
+.nav__primary > .menu-item.bg-orange > a:focus {
+  background-color: #9e4200;
 }
 
 /* line 136, resources/assets/styles/layouts/_header.scss */
 
-.nav__primary > .menu-item:nth-of-type(2) > a {
-  background-color: #AFBD00;
-  color: white;
+.nav__primary > .menu-item.bg-green > a {
+  background-color: #8F9D10;
+  color: #FFF;
 }
 
 /* line 140, resources/assets/styles/layouts/_header.scss */
 
-.nav__primary > .menu-item:nth-of-type(2) > a:hover,
-.nav__primary > .menu-item:nth-of-type(2) > a:focus {
-  background-color: #97a400;
+.nav__primary > .menu-item.bg-green > a:hover,
+.nav__primary > .menu-item.bg-green > a:focus {
+  background-color: #6d780c;
 }
 
 /* line 147, resources/assets/styles/layouts/_header.scss */
 
-.nav__primary > .menu-item:nth-of-type(3) > a {
-  background-color: #63ABB7;
+.nav__primary > .menu-item.bg-blue > a {
+  background-color: #368093;
   color: white;
 }
 
 /* line 151, resources/assets/styles/layouts/_header.scss */
 
-.nav__primary > .menu-item:nth-of-type(3) > a:hover,
-.nav__primary > .menu-item:nth-of-type(3) > a:focus {
-  background-color: #52a2af;
+.nav__primary > .menu-item.bg-blue > a:hover,
+.nav__primary > .menu-item.bg-blue > a:focus {
+  background-color: #2b6675;
 }
 
 /* line 158, resources/assets/styles/layouts/_header.scss */
@@ -18396,7 +18375,7 @@ body.search-wrapper > a[href="#content"],
     top: calc(100% + 12px);
     right: 0;
     width: 350px;
-    background-color: #007485;
+    background-color: #63ABB7;
     padding: 1rem;
     opacity: 0;
     -webkit-transition: opacity 0.3s ease-in-out;
@@ -18446,7 +18425,7 @@ body.search-wrapper > a[href="#content"],
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid #007485;
+    border-bottom: 8px solid #63ABB7;
     content: '';
   }
 }
@@ -18462,7 +18441,7 @@ body.search-wrapper > a[href="#content"],
 
 .page-footer .footer-call-to-action {
   position: relative;
-  background-color: #9FA739;
+  background-color: #8F9D10;
   padding: 180px 0 1.5rem 0;
 }
 
@@ -18515,16 +18494,17 @@ body.search-wrapper > a[href="#content"],
   text-align: center;
   height: auto;
   padding: 1.5rem 0;
+  font-size: 0.77778rem;
 }
 
-/* line 50, resources/assets/styles/layouts/_footer.scss */
+/* line 51, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-copyright__text {
   display: block;
   margin-top: 1rem;
 }
 
-/* line 57, resources/assets/styles/layouts/_footer.scss */
+/* line 58, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu {
   display: -webkit-box;
@@ -18537,19 +18517,19 @@ body.search-wrapper > a[href="#content"],
   margin: 0;
 }
 
-/* line 62, resources/assets/styles/layouts/_footer.scss */
+/* line 63, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu li {
   margin: 0.5rem;
 }
 
-/* line 66, resources/assets/styles/layouts/_footer.scss */
+/* line 67, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu a {
   text-decoration: underline;
 }
 
-/* line 69, resources/assets/styles/layouts/_footer.scss */
+/* line 70, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu a:hover,
 .page-footer .menu a:focus {
@@ -18557,13 +18537,13 @@ body.search-wrapper > a[href="#content"],
 }
 
 @media (min-width: 768px) {
-  /* line 77, resources/assets/styles/layouts/_footer.scss */
+  /* line 78, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .footer-call-to-action {
     padding-top: 2.5rem;
   }
 
-  /* line 81, resources/assets/styles/layouts/_footer.scss */
+  /* line 82, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu {
     -webkit-box-orient: horizontal;
@@ -18575,19 +18555,19 @@ body.search-wrapper > a[href="#content"],
             justify-content: center;
   }
 
-  /* line 85, resources/assets/styles/layouts/_footer.scss */
+  /* line 86, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu li {
     margin: 0;
   }
 
-  /* line 89, resources/assets/styles/layouts/_footer.scss */
+  /* line 90, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu li:not(:last-of-type) {
     margin-right: 1rem;
   }
 
-  /* line 93, resources/assets/styles/layouts/_footer.scss */
+  /* line 94, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu a {
     font-weight: 600;
@@ -18598,10 +18578,9 @@ body.search-wrapper > a[href="#content"],
 
 .home-hero {
   position: relative;
-  background-color: #F1F1F1;
 }
 
-/* line 5, resources/assets/styles/layouts/_home.scss */
+/* line 4, resources/assets/styles/layouts/_home.scss */
 
 .home-hero::after {
   display: block;
@@ -18621,21 +18600,21 @@ body.search-wrapper > a[href="#content"],
   content: '';
 }
 
-/* line 23, resources/assets/styles/layouts/_home.scss */
+/* line 22, resources/assets/styles/layouts/_home.scss */
 
 .home-hero h1 {
   padding-bottom: 2rem;
   font-weight: 300;
 }
 
-/* line 28, resources/assets/styles/layouts/_home.scss */
+/* line 27, resources/assets/styles/layouts/_home.scss */
 
 .home-hero .fl-col-content {
   position: relative;
   z-index: 10;
 }
 
-/* line 34, resources/assets/styles/layouts/_home.scss */
+/* line 33, resources/assets/styles/layouts/_home.scss */
 
 .list-partnerships-data {
   list-style-type: none;
@@ -18644,7 +18623,7 @@ body.search-wrapper > a[href="#content"],
   max-width: 300px;
 }
 
-/* line 40, resources/assets/styles/layouts/_home.scss */
+/* line 39, resources/assets/styles/layouts/_home.scss */
 
 .list-partnerships-data li {
   display: -webkit-box;
@@ -18658,55 +18637,55 @@ body.search-wrapper > a[href="#content"],
       justify-content: space-around;
 }
 
-/* line 48, resources/assets/styles/layouts/_home.scss */
+/* line 47, resources/assets/styles/layouts/_home.scss */
 
 .list-partnerships-data li::before {
   display: none !important;
 }
 
-/* line 52, resources/assets/styles/layouts/_home.scss */
+/* line 51, resources/assets/styles/layouts/_home.scss */
 
 .list-partnerships-data li:not(:last-of-type) {
   margin-bottom: 4px;
 }
 
-/* line 56, resources/assets/styles/layouts/_home.scss */
+/* line 55, resources/assets/styles/layouts/_home.scss */
 
 .list-partnerships-data li.data-orange {
-  background-color: #F9E2D2;
-  color: #E56E00;
+  background-color: #FAE3D3;
+  color: #C75300;
 }
 
-/* line 61, resources/assets/styles/layouts/_home.scss */
+/* line 60, resources/assets/styles/layouts/_home.scss */
 
 .list-partnerships-data li.data-teal {
-  background-color: #CCE3E6;
+  background-color: #CCE3E9;
   color: #007485;
 }
 
-/* line 66, resources/assets/styles/layouts/_home.scss */
+/* line 65, resources/assets/styles/layouts/_home.scss */
 
 .list-partnerships-data li.data-green {
   background-color: #EFF1D2;
-  color: #AFBD00;
+  color: #8F9D10;
 }
 
-/* line 71, resources/assets/styles/layouts/_home.scss */
+/* line 70, resources/assets/styles/layouts/_home.scss */
 
 .list-partnerships-data li.data-grey {
-  background-color: #dedede;
-  color: #897966;
+  background-color: #D9D9D9;
+  color: #5A4F42;
 }
 
-/* line 78, resources/assets/styles/layouts/_home.scss */
+/* line 77, resources/assets/styles/layouts/_home.scss */
 
 .home .fl-module-info-box {
   max-width: 390px;
   margin-left: auto;
-  color: #AFBD00;
+  color: #8F9D10;
 }
 
-/* line 84, resources/assets/styles/layouts/_home.scss */
+/* line 83, resources/assets/styles/layouts/_home.scss */
 
 .stat-card {
   max-width: 350px;
@@ -18749,7 +18728,7 @@ body.search-wrapper > a[href="#content"],
 
 .archive-wrap__inner {
   width: 100%;
-  background-color: white;
+  background-color: #FFF;
   padding: 1rem;
   margin-bottom: 4rem;
 }
@@ -18782,14 +18761,14 @@ body.search-wrapper > a[href="#content"],
 .archive-filters__filter {
   display: inline-block;
   padding: 1rem 1.5rem;
-  background-color: #D0C9C2;
-  color: #585D58;
+  background-color: #B8AEA3;
+  color: #5A4F42;
 }
 
 /* line 35, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters__filter.active {
-  background-color: white;
+  background-color: #FFF;
 }
 
 /* line 40, resources/assets/styles/layouts/_archive.scss */
@@ -18942,7 +18921,7 @@ body.search-wrapper > a[href="#content"],
 .page-header--w-icon__title {
   text-transform: uppercase;
   font-size: 1.125rem !important;
-  color: #98C7CF;
+  color: #97c7cf;
 }
 
 /* line 89, resources/assets/styles/layouts/_page.scss */
@@ -18994,7 +18973,7 @@ body.search-wrapper > a[href="#content"],
 .template-impact-landing .page-header > .container-wide,
 .template-impact-landing .sidebar-primary .page-header > .content,
 .sidebar-primary .template-impact-landing .page-header > .content {
-  background-color: rgba(137, 121, 102, 0.9);
+  background-color: rgba(148, 131, 110, 0.9);
 }
 
 @media only screen and (min-width: 769px) {
@@ -19127,7 +19106,7 @@ body.search-wrapper > a[href="#content"],
 /* line 197, resources/assets/styles/layouts/_page.scss */
 
 .tri-stats .fl-rich-text {
-  background-color: #F1F1F1;
+  background-color: #F5F4F3;
   padding: 0.75rem;
   text-align: center;
 }
@@ -19186,8 +19165,8 @@ body.search-wrapper > a[href="#content"],
           align-items: center;
   max-width: 390px;
   margin-left: auto;
-  background-color: white;
-  color: #AFBD00;
+  background-color: #FFF;
+  color: #8F9D10;
   padding: 1rem;
 }
 
@@ -19234,20 +19213,20 @@ body.search-wrapper > a[href="#content"],
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(0, 82, 95, 0.9);
+  background-color: rgba(0, 116, 133, 0.9);
 }
 
 /* line 269, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box > .fl-module-content > .uabb-infobox .uabb-infobox-text {
-  color: white;
+  color: #FFF;
 }
 
 /* line 275, resources/assets/styles/layouts/_page.scss */
 
 .fl-number {
-  background-color: #F1F1F1;
-  color: #707070;
+  background-color: #D9D9D9;
+  color: #5A4F42;
 }
 
 /* line 281, resources/assets/styles/layouts/_page.scss */
@@ -19392,65 +19371,65 @@ body.search-wrapper > a[href="#content"],
 /* line 39, resources/assets/styles/layouts/_single.scss */
 
 .single-entry[data-type="blog"] {
-  background-color: white;
-  border: 2px solid #F5F4F3;
+  background-color: #FFF;
+  border: 2px solid #E7E4E0;
 }
 
 /* line 44, resources/assets/styles/layouts/_single.scss */
 
 .single-entry[data-cat="environmental-conservation"] {
-  background-color: rgba(204, 227, 232, 0.6);
+  background-color: #CCE3E9;
 }
 
 /* line 47, resources/assets/styles/layouts/_single.scss */
 
 .single-entry[data-cat="environmental-conservation"] h2 {
-  color: #00525F;
+  color: #007485;
 }
 
 /* line 51, resources/assets/styles/layouts/_single.scss */
 
 .single-entry[data-cat="environmental-conservation"] .single-entry__label {
-  background-color: #00525F;
-  color: #CCE3E8;
+  background-color: #007485;
+  color: #CCE3E9;
 }
 
 /* line 57, resources/assets/styles/layouts/_single.scss */
 
 .single-entry[data-cat="regional-cultural-arts"] {
-  background-color: #F9E2D2;
+  background-color: #FAE3D3;
 }
 
 /* line 60, resources/assets/styles/layouts/_single.scss */
 
 .single-entry[data-cat="regional-cultural-arts"] h2 {
-  color: #E56E00;
+  color: #C75300;
 }
 
 /* line 64, resources/assets/styles/layouts/_single.scss */
 
 .single-entry[data-cat="regional-cultural-arts"] .single-entry__label {
-  background-color: #E56E00;
-  color: #F9E2D2;
+  background-color: #C75300;
+  color: #FAE3D3;
 }
 
 /* line 70, resources/assets/styles/layouts/_single.scss */
 
 .single-entry[data-cat="youth-literacy"] {
-  background-color: rgba(223, 229, 163, 0.6);
+  background-color: #EFF1D2;
 }
 
 /* line 73, resources/assets/styles/layouts/_single.scss */
 
 .single-entry[data-cat="youth-literacy"] h2 {
-  color: #7A7B0C;
+  color: #8F9D10;
 }
 
 /* line 77, resources/assets/styles/layouts/_single.scss */
 
 .single-entry[data-cat="youth-literacy"] .single-entry__label {
-  background-color: #7A7B0C;
-  color: #DFE5A3;
+  background-color: #8F9D10;
+  color: #EFF1D2;
 }
 
 /* line 83, resources/assets/styles/layouts/_single.scss */
@@ -19469,7 +19448,7 @@ body.search-wrapper > a[href="#content"],
 
 .single-entry[data-cat="community-development"] .single-entry__label {
   background-color: #5A4F42;
-  color: #E7E4E0;
+  color: #F5F4F3;
 }
 
 @media only screen and (min-width: 769px) {
@@ -19531,7 +19510,7 @@ body.search-wrapper > a[href="#content"],
 /* line 131, resources/assets/styles/layouts/_single.scss */
 
 .single-post .page-header .entry-primary-term {
-  color: #98C7CF;
+  color: #368093;
 }
 
 @media only screen and (min-width: 993px) {
@@ -19581,14 +19560,14 @@ body.search-wrapper > a[href="#content"],
 .single-post article .sidebar-primary .content,
 .sidebar-primary .single-post article .content {
   background-color: #004852;
-  color: white;
+  color: #FFF;
   text-align: left;
 }
 
 /* line 168, resources/assets/styles/layouts/_single.scss */
 
 .single-post article .entry-content {
-  background-color: white;
+  background-color: #FFF;
 }
 
 /* line 175, resources/assets/styles/layouts/_single.scss */
@@ -19603,7 +19582,7 @@ body.search-wrapper > a[href="#content"],
 .single-award .entry-content .award-detail-text {
   text-transform: none;
   letter-spacing: 0;
-  color: #E36F1E;
+  color: #C75300;
 }
 
 /* line 191, resources/assets/styles/layouts/_single.scss */
@@ -19614,8 +19593,8 @@ body.search-wrapper > a[href="#content"],
   padding: 1rem;
   font-weight: 600;
   text-align: center;
-  background-color: #897966;
-  color: white;
+  background-color: #94836E;
+  color: #FFF;
 }
 
 /* line 2, resources/assets/styles/layouts/_events.scss */
@@ -19653,7 +19632,7 @@ body.search-wrapper > a[href="#content"],
 /* line 23, resources/assets/styles/layouts/_events.scss */
 
 .template-events .main {
-  background-color: #DDD;
+  background-color: #E7E4E0;
 }
 
 /* line 27, resources/assets/styles/layouts/_events.scss */
@@ -19676,14 +19655,14 @@ body.search-wrapper > a[href="#content"],
 /* line 38, resources/assets/styles/layouts/_events.scss */
 
 .template-events [role="tabpanel"] {
-  background-color: white;
+  background-color: #FFF;
 }
 
 /* line 42, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping {
   position: relative;
-  border-top: 1px solid #98C7CF;
+  border-top: 1px solid #63ABB7;
   padding: 1rem 0;
 }
 
@@ -19819,13 +19798,13 @@ body.search-wrapper > a[href="#content"],
 /* line 148, resources/assets/styles/layouts/_events.scss */
 
 .single-event .kicker {
-  color: #E36F1E;
+  color: #C75300;
 }
 
 /* line 152, resources/assets/styles/layouts/_events.scss */
 
 .single-event .details {
-  color: #E36F1E;
+  color: #C75300;
 }
 
 /* line 1, resources/assets/styles/layouts/_people.scss */
@@ -19950,7 +19929,7 @@ body.search-wrapper > a[href="#content"],
 .single-person__details,
 .single-person__about {
   padding: 3rem 2rem;
-  color: white;
+  color: #FFF;
 }
 
 /* line 80, resources/assets/styles/layouts/_people.scss */

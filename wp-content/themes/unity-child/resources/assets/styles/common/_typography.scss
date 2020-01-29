@@ -31,11 +31,14 @@ h2 {
   color: $color-blue;
 }
 
+a {
+  color: $brand-primary;
+}
+
 blockquote {
   font-size: rem-calc(20);
   line-height: rem-calc(28);
-  font-family: 'PT Serif', sans-serif;
-  color: $brand-primary;
+  color: $color-green-a11y;
   margin: 1.5rem 0;
 
   p:last-of-type() {
@@ -94,7 +97,7 @@ blockquote {
 }
 
 .text-orange {
-  color: $color-orange;
+  color: $color-orange-a11y;
 }
 
 // Font weight utility classes.
@@ -113,5 +116,9 @@ $weights: (400, 600, 700);
     list-style: none;
     position: relative;
     padding-left: 30px;
+  }
+
+  ul {
+    margin-bottom: 0 !important;
   }
 }

@@ -32,22 +32,22 @@ a.btn {
 
 .btn--orange,
 a.btn--orange {
-  color: $color-orange;
+  color: $color-orange-a11y;
 
   &:hover,
   &:focus {
-    background-color: $color-orange;
-    color: white;
+    background-color: $color-orange-a11y;
+    color: $color-white;
   }
 }
 
 .btn--white,
 a.btn--white {
-  color: white;
+  color: $color-white;
 
   &:hover,
   &:focus {
-    background-color: white;
+    background-color: $color-white;
     color: $brand-primary;
   }
 }
@@ -59,7 +59,7 @@ a.btn--grey {
   &:hover,
   &:focus {
     background-color: $color-grey;
-    color: white;
+    color: $color-white;
   }
 }
 

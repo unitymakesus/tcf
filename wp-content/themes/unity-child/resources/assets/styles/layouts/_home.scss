@@ -1,6 +1,5 @@
 .home-hero {
   position: relative;
-  background-color: #F1F1F1;
 
   &::after {
     display: block;
@@ -54,23 +53,23 @@
     }
 
     &.data-orange {
-      background-color: #F9E2D2;
-      color: #E56E00;
+      background-color: $color-orange-light;
+      color: $color-orange-a11y;
     }
 
     &.data-teal {
-      background-color: #CCE3E6;
+      background-color: $color-teal-light;
       color: $brand-primary;
     }
 
     &.data-green {
-      background-color: #EFF1D2;
-      color: #AFBD00;
+      background-color: $color-green-light;
+      color: $color-green-a11y;
     }
 
     &.data-grey {
-      background-color: rgb(222, 222, 222);
-      color: #897966;
+      background-color: $color-grey-light;
+      color: $color-beige-darker;
     }
   }
 }
@@ -78,7 +77,7 @@
 .home .fl-module-info-box {
   max-width: 390px;
   margin-left: auto;
-  color: #AFBD00;
+  color: $color-green-a11y;
 }
 
 .stat-card {

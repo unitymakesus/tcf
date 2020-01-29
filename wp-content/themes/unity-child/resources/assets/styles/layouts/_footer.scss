@@ -5,7 +5,7 @@
 
 .page-footer .footer-call-to-action {
   position: relative;
-  background-color: #9FA739;
+  background-color: $color-green-a11y;
   padding: 180px 0 1.5rem 0;
 
   h2 {
@@ -42,10 +42,11 @@
 }
 
 .page-footer .footer-copyright {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba($color-black, 0.3);
   text-align: center;
   height: auto;
   padding: 1.5rem 0;
+  font-size: rem-calc(14);
 
   &__text {
     display: block;

@@ -26,7 +26,7 @@ select:not(.browser-default) {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-color: white;
+  background-color: $color-white;
   color: $color-grey;
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007485%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
   background-repeat: no-repeat, repeat;
@@ -58,9 +58,9 @@ select:not(.browser-default) {
   margin-bottom: 1rem;
 
   input[type="search"] {
-    border-color: #B8AEA3;
-    background-color: white;
-    color: #5A4F42;
+    border-color: $color-beige-med;
+    background-color: $color-white;
+    color: $color-beige-darker;
     height: 30px;
     width: 100%;
     max-width: 275px;
@@ -68,7 +68,7 @@ select:not(.browser-default) {
     margin: 0;
 
     &::placeholder {
-      color: #5A4F42;
+      color: $color-beige-darker;
       text-transform: uppercase;
     }
   }
@@ -84,31 +84,11 @@ select:not(.browser-default) {
     border: 0;
     width: 30px;
     height: 30px;
-    color: #5A4F42;
+    color: $color-beige-darker;
 
     .material-icons {
       font-size: rem-calc(24px);
       line-height: 0;
-    }
-  }
-}
-
-#award-search {
-  color: #414141;
-
-  label {
-    font-size: 1rem;
-    font-weight: 600;
-    color: inherit;
-  }
-
-  input[type="text"] {
-    border-color: #98C7CF;
-    color: #414141;
-    margin-top: 1rem;
-
-    &::placeholder {
-      color: inherit;
     }
   }
 }
@@ -167,8 +147,8 @@ select:not(.browser-default) {
     padding-right: 0;
 
     &:focus {
-      border-bottom: 1px solid #63ABB7 !important;
-      box-shadow: 0 1px 0 0 #63ABB7 !important;
+      border-bottom: 1px solid $color-teal !important;
+      box-shadow: 0 1px 0 0 $color-teal !important;
     }
 
     &::placeholder {
@@ -178,7 +158,7 @@ select:not(.browser-default) {
 }
 
 .gsection_title {
-  color: $color-orange;
+  color: $color-orange-a11y;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
@@ -200,8 +180,8 @@ select:not(.browser-default) {
 .gfield_error .validation_message,
 .gform_validation_error #error {
   padding: 1rem;
-  background-color: #FFEBEE;
-  color: #B71C1C;
+  background-color: lighten($error-color, 55);
+  color: $error-color;
 
   a {
     color: inherit;
@@ -211,7 +191,7 @@ select:not(.browser-default) {
 .gfield_error input,
 .gfield_error textarea,
 .gfield_error select {
-  border-color: #B71C1C !important;
+  border-color: $error-color !important;
 }
 
 .gfield_radio, .gfield_checkbox {
