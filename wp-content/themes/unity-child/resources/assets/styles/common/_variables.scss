@@ -1,23 +1,23 @@
 // Colors
 $color-yellow:      #FFE153;
 $color-blue:        #007485;
-$color-teal:        #63ABB7;
 $color-teal-a11y:   #368093;
+$color-teal:        #63ABB7;
 $color-teal-light:  #CCE3E9;
-$color-orange-light:#FAE3D3;
-$color-orange:      #E36F1E;
 $color-orange-a11y: #C75300;
-$color-grey-light:  #D9D9D9;
-$color-grey:        #585D58;
-$color-grey-dark:   #414141;
-$color-beige-light: #F5F4F3;
-$color-beige:       #E7E4E0;
-$color-beige-med:   #B8AEA3;
-$color-beige-dark:  #94836E;
-$color-beige-darker:#5A4F42;
-$color-white:       #FFF;
+$color-orange:      #E36F1E;
+$color-orange-light:#FAE3D3;
 $color-green-a11y:  #8F9D10;
 $color-green-light: #EFF1D2;
+$color-grey-dark:   #414141;
+$color-grey:        #585D58;
+$color-grey-light:  #D9D9D9;
+$color-beige-darker:#5A4F42;
+$color-beige-dark:  #94836E;
+$color-beige-med:   #B8AEA3;
+$color-beige:       #E7E4E0;
+$color-beige-light: #F5F4F3;
+$color-white:       #FFF;
 
 $brand-primary:     $color-blue;
 $brand-secondary:   $color-orange;
@@ -27,4 +27,4 @@ $sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 $sans-condensed: "Open Sans Condensed", $sans-serif;
 
 // Misc
-$focus-box-shadow: inset 0 0 0 4px lightblue;
+$focus-box-shadow: inset 0 0 0 4px $color-teal-light;
