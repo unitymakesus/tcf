@@ -683,39 +683,48 @@ class GFFormDisplay {
 		return $is_last_page;
 	}
 
+	/**
+	 * Returns the entry limit date range for the given period.
+	 *
+	 * @since unknown
+	 * @since 2.4.15 Updated the day period to use the local time.
+	 *
+	 * @param string $period The eriod for the entry limit.
+	 *
+	 * @return array
+	 */
 	private static function get_limit_period_dates( $period ) {
 		if ( empty( $period ) ) {
 			return array( 'start_date' => null, 'end_date' => null );
 		}
 
 		switch ( $period ) {
-			case 'day' :
+			case 'day':
 				return array(
-					'start_date' => gmdate( 'Y-m-d' ),
-					'end_date'   => gmdate( 'Y-m-d 23:59:59' )
+					'start_date' => current_time( 'Y-m-d' ),
+					'end_date'   => current_time( 'Y-m-d 23:59:59' ),
 				);
 				break;
 
-			case 'week' :
+			case 'week':
 				return array(
 					'start_date' => gmdate( 'Y-m-d', strtotime( 'Monday this week' ) ),
-					'end_date'   => gmdate( 'Y-m-d 23:59:59', strtotime( 'next Sunday' ) )
+					'end_date'   => gmdate( 'Y-m-d 23:59:59', strtotime( 'next Sunday' ) ),
 				);
 				break;
 
-			case 'month' :
-				$month_start = gmdate( 'Y-m-1' );
-
+			case 'month':
+				$month_start = gmdate( 'Y-m-1');
 				return array(
 					'start_date' => $month_start,
-					'end_date'   => gmdate( 'Y-m-d H:i:s', strtotime( "{$month_start} +1 month -1 second" ) )
+					'end_date'   => gmdate( 'Y-m-d H:i:s', strtotime( "{$month_start} +1 month -1 second" ) ),
 				);
 				break;
 
-			case 'year' :
+			case 'year':
 				return array(
 					'start_date' => gmdate( 'Y-1-1' ),
-					'end_date'   => gmdate( 'Y-12-31 23:59:59' )
+					'end_date'   => gmdate( 'Y-12-31 23:59:59' ),
 				);
 				break;
 		}
