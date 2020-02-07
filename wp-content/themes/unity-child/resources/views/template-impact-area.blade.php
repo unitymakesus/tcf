@@ -11,6 +11,7 @@
       @if (is_page('why-the-triangle'))
         @include('partials.county-map')
       @endif
+      @include('partials.page-footer-contact')
     </article>
   @endwhile
 @endsection

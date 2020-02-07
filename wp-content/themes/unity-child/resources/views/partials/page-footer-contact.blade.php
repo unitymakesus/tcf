@@ -1,30 +1,28 @@
 @if ($staff_members = get_field('staff_member_contact'))
   <footer class="entry-footer">
     <div class="container">
-      <div class="row">
-        <div class="col s12">
-          <h2>{{ get_field('contact_cta_title') }}</h2>
-          {!! get_field('contact_cta_text') !!}
-        </div>
-      </div>
       @foreach ($staff_members as $staff)
-        <div class="row no-gutters mb-3">
-          <div class="col s2">
+        <div class="row no-gutters mb-0">
+          <div class="col s5 m3">
             <div class="entry-footer__image">
               {!! get_the_post_thumbnail($staff, 'staff-headshot') !!}
             </div>
           </div>
-          <div class="col s10">
+          <div class="col s7 m9">
             <div class="entry-footer__details">
               <div class="row">
                 <div class="col s12">
-                  <h3 class="mb-0">{{ get_the_title($staff) }}</h3>
+                  @if ($staff == $staff_members[0])
+                    <h2 class="mb-0">{{ get_field('contact_cta_title') }}</h2>
+                    {!! get_field('contact_cta_text') !!}
+                  @endif
+                  <h3 class="mb-0 h4">{{ get_the_title($staff) }}</h3>
                   @if (have_rows('job_titles', $staff))
-                  <dl class="mt-2">
+                  <dl class="mt-0">
                     <dt class="screen-reader-text">{{ __('Job Title(s)', 'sage') }}</dt>
                     @while (have_rows('job_titles', $staff))
                       @php the_row(); @endphp
-                      <dd class="fw-600" itemprop="jobTitle">{{ get_sub_field('job_title') }}</dd>
+                      <dd itemprop="jobTitle">{{ get_sub_field('job_title') }}</dd>
                     @endwhile
                   </dl>
                   @endif

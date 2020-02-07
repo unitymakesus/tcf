@@ -16249,9 +16249,21 @@ h2 {
 
 a {
   color: #007485;
+  text-decoration: underline;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-/* line 38, resources/assets/styles/common/_typography.scss */
+/* line 39, resources/assets/styles/common/_typography.scss */
+
+a:hover,
+a:active {
+  -webkit-text-decoration-style: double;
+          text-decoration-style: double;
+}
+
+/* line 44, resources/assets/styles/common/_typography.scss */
 
 blockquote {
   font-size: 1.11111rem;
@@ -16260,21 +16272,21 @@ blockquote {
   margin: 1.5rem 0;
 }
 
-/* line 44, resources/assets/styles/common/_typography.scss */
+/* line 50, resources/assets/styles/common/_typography.scss */
 
 blockquote p:last-of-type {
   margin: 0;
   padding: 0;
 }
 
-/* line 50, resources/assets/styles/common/_typography.scss */
+/* line 56, resources/assets/styles/common/_typography.scss */
 
 .uabb-testimonial.uabb-testimonial {
   padding: 0;
   background: none;
 }
 
-/* line 55, resources/assets/styles/common/_typography.scss */
+/* line 61, resources/assets/styles/common/_typography.scss */
 
 .uabb-testimonial-author-description {
   font-size: 2rem;
@@ -16283,86 +16295,86 @@ blockquote p:last-of-type {
   margin-bottom: 0.3em;
 }
 
-/* line 65, resources/assets/styles/common/_typography.scss */
+/* line 71, resources/assets/styles/common/_typography.scss */
 
 .uabb-testimonial-author .uabb-testimonial-author-name::before {
   content: '\2014';
 }
 
-/* line 70, resources/assets/styles/common/_typography.scss */
+/* line 76, resources/assets/styles/common/_typography.scss */
 
 .wp-block-quote {
   max-width: 550px;
 }
 
-/* line 73, resources/assets/styles/common/_typography.scss */
+/* line 79, resources/assets/styles/common/_typography.scss */
 
 .wp-block-quote.has-text-align-left,
 .wp-block-quote.has-text-align-right {
   border: 0;
 }
 
-/* line 78, resources/assets/styles/common/_typography.scss */
+/* line 84, resources/assets/styles/common/_typography.scss */
 
 .wp-block-quote.has-text-align-left {
   margin-right: auto;
 }
 
-/* line 82, resources/assets/styles/common/_typography.scss */
+/* line 88, resources/assets/styles/common/_typography.scss */
 
 .wp-block-quote.has-text-align-right {
   margin-left: auto;
 }
 
-/* line 87, resources/assets/styles/common/_typography.scss */
+/* line 93, resources/assets/styles/common/_typography.scss */
 
 .text-center {
   text-align: center;
 }
 
-/* line 91, resources/assets/styles/common/_typography.scss */
+/* line 97, resources/assets/styles/common/_typography.scss */
 
 .text-uppercase {
   text-transform: uppercase;
 }
 
-/* line 95, resources/assets/styles/common/_typography.scss */
+/* line 101, resources/assets/styles/common/_typography.scss */
 
 .text-transform-none {
   text-transform: none;
 }
 
-/* line 99, resources/assets/styles/common/_typography.scss */
+/* line 105, resources/assets/styles/common/_typography.scss */
 
 .text-orange {
   color: #C75300;
 }
 
-/* line 107, resources/assets/styles/common/_typography.scss */
+/* line 113, resources/assets/styles/common/_typography.scss */
 
 .fw-400 {
   font-weight: 400;
 }
 
-/* line 107, resources/assets/styles/common/_typography.scss */
+/* line 113, resources/assets/styles/common/_typography.scss */
 
 .fw-600 {
   font-weight: 600;
 }
 
-/* line 107, resources/assets/styles/common/_typography.scss */
+/* line 113, resources/assets/styles/common/_typography.scss */
 
 .fw-700 {
   font-weight: 700;
 }
 
-/* line 112, resources/assets/styles/common/_typography.scss */
+/* line 118, resources/assets/styles/common/_typography.scss */
 
 .entry-content ul:not(.select-dropdown):not(.gform_fields) {
   margin-bottom: 2rem;
 }
 
-/* line 115, resources/assets/styles/common/_typography.scss */
+/* line 121, resources/assets/styles/common/_typography.scss */
 
 .entry-content ul  li {
   list-style: none;
@@ -16370,7 +16382,7 @@ blockquote p:last-of-type {
   padding-left: 30px;
 }
 
-/* line 121, resources/assets/styles/common/_typography.scss */
+/* line 127, resources/assets/styles/common/_typography.scss */
 
 .entry-content ul  ul {
   margin-bottom: 0 !important;
@@ -19235,123 +19247,117 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 
 /* line 203, resources/assets/styles/layouts/_page.scss */
 
-.single-award article,
-.page-template-default article,
-.template-narrow-w-footer-contact article {
-  padding-bottom: 4rem;
-}
-
-/* line 207, resources/assets/styles/layouts/_page.scss */
-
-.single-award .entry-content,
-.single-award .entry-footer,
-.page-template-default .entry-content,
-.page-template-default .entry-footer,
-.template-narrow-w-footer-contact .entry-content,
-.template-narrow-w-footer-contact .entry-footer {
-  max-width: 940px;
-  margin: 0 auto;
-}
-
-/* line 213, resources/assets/styles/layouts/_page.scss */
-
 .single-award .entry-content,
 .page-template-default .entry-content,
 .template-narrow-w-footer-contact .entry-content {
+  max-width: 940px;
+  margin: 0 auto;
   padding: 2rem 1rem;
   background-color: white;
 }
 
-/* line 218, resources/assets/styles/layouts/_page.scss */
-
-.single-award .entry-footer,
-.page-template-default .entry-footer,
-.template-narrow-w-footer-contact .entry-footer {
-  padding: 1rem;
-  background-color: #F5F4F3;
-}
-
-/* line 222, resources/assets/styles/layouts/_page.scss */
-
-.single-award .entry-footer h2,
-.page-template-default .entry-footer h2,
-.template-narrow-w-footer-contact .entry-footer h2 {
-  color: #007485;
-  font-family: "Open Sans Condensed", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-}
-
-/* line 227, resources/assets/styles/layouts/_page.scss */
-
-.single-award .entry-footer a,
-.page-template-default .entry-footer a,
-.template-narrow-w-footer-contact .entry-footer a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-/* line 232, resources/assets/styles/layouts/_page.scss */
-
-.single-award .entry-footer__image,
-.page-template-default .entry-footer__image,
-.template-narrow-w-footer-contact .entry-footer__image {
-  line-height: 0;
-}
-
-/* line 236, resources/assets/styles/layouts/_page.scss */
-
-.single-award .entry-footer__details,
-.page-template-default .entry-footer__details,
-.template-narrow-w-footer-contact .entry-footer__details {
-  padding: 1rem;
-}
-
 @media only screen and (min-width: 993px) {
-  /* line 242, resources/assets/styles/layouts/_page.scss */
+  /* line 211, resources/assets/styles/layouts/_page.scss */
+
+  .single-award article,
+  .page-template-default article,
+  .template-narrow-w-footer-contact article {
+    padding-bottom: 4rem;
+  }
+
+  /* line 215, resources/assets/styles/layouts/_page.scss */
 
   .single-award .entry-content,
   .page-template-default .entry-content,
   .template-narrow-w-footer-contact .entry-content {
     padding: 3rem 98px;
   }
+}
 
-  /* line 246, resources/assets/styles/layouts/_page.scss */
+/* line 221, resources/assets/styles/layouts/_page.scss */
 
-  .single-award .entry-footer,
-  .page-template-default .entry-footer,
-  .template-narrow-w-footer-contact .entry-footer {
-    padding: 2rem;
-  }
+.entry-footer {
+  background-color: #E7E4E0;
+}
 
-  /* line 249, resources/assets/styles/layouts/_page.scss */
+/* line 224, resources/assets/styles/layouts/_page.scss */
 
-  .single-award .entry-footer__details,
-  .page-template-default .entry-footer__details,
-  .template-narrow-w-footer-contact .entry-footer__details {
-    padding: 48px 36px;
+.entry-footer .container,
+.entry-footer .container-wide,
+.entry-footer .sidebar-primary .content,
+.sidebar-primary .entry-footer .content {
+  max-width: 940px;
+  margin: 0 auto;
+  background-color: #F5F4F3;
+}
+
+/* line 230, resources/assets/styles/layouts/_page.scss */
+
+.entry-footer h2 {
+  color: #007485;
+}
+
+/* line 234, resources/assets/styles/layouts/_page.scss */
+
+.entry-footer h3 {
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* line 238, resources/assets/styles/layouts/_page.scss */
+
+.entry-footer p,
+.entry-footer dd {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+/* line 243, resources/assets/styles/layouts/_page.scss */
+
+.entry-footer a {
+  color: inherit;
+}
+
+/* line 247, resources/assets/styles/layouts/_page.scss */
+
+.entry-footer__image {
+  line-height: 0;
+}
+
+/* line 251, resources/assets/styles/layouts/_page.scss */
+
+.entry-footer__details {
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 993px) {
+  /* line 221, resources/assets/styles/layouts/_page.scss */
+
+  .entry-footer {
+    padding: 0 0 3rem;
   }
 }
 
-/* line 256, resources/assets/styles/layouts/_page.scss */
+/* line 260, resources/assets/styles/layouts/_page.scss */
 
 .list-partners {
   list-style-type: none;
 }
 
-/* line 259, resources/assets/styles/layouts/_page.scss */
+/* line 263, resources/assets/styles/layouts/_page.scss */
 
 .list-partners li::before {
   display: inline-block;
   content: '>' !important;
 }
 
-/* line 264, resources/assets/styles/layouts/_page.scss */
+/* line 268, resources/assets/styles/layouts/_page.scss */
 
 .list-partners a {
   color: inherit;
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 270, resources/assets/styles/layouts/_page.scss */
+  /* line 274, resources/assets/styles/layouts/_page.scss */
 
   .list-partners {
     -webkit-column-count: 2;
@@ -19360,7 +19366,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   }
 }
 
-/* line 275, resources/assets/styles/layouts/_page.scss */
+/* line 279, resources/assets/styles/layouts/_page.scss */
 
 .small-card {
   display: -webkit-box;
@@ -19378,7 +19384,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   padding: 1rem;
 }
 
-/* line 285, resources/assets/styles/layouts/_page.scss */
+/* line 289, resources/assets/styles/layouts/_page.scss */
 
 .small-card__text {
   padding: 1.5rem;
@@ -19388,19 +19394,19 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   text-transform: uppercase;
 }
 
-/* line 292, resources/assets/styles/layouts/_page.scss */
+/* line 296, resources/assets/styles/layouts/_page.scss */
 
 .small-card__text + p {
   margin: 0;
 }
 
-/* line 297, resources/assets/styles/layouts/_page.scss */
+/* line 301, resources/assets/styles/layouts/_page.scss */
 
 .small-card img {
   width: 115px;
 }
 
-/* line 302, resources/assets/styles/layouts/_page.scss */
+/* line 306, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box,
 .fl-module-info-box > .fl-module-content,
@@ -19408,7 +19414,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   height: 100%;
 }
 
-/* line 308, resources/assets/styles/layouts/_page.scss */
+/* line 312, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box > .fl-module-content > .uabb-infobox {
   display: -webkit-box;
@@ -19424,65 +19430,65 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   background-color: rgba(0, 116, 133, 0.9);
 }
 
-/* line 314, resources/assets/styles/layouts/_page.scss */
+/* line 318, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box > .fl-module-content > .uabb-infobox .uabb-infobox-text {
   color: #FFF;
 }
 
-/* line 320, resources/assets/styles/layouts/_page.scss */
+/* line 324, resources/assets/styles/layouts/_page.scss */
 
 .fl-number {
   background-color: #D9D9D9;
   color: #5A4F42;
 }
 
-/* line 326, resources/assets/styles/layouts/_page.scss */
+/* line 330, resources/assets/styles/layouts/_page.scss */
 
 .fl-accordion .fl-accordion-item {
   margin-bottom: 20px;
 }
 
-/* line 331, resources/assets/styles/layouts/_page.scss */
+/* line 335, resources/assets/styles/layouts/_page.scss */
 
 .tweets {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
-/* line 335, resources/assets/styles/layouts/_page.scss */
+/* line 339, resources/assets/styles/layouts/_page.scss */
 
 .tweets__heading {
   margin-left: 2rem;
   margin-bottom: 0.5rem;
 }
 
-/* line 342, resources/assets/styles/layouts/_page.scss */
+/* line 346, resources/assets/styles/layouts/_page.scss */
 
 .tweets__wrap {
   padding: 2rem;
   background-color: #E7E4E0;
 }
 
-/* line 347, resources/assets/styles/layouts/_page.scss */
+/* line 351, resources/assets/styles/layouts/_page.scss */
 
 .tweets__item {
   padding: 0 0.5rem;
 }
 
-/* line 351, resources/assets/styles/layouts/_page.scss */
+/* line 355, resources/assets/styles/layouts/_page.scss */
 
 .tweets__item:not(:last-of-type) {
   margin-bottom: 1.5rem;
 }
 
-/* line 355, resources/assets/styles/layouts/_page.scss */
+/* line 359, resources/assets/styles/layouts/_page.scss */
 
 .tweets .twitter-stat {
   margin-right: 2rem;
 }
 
-/* line 358, resources/assets/styles/layouts/_page.scss */
+/* line 362, resources/assets/styles/layouts/_page.scss */
 
 .tweets .twitter-stat::before {
   display: inline-block;
@@ -19495,20 +19501,20 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   content: '';
 }
 
-/* line 369, resources/assets/styles/layouts/_page.scss */
+/* line 373, resources/assets/styles/layouts/_page.scss */
 
 .tweets .twitter-stat--like::before {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMjAgMjAiPjxwYXRoIGQ9Ik0xNy4xOSA0LjE1NWMtMS42NzItMS41MzQtNC4zODMtMS41MzQtNi4wNTUgMGwtMS4xMzUgMS4wNDItMS4xMzYtMS4wNDJjLTEuNjcyLTEuNTM0LTQuMzgyLTEuNTM0LTYuMDU0IDAtMS44ODEgMS43MjctMS44ODEgNC41MiAwIDYuMjQ2bDcuMTkgNi41OTkgNy4xOS02LjU5OWMxLjg4LTEuNzI2IDEuODgtNC41MiAwLTYuMjQ2eiI+PC9wYXRoPjwvc3ZnPgo=);
 }
 
-/* line 373, resources/assets/styles/layouts/_page.scss */
+/* line 377, resources/assets/styles/layouts/_page.scss */
 
 .tweets .twitter-stat--retweet::before {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMzAgMjgiPjxwYXRoIGQ9Ik0yMCAyMy41YzAgLjI2Ni0uMjM0LjUtLjUuNWgtMTVjLS41NzggMC0uNS0uNjA5LS41LTF2LTlIMWMtLjU0NyAwLTEtLjQ1My0xLTEgMC0uMjM0LjA3OC0uNDY5LjIzNC0uNjQxbDUtNmMuMTg3LS4yMTkuNDY5LS4zNDQuNzY2LS4zNDRzLjU3OC4xMjUuNzY2LjM0NGw1IDZBLjk1NS45NTUgMCAwIDEgMTIgMTNjMCAuNTQ3LS40NTMgMS0xIDFIOHY2aDljLjE0MSAwIC4yOTcuMDYzLjM5MS4xNzJsMi41IDNBLjYzLjYzIDAgMCAxIDIwIDIzLjV6TTMwIDE3YS45NTYuOTU2IDAgMCAxLS4yMzQuNjQxbC01IDZjLS4xODcuMjE5LS40NjkuMzU5LS43NjYuMzU5cy0uNTc4LS4xNDEtLjc2Ni0uMzU5bC01LTZBLjk1NS45NTUgMCAwIDEgMTggMTdjMC0uNTQ3LjQ1My0xIDEtMWgzdi02aC05YS40OTguNDk4IDAgMCAxLS4zOTEtLjE4N2wtMi41LTNBLjUzNi41MzYgMCAwIDEgMTAgNi41YzAtLjI2Ni4yMzQtLjUuNS0uNWgxNWMuNTc4IDAgLjUuNjA5LjUgMXY5aDNjLjU0NyAwIDEgLjQ1MyAxIDF6Ij48L3BhdGg+PC9zdmc+Cg==);
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 379, resources/assets/styles/layouts/_page.scss */
+  /* line 383, resources/assets/styles/layouts/_page.scss */
 
   .tweets__wrap {
     display: -webkit-box;
@@ -19523,7 +19529,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
             justify-content: space-evenly;
   }
 
-  /* line 385, resources/assets/styles/layouts/_page.scss */
+  /* line 389, resources/assets/styles/layouts/_page.scss */
 
   .tweets__item:not(:last-of-type) {
     margin-bottom: 0;

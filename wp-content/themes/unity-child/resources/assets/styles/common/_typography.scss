@@ -33,6 +33,12 @@ h2 {
 
 a {
   color: $brand-primary;
+  text-decoration: underline;
+  transition: all 0.3s;
+
+  &:hover, &:active {
+    text-decoration-style: double;
+  }
 }
 
 blockquote {
