@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header-w-intro')
+  @include('partials.page-header')
 
   <div class="container">
     <div class="row">

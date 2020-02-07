@@ -55,6 +55,7 @@ nav {
   .sub-menu a {
     padding: 0.25rem 0.5rem;
     font-size: rem-calc(15);
+    line-height: rem-calc(30);
 
     + .sub-menu {
       position: relative;
@@ -269,6 +270,7 @@ nav {
     > .btn {
       display: inline-block;
       border-color: transparent;
+      color: $color-grey-light;
     }
 
     .wp-search {

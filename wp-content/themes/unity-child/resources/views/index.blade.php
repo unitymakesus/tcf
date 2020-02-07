@@ -2,7 +2,8 @@
 
 @section('content')
   @include('partials.page-header-w-intro', [
-    'archive_intro' => is_home() ? get_field('stories_header_intro', 'option') : ''
+    'archive_intro' => is_home() ? get_field('stories_header_intro', 'option') : '',
+    'page_id' => is_home() ? get_option( 'page_for_posts' ) : get_the_id()
   ])
   <div class="archive-wrap">
     @if (is_home())

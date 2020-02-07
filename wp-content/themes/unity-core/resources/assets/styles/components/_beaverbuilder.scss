@@ -14,11 +14,15 @@
 }
 
 // Style Buttons
-.fl-builder-content.fl-builder-content a.fl-button {
+.fl-builder-content a.fl-button {
   @extend .btn;
+  @extend .btn-primary;
 
-  .fl-button-text {
-    color: $color-white;
+  border: none;
+  font-size: 1em;
+
+  *, &:visited * {
+    color: inherit;
   }
 }
 

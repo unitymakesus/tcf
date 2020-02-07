@@ -128,6 +128,10 @@ select:not(.browser-default) {
 
   label {
     font-weight: 600;
+
+    .uabb-gf-style .gform_wrapper & {
+      line-height: inherit;
+    }
   }
 
   input[type="text"],
@@ -155,6 +159,10 @@ select:not(.browser-default) {
       color: inherit;
     }
   }
+
+  textarea {
+    height: auto;
+  }
 }
 
 .gsection_title {
@@ -162,9 +170,22 @@ select:not(.browser-default) {
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
+.ginput_counter {
+  font-size: 0.8em;
+}
+
 .gform_footer input[type="submit"] {
   @extend .btn;
   @extend .btn--orange;
+
+  div[class*="fl-node-"] .uabb-gf-style .gform_wrapper & {
+    @extend .btn;
+    @extend .btn--orange;
+  }
+}
+
+.gform_save_link {
+  padding: 0.5rem 2rem;
 }
 
 .gform_validation_container {

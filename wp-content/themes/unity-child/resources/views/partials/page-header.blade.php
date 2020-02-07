@@ -1,10 +1,11 @@
 @php
-  $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id(), 'x-large');
+  $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($page_id), 'x-large');
+  $icon = get_field('page_header_icon', $page_id);
 @endphp
 
-<header class="page-header page-header--w-icon {{ $bg_img ? 'page-header--has-img' : '' }}" style="background-image: url('<?= $bg_img[0]; ?>')">
+<header class="page-header {{ $icon ? 'page-header--w-icon' : '' }} {{ $bg_img ? 'page-header--has-img' : '' }}" style="background-image: url('<?= $bg_img[0]; ?>')">
   <div class="container">
-    @if ($icon = get_field('page_header_icon'))
+    @if (!empty($icon))
       <div class="page-header__icon">
         <img src="{{ $icon['url'] }}" alt="" />
       </div>

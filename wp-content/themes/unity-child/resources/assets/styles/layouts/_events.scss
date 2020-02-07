@@ -1,38 +1,11 @@
 .template-events {
-  .page-header {
-    background-color: $color-white;
-    background-image: none !important;
-    height: auto;
-
-    .container {
-      background-color: transparent;
-      color: $brand-primary;
-      padding: 1rem 0;
-    }
-
-    h1 {
-      padding-left: 0.75rem;
-      padding-right: 0.75rem;
-    }
-
-    &::after {
-      display: none;
-    }
-  }
-
   .main {
     background-color: $color-beige;
   }
 
   .tabbed {
-    max-width: 820px;
+    max-width: 940px;
     margin: 0 auto;
-  }
-
-  .tabbed h3,
-  .tabbed .h3 {
-    text-transform: none;
-    color: $brand-primary;
   }
 
   [role="tabpanel"] {

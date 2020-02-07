@@ -3,12 +3,13 @@
 @section('content')
   @include('partials.page-header-w-intro', [
     'archive_intro' => get_field('press_header_intro', 'option'),
+    'page_id' => get_option( 'page_for_posts' )
   ])
   <div class="archive-wrap">
     <div class="archive-filters">
       <div class="container">
         <div class="row">
-          <div class="col s12">
+          <div class="col archive-filters__inner">
             <div class="flex">
               @php $active_filter = array_key_exists('filter', $_GET); @endphp
               <a href="{{ get_post_type_archive_link('press') }}" class="archive-filters__filter {{ $active_filter ? '' : 'active' }}">All</a>

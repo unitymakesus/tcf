@@ -6,9 +6,14 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  padding: 0 1rem;
   background-size: cover;
   background-position: center;
+
+  @media #{$medium-and-up} {
+    background-color: darken($brand-primary, 5%);
+    min-height: 300px;
+    padding: 0 1rem;
+  }
 
   &__title {
     font-size: rem-calc(32);
@@ -32,28 +37,27 @@
     opacity: 0.5;
   }
 
-  &--has-img {
-    background-color: darken($brand-primary, 5%);
-    min-height: 300px;
+  &::after {
+    display: block;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: calc(1200px + 2rem);
+    height: 100%;
+    margin: 0 auto;
+    background-image: url('../images/textures/texture-triangles.svg');
+    background-repeat: no-repeat;
+    background-size: 35vw;
+    background-position: right 1rem top;
+    content: '';
+    z-index: 5;
+    pointer-events: none;
 
-    &::after {
-      display: block;
-      position: absolute;
-      top: -1rem;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      max-width: calc(1200px + 2rem);
-      height: 100%;
-      margin: 0 auto;
-      background-image: url('../images/textures/texture-triangles.svg');
-      background-repeat: no-repeat;
-      background-size: 35vw;
-      background-position: right 1rem top;
-      content: '';
-      z-index: 5;
-      pointer-events: none;
+    @media #{$medium-and-up} {
+      background-size: 350px;
     }
   }
 
@@ -62,9 +66,16 @@
     background-color: $brand-primary;
     color: white;
     padding: 2rem;
+    max-width: 940px;
     text-align: left;
     z-index: 1;
   }
+}
+
+.page-header--has-img {
+  background-color: darken($brand-primary, 5%);
+  min-height: 300px;
+  padding: 0 1rem;
 }
 
 .page-header--w-icon {
@@ -90,8 +101,11 @@
   position: relative;
   background-color: $brand-primary;
   color: white;
-  padding: 3rem 0;
   margin-bottom: 3rem;
+
+  @media #{$medium-and-up} {
+    min-height: 220px;
+  }
 
   .archive-wrap + {
     margin-bottom: 0;
@@ -100,31 +114,76 @@
   .container {
     padding: 0;
     background-color: transparent;
-  }
-}
-
-.page-template-default .page-header,
-.template-narrow-w-footer-contact .page-header,
-.template-audience .page-header {
-  > .container {
     max-width: 940px;
+
+    &::after {
+      display: block;
+      position: absolute;
+      top: -1rem;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: calc(1200px + 2rem);
+      height: 100%;
+      margin: 0 auto;
+      background-image: url('../images/textures/texture-triangles.svg');
+      background-repeat: no-repeat;
+      background-size: 35vw;
+      background-position: right 1rem top;
+      content: '';
+      z-index: 5;
+      pointer-events: none;
+
+      @media #{$medium-and-up} {
+        background-size: 350px;
+      }
+    }
+  }
+
+  .col:last-of-type {
+    padding-bottom: 3rem;
+  }
+
+  .has-post-thumbnail & {
+    .flex {
+      justify-content: flex-start;
+    }
+
+    .col {
+      margin-left: 0;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    .thumbnail-container {
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  h2, h3, a {
+    color: inherit;
+  }
+
+  a:not(.btn) {
+    text-decoration: underline;
+
+    &:hover, &:focus {
+      text-decoration-style: double;
+    }
   }
 }
 
 .template-impact-landing .page-header {
   > .container {
     background-color: rgba($color-beige-dark, 0.9);
-  }
-}
 
-@media #{$medium-and-up} {
-  .page-header {
-    &--has-img {
-      min-height: 390px;
-
-      &::after {
-        background-size: 350px;
-      }
+    h1 {
+      color: $color-white;
     }
   }
 }
@@ -265,7 +324,7 @@
 
 // Accordions
 .fl-accordion .fl-accordion-item {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 // Tweets

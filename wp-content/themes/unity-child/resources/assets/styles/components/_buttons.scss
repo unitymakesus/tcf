@@ -13,7 +13,7 @@ a.btn {
   border-width: 1px;
   border-radius: 0;
   background-color: transparent;
-  color: inherit;
+  color: $color-grey;
   font-size: rem-calc(14);
   font-weight: 700;
   line-height: 1.5;
@@ -64,7 +64,7 @@ a.btn--grey {
 }
 
 // Beaver Builder
-.fl-builder-content.fl-builder-content a.fl-button.fl-button {
+.fl-builder-content a.fl-button {
   @extend .btn;
   @extend .btn--orange;
 
