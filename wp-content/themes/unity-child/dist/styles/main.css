@@ -19343,42 +19343,57 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 
 /* line 190, resources/assets/styles/layouts/_page.scss */
 
-.template-impact-landing .page-header > .container,
-.template-impact-landing .page-header > .container-wide,
-.template-impact-landing .sidebar-primary .page-header > .content,
-.sidebar-primary .template-impact-landing .page-header > .content {
-  background-color: rgba(148, 131, 110, 0.9);
+.template-landing.giving .page-header > .container,
+.template-landing.giving .page-header > .container-wide,
+.template-landing.giving .sidebar-primary .page-header > .content,
+.sidebar-primary .template-landing.giving .page-header > .content {
+  background-color: rgba(199, 83, 0, 0.9);
 }
 
 /* line 193, resources/assets/styles/layouts/_page.scss */
 
-.template-impact-landing .page-header > .container h1,
-.template-impact-landing .page-header > .container-wide h1,
-.template-impact-landing .sidebar-primary .page-header > .content h1,
-.sidebar-primary .template-impact-landing .page-header > .content h1 {
-  color: #FFF;
+.template-landing.giving .page-header > .container h1,
+.template-landing.giving .page-header > .container-wide h1,
+.template-landing.giving .sidebar-primary .page-header > .content h1,
+.sidebar-primary .template-landing.giving .page-header > .content h1 {
+  color: #FAE3D3;
 }
 
-/* line 199, resources/assets/styles/layouts/_page.scss */
+/* line 200, resources/assets/styles/layouts/_page.scss */
 
-.page-template-default .page-header,
-.template-narrow-w-footer-contact .page-header {
+.template-landing.impact .page-header > .container,
+.template-landing.impact .page-header > .container-wide,
+.template-landing.impact .sidebar-primary .page-header > .content,
+.sidebar-primary .template-landing.impact .page-header > .content {
+  background-color: rgba(143, 157, 16, 0.9);
+}
+
+/* line 203, resources/assets/styles/layouts/_page.scss */
+
+.template-landing.impact .page-header > .container h1,
+.template-landing.impact .page-header > .container-wide h1,
+.template-landing.impact .sidebar-primary .page-header > .content h1,
+.sidebar-primary .template-landing.impact .page-header > .content h1 {
+  color: #EFF1D2;
+}
+
+/* line 209, resources/assets/styles/layouts/_page.scss */
+
+.page-template-default .page-header {
   margin-bottom: 0;
 }
 
-/* line 207, resources/assets/styles/layouts/_page.scss */
+/* line 215, resources/assets/styles/layouts/_page.scss */
 
 .single-award main,
-.page-template-default main,
-.template-narrow-w-footer-contact main {
+.page-template-default main {
   background-color: #E7E4E0;
 }
 
-/* line 211, resources/assets/styles/layouts/_page.scss */
+/* line 219, resources/assets/styles/layouts/_page.scss */
 
 .single-award .entry-content,
-.page-template-default .entry-content,
-.template-narrow-w-footer-contact .entry-content {
+.page-template-default .entry-content {
   max-width: 940px;
   margin: 0 auto;
   padding: 2rem 1rem;
@@ -19386,30 +19401,28 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 219, resources/assets/styles/layouts/_page.scss */
+  /* line 227, resources/assets/styles/layouts/_page.scss */
 
   .single-award article,
-  .page-template-default article,
-  .template-narrow-w-footer-contact article {
+  .page-template-default article {
     padding-bottom: 4rem;
   }
 
-  /* line 223, resources/assets/styles/layouts/_page.scss */
+  /* line 231, resources/assets/styles/layouts/_page.scss */
 
   .single-award .entry-content,
-  .page-template-default .entry-content,
-  .template-narrow-w-footer-contact .entry-content {
+  .page-template-default .entry-content {
     padding: 3rem 98px;
   }
 }
 
-/* line 229, resources/assets/styles/layouts/_page.scss */
+/* line 237, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer {
   background-color: #E7E4E0;
 }
 
-/* line 232, resources/assets/styles/layouts/_page.scss */
+/* line 240, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer .container,
 .entry-footer .container-wide,
@@ -19418,19 +19431,19 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   background-color: #F5F4F3;
 }
 
-/* line 236, resources/assets/styles/layouts/_page.scss */
+/* line 244, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer h2 {
   color: #007485;
 }
 
-/* line 240, resources/assets/styles/layouts/_page.scss */
+/* line 248, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer h3 {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
-/* line 244, resources/assets/styles/layouts/_page.scss */
+/* line 252, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer p,
 .entry-footer dd {
@@ -19438,53 +19451,53 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   font-size: 1rem;
 }
 
-/* line 249, resources/assets/styles/layouts/_page.scss */
+/* line 257, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer a {
   color: inherit;
 }
 
-/* line 253, resources/assets/styles/layouts/_page.scss */
+/* line 261, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer__image {
   line-height: 0;
 }
 
-/* line 257, resources/assets/styles/layouts/_page.scss */
+/* line 265, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer__details {
   padding: 1rem;
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 229, resources/assets/styles/layouts/_page.scss */
+  /* line 237, resources/assets/styles/layouts/_page.scss */
 
   .entry-footer {
     padding: 0 0 3rem;
   }
 }
 
-/* line 266, resources/assets/styles/layouts/_page.scss */
+/* line 274, resources/assets/styles/layouts/_page.scss */
 
 .list-partners {
   list-style-type: none;
 }
 
-/* line 269, resources/assets/styles/layouts/_page.scss */
+/* line 277, resources/assets/styles/layouts/_page.scss */
 
 .list-partners li::before {
   display: inline-block;
   content: '>' !important;
 }
 
-/* line 274, resources/assets/styles/layouts/_page.scss */
+/* line 282, resources/assets/styles/layouts/_page.scss */
 
 .list-partners a {
   color: inherit;
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 280, resources/assets/styles/layouts/_page.scss */
+  /* line 288, resources/assets/styles/layouts/_page.scss */
 
   .list-partners {
     -webkit-column-count: 2;
@@ -19493,7 +19506,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   }
 }
 
-/* line 285, resources/assets/styles/layouts/_page.scss */
+/* line 293, resources/assets/styles/layouts/_page.scss */
 
 .small-card {
   display: -webkit-box;
@@ -19511,7 +19524,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   padding: 1rem;
 }
 
-/* line 295, resources/assets/styles/layouts/_page.scss */
+/* line 303, resources/assets/styles/layouts/_page.scss */
 
 .small-card__text {
   padding: 1.5rem;
@@ -19521,19 +19534,19 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   text-transform: uppercase;
 }
 
-/* line 302, resources/assets/styles/layouts/_page.scss */
+/* line 310, resources/assets/styles/layouts/_page.scss */
 
 .small-card__text + p {
   margin: 0;
 }
 
-/* line 307, resources/assets/styles/layouts/_page.scss */
+/* line 315, resources/assets/styles/layouts/_page.scss */
 
 .small-card img {
   width: 115px;
 }
 
-/* line 312, resources/assets/styles/layouts/_page.scss */
+/* line 320, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box,
 .fl-module-info-box > .fl-module-content,
@@ -19541,7 +19554,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   height: 100%;
 }
 
-/* line 318, resources/assets/styles/layouts/_page.scss */
+/* line 326, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box > .fl-module-content > .uabb-infobox {
   display: -webkit-box;
@@ -19557,20 +19570,20 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   background-color: rgba(0, 116, 133, 0.9);
 }
 
-/* line 324, resources/assets/styles/layouts/_page.scss */
+/* line 332, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box > .fl-module-content > .uabb-infobox .uabb-infobox-text {
   color: #FFF;
 }
 
-/* line 330, resources/assets/styles/layouts/_page.scss */
+/* line 338, resources/assets/styles/layouts/_page.scss */
 
 .fl-number {
   background-color: #D9D9D9;
   color: #5A4F42;
 }
 
-/* line 336, resources/assets/styles/layouts/_page.scss */
+/* line 344, resources/assets/styles/layouts/_page.scss */
 
 .fl-accordion .fl-accordion-item {
   margin-bottom: 20px;
@@ -20015,7 +20028,19 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   }
 }
 
-/* line 1, resources/assets/styles/layouts/_people.scss */
+/* line 2, resources/assets/styles/layouts/_people.scss */
+
+.template-staff .page-header--w-intro {
+  margin-bottom: 0;
+}
+
+/* line 6, resources/assets/styles/layouts/_people.scss */
+
+.template-staff .main {
+  background: #E7E4E0;
+}
+
+/* line 11, resources/assets/styles/layouts/_people.scss */
 
 .people {
   display: -webkit-box;
@@ -20026,7 +20051,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   margin: 0;
 }
 
-/* line 6, resources/assets/styles/layouts/_people.scss */
+/* line 16, resources/assets/styles/layouts/_people.scss */
 
 .people .person {
   position: relative;
@@ -20034,7 +20059,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   width: 50%;
 }
 
-/* line 11, resources/assets/styles/layouts/_people.scss */
+/* line 21, resources/assets/styles/layouts/_people.scss */
 
 .people .person__image {
   position: relative;
@@ -20042,7 +20067,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   line-height: 0;
 }
 
-/* line 16, resources/assets/styles/layouts/_people.scss */
+/* line 26, resources/assets/styles/layouts/_people.scss */
 
 .people .person__image img {
   -webkit-transform: scale(1);
@@ -20055,7 +20080,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out, -o-transform 0.3s ease-in-out;
 }
 
-/* line 23, resources/assets/styles/layouts/_people.scss */
+/* line 33, resources/assets/styles/layouts/_people.scss */
 
 .people .person:hover .details {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(white));
@@ -20064,7 +20089,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, white 100%);
 }
 
-/* line 27, resources/assets/styles/layouts/_people.scss */
+/* line 37, resources/assets/styles/layouts/_people.scss */
 
 .people .person:hover img {
   -webkit-transform: scale(1.1);
@@ -20072,7 +20097,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
           transform: scale(1.1);
 }
 
-/* line 32, resources/assets/styles/layouts/_people.scss */
+/* line 42, resources/assets/styles/layouts/_people.scss */
 
 .people .person .details {
   padding: 0.5rem;
@@ -20083,15 +20108,34 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   transition: background-image 0.3s ease-in-out;
 }
 
-/* line 38, resources/assets/styles/layouts/_people.scss */
+/* line 48, resources/assets/styles/layouts/_people.scss */
 
 .people .person .details__name {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #007485;
+  text-decoration: none;
 }
 
-/* line 48, resources/assets/styles/layouts/_people.scss */
+/* line 55, resources/assets/styles/layouts/_people.scss */
+
+.people .person .details__title {
+  font-size: 0.9rem;
+}
+
+/* line 63, resources/assets/styles/layouts/_people.scss */
+
+.single-simple-team .main {
+  background: #E7E4E0;
+}
+
+/* line 68, resources/assets/styles/layouts/_people.scss */
+
+.single-person {
+  background-color: #FFF;
+}
+
+/* line 71, resources/assets/styles/layouts/_people.scss */
 
 .single-person .col,
 .single-person .sidebar-primary .wrap .main,
@@ -20101,38 +20145,45 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   padding: 0;
 }
 
-/* line 52, resources/assets/styles/layouts/_people.scss */
+/* line 75, resources/assets/styles/layouts/_people.scss */
 
 .single-person .content-wrap {
   max-width: 450px;
 }
 
-/* line 56, resources/assets/styles/layouts/_people.scss */
+/* line 78, resources/assets/styles/layouts/_people.scss */
+
+.single-person .content-wrap h2,
+.single-person .content-wrap h3 {
+  color: #CCE3E9;
+}
+
+/* line 83, resources/assets/styles/layouts/_people.scss */
 
 .single-person .content-wrap-l {
   margin: 1rem 4rem 1rem 4rem;
 }
 
-/* line 59, resources/assets/styles/layouts/_people.scss */
+/* line 86, resources/assets/styles/layouts/_people.scss */
 
 .single-person .content-wrap-l figure {
   margin: 0 0 1rem 0;
 }
 
-/* line 63, resources/assets/styles/layouts/_people.scss */
+/* line 90, resources/assets/styles/layouts/_people.scss */
 
 .single-person .content-wrap-l img {
   max-width: 125px;
 }
 
-/* line 69, resources/assets/styles/layouts/_people.scss */
+/* line 96, resources/assets/styles/layouts/_people.scss */
 
 .single-person dl > dt {
   font-weight: 700;
   text-transform: uppercase;
 }
 
-/* line 75, resources/assets/styles/layouts/_people.scss */
+/* line 102, resources/assets/styles/layouts/_people.scss */
 
 .single-person__details,
 .single-person__about {
@@ -20140,56 +20191,66 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   color: #FFF;
 }
 
-/* line 80, resources/assets/styles/layouts/_people.scss */
+/* line 107, resources/assets/styles/layouts/_people.scss */
 
 .single-person__details a,
 .single-person__about a {
   color: inherit;
 }
 
-/* line 85, resources/assets/styles/layouts/_people.scss */
+/* line 112, resources/assets/styles/layouts/_people.scss */
 
 .single-person__details {
   position: relative;
-  padding-top: 240px;
+  padding-top: 80px;
   background-color: #007485;
 }
 
-/* line 86, resources/assets/styles/layouts/_people.scss */
+/* line 117, resources/assets/styles/layouts/_people.scss */
 
 .single-person__details h1 {
   font-size: 2rem;
   margin-bottom: 0;
 }
 
-/* line 95, resources/assets/styles/layouts/_people.scss */
+/* line 122, resources/assets/styles/layouts/_people.scss */
 
 .single-person__details::after {
   display: block;
   position: absolute;
-  top: 0;
+  top: -1rem;
   left: 0;
-  right: 1rem;
+  right: 0;
   bottom: 0;
   width: 100%;
-  max-width: 580px;
+  max-width: calc(1200px + 2rem);
   height: 100%;
   margin: 0 auto;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzc3LjMyOCIgaGVpZ2h0PSIyMzYuNTY5IiB2aWV3Qm94PSIwIDAgMzc3LjMyOCAyMzYuNTY5Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO30uYntjbGlwLXBhdGg6dXJsKCNhKTt9LmN7b3BhY2l0eTowLjg7fS5ke2NsaXAtcGF0aDp1cmwoI2IpO30uZXtvcGFjaXR5OjAuNjt9LmZ7Y2xpcC1wYXRoOnVybCgjYyk7fS5ne2NsaXAtcGF0aDp1cmwoI2QpO30uaHtmaWxsOiNmZmY7fS5pe2NsaXAtcGF0aDp1cmwoI2UpO30uantjbGlwLXBhdGg6dXJsKCNmKTt9Lmt7Y2xpcC1wYXRoOnVybCgjZyk7fS5se2NsaXAtcGF0aDp1cmwoI2gpO308L3N0eWxlPjxjbGlwUGF0aCBpZD0iYSI+PHBhdGggY2xhc3M9ImEiIGQ9Ik0wLDEzOC4zNDhIMzc3LjMyOFYtOTguMjIxSDBaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDk4LjIyMSkiLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iYiI+PHJlY3QgY2xhc3M9ImEiIHdpZHRoPSI0OTcuNzU1IiBoZWlnaHQ9IjI4NC43MzkiLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iYyI+PHJlY3QgY2xhc3M9ImEiIHdpZHRoPSI0NTkuMjE4IiBoZWlnaHQ9IjI3MC4yODgiLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iZCI+PHJlY3QgY2xhc3M9ImEiIHdpZHRoPSIyMDQuNzI1IiBoZWlnaHQ9IjI1MS40MTYiLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iZSI+PHJlY3QgY2xhc3M9ImEiIHdpZHRoPSIyMDQuNzI0IiBoZWlnaHQ9IjI1MS40MTciLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iZiI+PHJlY3QgY2xhc3M9ImEiIHdpZHRoPSI3NC41MjEiIGhlaWdodD0iMTA1LjQ0NCIvPjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSJnIj48cmVjdCBjbGFzcz0iYSIgd2lkdGg9IjExMS42OTYiIGhlaWdodD0iMTQ3LjIyMSIvPjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSJoIj48cmVjdCBjbGFzcz0iYSIgd2lkdGg9IjEyNy4wMzYiIGhlaWdodD0iMTY0LjQ1NyIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgOTguMjIxKSI+PGcgY2xhc3M9ImIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTk4LjIyMSkiPjxnIGNsYXNzPSJjIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjAuMjEzIC00NS43NjIpIj48ZyBjbGFzcz0iZCI+PGcgY2xhc3M9ImUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE5LjI2OCAxNC40NTEpIj48ZyBjbGFzcz0iZiI+PGcgY2xhc3M9ImMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM4LjUzNyA5LjYzNCkiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDApIj48ZyBjbGFzcz0iZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMi40MDggMjEuNjc2KSI+PHBhdGggY2xhc3M9ImgiIGQ9Ik0xMDguNDU3LDYwLjgzOS03Ny00My4xOTNWMTY0Ljg3MVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDc3IDQzLjE5MykiLz48L2c+PC9nPjwvZz48L2c+PGcgY2xhc3M9ImMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxNS45NTcgMjEuMTkzKSI+PGcgY2xhc3M9ImkiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2Ljg2IDIxLjY3NykiPjxwYXRoIGNsYXNzPSJoIiBkPSJNMCw2MC44MzksMTg1LjQ1Ny00My4xOTNWMTY0Ljg3MVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgNDMuMTkzKSIvPjwvZz48L2c+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDk3LjM3NSAyMDUuNzg4KSI+PHBhdGggY2xhc3M9ImgiIGQ9Ik0wLDE4LjE1Niw1NS4yNTItMTIuODlWNDkuMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMTIuODkpIi8+PC9nPjxnIGNsYXNzPSJjIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxODIuNDU5IDM2LjE0NSkiPjxnIGNsYXNzPSJqIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNi44NiAyMS42NzYpIj48cGF0aCBjbGFzcz0iaCIgZD0iTTAsMTguMTU2LDU1LjI1Mi0xMi44OVY0OS4yWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxMi44OSkiLz48L2c+PC9nPjwvZz48L2c+PC9nPjxnIGNsYXNzPSJjIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxODIuMjM1IDEyOC4yOCkiPjxnIGNsYXNzPSJrIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjQwOSAyMS42NzgpIj48cGF0aCBjbGFzcz0iaCIgZD0iTTU0LjA1MiwzMC4zNzEtMzguMzc1LTIxLjU2MlY4Mi4zWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzguMzc1IDIxLjU2MikiLz48L2c+PC9nPjwvZz48ZyBjbGFzcz0iYyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjgzLjk5MyAyNi41MikiPjxnIGNsYXNzPSJsIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjQwOCAyMS42NzUpIj48cGF0aCBjbGFzcz0iaCIgZD0iTTYzLjAyMywzNS40MTItNDQuNzQ0LTI1LjE0MVY5NS45NjVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0NC43NDQgMjUuMTQxKSIvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9nPjwvZz48L3N2Zz4=);
   background-repeat: no-repeat;
-  background-size: 350px 260px;
-  background-position: right top;
+  background-size: 35vw;
+  background-position: right 1rem top;
   content: '';
+  z-index: 5;
+  pointer-events: none;
 }
 
-/* line 114, resources/assets/styles/layouts/_people.scss */
+@media only screen and (min-width: 769px) {
+  /* line 122, resources/assets/styles/layouts/_people.scss */
+
+  .single-person__details::after {
+    background-size: 350px;
+  }
+}
+
+/* line 147, resources/assets/styles/layouts/_people.scss */
 
 .single-person__about {
   background-color: #004852;
 }
 
 @media only screen and (min-width: 601px) {
-  /* line 121, resources/assets/styles/layouts/_people.scss */
+  /* line 154, resources/assets/styles/layouts/_people.scss */
 
   .people .person {
     width: 33.333%;
@@ -20197,7 +20258,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 128, resources/assets/styles/layouts/_people.scss */
+  /* line 161, resources/assets/styles/layouts/_people.scss */
 
   .people .person {
     width: 25%;

@@ -186,24 +186,32 @@
   }
 }
 
-.template-impact-landing .page-header {
+.template-landing.giving .page-header {
   > .container {
-    background-color: rgba($color-beige-dark, 0.9);
+    background-color: rgba($color-orange-a11y, 0.9);
 
     h1 {
-      color: $color-white;
+      color: $color-orange-light;
     }
   }
 }
 
-.page-template-default .page-header,
-.template-narrow-w-footer-contact .page-header {
+.template-landing.impact .page-header {
+  > .container {
+    background-color: rgba($color-green-a11y, 0.9);
+
+    h1 {
+      color: $color-green-light;
+    }
+  }
+}
+
+.page-template-default .page-header {
   margin-bottom: 0;
 }
 
 .single-award,
-.page-template-default,
-.template-narrow-w-footer-contact {
+.page-template-default {
   main {
     background-color: $color-beige;
   }

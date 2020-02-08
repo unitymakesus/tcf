@@ -4,9 +4,9 @@ $first_name = get_field('first_name');
 
 @endphp
 
-<article class="single-person container-full" {!! post_class() !!}>
+<article class="single-person container-wide" {!! post_class() !!}>
   <div class="row flex">
-    <div class="col s12 m9 push-m3 bg-primary-darken">
+    <div class="col s12 m8 push-m4 bg-primary-darken">
       <section class="single-person__details">
         <div class="content-wrap">
           <h1 class="mb-0" itemprop="name">{{ the_title() }}</h1>
@@ -47,7 +47,7 @@ $first_name = get_field('first_name');
       </section>
       @endif
     </div>
-    <div class="col s12 m3 pull-m9">
+    <div class="col s12 m4 pull-m8">
       <div class="hide-on-small-only">
         {!! get_the_post_thumbnail(get_the_ID(), 'large') !!}
       </div>

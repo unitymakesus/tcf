@@ -1,3 +1,13 @@
+.template-staff {
+  .page-header--w-intro {
+    margin-bottom: 0;
+  }
+
+  .main {
+    background: $color-beige;
+  }
+}
+
 .people {
   display: flex;
   flex-wrap: wrap;
@@ -36,21 +46,38 @@
       transition: background-image 0.3s ease-in-out;
 
       &__name {
-        font-size: 1.25rem;
+        font-size: 1rem;
         font-weight: 600;
         color: $brand-primary;
+        text-decoration: none;
+      }
+
+      &__title {
+        font-size: 0.9rem;
       }
     }
   }
 }
 
+.single-simple-team {
+  .main {
+    background: $color-beige;
+  }
+}
+
 .single-person {
+  background-color: $color-white;
+
   .col {
     padding: 0;
   }
 
   .content-wrap {
     max-width: 450px;
+
+    h2, h3 {
+      color: $color-teal-light;
+    }
   }
 
   .content-wrap-l {
@@ -83,36 +110,42 @@
   }
 
   &__details {
+    position: relative;
+    padding-top: 80px;
+    background-color: $brand-primary;
+
     h1 {
       font-size: 2rem;
       margin-bottom: 0;
     }
 
-    position: relative;
-    padding-top: 240px;
-    background-color: $brand-primary;
-
     &::after {
       display: block;
       position: absolute;
-      top: 0;
+      top: -1rem;
       left: 0;
-      right: 1rem;
+      right: 0;
       bottom: 0;
       width: 100%;
-      max-width: 580px;
+      max-width: calc(1200px + 2rem);
       height: 100%;
       margin: 0 auto;
       background-image: url('../images/textures/texture-triangles.svg');
       background-repeat: no-repeat;
-      background-size: 350px 260px;
-      background-position: right top;
+      background-size: 35vw;
+      background-position: right 1rem top;
       content: '';
+      z-index: 5;
+      pointer-events: none;
+
+      @media #{$medium-and-up} {
+        background-size: 350px;
+      }
     }
   }
 
   &__about {
-    background-color: darken($brand-primary, 10);
+    background-color: $color-blue-dark;
   }
 }
 

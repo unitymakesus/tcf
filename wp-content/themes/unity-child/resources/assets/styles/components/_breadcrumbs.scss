@@ -3,7 +3,7 @@
   padding: 0.75em 0;
   line-height: 1;
   text-transform: uppercase;
-  background-color: darken($brand-primary, 10);
+  background-color: $color-blue-dark;
 
   .breadcrumb-trail {
     color: $color-teal-light;
