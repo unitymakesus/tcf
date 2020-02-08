@@ -20,7 +20,7 @@
   </div>
 @else
   <div class="container">
-    <div class="row">
+    <div class="row no-gutters">
       <div class="col s12 m8 l7">
         <h1 class="page-header__title">{!! App::title() !!}</h1>
         @if (isset($archive_intro))

@@ -1,28 +1,5 @@
-@if ($featured_event = get_field('main_featured_event'))
-  <section class="featured-event">
-    <div class="row flex">
-      <div class="col m6">
-        <div class="image-wrap">
-          {!! get_the_post_thumbnail($featured_event->ID, 'medium_large') !!}
-        </div>
-      </div>
-      <div class="col m6">
-        <div class="content-wrap">
-          <h2 class="mb-0">{{ $featured_event->post_title }}</h2>
-          <div class="fw-700 mb-3">{{ App\get_custom_date('event', $featured_event->ID) }}</div>
-          @if ($location = get_field('event_location', $featured_event->ID))
-            <p>{{ $location }}</p>
-          @endif
-          {!! get_field('event_summary', $featured_event->ID) !!}
-          @if ($link = get_field('event_cta', $featured_event->ID))
-            <a class="btn btn--orange" href="{{ $link['url'] }}">{{ $link['title'] }}</a>
-          @endif
-        </div>
-      </div>
-    </div>
-  </section>
-@endif
 <div class="container">
+  <div class="text-uppercase mt-10 mb-2 fw-700">View events by</div>
   <div class="tabbed">
     <ul>
       <li>

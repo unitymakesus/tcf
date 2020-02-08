@@ -80,7 +80,7 @@
             "key": "field_5e0f59f77fab0",
             "label": "Event Summary",
             "name": "event_summary",
-            "type": "wysiwyg",
+            "type": "textarea",
             "instructions": "Provide a basic summary to override the auto-excerpts generated on the main Event page.",
             "required": 0,
             "conditional_logic": 0,
@@ -90,10 +90,10 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         },
         {
             "key": "field_5e0f5a2a7fab1",
@@ -128,5 +128,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578790219
+    "modified": 1581120248
 }

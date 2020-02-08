@@ -1,6 +1,7 @@
 .tabbed [role="tablist"] {
   padding: 0;
   margin: 30px 0 0;
+  font-size: 0;
 }
 
 .tabbed [role="tablist"] li,
@@ -15,6 +16,7 @@
   padding: 1rem 1.5rem;
   background-color: $color-beige-med;
   color: $color-beige-darker;
+  line-height: 1;
 }
 
 .tabbed [role="tablist"] [aria-selected] {

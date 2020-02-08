@@ -16008,7 +16008,7 @@ sup {
 .container,
 .container-wide,
 .sidebar-primary .content {
-  max-width: 1200px;
+  max-width: 940px;
   width: 100%;
 }
 
@@ -16581,37 +16581,46 @@ blockquote p:last-of-type {
 
 /* line 8, resources/assets/styles/components/_breadcrumbs.scss */
 
+.breadcrumbs-wrap .container,
+.breadcrumbs-wrap .container-wide,
+.breadcrumbs-wrap .sidebar-primary .content,
+.sidebar-primary .breadcrumbs-wrap .content {
+  max-width: 1200px;
+}
+
+/* line 12, resources/assets/styles/components/_breadcrumbs.scss */
+
 .breadcrumbs-wrap .breadcrumb-trail {
   color: #CCE3E9;
 }
 
-/* line 12, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 16, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs-wrap a {
   color: inherit;
 }
 
-/* line 17, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 21, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-/* line 22, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 26, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs.breadcrumbs .trail-browse {
   display: none;
 }
 
-/* line 26, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 30, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs.breadcrumbs .trail-item,
 .breadcrumbs.breadcrumbs .trail-items a {
   font-weight: 600 !important;
 }
 
-/* line 31, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 35, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs.breadcrumbs .trail-items a {
   display: inline-block;
@@ -16621,7 +16630,7 @@ blockquote p:last-of-type {
   font-size: 0.77778rem;
 }
 
-/* line 38, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 42, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs.breadcrumbs .trail-items a:hover,
 .breadcrumbs.breadcrumbs .trail-items a:focus {
@@ -16629,7 +16638,7 @@ blockquote p:last-of-type {
           text-decoration-style: double;
 }
 
-/* line 43, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 47, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs .trail-items .trail-item:not(:last-of-type)::after {
   display: inline-block;
@@ -17921,45 +17930,47 @@ select:not(.browser-default):focus {
 .tabbed [role="tablist"] {
   padding: 0;
   margin: 30px 0 0;
+  font-size: 0;
 }
 
-/* line 6, resources/assets/styles/components/_tabs.scss */
+/* line 7, resources/assets/styles/components/_tabs.scss */
 
 .tabbed [role="tablist"] li,
 .tabbed [role="tablist"] a {
   display: inline-block;
 }
 
-/* line 11, resources/assets/styles/components/_tabs.scss */
+/* line 12, resources/assets/styles/components/_tabs.scss */
 
 .tabbed [role="tablist"] a {
   text-decoration: none;
   padding: 1rem 1.5rem;
   background-color: #B8AEA3;
   color: #5A4F42;
+  line-height: 1;
 }
 
-/* line 20, resources/assets/styles/components/_tabs.scss */
+/* line 22, resources/assets/styles/components/_tabs.scss */
 
 .tabbed [role="tablist"] [aria-selected] {
   position: relative;
   background-color: #FFF;
 }
 
-/* line 25, resources/assets/styles/components/_tabs.scss */
+/* line 27, resources/assets/styles/components/_tabs.scss */
 
 .tabbed [role="tabpanel"] {
   padding: 4rem 2rem;
 }
 
-/* line 29, resources/assets/styles/components/_tabs.scss */
+/* line 31, resources/assets/styles/components/_tabs.scss */
 
 .tabbed [role="tabpanel"] * + * {
   margin-top: 0.75rem;
 }
 
 @media (max-width: 767px) {
-  /* line 34, resources/assets/styles/components/_tabs.scss */
+  /* line 36, resources/assets/styles/components/_tabs.scss */
 
   .tabbed [role="tablist"] li,
   .tabbed [role="tablist"] a {
@@ -17967,13 +17978,13 @@ select:not(.browser-default):focus {
     position: static;
   }
 
-  /* line 40, resources/assets/styles/components/_tabs.scss */
+  /* line 42, resources/assets/styles/components/_tabs.scss */
 
   .tabbed [role="tablist"] [aria-selected] {
     position: static;
   }
 
-  /* line 44, resources/assets/styles/components/_tabs.scss */
+  /* line 46, resources/assets/styles/components/_tabs.scss */
 
   .tabbed [role="tablist"] [aria-selected]::after {
     content: ' \2B05';
@@ -18129,36 +18140,45 @@ nav {
 
 /* line 10, resources/assets/styles/layouts/_header.scss */
 
+.banner .container,
+.banner .container-wide,
+.banner .sidebar-primary .content,
+.sidebar-primary .banner .content {
+  max-width: 1200px;
+}
+
+/* line 14, resources/assets/styles/layouts/_header.scss */
+
 .banner .nav-primary {
   position: relative;
 }
 
-/* line 15, resources/assets/styles/layouts/_header.scss */
+/* line 19, resources/assets/styles/layouts/_header.scss */
 
 .banner .logo {
   display: inline-block;
   padding: 0;
 }
 
-/* line 20, resources/assets/styles/layouts/_header.scss */
+/* line 24, resources/assets/styles/layouts/_header.scss */
 
 .banner .menu-trigger-wrapper {
   float: right;
 }
 
-/* line 24, resources/assets/styles/layouts/_header.scss */
+/* line 28, resources/assets/styles/layouts/_header.scss */
 
 .banner .menu-trigger-wrapper label {
   float: none;
 }
 
-/* line 29, resources/assets/styles/layouts/_header.scss */
+/* line 33, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .navbar {
   height: auto;
 }
 
-/* line 33, resources/assets/styles/layouts/_header.scss */
+/* line 37, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .logo {
   color: #007485;
@@ -18170,26 +18190,26 @@ nav {
   text-decoration: none;
 }
 
-/* line 43, resources/assets/styles/layouts/_header.scss */
+/* line 47, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .navbar-menu {
   background-color: #414141;
 }
 
-/* line 47, resources/assets/styles/layouts/_header.scss */
+/* line 51, resources/assets/styles/layouts/_header.scss */
 
 .header-inline nav ul a {
   padding: 0.25rem 25px;
 }
 
-/* line 51, resources/assets/styles/layouts/_header.scss */
+/* line 55, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .sub-menu {
   width: 100%;
   max-width: 300px;
 }
 
-/* line 56, resources/assets/styles/layouts/_header.scss */
+/* line 60, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .sub-menu a {
   padding: 0.25rem 0.5rem;
@@ -18197,27 +18217,27 @@ nav {
   line-height: 1.66667rem;
 }
 
-/* line 61, resources/assets/styles/layouts/_header.scss */
+/* line 65, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .sub-menu a + .sub-menu {
   position: relative;
   height: auto;
 }
 
-/* line 65, resources/assets/styles/layouts/_header.scss */
+/* line 69, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .sub-menu a + .sub-menu > li a {
   padding-left: 1rem;
 }
 
-/* line 71, resources/assets/styles/layouts/_header.scss */
+/* line 75, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .cta-link {
   padding: 0;
   text-align: left;
 }
 
-/* line 76, resources/assets/styles/layouts/_header.scss */
+/* line 80, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .cta-link a {
   background-color: #C75300;
@@ -18225,7 +18245,7 @@ nav {
   color: #FFF;
 }
 
-/* line 81, resources/assets/styles/layouts/_header.scss */
+/* line 85, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .cta-link a:hover,
 .header-inline .cta-link a:focus {
@@ -18233,13 +18253,13 @@ nav {
   color: #C75300;
 }
 
-/* line 89, resources/assets/styles/layouts/_header.scss */
+/* line 93, resources/assets/styles/layouts/_header.scss */
 
 .navbar-menu li.menu-item-has-children a {
   cursor: pointer;
 }
 
-/* line 93, resources/assets/styles/layouts/_header.scss */
+/* line 97, resources/assets/styles/layouts/_header.scss */
 
 .navbar-menu li:hover > a,
 .navbar-menu li:focus > a,
@@ -18247,20 +18267,20 @@ nav {
   text-decoration: none;
 }
 
-/* line 99, resources/assets/styles/layouts/_header.scss */
+/* line 103, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary {
   position: relative;
 }
 
-/* line 102, resources/assets/styles/layouts/_header.scss */
+/* line 106, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item {
   height: 100%;
   font-weight: 600;
 }
 
-/* line 106, resources/assets/styles/layouts/_header.scss */
+/* line 110, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item > a {
   display: -webkit-box;
@@ -18276,75 +18296,75 @@ nav {
   text-align: center;
 }
 
-/* line 117, resources/assets/styles/layouts/_header.scss */
+/* line 121, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item:nth-child(-n+3) {
   font-size: 1.11111rem;
 }
 
-/* line 121, resources/assets/styles/layouts/_header.scss */
+/* line 125, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item:nth-child(n+4) > a {
   text-transform: uppercase;
   font-size: 0.77778rem;
 }
 
-/* line 127, resources/assets/styles/layouts/_header.scss */
+/* line 131, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-orange > a {
   background-color: #C75300;
   color: white;
 }
 
-/* line 131, resources/assets/styles/layouts/_header.scss */
+/* line 135, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-orange > a:hover,
 .nav__primary > .menu-item.bg-orange > a:focus {
   background-color: #9e4200;
 }
 
-/* line 138, resources/assets/styles/layouts/_header.scss */
+/* line 142, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-green > a {
   background-color: #8F9D10;
   color: #FFF;
 }
 
-/* line 142, resources/assets/styles/layouts/_header.scss */
+/* line 146, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-green > a:hover,
 .nav__primary > .menu-item.bg-green > a:focus {
   background-color: #6d780c;
 }
 
-/* line 149, resources/assets/styles/layouts/_header.scss */
+/* line 153, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-blue > a {
   background-color: #368093;
   color: white;
 }
 
-/* line 153, resources/assets/styles/layouts/_header.scss */
+/* line 157, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-blue > a:hover,
 .nav__primary > .menu-item.bg-blue > a:focus {
   background-color: #2b6675;
 }
 
-/* line 160, resources/assets/styles/layouts/_header.scss */
+/* line 164, resources/assets/styles/layouts/_header.scss */
 
 .nav__secondary {
   position: relative;
 }
 
-/* line 163, resources/assets/styles/layouts/_header.scss */
+/* line 167, resources/assets/styles/layouts/_header.scss */
 
 .nav__secondary > .menu-item {
   padding: 0;
   margin-right: 2rem;
 }
 
-/* line 167, resources/assets/styles/layouts/_header.scss */
+/* line 171, resources/assets/styles/layouts/_header.scss */
 
 .nav__secondary > .menu-item > a {
   border: 0;
@@ -18355,7 +18375,7 @@ nav {
   font-weight: 600;
 }
 
-/* line 175, resources/assets/styles/layouts/_header.scss */
+/* line 179, resources/assets/styles/layouts/_header.scss */
 
 .nav__secondary > .menu-item > a:hover,
 .nav__secondary > .menu-item > a:focus {
@@ -18363,7 +18383,7 @@ nav {
   text-decoration: underline;
 }
 
-/* line 185, resources/assets/styles/layouts/_header.scss */
+/* line 189, resources/assets/styles/layouts/_header.scss */
 
 .search-wrapper > .btn,
 .search-wrapper > .btn-large,
@@ -18377,7 +18397,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 }
 
 @media only screen and (max-width: 992px) {
-  /* line 191, resources/assets/styles/layouts/_header.scss */
+  /* line 195, resources/assets/styles/layouts/_header.scss */
 
   .banner .logo {
     min-height: 0;
@@ -18385,7 +18405,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 197, resources/assets/styles/layouts/_header.scss */
+  /* line 201, resources/assets/styles/layouts/_header.scss */
 
   .header-inline .logo {
     font-size: 1.7rem;
@@ -18394,7 +18414,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     letter-spacing: -2px;
   }
 
-  /* line 204, resources/assets/styles/layouts/_header.scss */
+  /* line 208, resources/assets/styles/layouts/_header.scss */
 
   .header-inline .navbar-menu {
     display: -webkit-box;
@@ -18402,14 +18422,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     display: flex;
   }
 
-  /* line 208, resources/assets/styles/layouts/_header.scss */
+  /* line 212, resources/assets/styles/layouts/_header.scss */
 
   .header-inline .cta-link {
     margin-left: 1rem;
     text-align: right;
   }
 
-  /* line 213, resources/assets/styles/layouts/_header.scss */
+  /* line 217, resources/assets/styles/layouts/_header.scss */
 
   .header-inline .nav__primary {
     position: relative;
@@ -18425,7 +18445,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     z-index: 0;
   }
 
-  /* line 220, resources/assets/styles/layouts/_header.scss */
+  /* line 224, resources/assets/styles/layouts/_header.scss */
 
   .header-inline .nav__primary::before {
     position: absolute;
@@ -18442,7 +18462,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     content: '';
   }
 
-  /* line 234, resources/assets/styles/layouts/_header.scss */
+  /* line 238, resources/assets/styles/layouts/_header.scss */
 
   .utility-wrapper {
     display: -webkit-box;
@@ -18458,7 +18478,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     padding: 0 15px;
   }
 
-  /* line 242, resources/assets/styles/layouts/_header.scss */
+  /* line 246, resources/assets/styles/layouts/_header.scss */
 
   .utility-wrapper__nav {
     display: -webkit-box;
@@ -18473,7 +18493,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
             align-items: center;
   }
 
-  /* line 249, resources/assets/styles/layouts/_header.scss */
+  /* line 253, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper {
     position: relative;
@@ -18485,7 +18505,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
             align-items: center;
   }
 
-  /* line 254, resources/assets/styles/layouts/_header.scss */
+  /* line 258, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper__inner {
     display: none;
@@ -18501,14 +18521,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     transition: opacity 0.3s ease-in-out;
   }
 
-  /* line 265, resources/assets/styles/layouts/_header.scss */
+  /* line 269, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper__inner.is-active {
     display: block;
     opacity: 1;
   }
 
-  /* line 271, resources/assets/styles/layouts/_header.scss */
+  /* line 275, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper > .btn,
   .search-wrapper > .btn-large,
@@ -18523,20 +18543,20 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     color: #D9D9D9;
   }
 
-  /* line 277, resources/assets/styles/layouts/_header.scss */
+  /* line 281, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper .wp-search {
     position: relative;
     margin-bottom: 0;
   }
 
-  /* line 281, resources/assets/styles/layouts/_header.scss */
+  /* line 285, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper .wp-search input[type="search"] {
     border-color: transparent;
   }
 
-  /* line 285, resources/assets/styles/layouts/_header.scss */
+  /* line 289, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper .wp-search::after {
     position: absolute;
@@ -18557,7 +18577,16 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   padding: 0;
 }
 
-/* line 6, resources/assets/styles/layouts/_footer.scss */
+/* line 5, resources/assets/styles/layouts/_footer.scss */
+
+.page-footer .container,
+.page-footer .container-wide,
+.page-footer .sidebar-primary .content,
+.sidebar-primary .page-footer .content {
+  max-width: 1200px;
+}
+
+/* line 10, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-call-to-action {
   position: relative;
@@ -18565,14 +18594,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   padding: 180px 0 1.5rem 0;
 }
 
-/* line 11, resources/assets/styles/layouts/_footer.scss */
+/* line 15, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-call-to-action h2 {
   color: white;
   text-transform: uppercase;
 }
 
-/* line 16, resources/assets/styles/layouts/_footer.scss */
+/* line 20, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-call-to-action::after {
   position: absolute;
@@ -18586,13 +18615,13 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   content: '';
 }
 
-/* line 29, resources/assets/styles/layouts/_footer.scss */
+/* line 33, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-content {
   padding: 3rem 0;
 }
 
-/* line 33, resources/assets/styles/layouts/_footer.scss */
+/* line 37, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-logo img {
   width: 100%;
@@ -18600,14 +18629,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   margin-bottom: 2rem;
 }
 
-/* line 39, resources/assets/styles/layouts/_footer.scss */
+/* line 43, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-content,
 .page-footer .footer-copyright {
   font-size: 0.83333rem;
 }
 
-/* line 44, resources/assets/styles/layouts/_footer.scss */
+/* line 48, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-copyright {
   background-color: rgba(0, 0, 0, 0.3);
@@ -18617,14 +18646,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   font-size: 0.77778rem;
 }
 
-/* line 51, resources/assets/styles/layouts/_footer.scss */
+/* line 55, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-copyright__text {
   display: block;
   margin-top: 1rem;
 }
 
-/* line 58, resources/assets/styles/layouts/_footer.scss */
+/* line 62, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu {
   display: -webkit-box;
@@ -18637,19 +18666,19 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   margin: 0;
 }
 
-/* line 63, resources/assets/styles/layouts/_footer.scss */
+/* line 67, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu li {
   margin: 0.5rem;
 }
 
-/* line 67, resources/assets/styles/layouts/_footer.scss */
+/* line 71, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu a {
   text-decoration: underline;
 }
 
-/* line 70, resources/assets/styles/layouts/_footer.scss */
+/* line 74, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu a:hover,
 .page-footer .menu a:focus {
@@ -18657,13 +18686,13 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 }
 
 @media (min-width: 768px) {
-  /* line 78, resources/assets/styles/layouts/_footer.scss */
+  /* line 82, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .footer-call-to-action {
     padding-top: 2.5rem;
   }
 
-  /* line 82, resources/assets/styles/layouts/_footer.scss */
+  /* line 86, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu {
     -webkit-box-orient: horizontal;
@@ -18675,19 +18704,19 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
             justify-content: center;
   }
 
-  /* line 86, resources/assets/styles/layouts/_footer.scss */
+  /* line 90, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu li {
     margin: 0;
   }
 
-  /* line 90, resources/assets/styles/layouts/_footer.scss */
+  /* line 94, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu li:not(:last-of-type) {
     margin-right: 1rem;
   }
 
-  /* line 94, resources/assets/styles/layouts/_footer.scss */
+  /* line 98, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu a {
     font-weight: 600;
@@ -18846,15 +18875,6 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 
 /* line 7, resources/assets/styles/layouts/_archive.scss */
 
-.archive-wrap .container,
-.archive-wrap .container-wide,
-.archive-wrap .sidebar-primary .content,
-.sidebar-primary .archive-wrap .content {
-  max-width: 940px;
-}
-
-/* line 11, resources/assets/styles/layouts/_archive.scss */
-
 .archive-wrap__inner {
   width: 100%;
   background-color: #FFF;
@@ -18863,14 +18883,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 11, resources/assets/styles/layouts/_archive.scss */
+  /* line 7, resources/assets/styles/layouts/_archive.scss */
 
   .archive-wrap__inner {
     padding: 2rem 80px;
   }
 }
 
-/* line 24, resources/assets/styles/layouts/_archive.scss */
+/* line 20, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters__inner {
   display: -webkit-box;
@@ -18886,7 +18906,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   width: 100%;
 }
 
-/* line 32, resources/assets/styles/layouts/_archive.scss */
+/* line 28, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters__filter {
   display: inline-block;
@@ -18895,13 +18915,13 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   color: #5A4F42;
 }
 
-/* line 40, resources/assets/styles/layouts/_archive.scss */
+/* line 36, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters__filter.active {
   background-color: #FFF;
 }
 
-/* line 45, resources/assets/styles/layouts/_archive.scss */
+/* line 41, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters .btn,
 .archive-filters .btn-large,
@@ -18918,7 +18938,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   margin-right: 0;
 }
 
-/* line 50, resources/assets/styles/layouts/_archive.scss */
+/* line 46, resources/assets/styles/layouts/_archive.scss */
 
 .pagination .page-numbers {
   color: #585D58 !important;
@@ -19033,12 +19053,11 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   background-color: #007485;
   color: white;
   padding: 2rem;
-  max-width: 940px;
   text-align: left;
   z-index: 1;
 }
 
-/* line 75, resources/assets/styles/layouts/_page.scss */
+/* line 74, resources/assets/styles/layouts/_page.scss */
 
 .page-header--has-img {
   background-color: #005e6c;
@@ -19046,14 +19065,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   padding: 0 1rem;
 }
 
-/* line 81, resources/assets/styles/layouts/_page.scss */
+/* line 80, resources/assets/styles/layouts/_page.scss */
 
 .page-header--w-icon {
   padding-top: 3rem;
   margin-bottom: 3rem;
 }
 
-/* line 85, resources/assets/styles/layouts/_page.scss */
+/* line 84, resources/assets/styles/layouts/_page.scss */
 
 .page-header--w-icon .container,
 .page-header--w-icon .container-wide,
@@ -19067,7 +19086,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
           align-items: center;
 }
 
-/* line 90, resources/assets/styles/layouts/_page.scss */
+/* line 89, resources/assets/styles/layouts/_page.scss */
 
 .page-header--w-icon__title {
   text-transform: uppercase;
@@ -19075,7 +19094,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   color: #97c7cf;
 }
 
-/* line 100, resources/assets/styles/layouts/_page.scss */
+/* line 99, resources/assets/styles/layouts/_page.scss */
 
 .page-header--w-intro {
   position: relative;
@@ -19085,20 +19104,20 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 100, resources/assets/styles/layouts/_page.scss */
+  /* line 99, resources/assets/styles/layouts/_page.scss */
 
   .page-header--w-intro {
     min-height: 220px;
   }
 }
 
-/* line 110, resources/assets/styles/layouts/_page.scss */
+/* line 109, resources/assets/styles/layouts/_page.scss */
 
 .page-header--w-intro .archive-wrap + {
   margin-bottom: 0;
 }
 
-/* line 114, resources/assets/styles/layouts/_page.scss */
+/* line 113, resources/assets/styles/layouts/_page.scss */
 
 .page-header--w-intro .container,
 .page-header--w-intro .container-wide,
@@ -19106,10 +19125,9 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 .sidebar-primary .page-header--w-intro .content {
   padding: 0;
   background-color: transparent;
-  max-width: 940px;
 }
 
-/* line 119, resources/assets/styles/layouts/_page.scss */
+/* line 117, resources/assets/styles/layouts/_page.scss */
 
 .page-header--w-intro .container::after,
 .page-header--w-intro .container-wide::after,
@@ -19135,7 +19153,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 119, resources/assets/styles/layouts/_page.scss */
+  /* line 117, resources/assets/styles/layouts/_page.scss */
 
   .page-header--w-intro .container::after,
   .page-header--w-intro .container-wide::after,
@@ -19145,7 +19163,26 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   }
 }
 
-/* line 144, resources/assets/styles/layouts/_page.scss */
+/* line 143, resources/assets/styles/layouts/_page.scss */
+
+.page-header--w-intro.page-header--has-event .container::after,
+.page-header--w-intro.page-header--has-event .container-wide::after,
+.page-header--w-intro.page-header--has-event .sidebar-primary .content::after,
+.sidebar-primary .page-header--w-intro.page-header--has-event .content::after {
+  display: none;
+}
+
+/* line 147, resources/assets/styles/layouts/_page.scss */
+
+.page-header--w-intro.page-header--has-event .col:last-of-type,
+.page-header--w-intro.page-header--has-event .sidebar-primary .wrap .main:last-of-type,
+.sidebar-primary .wrap .page-header--w-intro.page-header--has-event .main:last-of-type,
+.page-header--w-intro.page-header--has-event .sidebar-primary .wrap .sidebar:last-of-type,
+.sidebar-primary .wrap .page-header--w-intro.page-header--has-event .sidebar:last-of-type {
+  padding-bottom: 0;
+}
+
+/* line 152, resources/assets/styles/layouts/_page.scss */
 
 .page-header--w-intro .col:last-of-type,
 .page-header--w-intro .sidebar-primary .wrap .main:last-of-type,
@@ -19155,7 +19192,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   padding-bottom: 3rem;
 }
 
-/* line 149, resources/assets/styles/layouts/_page.scss */
+/* line 157, resources/assets/styles/layouts/_page.scss */
 
 .has-post-thumbnail .page-header--w-intro .flex {
   -webkit-box-pack: start;
@@ -19163,7 +19200,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
           justify-content: flex-start;
 }
 
-/* line 153, resources/assets/styles/layouts/_page.scss */
+/* line 161, resources/assets/styles/layouts/_page.scss */
 
 .has-post-thumbnail .page-header--w-intro .col,
 .has-post-thumbnail .page-header--w-intro .sidebar-primary .wrap .main,
@@ -19173,7 +19210,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   margin-left: 0;
 }
 
-/* line 156, resources/assets/styles/layouts/_page.scss */
+/* line 164, resources/assets/styles/layouts/_page.scss */
 
 .has-post-thumbnail .page-header--w-intro .col:first-child,
 .has-post-thumbnail .page-header--w-intro .sidebar-primary .wrap .main:first-child,
@@ -19183,7 +19220,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   padding-left: 0;
 }
 
-/* line 161, resources/assets/styles/layouts/_page.scss */
+/* line 169, resources/assets/styles/layouts/_page.scss */
 
 .has-post-thumbnail .page-header--w-intro .thumbnail-container {
   height: 100%;
@@ -19191,7 +19228,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   background-position: center;
 }
 
-/* line 168, resources/assets/styles/layouts/_page.scss */
+/* line 176, resources/assets/styles/layouts/_page.scss */
 
 .page-header--w-intro h2,
 .page-header--w-intro h3,
@@ -19199,13 +19236,13 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   color: inherit;
 }
 
-/* line 172, resources/assets/styles/layouts/_page.scss */
+/* line 180, resources/assets/styles/layouts/_page.scss */
 
 .page-header--w-intro a:not(.btn):not(.btn-large):not(.btn-small) {
   text-decoration: underline;
 }
 
-/* line 175, resources/assets/styles/layouts/_page.scss */
+/* line 183, resources/assets/styles/layouts/_page.scss */
 
 .page-header--w-intro a:not(.btn):not(.btn-large):not(.btn-small):hover,
 .page-header--w-intro a:not(.btn):not(.btn-large):not(.btn-small):focus {
@@ -19213,7 +19250,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
           text-decoration-style: double;
 }
 
-/* line 182, resources/assets/styles/layouts/_page.scss */
+/* line 190, resources/assets/styles/layouts/_page.scss */
 
 .template-impact-landing .page-header > .container,
 .template-impact-landing .page-header > .container-wide,
@@ -19222,7 +19259,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   background-color: rgba(148, 131, 110, 0.9);
 }
 
-/* line 185, resources/assets/styles/layouts/_page.scss */
+/* line 193, resources/assets/styles/layouts/_page.scss */
 
 .template-impact-landing .page-header > .container h1,
 .template-impact-landing .page-header > .container-wide h1,
@@ -19231,14 +19268,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   color: #FFF;
 }
 
-/* line 191, resources/assets/styles/layouts/_page.scss */
+/* line 199, resources/assets/styles/layouts/_page.scss */
 
 .page-template-default .page-header,
 .template-narrow-w-footer-contact .page-header {
   margin-bottom: 0;
 }
 
-/* line 199, resources/assets/styles/layouts/_page.scss */
+/* line 207, resources/assets/styles/layouts/_page.scss */
 
 .single-award main,
 .page-template-default main,
@@ -19246,7 +19283,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   background-color: #E7E4E0;
 }
 
-/* line 203, resources/assets/styles/layouts/_page.scss */
+/* line 211, resources/assets/styles/layouts/_page.scss */
 
 .single-award .entry-content,
 .page-template-default .entry-content,
@@ -19258,7 +19295,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 211, resources/assets/styles/layouts/_page.scss */
+  /* line 219, resources/assets/styles/layouts/_page.scss */
 
   .single-award article,
   .page-template-default article,
@@ -19266,7 +19303,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
     padding-bottom: 4rem;
   }
 
-  /* line 215, resources/assets/styles/layouts/_page.scss */
+  /* line 223, resources/assets/styles/layouts/_page.scss */
 
   .single-award .entry-content,
   .page-template-default .entry-content,
@@ -19275,36 +19312,34 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   }
 }
 
-/* line 221, resources/assets/styles/layouts/_page.scss */
+/* line 229, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer {
   background-color: #E7E4E0;
 }
 
-/* line 224, resources/assets/styles/layouts/_page.scss */
+/* line 232, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer .container,
 .entry-footer .container-wide,
 .entry-footer .sidebar-primary .content,
 .sidebar-primary .entry-footer .content {
-  max-width: 940px;
-  margin: 0 auto;
   background-color: #F5F4F3;
 }
 
-/* line 230, resources/assets/styles/layouts/_page.scss */
+/* line 236, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer h2 {
   color: #007485;
 }
 
-/* line 234, resources/assets/styles/layouts/_page.scss */
+/* line 240, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer h3 {
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
-/* line 238, resources/assets/styles/layouts/_page.scss */
+/* line 244, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer p,
 .entry-footer dd {
@@ -19312,53 +19347,53 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   font-size: 1rem;
 }
 
-/* line 243, resources/assets/styles/layouts/_page.scss */
+/* line 249, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer a {
   color: inherit;
 }
 
-/* line 247, resources/assets/styles/layouts/_page.scss */
+/* line 253, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer__image {
   line-height: 0;
 }
 
-/* line 251, resources/assets/styles/layouts/_page.scss */
+/* line 257, resources/assets/styles/layouts/_page.scss */
 
 .entry-footer__details {
   padding: 1rem;
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 221, resources/assets/styles/layouts/_page.scss */
+  /* line 229, resources/assets/styles/layouts/_page.scss */
 
   .entry-footer {
     padding: 0 0 3rem;
   }
 }
 
-/* line 260, resources/assets/styles/layouts/_page.scss */
+/* line 266, resources/assets/styles/layouts/_page.scss */
 
 .list-partners {
   list-style-type: none;
 }
 
-/* line 263, resources/assets/styles/layouts/_page.scss */
+/* line 269, resources/assets/styles/layouts/_page.scss */
 
 .list-partners li::before {
   display: inline-block;
   content: '>' !important;
 }
 
-/* line 268, resources/assets/styles/layouts/_page.scss */
+/* line 274, resources/assets/styles/layouts/_page.scss */
 
 .list-partners a {
   color: inherit;
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 274, resources/assets/styles/layouts/_page.scss */
+  /* line 280, resources/assets/styles/layouts/_page.scss */
 
   .list-partners {
     -webkit-column-count: 2;
@@ -19367,7 +19402,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   }
 }
 
-/* line 279, resources/assets/styles/layouts/_page.scss */
+/* line 285, resources/assets/styles/layouts/_page.scss */
 
 .small-card {
   display: -webkit-box;
@@ -19385,7 +19420,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   padding: 1rem;
 }
 
-/* line 289, resources/assets/styles/layouts/_page.scss */
+/* line 295, resources/assets/styles/layouts/_page.scss */
 
 .small-card__text {
   padding: 1.5rem;
@@ -19395,19 +19430,19 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   text-transform: uppercase;
 }
 
-/* line 296, resources/assets/styles/layouts/_page.scss */
+/* line 302, resources/assets/styles/layouts/_page.scss */
 
 .small-card__text + p {
   margin: 0;
 }
 
-/* line 301, resources/assets/styles/layouts/_page.scss */
+/* line 307, resources/assets/styles/layouts/_page.scss */
 
 .small-card img {
   width: 115px;
 }
 
-/* line 306, resources/assets/styles/layouts/_page.scss */
+/* line 312, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box,
 .fl-module-info-box > .fl-module-content,
@@ -19415,7 +19450,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   height: 100%;
 }
 
-/* line 312, resources/assets/styles/layouts/_page.scss */
+/* line 318, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box > .fl-module-content > .uabb-infobox {
   display: -webkit-box;
@@ -19431,65 +19466,65 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   background-color: rgba(0, 116, 133, 0.9);
 }
 
-/* line 318, resources/assets/styles/layouts/_page.scss */
+/* line 324, resources/assets/styles/layouts/_page.scss */
 
 .fl-module-info-box > .fl-module-content > .uabb-infobox .uabb-infobox-text {
   color: #FFF;
 }
 
-/* line 324, resources/assets/styles/layouts/_page.scss */
+/* line 330, resources/assets/styles/layouts/_page.scss */
 
 .fl-number {
   background-color: #D9D9D9;
   color: #5A4F42;
 }
 
-/* line 330, resources/assets/styles/layouts/_page.scss */
+/* line 336, resources/assets/styles/layouts/_page.scss */
 
 .fl-accordion .fl-accordion-item {
   margin-bottom: 20px;
 }
 
-/* line 335, resources/assets/styles/layouts/_page.scss */
+/* line 341, resources/assets/styles/layouts/_page.scss */
 
 .tweets {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
-/* line 339, resources/assets/styles/layouts/_page.scss */
+/* line 345, resources/assets/styles/layouts/_page.scss */
 
 .tweets__heading {
   margin-left: 2rem;
   margin-bottom: 0.5rem;
 }
 
-/* line 346, resources/assets/styles/layouts/_page.scss */
+/* line 352, resources/assets/styles/layouts/_page.scss */
 
 .tweets__wrap {
   padding: 2rem;
   background-color: #E7E4E0;
 }
 
-/* line 351, resources/assets/styles/layouts/_page.scss */
+/* line 357, resources/assets/styles/layouts/_page.scss */
 
 .tweets__item {
   padding: 0 0.5rem;
 }
 
-/* line 355, resources/assets/styles/layouts/_page.scss */
+/* line 361, resources/assets/styles/layouts/_page.scss */
 
 .tweets__item:not(:last-of-type) {
   margin-bottom: 1.5rem;
 }
 
-/* line 359, resources/assets/styles/layouts/_page.scss */
+/* line 365, resources/assets/styles/layouts/_page.scss */
 
 .tweets .twitter-stat {
   margin-right: 2rem;
 }
 
-/* line 362, resources/assets/styles/layouts/_page.scss */
+/* line 368, resources/assets/styles/layouts/_page.scss */
 
 .tweets .twitter-stat::before {
   display: inline-block;
@@ -19502,20 +19537,20 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   content: '';
 }
 
-/* line 373, resources/assets/styles/layouts/_page.scss */
+/* line 379, resources/assets/styles/layouts/_page.scss */
 
 .tweets .twitter-stat--like::before {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMjAgMjAiPjxwYXRoIGQ9Ik0xNy4xOSA0LjE1NWMtMS42NzItMS41MzQtNC4zODMtMS41MzQtNi4wNTUgMGwtMS4xMzUgMS4wNDItMS4xMzYtMS4wNDJjLTEuNjcyLTEuNTM0LTQuMzgyLTEuNTM0LTYuMDU0IDAtMS44ODEgMS43MjctMS44ODEgNC41MiAwIDYuMjQ2bDcuMTkgNi41OTkgNy4xOS02LjU5OWMxLjg4LTEuNzI2IDEuODgtNC41MiAwLTYuMjQ2eiI+PC9wYXRoPjwvc3ZnPgo=);
 }
 
-/* line 377, resources/assets/styles/layouts/_page.scss */
+/* line 383, resources/assets/styles/layouts/_page.scss */
 
 .tweets .twitter-stat--retweet::before {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMzAgMjgiPjxwYXRoIGQ9Ik0yMCAyMy41YzAgLjI2Ni0uMjM0LjUtLjUuNWgtMTVjLS41NzggMC0uNS0uNjA5LS41LTF2LTlIMWMtLjU0NyAwLTEtLjQ1My0xLTEgMC0uMjM0LjA3OC0uNDY5LjIzNC0uNjQxbDUtNmMuMTg3LS4yMTkuNDY5LS4zNDQuNzY2LS4zNDRzLjU3OC4xMjUuNzY2LjM0NGw1IDZBLjk1NS45NTUgMCAwIDEgMTIgMTNjMCAuNTQ3LS40NTMgMS0xIDFIOHY2aDljLjE0MSAwIC4yOTcuMDYzLjM5MS4xNzJsMi41IDNBLjYzLjYzIDAgMCAxIDIwIDIzLjV6TTMwIDE3YS45NTYuOTU2IDAgMCAxLS4yMzQuNjQxbC01IDZjLS4xODcuMjE5LS40NjkuMzU5LS43NjYuMzU5cy0uNTc4LS4xNDEtLjc2Ni0uMzU5bC01LTZBLjk1NS45NTUgMCAwIDEgMTggMTdjMC0uNTQ3LjQ1My0xIDEtMWgzdi02aC05YS40OTguNDk4IDAgMCAxLS4zOTEtLjE4N2wtMi41LTNBLjUzNi41MzYgMCAwIDEgMTAgNi41YzAtLjI2Ni4yMzQtLjUuNS0uNWgxNWMuNTc4IDAgLjUuNjA5LjUgMXY5aDNjLjU0NyAwIDEgLjQ1MyAxIDF6Ij48L3BhdGg+PC9zdmc+Cg==);
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 383, resources/assets/styles/layouts/_page.scss */
+  /* line 389, resources/assets/styles/layouts/_page.scss */
 
   .tweets__wrap {
     display: -webkit-box;
@@ -19530,7 +19565,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
             justify-content: space-evenly;
   }
 
-  /* line 389, resources/assets/styles/layouts/_page.scss */
+  /* line 395, resources/assets/styles/layouts/_page.scss */
 
   .tweets__item:not(:last-of-type) {
     margin-bottom: 0;
@@ -19735,32 +19770,31 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   .single-post .page-header .container-wide,
   .single-post .page-header .sidebar-primary .content,
   .sidebar-primary .single-post .page-header .content {
-    max-width: 940px;
     padding: 2rem 80px;
   }
 }
 
-/* line 143, resources/assets/styles/layouts/_single.scss */
+/* line 142, resources/assets/styles/layouts/_single.scss */
 
 .single-post .entry-content {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 143, resources/assets/styles/layouts/_single.scss */
+  /* line 142, resources/assets/styles/layouts/_single.scss */
 
   .single-post .entry-content {
     padding: 40px 80px;
   }
 }
 
-/* line 151, resources/assets/styles/layouts/_single.scss */
+/* line 150, resources/assets/styles/layouts/_single.scss */
 
 .single-post .content {
   background-color: #E7E4E0;
 }
 
-/* line 156, resources/assets/styles/layouts/_single.scss */
+/* line 155, resources/assets/styles/layouts/_single.scss */
 
 .single-post article > .entry-content {
   max-width: 940px;
@@ -19768,7 +19802,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   margin: 0 auto;
 }
 
-/* line 162, resources/assets/styles/layouts/_single.scss */
+/* line 161, resources/assets/styles/layouts/_single.scss */
 
 .single-post article .container,
 .single-post article .container-wide,
@@ -19779,20 +19813,20 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   text-align: left;
 }
 
-/* line 168, resources/assets/styles/layouts/_single.scss */
+/* line 167, resources/assets/styles/layouts/_single.scss */
 
 .single-post article .entry-content {
   background-color: #FFF;
 }
 
-/* line 175, resources/assets/styles/layouts/_single.scss */
+/* line 174, resources/assets/styles/layouts/_single.scss */
 
 .single-award .entry-content h2 {
   letter-spacing: 0;
   margin-bottom: 0;
 }
 
-/* line 182, resources/assets/styles/layouts/_single.scss */
+/* line 181, resources/assets/styles/layouts/_single.scss */
 
 .single-award .entry-content .award-detail-text {
   text-transform: none;
@@ -19800,7 +19834,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   color: #C75300;
 }
 
-/* line 191, resources/assets/styles/layouts/_single.scss */
+/* line 190, resources/assets/styles/layouts/_single.scss */
 
 .single-award .entry-pre-footer {
   max-width: 940px;
