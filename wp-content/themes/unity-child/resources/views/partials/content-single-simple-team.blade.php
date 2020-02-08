@@ -6,7 +6,7 @@ $first_name = get_field('first_name');
 
 <article class="single-person container-wide" {!! post_class() !!}>
   <div class="row flex">
-    <div class="col s12 m8 push-m4 bg-primary-darken">
+    <div class="col s12 m8 push-m4">
       <section class="single-person__details">
         <div class="content-wrap">
           <h1 class="mb-0" itemprop="name">{{ the_title() }}</h1>

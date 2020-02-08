@@ -39,3 +39,30 @@
     margin-top: 4rem;
   }
 }
+
+.single-award .entry-content {
+  h2 {
+    @extend .h4;
+
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+
+  .award-detail-text {
+    @extend .h2;
+
+    text-transform: none;
+    letter-spacing: 0;
+    color: $color-orange-a11y;
+  }
+}
+
+.single-award .entry-pre-footer {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: $color-beige-dark;
+  color: $color-white;
+}

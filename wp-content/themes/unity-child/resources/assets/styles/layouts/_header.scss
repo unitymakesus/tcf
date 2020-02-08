@@ -101,7 +101,6 @@ nav {
 
   > .menu-item {
     height: 100%;
-    font-weight: 600;
 
     > a {
       display: flex;
@@ -121,6 +120,7 @@ nav {
   > .menu-item:nth-child(n+4) > a {
     text-transform: uppercase;
     font-size: rem-calc(14);
+    font-weight: 600;
   }
 
   // Giving

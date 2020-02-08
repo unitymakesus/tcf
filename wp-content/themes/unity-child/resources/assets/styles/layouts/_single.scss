@@ -138,89 +138,60 @@
   }
 }
 
-.single-post header {
-  text-align: left;
-}
-
-.single-post .page-header {
-  padding: 0 1rem;
-  min-height: 390px;
-
-  a {
-    color: inherit;
-    text-decoration: underline;
-  }
-
-  .entry-title {
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-  }
-
-  .entry-primary-term {
-    color: $color-teal-a11y;
-  }
-
-  @media #{$large-and-up} {
-    .container {
-      padding: 2rem 80px;
-    }
-  }
-}
-
-.single-post .entry-content {
-  margin-bottom: 0;
-
-  @media #{$large-and-up} {
-    padding: 40px 80px;
-  }
-}
-
-.single-post .content {
-  background-color: $color-beige;
-}
-
-.single-post article {
-  > .entry-content {
-    max-width: 940px;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .container {
-    background-color: darken($brand-primary, 10);
-    color: $color-white;
+.single-post {
+  header {
     text-align: left;
   }
 
+  .main {
+    background-color: $color-beige;
+
+    @media #{$large-and-up} {
+      padding-bottom: 4rem;
+    }
+  }
+
+  .page-header {
+    text-align: left;
+    padding: 0 1rem;
+    min-height: 390px;
+
+    .container {
+      background-color: rgba($color-blue-dark, 0.8);
+    }
+
+    .entry-title {
+      font-weight: 400;
+      margin: 0.5rem 0;
+    }
+
+    .entry-primary-term {
+      color: $color-teal-light;
+      text-transform: uppercase;
+      font-size: 1.125rem !important;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    @media #{$large-and-up} {
+      .container {
+        padding: 2rem 80px;
+      }
+    }
+  }
+
   .entry-content {
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
     background-color: $color-white;
+    padding: 2rem 1rem;
+
+    @media #{$large-and-up} {
+      padding: 3rem 98px;
+    }
   }
-}
-
-// Awards (Scholarships & Grants)
-.single-award .entry-content {
-  h2 {
-    @extend .h4;
-
-    letter-spacing: 0;
-    margin-bottom: 0;
-  }
-
-  .award-detail-text {
-    @extend .h2;
-
-    text-transform: none;
-    letter-spacing: 0;
-    color: $color-orange-a11y;
-  }
-}
-
-.single-award .entry-pre-footer {
-  max-width: 940px;
-  margin: 0 auto;
-  padding: 1rem;
-  font-weight: 600;
-  text-align: center;
-  background-color: $color-beige-dark;
-  color: $color-white;
 }
