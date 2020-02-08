@@ -1,4 +1,10 @@
-@if ($staff_members = get_field('staff_member_contact'))
+@php
+  $staff_members = is_archive('press') ? get_field('staff_member_contact', 'option') : get_field('staff_member_contact');
+  $cta_title = is_archive('press') ? get_field('contact_cta_title', 'option') : get_field('contact_cta_title');
+  $cta_text = is_archive('press') ? get_field('contact_cta_text', 'option') : get_field('contact_cta_text');
+@endphp
+
+@if (!empty($staff_members))
   <footer class="entry-footer">
     <div class="container">
       @foreach ($staff_members as $staff)
@@ -13,8 +19,8 @@
               <div class="row">
                 <div class="col s12">
                   @if ($staff == $staff_members[0])
-                    <h2 class="mb-0">{{ get_field('contact_cta_title') }}</h2>
-                    {!! get_field('contact_cta_text') !!}
+                    <h2 class="mb-0">{{ $cta_title }}</h2>
+                    {!! $cta_text !!}
                   @endif
                   <h3 class="mb-0 h4">{{ get_the_title($staff) }}</h3>
                   @if (have_rows('job_titles', $staff))

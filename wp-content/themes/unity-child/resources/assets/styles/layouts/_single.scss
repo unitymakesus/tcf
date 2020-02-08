@@ -34,14 +34,23 @@
 
   &__meta {
     margin-bottom: 1rem;
+    font-size: 0.9em;
   }
 
   &[data-type="blog"] {
-    background-color: $color-white;
-    border: 2px solid $color-beige;
+    background-color: $color-beige;
+
+    h2 {
+      color: $color-beige-darker;
+    }
+
+    .single-entry__label {
+      background-color: $color-beige-darker;
+      color: $color-beige-light;
+    }
   }
 
-  &[data-cat="environmental-conservation"] {
+  &[data-type="stories"] {
     background-color: $color-teal-light;
 
     h2 {
@@ -54,43 +63,62 @@
     }
   }
 
-  &[data-cat="regional-cultural-arts"] {
-    background-color: $color-orange-light;
+  // &[data-cat="environmental-conservation"] {
+  //   background-color: $color-teal-light;
+  //
+  //   h2 {
+  //     color: $color-blue;
+  //   }
+  //
+  //   .single-entry__label {
+  //     background-color: $color-blue;
+  //     color: $color-teal-light;
+  //   }
+  // }
+  //
+  // &[data-cat="regional-cultural-arts"] {
+  //   background-color: $color-orange-light;
+  //
+  //   h2 {
+  //     color: $color-orange-a11y;
+  //   }
+  //
+  //   .single-entry__label {
+  //     background-color: $color-orange-a11y;
+  //     color: $color-orange-light;
+  //   }
+  // }
+  //
+  // &[data-cat="youth-literacy"] {
+  //   background-color: $color-green-light;
+  //
+  //   h2 {
+  //     color: $color-green-a11y;
+  //   }
+  //
+  //   .single-entry__label {
+  //     background-color: $color-green-a11y;
+  //     color: $color-green-light;
+  //   }
+  // }
+  //
+  // &[data-cat="community-development"] {
+  //   background-color: $color-beige;
+  //
+  //   h2 {
+  //     color: $color-beige-darker;
+  //   }
+  //
+  //   .single-entry__label {
+  //     background-color: $color-beige-darker;
+  //     color: $color-beige-light;
+  //   }
+  // }
 
-    h2 {
-      color: $color-orange-a11y;
-    }
-
-    .single-entry__label {
-      background-color: $color-orange-a11y;
-      color: $color-orange-light;
-    }
-  }
-
-  &[data-cat="youth-literacy"] {
-    background-color: $color-green-light;
-
-    h2 {
-      color: $color-green-a11y;
-    }
-
-    .single-entry__label {
-      background-color: $color-green-a11y;
-      color: $color-green-light;
-    }
-  }
-
-  &[data-cat="community-development"] {
-    background-color: $color-beige;
-
-    h2 {
-      color: $color-beige-darker;
-    }
-
-    .single-entry__label {
-      background-color: $color-beige-darker;
-      color: $color-beige-light;
-    }
+  a.read-more {
+    display: block;
+    font-style: italic;
+    color: inherit;
   }
 
   @media #{$medium-and-up} {

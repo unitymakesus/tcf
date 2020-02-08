@@ -18850,27 +18850,33 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   position: relative;
   top: -3rem;
   margin-bottom: -3rem;
+  padding-top: 1rem;
   background-color: #E7E4E0;
 }
 
-/* line 7, resources/assets/styles/layouts/_archive.scss */
+/* line 8, resources/assets/styles/layouts/_archive.scss */
 
 .archive-wrap__inner {
   width: 100%;
   background-color: #FFF;
   padding: 1rem;
-  margin-bottom: 4rem;
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 7, resources/assets/styles/layouts/_archive.scss */
+  /* line 8, resources/assets/styles/layouts/_archive.scss */
 
   .archive-wrap__inner {
-    padding: 2rem 80px;
+    padding: 2rem 3rem;
   }
 }
 
-/* line 20, resources/assets/styles/layouts/_archive.scss */
+/* line 18, resources/assets/styles/layouts/_archive.scss */
+
+.blog .archive-wrap {
+  padding-bottom: 3rem;
+}
+
+/* line 24, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters__inner {
   display: -webkit-box;
@@ -18886,22 +18892,23 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   width: 100%;
 }
 
-/* line 28, resources/assets/styles/layouts/_archive.scss */
+/* line 32, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters__filter {
   display: inline-block;
   padding: 1rem 1.5rem;
   background-color: #B8AEA3;
   color: #5A4F42;
+  text-decoration: none;
 }
 
-/* line 36, resources/assets/styles/layouts/_archive.scss */
+/* line 41, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters__filter.active {
   background-color: #FFF;
 }
 
-/* line 41, resources/assets/styles/layouts/_archive.scss */
+/* line 46, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters .btn,
 .archive-filters .btn-large,
@@ -18918,7 +18925,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   margin-right: 0;
 }
 
-/* line 46, resources/assets/styles/layouts/_archive.scss */
+/* line 51, resources/assets/styles/layouts/_archive.scss */
 
 .pagination .page-numbers {
   color: #585D58 !important;
@@ -18933,6 +18940,106 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+/* line 65, resources/assets/styles/layouts/_archive.scss */
+
+.tweets {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* line 69, resources/assets/styles/layouts/_archive.scss */
+
+.tweets__heading {
+  margin-left: calc(2rem + 10px);
+  margin-bottom: 0.5rem;
+}
+
+/* line 76, resources/assets/styles/layouts/_archive.scss */
+
+.tweets__wrap {
+  padding: 2rem;
+  background-color: #E7E4E0;
+}
+
+/* line 81, resources/assets/styles/layouts/_archive.scss */
+
+.tweets__item {
+  padding: 0 0.5rem;
+}
+
+/* line 85, resources/assets/styles/layouts/_archive.scss */
+
+.tweets__item:not(:last-of-type) {
+  margin-bottom: 1.5rem;
+}
+
+/* line 89, resources/assets/styles/layouts/_archive.scss */
+
+.tweets svg {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* line 93, resources/assets/styles/layouts/_archive.scss */
+
+.tweets svg path {
+  fill: #007485;
+}
+
+/* line 98, resources/assets/styles/layouts/_archive.scss */
+
+.tweets .twitter-stat {
+  margin-right: 2rem;
+}
+
+/* line 101, resources/assets/styles/layouts/_archive.scss */
+
+.tweets .twitter-stat::before {
+  display: inline-block;
+  position: relative;
+  top: 2px;
+  margin-right: 0.5rem;
+  background-size: 18px 18px;
+  width: 18px;
+  height: 18px;
+  content: '';
+}
+
+/* line 112, resources/assets/styles/layouts/_archive.scss */
+
+.tweets .twitter-stat--like::before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMjAgMjAiPjxwYXRoIGQ9Ik0xNy4xOSA0LjE1NWMtMS42NzItMS41MzQtNC4zODMtMS41MzQtNi4wNTUgMGwtMS4xMzUgMS4wNDItMS4xMzYtMS4wNDJjLTEuNjcyLTEuNTM0LTQuMzgyLTEuNTM0LTYuMDU0IDAtMS44ODEgMS43MjctMS44ODEgNC41MiAwIDYuMjQ2bDcuMTkgNi41OTkgNy4xOS02LjU5OWMxLjg4LTEuNzI2IDEuODgtNC41MiAwLTYuMjQ2eiI+PC9wYXRoPjwvc3ZnPgo=);
+}
+
+/* line 116, resources/assets/styles/layouts/_archive.scss */
+
+.tweets .twitter-stat--retweet::before {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMzAgMjgiPjxwYXRoIGQ9Ik0yMCAyMy41YzAgLjI2Ni0uMjM0LjUtLjUuNWgtMTVjLS41NzggMC0uNS0uNjA5LS41LTF2LTlIMWMtLjU0NyAwLTEtLjQ1My0xLTEgMC0uMjM0LjA3OC0uNDY5LjIzNC0uNjQxbDUtNmMuMTg3LS4yMTkuNDY5LS4zNDQuNzY2LS4zNDRzLjU3OC4xMjUuNzY2LjM0NGw1IDZBLjk1NS45NTUgMCAwIDEgMTIgMTNjMCAuNTQ3LS40NTMgMS0xIDFIOHY2aDljLjE0MSAwIC4yOTcuMDYzLjM5MS4xNzJsMi41IDNBLjYzLjYzIDAgMCAxIDIwIDIzLjV6TTMwIDE3YS45NTYuOTU2IDAgMCAxLS4yMzQuNjQxbC01IDZjLS4xODcuMjE5LS40NjkuMzU5LS43NjYuMzU5cy0uNTc4LS4xNDEtLjc2Ni0uMzU5bC01LTZBLjk1NS45NTUgMCAwIDEgMTggMTdjMC0uNTQ3LjQ1My0xIDEtMWgzdi02aC05YS40OTguNDk4IDAgMCAxLS4zOTEtLjE4N2wtMi41LTNBLjUzNi41MzYgMCAwIDEgMTAgNi41YzAtLjI2Ni4yMzQtLjUuNS0uNWgxNWMuNTc4IDAgLjUuNjA5LjUgMXY5aDNjLjU0NyAwIDEgLjQ1MyAxIDF6Ij48L3BhdGg+PC9zdmc+Cg==);
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 122, resources/assets/styles/layouts/_archive.scss */
+
+  .tweets__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+
+  /* line 128, resources/assets/styles/layouts/_archive.scss */
+
+  .tweets__item:not(:last-of-type) {
+    margin-bottom: 0;
+  }
 }
 
 /* line 1, resources/assets/styles/layouts/_page.scss */
@@ -19465,93 +19572,6 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   margin-bottom: 20px;
 }
 
-/* line 341, resources/assets/styles/layouts/_page.scss */
-
-.tweets {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-/* line 345, resources/assets/styles/layouts/_page.scss */
-
-.tweets__heading {
-  margin-left: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-/* line 352, resources/assets/styles/layouts/_page.scss */
-
-.tweets__wrap {
-  padding: 2rem;
-  background-color: #E7E4E0;
-}
-
-/* line 357, resources/assets/styles/layouts/_page.scss */
-
-.tweets__item {
-  padding: 0 0.5rem;
-}
-
-/* line 361, resources/assets/styles/layouts/_page.scss */
-
-.tweets__item:not(:last-of-type) {
-  margin-bottom: 1.5rem;
-}
-
-/* line 365, resources/assets/styles/layouts/_page.scss */
-
-.tweets .twitter-stat {
-  margin-right: 2rem;
-}
-
-/* line 368, resources/assets/styles/layouts/_page.scss */
-
-.tweets .twitter-stat::before {
-  display: inline-block;
-  position: relative;
-  top: 2px;
-  margin-right: 0.5rem;
-  background-size: 18px 18px;
-  width: 18px;
-  height: 18px;
-  content: '';
-}
-
-/* line 379, resources/assets/styles/layouts/_page.scss */
-
-.tweets .twitter-stat--like::before {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMjAgMjAiPjxwYXRoIGQ9Ik0xNy4xOSA0LjE1NWMtMS42NzItMS41MzQtNC4zODMtMS41MzQtNi4wNTUgMGwtMS4xMzUgMS4wNDItMS4xMzYtMS4wNDJjLTEuNjcyLTEuNTM0LTQuMzgyLTEuNTM0LTYuMDU0IDAtMS44ODEgMS43MjctMS44ODEgNC41MiAwIDYuMjQ2bDcuMTkgNi41OTkgNy4xOS02LjU5OWMxLjg4LTEuNzI2IDEuODgtNC41MiAwLTYuMjQ2eiI+PC9wYXRoPjwvc3ZnPgo=);
-}
-
-/* line 383, resources/assets/styles/layouts/_page.scss */
-
-.tweets .twitter-stat--retweet::before {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMzAgMjgiPjxwYXRoIGQ9Ik0yMCAyMy41YzAgLjI2Ni0uMjM0LjUtLjUuNWgtMTVjLS41NzggMC0uNS0uNjA5LS41LTF2LTlIMWMtLjU0NyAwLTEtLjQ1My0xLTEgMC0uMjM0LjA3OC0uNDY5LjIzNC0uNjQxbDUtNmMuMTg3LS4yMTkuNDY5LS4zNDQuNzY2LS4zNDRzLjU3OC4xMjUuNzY2LjM0NGw1IDZBLjk1NS45NTUgMCAwIDEgMTIgMTNjMCAuNTQ3LS40NTMgMS0xIDFIOHY2aDljLjE0MSAwIC4yOTcuMDYzLjM5MS4xNzJsMi41IDNBLjYzLjYzIDAgMCAxIDIwIDIzLjV6TTMwIDE3YS45NTYuOTU2IDAgMCAxLS4yMzQuNjQxbC01IDZjLS4xODcuMjE5LS40NjkuMzU5LS43NjYuMzU5cy0uNTc4LS4xNDEtLjc2Ni0uMzU5bC01LTZBLjk1NS45NTUgMCAwIDEgMTggMTdjMC0uNTQ3LjQ1My0xIDEtMWgzdi02aC05YS40OTguNDk4IDAgMCAxLS4zOTEtLjE4N2wtMi41LTNBLjUzNi41MzYgMCAwIDEgMTAgNi41YzAtLjI2Ni4yMzQtLjUuNS0uNWgxNWMuNTc4IDAgLjUuNjA5LjUgMXY5aDNjLjU0NyAwIDEgLjQ1MyAxIDF6Ij48L3BhdGg+PC9zdmc+Cg==);
-}
-
-@media only screen and (min-width: 769px) {
-  /* line 389, resources/assets/styles/layouts/_page.scss */
-
-  .tweets__wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-
-  /* line 395, resources/assets/styles/layouts/_page.scss */
-
-  .tweets__item:not(:last-of-type) {
-    margin-bottom: 0;
-  }
-}
-
 /* line 1, resources/assets/styles/layouts/_single.scss */
 
 .single-entry {
@@ -19596,89 +19616,53 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 
 .single-entry__meta {
   margin-bottom: 1rem;
+  font-size: 0.9em;
 }
 
-/* line 39, resources/assets/styles/layouts/_single.scss */
+/* line 40, resources/assets/styles/layouts/_single.scss */
 
 .single-entry[data-type="blog"] {
-  background-color: #FFF;
-  border: 2px solid #E7E4E0;
+  background-color: #E7E4E0;
 }
 
-/* line 44, resources/assets/styles/layouts/_single.scss */
+/* line 43, resources/assets/styles/layouts/_single.scss */
 
-.single-entry[data-cat="environmental-conservation"] {
-  background-color: #CCE3E9;
+.single-entry[data-type="blog"] h2 {
+  color: #5A4F42;
 }
 
 /* line 47, resources/assets/styles/layouts/_single.scss */
 
-.single-entry[data-cat="environmental-conservation"] h2 {
+.single-entry[data-type="blog"] .single-entry__label {
+  background-color: #5A4F42;
+  color: #F5F4F3;
+}
+
+/* line 53, resources/assets/styles/layouts/_single.scss */
+
+.single-entry[data-type="stories"] {
+  background-color: #CCE3E9;
+}
+
+/* line 56, resources/assets/styles/layouts/_single.scss */
+
+.single-entry[data-type="stories"] h2 {
   color: #007485;
-}
-
-/* line 51, resources/assets/styles/layouts/_single.scss */
-
-.single-entry[data-cat="environmental-conservation"] .single-entry__label {
-  background-color: #007485;
-  color: #CCE3E9;
-}
-
-/* line 57, resources/assets/styles/layouts/_single.scss */
-
-.single-entry[data-cat="regional-cultural-arts"] {
-  background-color: #FAE3D3;
 }
 
 /* line 60, resources/assets/styles/layouts/_single.scss */
 
-.single-entry[data-cat="regional-cultural-arts"] h2 {
-  color: #C75300;
+.single-entry[data-type="stories"] .single-entry__label {
+  background-color: #007485;
+  color: #CCE3E9;
 }
 
-/* line 64, resources/assets/styles/layouts/_single.scss */
+/* line 118, resources/assets/styles/layouts/_single.scss */
 
-.single-entry[data-cat="regional-cultural-arts"] .single-entry__label {
-  background-color: #C75300;
-  color: #FAE3D3;
-}
-
-/* line 70, resources/assets/styles/layouts/_single.scss */
-
-.single-entry[data-cat="youth-literacy"] {
-  background-color: #EFF1D2;
-}
-
-/* line 73, resources/assets/styles/layouts/_single.scss */
-
-.single-entry[data-cat="youth-literacy"] h2 {
-  color: #8F9D10;
-}
-
-/* line 77, resources/assets/styles/layouts/_single.scss */
-
-.single-entry[data-cat="youth-literacy"] .single-entry__label {
-  background-color: #8F9D10;
-  color: #EFF1D2;
-}
-
-/* line 83, resources/assets/styles/layouts/_single.scss */
-
-.single-entry[data-cat="community-development"] {
-  background-color: #E7E4E0;
-}
-
-/* line 86, resources/assets/styles/layouts/_single.scss */
-
-.single-entry[data-cat="community-development"] h2 {
-  color: #5A4F42;
-}
-
-/* line 90, resources/assets/styles/layouts/_single.scss */
-
-.single-entry[data-cat="community-development"] .single-entry__label {
-  background-color: #5A4F42;
-  color: #F5F4F3;
+.single-entry a.read-more {
+  display: block;
+  font-style: italic;
+  color: inherit;
 }
 
 @media only screen and (min-width: 769px) {
@@ -19690,7 +19674,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
     display: flex;
   }
 
-  /* line 99, resources/assets/styles/layouts/_single.scss */
+  /* line 127, resources/assets/styles/layouts/_single.scss */
 
   .single-entry__summary {
     -webkit-box-flex: 1;
@@ -19698,7 +19682,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
             flex-grow: 1;
   }
 
-  /* line 103, resources/assets/styles/layouts/_single.scss */
+  /* line 131, resources/assets/styles/layouts/_single.scss */
 
   .single-entry__image {
     -ms-flex-negative: 0;
@@ -19710,41 +19694,41 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   }
 }
 
-/* line 113, resources/assets/styles/layouts/_single.scss */
+/* line 141, resources/assets/styles/layouts/_single.scss */
 
 .single-post header {
   text-align: left;
 }
 
-/* line 117, resources/assets/styles/layouts/_single.scss */
+/* line 145, resources/assets/styles/layouts/_single.scss */
 
 .single-post .page-header {
   padding: 0 1rem;
   min-height: 390px;
 }
 
-/* line 121, resources/assets/styles/layouts/_single.scss */
+/* line 149, resources/assets/styles/layouts/_single.scss */
 
 .single-post .page-header a {
   color: inherit;
   text-decoration: underline;
 }
 
-/* line 126, resources/assets/styles/layouts/_single.scss */
+/* line 154, resources/assets/styles/layouts/_single.scss */
 
 .single-post .page-header .entry-title {
   font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
-/* line 131, resources/assets/styles/layouts/_single.scss */
+/* line 159, resources/assets/styles/layouts/_single.scss */
 
 .single-post .page-header .entry-primary-term {
   color: #368093;
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 136, resources/assets/styles/layouts/_single.scss */
+  /* line 164, resources/assets/styles/layouts/_single.scss */
 
   .single-post .page-header .container,
   .single-post .page-header .container-wide,
@@ -19754,27 +19738,27 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   }
 }
 
-/* line 142, resources/assets/styles/layouts/_single.scss */
+/* line 170, resources/assets/styles/layouts/_single.scss */
 
 .single-post .entry-content {
   margin-bottom: 0;
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 142, resources/assets/styles/layouts/_single.scss */
+  /* line 170, resources/assets/styles/layouts/_single.scss */
 
   .single-post .entry-content {
     padding: 40px 80px;
   }
 }
 
-/* line 150, resources/assets/styles/layouts/_single.scss */
+/* line 178, resources/assets/styles/layouts/_single.scss */
 
 .single-post .content {
   background-color: #E7E4E0;
 }
 
-/* line 155, resources/assets/styles/layouts/_single.scss */
+/* line 183, resources/assets/styles/layouts/_single.scss */
 
 .single-post article > .entry-content {
   max-width: 940px;
@@ -19782,7 +19766,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   margin: 0 auto;
 }
 
-/* line 161, resources/assets/styles/layouts/_single.scss */
+/* line 189, resources/assets/styles/layouts/_single.scss */
 
 .single-post article .container,
 .single-post article .container-wide,
@@ -19793,20 +19777,20 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   text-align: left;
 }
 
-/* line 167, resources/assets/styles/layouts/_single.scss */
+/* line 195, resources/assets/styles/layouts/_single.scss */
 
 .single-post article .entry-content {
   background-color: #FFF;
 }
 
-/* line 174, resources/assets/styles/layouts/_single.scss */
+/* line 202, resources/assets/styles/layouts/_single.scss */
 
 .single-award .entry-content h2 {
   letter-spacing: 0;
   margin-bottom: 0;
 }
 
-/* line 181, resources/assets/styles/layouts/_single.scss */
+/* line 209, resources/assets/styles/layouts/_single.scss */
 
 .single-award .entry-content .award-detail-text {
   text-transform: none;
@@ -19814,7 +19798,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   color: #C75300;
 }
 
-/* line 190, resources/assets/styles/layouts/_single.scss */
+/* line 218, resources/assets/styles/layouts/_single.scss */
 
 .single-award .entry-pre-footer {
   max-width: 940px;

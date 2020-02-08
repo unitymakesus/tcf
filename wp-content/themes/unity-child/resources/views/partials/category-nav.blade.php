@@ -2,7 +2,7 @@
 <nav class="dropdown">
   <ul>
     <li class="dropdown__item">
-      <a class="btn btn--grey" href="#" aria-haspopup="true">{{ __('Categories', 'sage') }}</a>
+      <a class="btn btn--grey" href="javascript:void()" aria-haspopup="true">{{ __('Categories', 'sage') }}</a>
       <ul class="dropdown__submenu" aria-label="submenu">
         @foreach ($categories as $category)
           <li>

@@ -2,17 +2,21 @@
   position: relative;
   top: -3rem;
   margin-bottom: -3rem;
+  padding-top: 1rem;
   background-color: $color-beige;
 
   &__inner {
     width: 100%;
     background-color: $color-white;
     padding: 1rem;
-    margin-bottom: 4rem;
 
     @media #{$large-and-up} {
-      padding: 2rem 80px;
+      padding: 2rem 3rem;
     }
+  }
+
+  .blog & {
+    padding-bottom: 3rem;
   }
 }
 
@@ -32,6 +36,7 @@
     padding: 1rem 1.5rem;
     background-color: $color-beige-med;
     color: $color-beige-darker;
+    text-decoration: none;
 
     &.active {
       background-color: $color-white;
@@ -54,4 +59,74 @@
   font-weight: 400;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+}
+
+// Tweets
+.tweets {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  &__heading {
+    @extend .h2;
+
+    margin-left: calc(2rem + 10px);
+    margin-bottom: 0.5rem;
+  }
+
+  &__wrap {
+    padding: 2rem;
+    background-color: $color-beige;
+  }
+
+  &__item {
+    padding: 0 0.5rem;
+  }
+
+  &__item:not(:last-of-type()) {
+    margin-bottom: 1.5rem;
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: bottom;
+
+    path {
+      fill: $brand-primary;
+    }
+  }
+
+  .twitter-stat {
+    margin-right: 2rem;
+
+    &::before {
+      display: inline-block;
+      position: relative;
+      top: 2px;
+      margin-right: 0.5rem;
+      background-size: 18px 18px;
+      width: 18px;
+      height: 18px;
+      content: '';
+    }
+
+    &--like::before {
+      background-image: url('../images/icons/icon-twitter-like.svg');
+    }
+
+    &--retweet::before {
+      background-image: url('../images/icons/icon-twitter-retweet.svg');
+    }
+  }
+
+  @media #{$medium-and-up} {
+    &__wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    &__item:not(:last-of-type()) {
+      margin-bottom: 0;
+    }
+  }
 }

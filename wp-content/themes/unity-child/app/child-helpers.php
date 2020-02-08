@@ -8,9 +8,11 @@ namespace App;
 function get_the_primary_term($post_id, $taxonomy) {
   if ($primary_term = the_seo_framework()->get_primary_term($post_id, $taxonomy)) {
     return $primary_term;
+  } else {
+    $terms = get_the_terms($post_id, $taxonomy);
   }
 
-	return the_seo_framework()->get_primary_term($post_id, $taxonomy);
+	return $terms[0];
 }
 
 /**

@@ -79,6 +79,13 @@
                 "operator": "==",
                 "value": "award"
             }
+        ],
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-press-settings"
+            }
         ]
     ],
     "menu_order": 90,
@@ -89,5 +96,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1581108367
+    "modified": 1581126813
 }
