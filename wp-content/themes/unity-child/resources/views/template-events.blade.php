@@ -1,7 +1,6 @@
 {{--
   Template Name: Events
-  --}}
-
+ --}}
 @extends('layouts.app')
 
 @section('content')
