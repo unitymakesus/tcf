@@ -1,22 +1,35 @@
+.archive {
+  .page-header--w-intro {
+    margin-bottom: 0;
+  }
+}
+
 .archive-wrap {
   position: relative;
-  top: -3rem;
-  margin-bottom: -3rem;
-  padding-top: 1rem;
   background-color: $color-beige;
 
   &__inner {
     width: 100%;
     background-color: $color-white;
     padding: 1rem;
-
-    @media #{$large-and-up} {
-      padding: 2rem 3rem;
-    }
   }
 
   .blog & {
     padding-bottom: 3rem;
+  }
+
+  @media #{$large-and-up} {
+    padding: 3rem 0;
+
+    &__inner {
+      padding: 2rem 3rem;
+    }
+
+    & + .entry-footer {
+      position: relative;
+      top: -3rem;
+      margin-bottom: -3rem;
+    }
   }
 }
 
@@ -25,7 +38,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
     width: 100%;
   }
 

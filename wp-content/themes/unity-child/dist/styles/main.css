@@ -16038,16 +16038,18 @@ figure figcaption {
   margin-bottom: 0;
 }
 
-/* line 15, resources/assets/styles/common/_grid.scss */
+@media only screen and (min-width: 993px) {
+  /* line 15, resources/assets/styles/common/_grid.scss */
 
-.row.no-gutters > [class^="col"],
-.sidebar-primary .no-gutters.wrap > [class^="col"] {
-  padding-left: 0;
-  padding-right: 0;
+  .row.no-gutters > [class^="col"],
+  .sidebar-primary .no-gutters.wrap > [class^="col"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media only screen and (max-width: 992px) {
-  /* line 22, resources/assets/styles/common/_grid.scss */
+  /* line 24, resources/assets/styles/common/_grid.scss */
 
   .fl-col-small:not(.fl-col-small-full-width) {
     max-width: 100%;
@@ -17924,7 +17926,7 @@ select:not(.browser-default):focus {
 
 .tabbed [role="tablist"] {
   padding: 0;
-  margin: 30px 0 0;
+  margin: 0;
   font-size: 0;
 }
 
@@ -17955,7 +17957,7 @@ select:not(.browser-default):focus {
 /* line 27, resources/assets/styles/components/_tabs.scss */
 
 .tabbed [role="tabpanel"] {
-  padding: 4rem 2rem;
+  padding: 2rem;
 }
 
 /* line 31, resources/assets/styles/components/_tabs.scss */
@@ -18583,7 +18585,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 .page-footer .footer-call-to-action::after {
   position: absolute;
   top: 0;
-  left: 20vw;
+  left: 2vw;
   width: 250px;
   height: 160px;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzc3LjMyOCIgaGVpZ2h0PSIyMzYuNTY5IiB2aWV3Qm94PSIwIDAgMzc3LjMyOCAyMzYuNTY5Ij48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO30uYntjbGlwLXBhdGg6dXJsKCNhKTt9LmN7b3BhY2l0eTowLjg7fS5ke2NsaXAtcGF0aDp1cmwoI2IpO30uZXtvcGFjaXR5OjAuNjt9LmZ7Y2xpcC1wYXRoOnVybCgjYyk7fS5ne2NsaXAtcGF0aDp1cmwoI2QpO30uaHtmaWxsOiNmZmY7fS5pe2NsaXAtcGF0aDp1cmwoI2UpO30uantjbGlwLXBhdGg6dXJsKCNmKTt9Lmt7Y2xpcC1wYXRoOnVybCgjZyk7fS5se2NsaXAtcGF0aDp1cmwoI2gpO308L3N0eWxlPjxjbGlwUGF0aCBpZD0iYSI+PHBhdGggY2xhc3M9ImEiIGQ9Ik0wLDEzOC4zNDhIMzc3LjMyOFYtOTguMjIxSDBaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDk4LjIyMSkiLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iYiI+PHJlY3QgY2xhc3M9ImEiIHdpZHRoPSI0OTcuNzU1IiBoZWlnaHQ9IjI4NC43MzkiLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iYyI+PHJlY3QgY2xhc3M9ImEiIHdpZHRoPSI0NTkuMjE4IiBoZWlnaHQ9IjI3MC4yODgiLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iZCI+PHJlY3QgY2xhc3M9ImEiIHdpZHRoPSIyMDQuNzI1IiBoZWlnaHQ9IjI1MS40MTYiLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iZSI+PHJlY3QgY2xhc3M9ImEiIHdpZHRoPSIyMDQuNzI0IiBoZWlnaHQ9IjI1MS40MTciLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iZiI+PHJlY3QgY2xhc3M9ImEiIHdpZHRoPSI3NC41MjEiIGhlaWdodD0iMTA1LjQ0NCIvPjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSJnIj48cmVjdCBjbGFzcz0iYSIgd2lkdGg9IjExMS42OTYiIGhlaWdodD0iMTQ3LjIyMSIvPjwvY2xpcFBhdGg+PGNsaXBQYXRoIGlkPSJoIj48cmVjdCBjbGFzcz0iYSIgd2lkdGg9IjEyNy4wMzYiIGhlaWdodD0iMTY0LjQ1NyIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgOTguMjIxKSI+PGcgY2xhc3M9ImIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTk4LjIyMSkiPjxnIGNsYXNzPSJjIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjAuMjEzIC00NS43NjIpIj48ZyBjbGFzcz0iZCI+PGcgY2xhc3M9ImUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE5LjI2OCAxNC40NTEpIj48ZyBjbGFzcz0iZiI+PGcgY2xhc3M9ImMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM4LjUzNyA5LjYzNCkiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDApIj48ZyBjbGFzcz0iZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMi40MDggMjEuNjc2KSI+PHBhdGggY2xhc3M9ImgiIGQ9Ik0xMDguNDU3LDYwLjgzOS03Ny00My4xOTNWMTY0Ljg3MVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDc3IDQzLjE5MykiLz48L2c+PC9nPjwvZz48L2c+PGcgY2xhc3M9ImMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxNS45NTcgMjEuMTkzKSI+PGcgY2xhc3M9ImkiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2Ljg2IDIxLjY3NykiPjxwYXRoIGNsYXNzPSJoIiBkPSJNMCw2MC44MzksMTg1LjQ1Ny00My4xOTNWMTY0Ljg3MVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgNDMuMTkzKSIvPjwvZz48L2c+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDk3LjM3NSAyMDUuNzg4KSI+PHBhdGggY2xhc3M9ImgiIGQ9Ik0wLDE4LjE1Niw1NS4yNTItMTIuODlWNDkuMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMTIuODkpIi8+PC9nPjxnIGNsYXNzPSJjIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxODIuNDU5IDM2LjE0NSkiPjxnIGNsYXNzPSJqIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNi44NiAyMS42NzYpIj48cGF0aCBjbGFzcz0iaCIgZD0iTTAsMTguMTU2LDU1LjI1Mi0xMi44OVY0OS4yWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxMi44OSkiLz48L2c+PC9nPjwvZz48L2c+PC9nPjxnIGNsYXNzPSJjIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxODIuMjM1IDEyOC4yOCkiPjxnIGNsYXNzPSJrIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjQwOSAyMS42NzgpIj48cGF0aCBjbGFzcz0iaCIgZD0iTTU0LjA1MiwzMC4zNzEtMzguMzc1LTIxLjU2MlY4Mi4zWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzguMzc1IDIxLjU2MikiLz48L2c+PC9nPjwvZz48ZyBjbGFzcz0iYyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjgzLjk5MyAyNi41MikiPjxnIGNsYXNzPSJsIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjQwOCAyMS42NzUpIj48cGF0aCBjbGFzcz0iaCIgZD0iTTYzLjAyMywzNS40MTItNDQuNzQ0LTI1LjE0MVY5NS45NjVaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0NC43NDQgMjUuMTQxKSIvPjwvZz48L2c+PC9nPjwvZz48L2c+PC9nPjwvZz48L3N2Zz4=);
@@ -18592,13 +18594,21 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   content: '';
 }
 
-/* line 29, resources/assets/styles/layouts/_footer.scss */
+@media only screen and (min-width: 993px) {
+  /* line 16, resources/assets/styles/layouts/_footer.scss */
+
+  .page-footer .footer-call-to-action::after {
+    left: 12vw;
+  }
+}
+
+/* line 33, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-content {
   padding: 3rem 0;
 }
 
-/* line 33, resources/assets/styles/layouts/_footer.scss */
+/* line 37, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-logo img {
   width: 100%;
@@ -18606,14 +18616,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   margin-bottom: 2rem;
 }
 
-/* line 39, resources/assets/styles/layouts/_footer.scss */
+/* line 43, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-content,
 .page-footer .footer-copyright {
   font-size: 0.83333rem;
 }
 
-/* line 44, resources/assets/styles/layouts/_footer.scss */
+/* line 48, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-copyright {
   background-color: rgba(0, 0, 0, 0.3);
@@ -18623,14 +18633,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   font-size: 0.77778rem;
 }
 
-/* line 51, resources/assets/styles/layouts/_footer.scss */
+/* line 55, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-copyright__text {
   display: block;
   margin-top: 1rem;
 }
 
-/* line 58, resources/assets/styles/layouts/_footer.scss */
+/* line 62, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu {
   display: -webkit-box;
@@ -18643,19 +18653,19 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   margin: 0;
 }
 
-/* line 63, resources/assets/styles/layouts/_footer.scss */
+/* line 67, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu li {
   margin: 0.5rem;
 }
 
-/* line 67, resources/assets/styles/layouts/_footer.scss */
+/* line 71, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu a {
   text-decoration: underline;
 }
 
-/* line 70, resources/assets/styles/layouts/_footer.scss */
+/* line 74, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu a:hover,
 .page-footer .menu a:focus {
@@ -18663,13 +18673,13 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 }
 
 @media (min-width: 768px) {
-  /* line 78, resources/assets/styles/layouts/_footer.scss */
+  /* line 82, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .footer-call-to-action {
     padding-top: 2.5rem;
   }
 
-  /* line 82, resources/assets/styles/layouts/_footer.scss */
+  /* line 86, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu {
     -webkit-box-orient: horizontal;
@@ -18681,19 +18691,19 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
             justify-content: center;
   }
 
-  /* line 86, resources/assets/styles/layouts/_footer.scss */
+  /* line 90, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu li {
     margin: 0;
   }
 
-  /* line 90, resources/assets/styles/layouts/_footer.scss */
+  /* line 94, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu li:not(:last-of-type) {
     margin-right: 1rem;
   }
 
-  /* line 94, resources/assets/styles/layouts/_footer.scss */
+  /* line 98, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu a {
     font-weight: 600;
@@ -18841,17 +18851,20 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   }
 }
 
-/* line 1, resources/assets/styles/layouts/_archive.scss */
+/* line 2, resources/assets/styles/layouts/_archive.scss */
+
+.archive .page-header--w-intro {
+  margin-bottom: 0;
+}
+
+/* line 7, resources/assets/styles/layouts/_archive.scss */
 
 .archive-wrap {
   position: relative;
-  top: -3rem;
-  margin-bottom: -3rem;
-  padding-top: 1rem;
   background-color: #E7E4E0;
 }
 
-/* line 8, resources/assets/styles/layouts/_archive.scss */
+/* line 11, resources/assets/styles/layouts/_archive.scss */
 
 .archive-wrap__inner {
   width: 100%;
@@ -18859,21 +18872,35 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   padding: 1rem;
 }
 
-@media only screen and (min-width: 993px) {
-  /* line 8, resources/assets/styles/layouts/_archive.scss */
-
-  .archive-wrap__inner {
-    padding: 2rem 3rem;
-  }
-}
-
-/* line 18, resources/assets/styles/layouts/_archive.scss */
+/* line 17, resources/assets/styles/layouts/_archive.scss */
 
 .blog .archive-wrap {
   padding-bottom: 3rem;
 }
 
-/* line 24, resources/assets/styles/layouts/_archive.scss */
+@media only screen and (min-width: 993px) {
+  /* line 7, resources/assets/styles/layouts/_archive.scss */
+
+  .archive-wrap {
+    padding: 3rem 0;
+  }
+
+  /* line 24, resources/assets/styles/layouts/_archive.scss */
+
+  .archive-wrap__inner {
+    padding: 2rem 3rem;
+  }
+
+  /* line 28, resources/assets/styles/layouts/_archive.scss */
+
+  .archive-wrap + .entry-footer {
+    position: relative;
+    top: -3rem;
+    margin-bottom: -3rem;
+  }
+}
+
+/* line 37, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters__inner {
   display: -webkit-box;
@@ -18885,11 +18912,10 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 30px;
   width: 100%;
 }
 
-/* line 32, resources/assets/styles/layouts/_archive.scss */
+/* line 44, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters__filter {
   display: inline-block;
@@ -18899,13 +18925,13 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   text-decoration: none;
 }
 
-/* line 41, resources/assets/styles/layouts/_archive.scss */
+/* line 53, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters__filter.active {
   background-color: #FFF;
 }
 
-/* line 46, resources/assets/styles/layouts/_archive.scss */
+/* line 58, resources/assets/styles/layouts/_archive.scss */
 
 .archive-filters .btn,
 .archive-filters .btn-large,
@@ -18922,7 +18948,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   margin-right: 0;
 }
 
-/* line 51, resources/assets/styles/layouts/_archive.scss */
+/* line 63, resources/assets/styles/layouts/_archive.scss */
 
 .pagination .page-numbers {
   color: #585D58 !important;
@@ -18939,59 +18965,59 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   transition: all 0.3s ease-in-out;
 }
 
-/* line 65, resources/assets/styles/layouts/_archive.scss */
+/* line 77, resources/assets/styles/layouts/_archive.scss */
 
 .tweets {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
-/* line 69, resources/assets/styles/layouts/_archive.scss */
+/* line 81, resources/assets/styles/layouts/_archive.scss */
 
 .tweets__heading {
   margin-left: calc(2rem + 10px);
   margin-bottom: 0.5rem;
 }
 
-/* line 76, resources/assets/styles/layouts/_archive.scss */
+/* line 88, resources/assets/styles/layouts/_archive.scss */
 
 .tweets__wrap {
   padding: 2rem;
   background-color: #E7E4E0;
 }
 
-/* line 81, resources/assets/styles/layouts/_archive.scss */
+/* line 93, resources/assets/styles/layouts/_archive.scss */
 
 .tweets__item {
   padding: 0 0.5rem;
 }
 
-/* line 85, resources/assets/styles/layouts/_archive.scss */
+/* line 97, resources/assets/styles/layouts/_archive.scss */
 
 .tweets__item:not(:last-of-type) {
   margin-bottom: 1.5rem;
 }
 
-/* line 89, resources/assets/styles/layouts/_archive.scss */
+/* line 101, resources/assets/styles/layouts/_archive.scss */
 
 .tweets svg {
   display: inline-block;
   vertical-align: bottom;
 }
 
-/* line 93, resources/assets/styles/layouts/_archive.scss */
+/* line 105, resources/assets/styles/layouts/_archive.scss */
 
 .tweets svg path {
   fill: #007485;
 }
 
-/* line 98, resources/assets/styles/layouts/_archive.scss */
+/* line 110, resources/assets/styles/layouts/_archive.scss */
 
 .tweets .twitter-stat {
   margin-right: 2rem;
 }
 
-/* line 101, resources/assets/styles/layouts/_archive.scss */
+/* line 113, resources/assets/styles/layouts/_archive.scss */
 
 .tweets .twitter-stat::before {
   display: inline-block;
@@ -19004,20 +19030,20 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   content: '';
 }
 
-/* line 112, resources/assets/styles/layouts/_archive.scss */
+/* line 124, resources/assets/styles/layouts/_archive.scss */
 
 .tweets .twitter-stat--like::before {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMjAgMjAiPjxwYXRoIGQ9Ik0xNy4xOSA0LjE1NWMtMS42NzItMS41MzQtNC4zODMtMS41MzQtNi4wNTUgMGwtMS4xMzUgMS4wNDItMS4xMzYtMS4wNDJjLTEuNjcyLTEuNTM0LTQuMzgyLTEuNTM0LTYuMDU0IDAtMS44ODEgMS43MjctMS44ODEgNC41MiAwIDYuMjQ2bDcuMTkgNi41OTkgNy4xOS02LjU5OWMxLjg4LTEuNzI2IDEuODgtNC41MiAwLTYuMjQ2eiI+PC9wYXRoPjwvc3ZnPgo=);
 }
 
-/* line 116, resources/assets/styles/layouts/_archive.scss */
+/* line 128, resources/assets/styles/layouts/_archive.scss */
 
 .tweets .twitter-stat--retweet::before {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjE4IiB2aWV3Qm94PSIwIDAgMzAgMjgiPjxwYXRoIGQ9Ik0yMCAyMy41YzAgLjI2Ni0uMjM0LjUtLjUuNWgtMTVjLS41NzggMC0uNS0uNjA5LS41LTF2LTlIMWMtLjU0NyAwLTEtLjQ1My0xLTEgMC0uMjM0LjA3OC0uNDY5LjIzNC0uNjQxbDUtNmMuMTg3LS4yMTkuNDY5LS4zNDQuNzY2LS4zNDRzLjU3OC4xMjUuNzY2LjM0NGw1IDZBLjk1NS45NTUgMCAwIDEgMTIgMTNjMCAuNTQ3LS40NTMgMS0xIDFIOHY2aDljLjE0MSAwIC4yOTcuMDYzLjM5MS4xNzJsMi41IDNBLjYzLjYzIDAgMCAxIDIwIDIzLjV6TTMwIDE3YS45NTYuOTU2IDAgMCAxLS4yMzQuNjQxbC01IDZjLS4xODcuMjE5LS40NjkuMzU5LS43NjYuMzU5cy0uNTc4LS4xNDEtLjc2Ni0uMzU5bC01LTZBLjk1NS45NTUgMCAwIDEgMTggMTdjMC0uNTQ3LjQ1My0xIDEtMWgzdi02aC05YS40OTguNDk4IDAgMCAxLS4zOTEtLjE4N2wtMi41LTNBLjUzNi41MzYgMCAwIDEgMTAgNi41YzAtLjI2Ni4yMzQtLjUuNS0uNWgxNWMuNTc4IDAgLjUuNjA5LjUgMXY5aDNjLjU0NyAwIDEgLjQ1MyAxIDF6Ij48L3BhdGg+PC9zdmc+Cg==);
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 122, resources/assets/styles/layouts/_archive.scss */
+  /* line 134, resources/assets/styles/layouts/_archive.scss */
 
   .tweets__wrap {
     display: -webkit-box;
@@ -19032,7 +19058,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
             justify-content: space-evenly;
   }
 
-  /* line 128, resources/assets/styles/layouts/_archive.scss */
+  /* line 140, resources/assets/styles/layouts/_archive.scss */
 
   .tweets__item:not(:last-of-type) {
     margin-bottom: 0;
@@ -19798,20 +19824,28 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   background-color: #E7E4E0;
 }
 
-/* line 6, resources/assets/styles/layouts/_events.scss */
+@media only screen and (min-width: 993px) {
+  /* line 2, resources/assets/styles/layouts/_events.scss */
+
+  .template-events .main {
+    padding-bottom: 3rem;
+  }
+}
+
+/* line 10, resources/assets/styles/layouts/_events.scss */
 
 .template-events .tabbed {
   max-width: 940px;
   margin: 0 auto;
 }
 
-/* line 11, resources/assets/styles/layouts/_events.scss */
+/* line 15, resources/assets/styles/layouts/_events.scss */
 
 .template-events [role="tabpanel"] {
   background-color: #FFF;
 }
 
-/* line 15, resources/assets/styles/layouts/_events.scss */
+/* line 19, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping {
   position: relative;
@@ -19819,7 +19853,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   padding: 1rem 0;
 }
 
-/* line 20, resources/assets/styles/layouts/_events.scss */
+/* line 24, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping__subhead {
   color: #E56E00;
@@ -19827,13 +19861,13 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   font-weight: bold;
 }
 
-/* line 26, resources/assets/styles/layouts/_events.scss */
+/* line 30, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping__content {
   width: 100%;
 }
 
-/* line 30, resources/assets/styles/layouts/_events.scss */
+/* line 34, resources/assets/styles/layouts/_events.scss */
 
 .template-events .event-grouping__image {
   max-width: 250px;
@@ -19841,7 +19875,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 39, resources/assets/styles/layouts/_events.scss */
+  /* line 43, resources/assets/styles/layouts/_events.scss */
 
   .event-grouping__content {
     -webkit-box-flex: 1;
@@ -19849,7 +19883,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
             flex-grow: 1;
   }
 
-  /* line 43, resources/assets/styles/layouts/_events.scss */
+  /* line 47, resources/assets/styles/layouts/_events.scss */
 
   .event-grouping__image {
     margin-left: 2rem;
@@ -19858,43 +19892,34 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   }
 }
 
-/* line 51, resources/assets/styles/layouts/_events.scss */
+/* line 55, resources/assets/styles/layouts/_events.scss */
 
 .featured-event {
-  background-color: #414141;
+  background-color: #004852;
   color: #FFF;
 }
 
-/* line 55, resources/assets/styles/layouts/_events.scss */
-
-.featured-event .row,
-.featured-event .sidebar-primary .wrap,
-.sidebar-primary .featured-event .wrap {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-}
-
-/* line 60, resources/assets/styles/layouts/_events.scss */
+/* line 59, resources/assets/styles/layouts/_events.scss */
 
 .featured-event .content-wrap {
   padding: 2rem 1rem;
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 67, resources/assets/styles/layouts/_events.scss */
+  /* line 66, resources/assets/styles/layouts/_events.scss */
 
   .featured-event .content-wrap {
     padding: 2rem 0;
   }
 
-  /* line 71, resources/assets/styles/layouts/_events.scss */
+  /* line 70, resources/assets/styles/layouts/_events.scss */
 
   .featured-event .image-wrap {
     position: relative;
     height: 100%;
   }
 
-  /* line 75, resources/assets/styles/layouts/_events.scss */
+  /* line 74, resources/assets/styles/layouts/_events.scss */
 
   .featured-event .image-wrap img {
     position: absolute;
@@ -19909,26 +19934,26 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   }
 }
 
-/* line 90, resources/assets/styles/layouts/_events.scss */
+/* line 89, resources/assets/styles/layouts/_events.scss */
 
 .single-event .featured-image {
   margin: 0;
 }
 
-/* line 93, resources/assets/styles/layouts/_events.scss */
+/* line 92, resources/assets/styles/layouts/_events.scss */
 
 .single-event .featured-image img {
   display: block;
 }
 
-/* line 98, resources/assets/styles/layouts/_events.scss */
+/* line 97, resources/assets/styles/layouts/_events.scss */
 
 .single-event main {
   position: relative;
   background: #E7E4E0;
 }
 
-/* line 103, resources/assets/styles/layouts/_events.scss */
+/* line 102, resources/assets/styles/layouts/_events.scss */
 
 .single-event article {
   max-width: 940px;
@@ -19937,7 +19962,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   background: #FFF;
 }
 
-/* line 110, resources/assets/styles/layouts/_events.scss */
+/* line 109, resources/assets/styles/layouts/_events.scss */
 
 .single-event h1 {
   font-size: 2rem;
@@ -19945,20 +19970,20 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   font-weight: 400;
 }
 
-/* line 116, resources/assets/styles/layouts/_events.scss */
+/* line 115, resources/assets/styles/layouts/_events.scss */
 
 .single-event .kicker {
   color: #C75300;
 }
 
-/* line 120, resources/assets/styles/layouts/_events.scss */
+/* line 119, resources/assets/styles/layouts/_events.scss */
 
 .single-event .details {
   color: #C75300;
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 125, resources/assets/styles/layouts/_events.scss */
+  /* line 124, resources/assets/styles/layouts/_events.scss */
 
   .single-event .featured-image {
     position: relative;
@@ -19966,7 +19991,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
     margin: 0;
   }
 
-  /* line 130, resources/assets/styles/layouts/_events.scss */
+  /* line 129, resources/assets/styles/layouts/_events.scss */
 
   .single-event .featured-image img {
     position: absolute;
@@ -19980,13 +20005,13 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
        object-fit: cover;
   }
 
-  /* line 142, resources/assets/styles/layouts/_events.scss */
+  /* line 141, resources/assets/styles/layouts/_events.scss */
 
   .single-event main {
     padding-bottom: 4rem;
   }
 
-  /* line 146, resources/assets/styles/layouts/_events.scss */
+  /* line 145, resources/assets/styles/layouts/_events.scss */
 
   .single-event article {
     padding: 3rem 98px;

@@ -1,6 +1,10 @@
 .template-events {
   .main {
     background-color: $color-beige;
+
+    @media #{$large-and-up} {
+      padding-bottom: 3rem;
+    }
   }
 
   .tabbed {
@@ -49,13 +53,8 @@
 
 // Featured Event
 .featured-event {
-  background-color: $color-grey-dark;
+  background-color: $color-blue-dark;
   color: $color-white;
-
-  .row {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-  }
 
   .content-wrap {
     padding: 2rem 1rem;

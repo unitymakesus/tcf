@@ -1,6 +1,6 @@
 .tabbed [role="tablist"] {
   padding: 0;
-  margin: 30px 0 0;
+  margin: 0;
   font-size: 0;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .tabbed [role="tabpanel"] {
-  padding: 4rem 2rem;
+  padding: 2rem;
 }
 
 .tabbed [role="tabpanel"] * + * {

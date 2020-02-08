@@ -16,13 +16,17 @@
   &::after {
     position: absolute;
     top: 0;
-    left: 20vw;
+    left: 2vw;
     width: 250px;
     height: 160px;
     background-image: url('../images/textures/texture-triangles.svg');
     background-size: 250px 160px;
     background-repeat: no-repeat;
     content: '';
+
+    @media #{$large-and-up} {
+      left: 12vw;
+    }
   }
 }
 
