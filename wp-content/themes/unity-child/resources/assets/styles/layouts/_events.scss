@@ -87,29 +87,24 @@
 }
 
 .single-event {
-  main {
-    position: relative;
-    padding-bottom: 280px;
+  .featured-image {
+    margin: 0;
 
-    &::after {
-      position: absolute;
+    img {
       display: block;
-      bottom: 0;
-      right: 20%;
-      width: 350px;
-      height: 260px;
-      margin: 0 auto;
-      background-image: url('../images/textures/texture-triangles-gray.svg');
-      background-repeat: no-repeat;
-      background-size: 350px 260px;
-      background-position: right top;
-      content: '';
     }
   }
 
+  main {
+    position: relative;
+    background: $color-beige;
+  }
+
   article {
-    max-width: 768px;
+    max-width: 940px;
     margin: 0 auto;
+    padding: 2rem 1rem;
+    background: $color-white;
   }
 
   h1 {
@@ -124,5 +119,32 @@
 
   .details {
     color: $color-orange-a11y;
+  }
+
+  @media #{$medium-and-up} {
+    .featured-image {
+      position: relative;
+      height: 390px;
+      margin: 0;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    main {
+      padding-bottom: 4rem;
+    }
+
+    article {
+      padding: 3rem 98px;
+    }
   }
 }

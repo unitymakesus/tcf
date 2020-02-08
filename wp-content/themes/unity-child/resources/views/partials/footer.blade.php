@@ -1,7 +1,7 @@
 <footer class="content-info page-footer" role="contentinfo">
   @if (get_field('global_footer_cta_enable', 'option'))
   <div class="footer-call-to-action">
-    <div class="container">
+    <div class="container-wide">
       <div class="row">
         <div class="col s12 m7 push-m5">
           <h2 class="h2">{{ get_field('global_footer_cta_heading', 'option') }}</h2>
@@ -16,7 +16,7 @@
   @endif
 
   <div class="footer-content">
-    <div class="container">
+    <div class="container-wide">
       <div class="row">
         <div class="col s12 m3">
           <div class="footer-logo">
@@ -62,7 +62,7 @@
   </div>
 
   <div class="footer-copyright">
-    <div class="container">
+    <div class="container-wide">
       <div class="row">
         <div class="col s12">
           @php dynamic_sidebar('footer-utility') @endphp

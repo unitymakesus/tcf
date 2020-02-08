@@ -14,7 +14,7 @@
 
 @if (get_field('global_alert_bar_enable', 'options'))
   <div class="alert-bar">
-    <div class="container">
+    <div class="container-wide">
       <div class="row">
         <div class="col s12 text-center">
           {!! get_field('global_alert_bar_message', 'option') !!}
@@ -25,7 +25,7 @@
 @endif
 
 <header class="banner header-inline" role="banner" style="background-color: {{ $header_color }}">
-  <div class="container">
+  <div class="container-wide">
     <nav class="nav-primary" role="navigation">
       <div class="navbar" data-text-color="{{ $text_color }}">
         @php
@@ -79,7 +79,7 @@
 
 @if ( !is_front_page() && function_exists( 'breadcrumb_trail' ) )
   <div class="breadcrumbs-wrap">
-    <div class="container">
+    <div class="container-wide">
       @php breadcrumb_trail() @endphp
     </div>
   </div>

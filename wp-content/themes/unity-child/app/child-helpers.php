@@ -33,13 +33,13 @@ function get_custom_date($post_type, $id) {
  * Retrieve the event's date as well as the location text.
  */
 function get_event_full_details($event) {
-  $event_date = get_event_date($event);
+  $event_date = get_custom_date('event', $event);
 
   if ($location = get_field('event_location')) {
     return "{$event_date} | {$location}";
   }
 
-  return get_event_date($event);
+  return get_custom_date('event', $event);
 }
 
 /**

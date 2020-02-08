@@ -13486,7 +13486,7 @@ abbr[title] {
 /* line 30, ../unity-core/resources/assets/styles/components/_beaverbuilder.scss */
 
 .fl-node-5cb689ac24ec7.fl-button-lightbox-content {
-  max-width: 1200px;
+  max-width: 940px;
 }
 
 /* line 35, ../unity-core/resources/assets/styles/components/_beaverbuilder.scss */
@@ -16014,12 +16014,19 @@ sup {
 
 /* line 6, resources/assets/styles/common/_grid.scss */
 
+.container-wide {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* line 11, resources/assets/styles/common/_grid.scss */
+
 .row,
 .sidebar-primary .wrap {
   margin-bottom: 0;
 }
 
-/* line 10, resources/assets/styles/common/_grid.scss */
+/* line 15, resources/assets/styles/common/_grid.scss */
 
 .row.no-gutters > [class^="col"],
 .sidebar-primary .no-gutters.wrap > [class^="col"] {
@@ -16028,7 +16035,7 @@ sup {
 }
 
 @media only screen and (max-width: 992px) {
-  /* line 17, resources/assets/styles/common/_grid.scss */
+  /* line 22, resources/assets/styles/common/_grid.scss */
 
   .fl-col-small:not(.fl-col-small-full-width) {
     max-width: 100%;
@@ -16581,46 +16588,37 @@ blockquote p:last-of-type {
 
 /* line 8, resources/assets/styles/components/_breadcrumbs.scss */
 
-.breadcrumbs-wrap .container,
-.breadcrumbs-wrap .container-wide,
-.breadcrumbs-wrap .sidebar-primary .content,
-.sidebar-primary .breadcrumbs-wrap .content {
-  max-width: 1200px;
-}
-
-/* line 12, resources/assets/styles/components/_breadcrumbs.scss */
-
 .breadcrumbs-wrap .breadcrumb-trail {
   color: #CCE3E9;
 }
 
-/* line 16, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 12, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs-wrap a {
   color: inherit;
 }
 
-/* line 21, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 17, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs {
   padding-left: 1em;
   padding-right: 1em;
 }
 
-/* line 26, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 22, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs.breadcrumbs .trail-browse {
   display: none;
 }
 
-/* line 30, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 26, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs.breadcrumbs .trail-item,
 .breadcrumbs.breadcrumbs .trail-items a {
   font-weight: 600 !important;
 }
 
-/* line 35, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 31, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs.breadcrumbs .trail-items a {
   display: inline-block;
@@ -16630,7 +16628,7 @@ blockquote p:last-of-type {
   font-size: 0.77778rem;
 }
 
-/* line 42, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 38, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs.breadcrumbs .trail-items a:hover,
 .breadcrumbs.breadcrumbs .trail-items a:focus {
@@ -16638,7 +16636,7 @@ blockquote p:last-of-type {
           text-decoration-style: double;
 }
 
-/* line 47, resources/assets/styles/components/_breadcrumbs.scss */
+/* line 43, resources/assets/styles/components/_breadcrumbs.scss */
 
 .breadcrumbs .trail-items .trail-item:not(:last-of-type)::after {
   display: inline-block;
@@ -18140,45 +18138,36 @@ nav {
 
 /* line 10, resources/assets/styles/layouts/_header.scss */
 
-.banner .container,
-.banner .container-wide,
-.banner .sidebar-primary .content,
-.sidebar-primary .banner .content {
-  max-width: 1200px;
-}
-
-/* line 14, resources/assets/styles/layouts/_header.scss */
-
 .banner .nav-primary {
   position: relative;
 }
 
-/* line 19, resources/assets/styles/layouts/_header.scss */
+/* line 15, resources/assets/styles/layouts/_header.scss */
 
 .banner .logo {
   display: inline-block;
   padding: 0;
 }
 
-/* line 24, resources/assets/styles/layouts/_header.scss */
+/* line 20, resources/assets/styles/layouts/_header.scss */
 
 .banner .menu-trigger-wrapper {
   float: right;
 }
 
-/* line 28, resources/assets/styles/layouts/_header.scss */
+/* line 24, resources/assets/styles/layouts/_header.scss */
 
 .banner .menu-trigger-wrapper label {
   float: none;
 }
 
-/* line 33, resources/assets/styles/layouts/_header.scss */
+/* line 29, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .navbar {
   height: auto;
 }
 
-/* line 37, resources/assets/styles/layouts/_header.scss */
+/* line 33, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .logo {
   color: #007485;
@@ -18190,26 +18179,26 @@ nav {
   text-decoration: none;
 }
 
-/* line 47, resources/assets/styles/layouts/_header.scss */
+/* line 43, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .navbar-menu {
   background-color: #414141;
 }
 
-/* line 51, resources/assets/styles/layouts/_header.scss */
+/* line 47, resources/assets/styles/layouts/_header.scss */
 
 .header-inline nav ul a {
   padding: 0.25rem 25px;
 }
 
-/* line 55, resources/assets/styles/layouts/_header.scss */
+/* line 51, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .sub-menu {
   width: 100%;
   max-width: 300px;
 }
 
-/* line 60, resources/assets/styles/layouts/_header.scss */
+/* line 56, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .sub-menu a {
   padding: 0.25rem 0.5rem;
@@ -18217,27 +18206,27 @@ nav {
   line-height: 1.66667rem;
 }
 
-/* line 65, resources/assets/styles/layouts/_header.scss */
+/* line 61, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .sub-menu a + .sub-menu {
   position: relative;
   height: auto;
 }
 
-/* line 69, resources/assets/styles/layouts/_header.scss */
+/* line 65, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .sub-menu a + .sub-menu > li a {
   padding-left: 1rem;
 }
 
-/* line 75, resources/assets/styles/layouts/_header.scss */
+/* line 71, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .cta-link {
   padding: 0;
   text-align: left;
 }
 
-/* line 80, resources/assets/styles/layouts/_header.scss */
+/* line 76, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .cta-link a {
   background-color: #C75300;
@@ -18245,7 +18234,7 @@ nav {
   color: #FFF;
 }
 
-/* line 85, resources/assets/styles/layouts/_header.scss */
+/* line 81, resources/assets/styles/layouts/_header.scss */
 
 .header-inline .cta-link a:hover,
 .header-inline .cta-link a:focus {
@@ -18253,13 +18242,13 @@ nav {
   color: #C75300;
 }
 
-/* line 93, resources/assets/styles/layouts/_header.scss */
+/* line 89, resources/assets/styles/layouts/_header.scss */
 
 .navbar-menu li.menu-item-has-children a {
   cursor: pointer;
 }
 
-/* line 97, resources/assets/styles/layouts/_header.scss */
+/* line 93, resources/assets/styles/layouts/_header.scss */
 
 .navbar-menu li:hover > a,
 .navbar-menu li:focus > a,
@@ -18267,20 +18256,20 @@ nav {
   text-decoration: none;
 }
 
-/* line 103, resources/assets/styles/layouts/_header.scss */
+/* line 99, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary {
   position: relative;
 }
 
-/* line 106, resources/assets/styles/layouts/_header.scss */
+/* line 102, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item {
   height: 100%;
   font-weight: 600;
 }
 
-/* line 110, resources/assets/styles/layouts/_header.scss */
+/* line 106, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item > a {
   display: -webkit-box;
@@ -18296,75 +18285,75 @@ nav {
   text-align: center;
 }
 
-/* line 121, resources/assets/styles/layouts/_header.scss */
+/* line 117, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item:nth-child(-n+3) {
   font-size: 1.11111rem;
 }
 
-/* line 125, resources/assets/styles/layouts/_header.scss */
+/* line 121, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item:nth-child(n+4) > a {
   text-transform: uppercase;
   font-size: 0.77778rem;
 }
 
-/* line 131, resources/assets/styles/layouts/_header.scss */
+/* line 127, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-orange > a {
   background-color: #C75300;
   color: white;
 }
 
-/* line 135, resources/assets/styles/layouts/_header.scss */
+/* line 131, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-orange > a:hover,
 .nav__primary > .menu-item.bg-orange > a:focus {
   background-color: #9e4200;
 }
 
-/* line 142, resources/assets/styles/layouts/_header.scss */
+/* line 138, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-green > a {
   background-color: #8F9D10;
   color: #FFF;
 }
 
-/* line 146, resources/assets/styles/layouts/_header.scss */
+/* line 142, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-green > a:hover,
 .nav__primary > .menu-item.bg-green > a:focus {
   background-color: #6d780c;
 }
 
-/* line 153, resources/assets/styles/layouts/_header.scss */
+/* line 149, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-blue > a {
   background-color: #368093;
   color: white;
 }
 
-/* line 157, resources/assets/styles/layouts/_header.scss */
+/* line 153, resources/assets/styles/layouts/_header.scss */
 
 .nav__primary > .menu-item.bg-blue > a:hover,
 .nav__primary > .menu-item.bg-blue > a:focus {
   background-color: #2b6675;
 }
 
-/* line 164, resources/assets/styles/layouts/_header.scss */
+/* line 160, resources/assets/styles/layouts/_header.scss */
 
 .nav__secondary {
   position: relative;
 }
 
-/* line 167, resources/assets/styles/layouts/_header.scss */
+/* line 163, resources/assets/styles/layouts/_header.scss */
 
 .nav__secondary > .menu-item {
   padding: 0;
   margin-right: 2rem;
 }
 
-/* line 171, resources/assets/styles/layouts/_header.scss */
+/* line 167, resources/assets/styles/layouts/_header.scss */
 
 .nav__secondary > .menu-item > a {
   border: 0;
@@ -18375,7 +18364,7 @@ nav {
   font-weight: 600;
 }
 
-/* line 179, resources/assets/styles/layouts/_header.scss */
+/* line 175, resources/assets/styles/layouts/_header.scss */
 
 .nav__secondary > .menu-item > a:hover,
 .nav__secondary > .menu-item > a:focus {
@@ -18383,7 +18372,7 @@ nav {
   text-decoration: underline;
 }
 
-/* line 189, resources/assets/styles/layouts/_header.scss */
+/* line 185, resources/assets/styles/layouts/_header.scss */
 
 .search-wrapper > .btn,
 .search-wrapper > .btn-large,
@@ -18397,7 +18386,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 }
 
 @media only screen and (max-width: 992px) {
-  /* line 195, resources/assets/styles/layouts/_header.scss */
+  /* line 191, resources/assets/styles/layouts/_header.scss */
 
   .banner .logo {
     min-height: 0;
@@ -18405,7 +18394,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 201, resources/assets/styles/layouts/_header.scss */
+  /* line 197, resources/assets/styles/layouts/_header.scss */
 
   .header-inline .logo {
     font-size: 1.7rem;
@@ -18414,7 +18403,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     letter-spacing: -2px;
   }
 
-  /* line 208, resources/assets/styles/layouts/_header.scss */
+  /* line 204, resources/assets/styles/layouts/_header.scss */
 
   .header-inline .navbar-menu {
     display: -webkit-box;
@@ -18422,14 +18411,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     display: flex;
   }
 
-  /* line 212, resources/assets/styles/layouts/_header.scss */
+  /* line 208, resources/assets/styles/layouts/_header.scss */
 
   .header-inline .cta-link {
     margin-left: 1rem;
     text-align: right;
   }
 
-  /* line 217, resources/assets/styles/layouts/_header.scss */
+  /* line 213, resources/assets/styles/layouts/_header.scss */
 
   .header-inline .nav__primary {
     position: relative;
@@ -18445,7 +18434,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     z-index: 0;
   }
 
-  /* line 224, resources/assets/styles/layouts/_header.scss */
+  /* line 220, resources/assets/styles/layouts/_header.scss */
 
   .header-inline .nav__primary::before {
     position: absolute;
@@ -18462,7 +18451,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     content: '';
   }
 
-  /* line 238, resources/assets/styles/layouts/_header.scss */
+  /* line 234, resources/assets/styles/layouts/_header.scss */
 
   .utility-wrapper {
     display: -webkit-box;
@@ -18478,7 +18467,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     padding: 0 15px;
   }
 
-  /* line 246, resources/assets/styles/layouts/_header.scss */
+  /* line 242, resources/assets/styles/layouts/_header.scss */
 
   .utility-wrapper__nav {
     display: -webkit-box;
@@ -18493,7 +18482,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
             align-items: center;
   }
 
-  /* line 253, resources/assets/styles/layouts/_header.scss */
+  /* line 249, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper {
     position: relative;
@@ -18505,7 +18494,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
             align-items: center;
   }
 
-  /* line 258, resources/assets/styles/layouts/_header.scss */
+  /* line 254, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper__inner {
     display: none;
@@ -18521,14 +18510,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     transition: opacity 0.3s ease-in-out;
   }
 
-  /* line 269, resources/assets/styles/layouts/_header.scss */
+  /* line 265, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper__inner.is-active {
     display: block;
     opacity: 1;
   }
 
-  /* line 275, resources/assets/styles/layouts/_header.scss */
+  /* line 271, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper > .btn,
   .search-wrapper > .btn-large,
@@ -18543,20 +18532,20 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     color: #D9D9D9;
   }
 
-  /* line 281, resources/assets/styles/layouts/_header.scss */
+  /* line 277, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper .wp-search {
     position: relative;
     margin-bottom: 0;
   }
 
-  /* line 285, resources/assets/styles/layouts/_header.scss */
+  /* line 281, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper .wp-search input[type="search"] {
     border-color: transparent;
   }
 
-  /* line 289, resources/assets/styles/layouts/_header.scss */
+  /* line 285, resources/assets/styles/layouts/_header.scss */
 
   .search-wrapper .wp-search::after {
     position: absolute;
@@ -18577,16 +18566,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   padding: 0;
 }
 
-/* line 5, resources/assets/styles/layouts/_footer.scss */
-
-.page-footer .container,
-.page-footer .container-wide,
-.page-footer .sidebar-primary .content,
-.sidebar-primary .page-footer .content {
-  max-width: 1200px;
-}
-
-/* line 10, resources/assets/styles/layouts/_footer.scss */
+/* line 6, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-call-to-action {
   position: relative;
@@ -18594,14 +18574,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   padding: 180px 0 1.5rem 0;
 }
 
-/* line 15, resources/assets/styles/layouts/_footer.scss */
+/* line 11, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-call-to-action h2 {
   color: white;
   text-transform: uppercase;
 }
 
-/* line 20, resources/assets/styles/layouts/_footer.scss */
+/* line 16, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-call-to-action::after {
   position: absolute;
@@ -18615,13 +18595,13 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   content: '';
 }
 
-/* line 33, resources/assets/styles/layouts/_footer.scss */
+/* line 29, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-content {
   padding: 3rem 0;
 }
 
-/* line 37, resources/assets/styles/layouts/_footer.scss */
+/* line 33, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-logo img {
   width: 100%;
@@ -18629,14 +18609,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   margin-bottom: 2rem;
 }
 
-/* line 43, resources/assets/styles/layouts/_footer.scss */
+/* line 39, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-content,
 .page-footer .footer-copyright {
   font-size: 0.83333rem;
 }
 
-/* line 48, resources/assets/styles/layouts/_footer.scss */
+/* line 44, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-copyright {
   background-color: rgba(0, 0, 0, 0.3);
@@ -18646,14 +18626,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   font-size: 0.77778rem;
 }
 
-/* line 55, resources/assets/styles/layouts/_footer.scss */
+/* line 51, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-copyright__text {
   display: block;
   margin-top: 1rem;
 }
 
-/* line 62, resources/assets/styles/layouts/_footer.scss */
+/* line 58, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu {
   display: -webkit-box;
@@ -18666,19 +18646,19 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   margin: 0;
 }
 
-/* line 67, resources/assets/styles/layouts/_footer.scss */
+/* line 63, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu li {
   margin: 0.5rem;
 }
 
-/* line 71, resources/assets/styles/layouts/_footer.scss */
+/* line 67, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu a {
   text-decoration: underline;
 }
 
-/* line 74, resources/assets/styles/layouts/_footer.scss */
+/* line 70, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .menu a:hover,
 .page-footer .menu a:focus {
@@ -18686,13 +18666,13 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 }
 
 @media (min-width: 768px) {
-  /* line 82, resources/assets/styles/layouts/_footer.scss */
+  /* line 78, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .footer-call-to-action {
     padding-top: 2.5rem;
   }
 
-  /* line 86, resources/assets/styles/layouts/_footer.scss */
+  /* line 82, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu {
     -webkit-box-orient: horizontal;
@@ -18704,19 +18684,19 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
             justify-content: center;
   }
 
-  /* line 90, resources/assets/styles/layouts/_footer.scss */
+  /* line 86, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu li {
     margin: 0;
   }
 
-  /* line 94, resources/assets/styles/layouts/_footer.scss */
+  /* line 90, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu li:not(:last-of-type) {
     margin-right: 1rem;
   }
 
-  /* line 98, resources/assets/styles/layouts/_footer.scss */
+  /* line 94, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .menu a {
     font-weight: 600;
@@ -19965,36 +19945,33 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 
 /* line 90, resources/assets/styles/layouts/_events.scss */
 
-.single-event main {
-  position: relative;
-  padding-bottom: 280px;
+.single-event .featured-image {
+  margin: 0;
 }
 
-/* line 94, resources/assets/styles/layouts/_events.scss */
+/* line 93, resources/assets/styles/layouts/_events.scss */
 
-.single-event main::after {
-  position: absolute;
+.single-event .featured-image img {
   display: block;
-  bottom: 0;
-  right: 20%;
-  width: 350px;
-  height: 260px;
+}
+
+/* line 98, resources/assets/styles/layouts/_events.scss */
+
+.single-event main {
+  position: relative;
+  background: #E7E4E0;
+}
+
+/* line 103, resources/assets/styles/layouts/_events.scss */
+
+.single-event article {
+  max-width: 940px;
   margin: 0 auto;
-  background-image: url(/wp-content/themes/unity-child/dist/images/textures/texture-triangles-gray.svg);
-  background-repeat: no-repeat;
-  background-size: 350px 260px;
-  background-position: right top;
-  content: '';
+  padding: 2rem 1rem;
+  background: #FFF;
 }
 
 /* line 110, resources/assets/styles/layouts/_events.scss */
-
-.single-event article {
-  max-width: 768px;
-  margin: 0 auto;
-}
-
-/* line 115, resources/assets/styles/layouts/_events.scss */
 
 .single-event h1 {
   font-size: 2rem;
@@ -20002,16 +19979,52 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   font-weight: 400;
 }
 
-/* line 121, resources/assets/styles/layouts/_events.scss */
+/* line 116, resources/assets/styles/layouts/_events.scss */
 
 .single-event .kicker {
   color: #C75300;
 }
 
-/* line 125, resources/assets/styles/layouts/_events.scss */
+/* line 120, resources/assets/styles/layouts/_events.scss */
 
 .single-event .details {
   color: #C75300;
+}
+
+@media only screen and (min-width: 769px) {
+  /* line 125, resources/assets/styles/layouts/_events.scss */
+
+  .single-event .featured-image {
+    position: relative;
+    height: 390px;
+    margin: 0;
+  }
+
+  /* line 130, resources/assets/styles/layouts/_events.scss */
+
+  .single-event .featured-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+
+  /* line 142, resources/assets/styles/layouts/_events.scss */
+
+  .single-event main {
+    padding-bottom: 4rem;
+  }
+
+  /* line 146, resources/assets/styles/layouts/_events.scss */
+
+  .single-event article {
+    padding: 3rem 98px;
+  }
 }
 
 /* line 1, resources/assets/styles/layouts/_people.scss */
