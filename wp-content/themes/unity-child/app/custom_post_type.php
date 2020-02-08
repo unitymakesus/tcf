@@ -59,6 +59,7 @@ function create_post_type() {
     'publicly_queryable' => true,
     'show_ui' => true,
     'show_in_nav_menus' => false,
+    'show_in_rest' => true,
     'menu_position' => 20,
     'menu_icon' => 'dashicons-calendar',
     'capability_type' => 'page',
