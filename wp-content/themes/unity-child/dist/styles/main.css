@@ -16816,10 +16816,9 @@ a.btn--grey:focus {
   position: relative;
   background-color: #B8AEA3;
   min-height: 440px;
-  margin-bottom: -4rem;
 }
 
-/* line 7, resources/assets/styles/components/_county-map.scss */
+/* line 6, resources/assets/styles/components/_county-map.scss */
 
 .county-map .js-map {
   display: -webkit-box;
@@ -16837,14 +16836,14 @@ a.btn--grey:focus {
   margin: 0 auto;
 }
 
-/* line 20, resources/assets/styles/components/_county-map.scss */
+/* line 19, resources/assets/styles/components/_county-map.scss */
 
 .county-map .js-map svg {
   height: 100%;
   width: 100%;
 }
 
-/* line 26, resources/assets/styles/components/_county-map.scss */
+/* line 25, resources/assets/styles/components/_county-map.scss */
 
 .county-map .js-accordion {
   position: relative;
@@ -16852,7 +16851,7 @@ a.btn--grey:focus {
 }
 
 @media only screen and (min-width: 769px) {
-  /* line 32, resources/assets/styles/components/_county-map.scss */
+  /* line 31, resources/assets/styles/components/_county-map.scss */
 
   .county-map .js-accordion {
     max-width: 350px;
@@ -16860,20 +16859,20 @@ a.btn--grey:focus {
   }
 }
 
-/* line 41, resources/assets/styles/components/_county-map.scss */
+/* line 40, resources/assets/styles/components/_county-map.scss */
 
 .counties__inactive path {
   fill: #F5F4F3;
   stroke: #B8AEA3;
 }
 
-/* line 47, resources/assets/styles/components/_county-map.scss */
+/* line 46, resources/assets/styles/components/_county-map.scss */
 
 .counties__active {
   cursor: pointer;
 }
 
-/* line 52, resources/assets/styles/components/_county-map.scss */
+/* line 51, resources/assets/styles/components/_county-map.scss */
 
 .a,
 .b,
@@ -16885,7 +16884,7 @@ a.btn--grey:focus {
   stroke-width: 0.521px;
 }
 
-/* line 62, resources/assets/styles/components/_county-map.scss */
+/* line 61, resources/assets/styles/components/_county-map.scss */
 
 .b,
 .c,
@@ -16894,31 +16893,31 @@ a.btn--grey:focus {
   stroke: #1A1818;
 }
 
-/* line 69, resources/assets/styles/components/_county-map.scss */
+/* line 68, resources/assets/styles/components/_county-map.scss */
 
 [data-county="chatham"] {
   fill: #94836E;
 }
 
-/* line 73, resources/assets/styles/components/_county-map.scss */
+/* line 72, resources/assets/styles/components/_county-map.scss */
 
 [data-county="durham"] {
   fill: #8F9D10;
 }
 
-/* line 77, resources/assets/styles/components/_county-map.scss */
+/* line 76, resources/assets/styles/components/_county-map.scss */
 
 [data-county="orange"] {
   fill: #E36F1E;
 }
 
-/* line 81, resources/assets/styles/components/_county-map.scss */
+/* line 80, resources/assets/styles/components/_county-map.scss */
 
 [data-county="wake"] {
   fill: #007485;
 }
 
-/* line 85, resources/assets/styles/components/_county-map.scss */
+/* line 84, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected] {
   padding: 0.75rem 1rem;
@@ -16926,49 +16925,49 @@ a.btn--grey:focus {
   width: 100%;
 }
 
-/* line 91, resources/assets/styles/components/_county-map.scss */
+/* line 90, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected]:nth-of-type(1) {
   background-color: #414141;
 }
 
-/* line 96, resources/assets/styles/components/_county-map.scss */
+/* line 95, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected]:nth-of-type(2) {
   background-color: #5A4F42;
 }
 
-/* line 101, resources/assets/styles/components/_county-map.scss */
+/* line 100, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected]:nth-of-type(3) {
   background-color: #8F9D10;
 }
 
-/* line 106, resources/assets/styles/components/_county-map.scss */
+/* line 105, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected]:nth-of-type(4) {
   background-color: #C75300;
 }
 
-/* line 111, resources/assets/styles/components/_county-map.scss */
+/* line 110, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion [aria-selected]:nth-of-type(5) {
   background-color: #007485;
 }
 
-/* line 116, resources/assets/styles/components/_county-map.scss */
+/* line 115, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel[aria-hidden="true"] {
   display: none;
 }
 
-/* line 120, resources/assets/styles/components/_county-map.scss */
+/* line 119, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel[role="tabpanel"] {
   padding: 0;
 }
 
-/* line 124, resources/assets/styles/components/_county-map.scss */
+/* line 123, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap {
   position: relative;
@@ -16991,7 +16990,7 @@ a.btn--grey:focus {
   z-index: 0;
 }
 
-/* line 135, resources/assets/styles/components/_county-map.scss */
+/* line 134, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap a {
   color: inherit;
@@ -16999,7 +16998,7 @@ a.btn--grey:focus {
   margin-top: 1rem;
 }
 
-/* line 141, resources/assets/styles/components/_county-map.scss */
+/* line 140, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap .percentage {
   font-family: "Open Sans Condensed", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -17009,14 +17008,14 @@ a.btn--grey:focus {
   line-height: 1.25;
 }
 
-/* line 148, resources/assets/styles/components/_county-map.scss */
+/* line 147, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap .percentage sup {
   font-size: 2.88889rem;
   top: -1.5rem;
 }
 
-/* line 157, resources/assets/styles/components/_county-map.scss */
+/* line 156, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap .amount sub {
   top: 0;
@@ -17024,7 +17023,7 @@ a.btn--grey:focus {
   font-size: 1.5rem;
 }
 
-/* line 164, resources/assets/styles/components/_county-map.scss */
+/* line 163, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap::after {
   position: absolute;
@@ -17038,43 +17037,43 @@ a.btn--grey:focus {
   z-index: -1;
 }
 
-/* line 176, resources/assets/styles/components/_county-map.scss */
+/* line 175, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap--all::after {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 180, resources/assets/styles/components/_county-map.scss */
+/* line 179, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap--chatham::after {
   background-color: rgba(90, 79, 66, 0.4);
 }
 
-/* line 184, resources/assets/styles/components/_county-map.scss */
+/* line 183, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap--durham::after {
   background-color: rgba(143, 157, 16, 0.4);
 }
 
-/* line 188, resources/assets/styles/components/_county-map.scss */
+/* line 187, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap--orange::after {
   background-color: rgba(199, 83, 0, 0.4);
 }
 
-/* line 192, resources/assets/styles/components/_county-map.scss */
+/* line 191, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel-wrap--wake::after {
   background-color: rgba(0, 116, 133, 0.4);
 }
 
-/* line 197, resources/assets/styles/components/_county-map.scss */
+/* line 196, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__panel[role="tabpanel"] .js-accordion__header {
   display: none;
 }
 
-/* line 201, resources/assets/styles/components/_county-map.scss */
+/* line 200, resources/assets/styles/components/_county-map.scss */
 
 button.js-accordion__header {
   display: block !important;
@@ -17085,7 +17084,7 @@ button.js-accordion__header {
   color: white;
 }
 
-/* line 210, resources/assets/styles/components/_county-map.scss */
+/* line 209, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__header::after {
   position: absolute;
@@ -17096,13 +17095,13 @@ button.js-accordion__header {
   right: 1rem;
 }
 
-/* line 217, resources/assets/styles/components/_county-map.scss */
+/* line 216, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__header[aria-expanded="true"]::after {
   content: " -";
 }
 
-/* line 221, resources/assets/styles/components/_county-map.scss */
+/* line 220, resources/assets/styles/components/_county-map.scss */
 
 .js-accordion__header[aria-expanded="false"]::after {
   content: " +";
