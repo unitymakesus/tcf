@@ -65,7 +65,7 @@
     position: relative;
     background-color: $brand-primary;
     color: white;
-    padding: 2rem;
+    padding: 2rem calc(2rem + 20px);
     text-align: left;
     z-index: 1;
   }
@@ -229,7 +229,7 @@
     }
 
     .entry-content {
-      padding: 3rem 98px;
+      padding: 2rem;
     }
   }
 }

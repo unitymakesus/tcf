@@ -19162,7 +19162,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
   position: relative;
   background-color: #007485;
   color: white;
-  padding: 2rem;
+  padding: 2rem calc(2rem + 20px);
   text-align: left;
   z-index: 1;
 }
@@ -19431,7 +19431,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 
   .single-award .entry-content,
   .page-template-default .entry-content {
-    padding: 3rem 98px;
+    padding: 2rem;
   }
 }
 
