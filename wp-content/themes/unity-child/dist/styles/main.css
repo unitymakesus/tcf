@@ -19160,7 +19160,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 .page-header .sidebar-primary .content,
 .sidebar-primary .page-header .content {
   position: relative;
-  background-color: #007485;
+  background-color: rgba(0, 116, 133, 0.8);
   color: white;
   padding: 2rem calc(2rem + 20px);
   text-align: left;
@@ -19366,7 +19366,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 .template-landing.giving .page-header > .container-wide,
 .template-landing.giving .sidebar-primary .page-header > .content,
 .sidebar-primary .template-landing.giving .page-header > .content {
-  background-color: rgba(199, 83, 0, 0.9);
+  background-color: rgba(199, 83, 0, 0.8);
 }
 
 /* line 193, resources/assets/styles/layouts/_page.scss */
@@ -19384,7 +19384,7 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .archive-filt
 .template-landing.impact .page-header > .container-wide,
 .template-landing.impact .sidebar-primary .page-header > .content,
 .sidebar-primary .template-landing.impact .page-header > .content {
-  background-color: rgba(143, 157, 16, 0.9);
+  background-color: rgba(143, 157, 16, 0.8);
 }
 
 /* line 203, resources/assets/styles/layouts/_page.scss */

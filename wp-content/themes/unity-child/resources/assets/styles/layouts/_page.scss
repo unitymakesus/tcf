@@ -63,7 +63,7 @@
 
   .container {
     position: relative;
-    background-color: $brand-primary;
+    background-color: rgba($brand-primary, 0.9);
     color: white;
     padding: 2rem calc(2rem + 20px);
     text-align: left;
