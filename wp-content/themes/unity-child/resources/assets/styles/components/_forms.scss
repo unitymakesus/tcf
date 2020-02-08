@@ -167,7 +167,7 @@ select:not(.browser-default) {
 
 .gsection_title {
   color: $color-orange-a11y;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: $sans-condensed;
 }
 
 .ginput_counter {
@@ -252,7 +252,7 @@ select:not(.browser-default) {
         z-index: 0;
         transition: 0.28s ease;
         border-radius: 50%;
-        border: 2px solid transparentize($brand-primary, 0.4);
+        border: 2px solid rgba($brand-primary, 0.4);
         content: '';
       }
     }

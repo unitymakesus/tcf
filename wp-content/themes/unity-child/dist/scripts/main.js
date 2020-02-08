@@ -601,6 +601,27 @@ var tabbedInterface = function () {
 /* harmony default export */ __webpack_exports__["a"] = ({
   finalize: function finalize() {
     $('.js-accordion').accordion({ buttonsGeneratedContent: 'html' });
+
+    $('.counties__active path').on('click', function() {
+      var county = $(this).data('county');
+
+      switch (county) {
+        case 'chatham':
+          $('.js-accordion button:nth-of-type(2)').trigger('click');
+          break;
+        case 'durham':
+          $('.js-accordion button:nth-of-type(3)').trigger('click');
+          break;
+        case 'orange':
+          $('.js-accordion button:nth-of-type(4)').trigger('click');
+          break;
+        case 'wake':
+          $('.js-accordion button:nth-of-type(5)').trigger('click');
+          break;
+        default:
+          $('.js-accordion button:nth-of-type(1)').trigger('click');
+      }
+    });
   },
 });
 

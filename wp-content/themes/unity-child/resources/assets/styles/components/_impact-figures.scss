@@ -59,7 +59,7 @@
     background-color: #00525F;
 
     a::after {
-      background-color: transparentize(#00525F, 0.25);
+      background-color: rgba(#00525F, 0.25);
     }
   }
 }
@@ -73,7 +73,7 @@
     background-color: #859002;
 
     a::after {
-      background-color: transparentize(#859002, 0.25);
+      background-color: rgba(#859002, 0.25);
     }
   }
 }
@@ -87,7 +87,7 @@
     background-color: #C75300;
 
     a::after {
-      background-color: transparentize(#C75300, 0.25);
+      background-color: rgba(#C75300, 0.25);
     }
   }
 }
@@ -101,7 +101,7 @@
     background-color: #716557;
 
     a::after {
-      background-color: transparentize(#716557, 0.25);
+      background-color: rgba(#716557, 0.25);
     }
   }
 }
@@ -115,7 +115,7 @@
     background-color: #414141;
 
     a::after {
-      background-color: transparentize(#414141, 0.25);
+      background-color: rgba(#414141, 0.25);
     }
   }
 }

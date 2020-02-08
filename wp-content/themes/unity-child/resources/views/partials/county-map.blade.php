@@ -23,7 +23,7 @@
             <span class="screen-reader-text"> dollars</span>
           </div>
           @if ($all['link'])
-            <a href="{{ $all['link']['url'] }}">{{ $all['link']['title'] }}</a>
+            <a href="{{ $all['link']['url'] }}" target="_blank">{{ $all['link']['title'] }}</a>
           @endif
         </div>
       </div>
@@ -40,7 +40,7 @@
             <span class="screen-reader-text"> dollars</span>
           </div>
           @if ($chatham['link'])
-            <a href="{{ $chatham['link']['url'] }}">{{ $chatham['link']['title'] }}</a>
+            <a href="{{ $chatham['link']['url'] }}" target="_blank">{{ $chatham['link']['title'] }}</a>
           @endif
         </div>
       </div>
@@ -57,7 +57,7 @@
             <span class="screen-reader-text"> dollars</span>
           </div>
           @if ($durham['link'])
-            <a href="{{ $durham['link']['url'] }}">{{ $durham['link']['title'] }}</a>
+            <a href="{{ $durham['link']['url'] }}" target="_blank">{{ $durham['link']['title'] }}</a>
           @endif
         </div>
       </div>
@@ -74,7 +74,7 @@
             <span class="screen-reader-text"> dollars</span>
           </div>
           @if ($orange['link'])
-            <a href="{{ $orange['link']['url'] }}">{{ $orange['link']['title'] }}</a>
+            <a href="{{ $orange['link']['url'] }}" target="_blank">{{ $orange['link']['title'] }}</a>
           @endif
         </div>
       </div>
@@ -91,7 +91,7 @@
             <span class="screen-reader-text"> dollars</span>
           </div>
           @if ($wake['link'])
-            <a href="{{ $wake['link']['url'] }}">{{ $wake['link']['title'] }}</a>
+            <a href="{{ $wake['link']['url'] }}" target="_blank">{{ $wake['link']['title'] }}</a>
           @endif
         </div>
       </div>
