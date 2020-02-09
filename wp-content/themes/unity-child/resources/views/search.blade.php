@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.page-header-w-intro')
-
+  @include('partials.page-header-w-intro', [
+    'page_id' => get_option( 'page_for_posts' )
+  ])
   <div class="container">
     <div class="row">
       <div class="col s12">
