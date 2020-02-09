@@ -18143,38 +18143,8 @@ nav {
 
 /* line 10, resources/assets/styles/layouts/_header.scss */
 
-.banner .nav-primary {
-  position: relative;
-}
-
-/* line 15, resources/assets/styles/layouts/_header.scss */
-
 .banner .logo {
   display: inline-block;
-  padding: 0;
-}
-
-/* line 20, resources/assets/styles/layouts/_header.scss */
-
-.banner .menu-trigger-wrapper {
-  float: right;
-}
-
-/* line 24, resources/assets/styles/layouts/_header.scss */
-
-.banner .menu-trigger-wrapper label {
-  float: none;
-}
-
-/* line 29, resources/assets/styles/layouts/_header.scss */
-
-.header-inline .navbar {
-  height: auto;
-}
-
-/* line 33, resources/assets/styles/layouts/_header.scss */
-
-.header-inline .logo {
   color: #007485;
   font-size: 1.33333rem;
   font-weight: 600;
@@ -18184,214 +18154,8 @@ nav {
   text-decoration: none;
 }
 
-/* line 43, resources/assets/styles/layouts/_header.scss */
-
-.header-inline .navbar-menu {
-  background-color: #414141;
-}
-
-/* line 47, resources/assets/styles/layouts/_header.scss */
-
-.header-inline nav ul a {
-  padding: 0.25rem 25px;
-}
-
-/* line 51, resources/assets/styles/layouts/_header.scss */
-
-.header-inline .sub-menu {
-  width: 100%;
-  max-width: 300px;
-}
-
-/* line 56, resources/assets/styles/layouts/_header.scss */
-
-.header-inline .sub-menu a {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.83333rem;
-  line-height: 1.66667rem;
-}
-
-/* line 61, resources/assets/styles/layouts/_header.scss */
-
-.header-inline .sub-menu a + .sub-menu {
-  position: relative;
-  height: auto;
-}
-
-/* line 65, resources/assets/styles/layouts/_header.scss */
-
-.header-inline .sub-menu a + .sub-menu > li a {
-  padding-left: 1rem;
-}
-
-/* line 71, resources/assets/styles/layouts/_header.scss */
-
-.header-inline .cta-link {
-  padding: 0;
-  text-align: left;
-}
-
-/* line 76, resources/assets/styles/layouts/_header.scss */
-
-.header-inline .cta-link a {
-  background-color: #C75300;
-  border-color: #C75300;
-  color: #FFF;
-}
-
-/* line 81, resources/assets/styles/layouts/_header.scss */
-
-.header-inline .cta-link a:hover,
-.header-inline .cta-link a:focus {
-  background-color: #FFF;
-  color: #C75300;
-}
-
-/* line 89, resources/assets/styles/layouts/_header.scss */
-
-.navbar-menu li.menu-item-has-children a {
-  cursor: pointer;
-}
-
-/* line 93, resources/assets/styles/layouts/_header.scss */
-
-.navbar-menu li:hover > a,
-.navbar-menu li:focus > a,
-.navbar-menu li.hover > a {
-  text-decoration: none;
-}
-
-/* line 99, resources/assets/styles/layouts/_header.scss */
-
-.nav__primary {
-  position: relative;
-}
-
-/* line 102, resources/assets/styles/layouts/_header.scss */
-
-.nav__primary > .menu-item {
-  height: 100%;
-}
-
-/* line 105, resources/assets/styles/layouts/_header.scss */
-
-.nav__primary > .menu-item > a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  color: #FFF;
-  padding: 0.5rem 25px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-/* line 116, resources/assets/styles/layouts/_header.scss */
-
-.nav__primary > .menu-item:nth-child(-n+3) {
-  font-size: 1.11111rem;
-}
-
-/* line 120, resources/assets/styles/layouts/_header.scss */
-
-.nav__primary > .menu-item:nth-child(n+4) > a {
-  text-transform: uppercase;
-  font-size: 0.77778rem;
-  font-weight: 600;
-}
-
-/* line 127, resources/assets/styles/layouts/_header.scss */
-
-.nav__primary > .menu-item.bg-orange > a {
-  background-color: #C75300;
-  color: white;
-}
-
-/* line 131, resources/assets/styles/layouts/_header.scss */
-
-.nav__primary > .menu-item.bg-orange > a:hover,
-.nav__primary > .menu-item.bg-orange > a:focus {
-  background-color: #9e4200;
-}
-
-/* line 138, resources/assets/styles/layouts/_header.scss */
-
-.nav__primary > .menu-item.bg-green > a {
-  background-color: #8F9D10;
-  color: #FFF;
-}
-
-/* line 142, resources/assets/styles/layouts/_header.scss */
-
-.nav__primary > .menu-item.bg-green > a:hover,
-.nav__primary > .menu-item.bg-green > a:focus {
-  background-color: #6d780c;
-}
-
-/* line 149, resources/assets/styles/layouts/_header.scss */
-
-.nav__primary > .menu-item.bg-blue > a {
-  background-color: #368093;
-  color: white;
-}
-
-/* line 153, resources/assets/styles/layouts/_header.scss */
-
-.nav__primary > .menu-item.bg-blue > a:hover,
-.nav__primary > .menu-item.bg-blue > a:focus {
-  background-color: #2b6675;
-}
-
-/* line 160, resources/assets/styles/layouts/_header.scss */
-
-.nav__secondary {
-  position: relative;
-}
-
-/* line 163, resources/assets/styles/layouts/_header.scss */
-
-.nav__secondary > .menu-item {
-  padding: 0;
-  margin-right: 2rem;
-}
-
-/* line 167, resources/assets/styles/layouts/_header.scss */
-
-.nav__secondary > .menu-item > a {
-  border: 0;
-  padding: 0;
-  color: #007485;
-  font-size: 0.77778rem;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-/* line 175, resources/assets/styles/layouts/_header.scss */
-
-.nav__secondary > .menu-item > a:hover,
-.nav__secondary > .menu-item > a:focus {
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-/* line 185, resources/assets/styles/layouts/_header.scss */
-
-.search-wrapper > .btn,
-.search-wrapper > .btn-large,
-.search-wrapper > .btn-small,
-.fl-builder-content .search-wrapper > a.fl-button,
-.ctct-form-wrapper.ctct-form-wrapper .search-wrapper > .ctct-submit,
-body.search-wrapper > a[href="#content"],
-.gform_footer .search-wrapper > input[type="submit"],
-div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapper > input[type="submit"] {
-  display: none;
-}
-
 @media only screen and (max-width: 992px) {
-  /* line 191, resources/assets/styles/layouts/_header.scss */
+  /* line 10, resources/assets/styles/layouts/_header.scss */
 
   .banner .logo {
     min-height: 0;
@@ -18399,97 +18163,49 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 }
 
 @media only screen and (min-width: 993px) {
-  /* line 197, resources/assets/styles/layouts/_header.scss */
+  /* line 10, resources/assets/styles/layouts/_header.scss */
 
-  .header-inline .logo {
+  .banner .logo {
     font-size: 1.7rem;
     max-width: 460px;
     margin: 2rem 0;
     letter-spacing: -2px;
   }
+}
 
-  /* line 204, resources/assets/styles/layouts/_header.scss */
+/* line 31, resources/assets/styles/layouts/_header.scss */
 
-  .header-inline .navbar-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+.banner .menu-trigger-wrapper {
+  float: right;
+}
 
-  /* line 208, resources/assets/styles/layouts/_header.scss */
+/* line 34, resources/assets/styles/layouts/_header.scss */
 
-  .header-inline .cta-link {
-    margin-left: 1rem;
-    text-align: right;
-  }
+.banner .menu-trigger-wrapper label {
+  float: none;
+}
 
-  /* line 213, resources/assets/styles/layouts/_header.scss */
+/* line 40, resources/assets/styles/layouts/_header.scss */
 
-  .header-inline .nav__primary {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    z-index: 0;
-  }
+.banner .search-wrapper > .btn,
+.banner .search-wrapper > .btn-large,
+.banner .search-wrapper > .btn-small,
+.banner .fl-builder-content .search-wrapper > a.fl-button,
+.fl-builder-content .banner .search-wrapper > a.fl-button,
+.banner .ctct-form-wrapper.ctct-form-wrapper .search-wrapper > .ctct-submit,
+.ctct-form-wrapper.ctct-form-wrapper .banner .search-wrapper > .ctct-submit,
+.banner body.search-wrapper > a[href="#content"],
+.banner .gform_footer .search-wrapper > input[type="submit"],
+.gform_footer .banner .search-wrapper > input[type="submit"],
+.banner div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapper > input[type="submit"],
+div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .banner .search-wrapper > input[type="submit"] {
+  display: none;
+}
 
-  /* line 220, resources/assets/styles/layouts/_header.scss */
+@media only screen and (min-width: 993px) {
+  /* line 39, resources/assets/styles/layouts/_header.scss */
 
-  .header-inline .nav__primary::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -100vw;
-    right: -100vw;
-    z-index: -1;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    background-color: #414141;
-    content: '';
-  }
-
-  /* line 234, resources/assets/styles/layouts/_header.scss */
-
-  .utility-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: absolute;
-    top: 1.75rem;
-    right: 0;
-    padding: 0 15px;
-  }
-
-  /* line 242, resources/assets/styles/layouts/_header.scss */
-
-  .utility-wrapper__nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  /* line 249, resources/assets/styles/layouts/_header.scss */
-
-  .search-wrapper {
+  .banner .search-wrapper {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -18499,9 +18215,9 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
             align-items: center;
   }
 
-  /* line 254, resources/assets/styles/layouts/_header.scss */
+  /* line 49, resources/assets/styles/layouts/_header.scss */
 
-  .search-wrapper__inner {
+  .banner .search-wrapper__inner {
     display: none;
     position: absolute;
     top: calc(100% + 12px);
@@ -18515,44 +18231,48 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     transition: opacity 0.3s ease-in-out;
   }
 
-  /* line 265, resources/assets/styles/layouts/_header.scss */
+  /* line 60, resources/assets/styles/layouts/_header.scss */
 
-  .search-wrapper__inner.is-active {
+  .banner .search-wrapper__inner.is-active {
     display: block;
     opacity: 1;
   }
 
-  /* line 271, resources/assets/styles/layouts/_header.scss */
+  /* line 66, resources/assets/styles/layouts/_header.scss */
 
-  .search-wrapper > .btn,
-  .search-wrapper > .btn-large,
-  .search-wrapper > .btn-small,
-  .fl-builder-content .search-wrapper > a.fl-button,
-  .ctct-form-wrapper.ctct-form-wrapper .search-wrapper > .ctct-submit,
-  body.search-wrapper > a[href="#content"],
-  .gform_footer .search-wrapper > input[type="submit"],
-  div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapper > input[type="submit"] {
+  .banner .search-wrapper > .btn,
+  .banner .search-wrapper > .btn-large,
+  .banner .search-wrapper > .btn-small,
+  .banner .fl-builder-content .search-wrapper > a.fl-button,
+  .fl-builder-content .banner .search-wrapper > a.fl-button,
+  .banner .ctct-form-wrapper.ctct-form-wrapper .search-wrapper > .ctct-submit,
+  .ctct-form-wrapper.ctct-form-wrapper .banner .search-wrapper > .ctct-submit,
+  .banner body.search-wrapper > a[href="#content"],
+  .banner .gform_footer .search-wrapper > input[type="submit"],
+  .gform_footer .banner .search-wrapper > input[type="submit"],
+  .banner div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapper > input[type="submit"],
+  div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .banner .search-wrapper > input[type="submit"] {
     display: inline-block;
     border-color: transparent;
     color: #D9D9D9;
   }
 
-  /* line 277, resources/assets/styles/layouts/_header.scss */
+  /* line 72, resources/assets/styles/layouts/_header.scss */
 
-  .search-wrapper .wp-search {
+  .banner .search-wrapper .wp-search {
     position: relative;
     margin-bottom: 0;
   }
 
-  /* line 281, resources/assets/styles/layouts/_header.scss */
+  /* line 76, resources/assets/styles/layouts/_header.scss */
 
-  .search-wrapper .wp-search input[type="search"] {
+  .banner .search-wrapper .wp-search input[type="search"] {
     border-color: transparent;
   }
 
-  /* line 285, resources/assets/styles/layouts/_header.scss */
+  /* line 80, resources/assets/styles/layouts/_header.scss */
 
-  .search-wrapper .wp-search::after {
+  .banner .search-wrapper .wp-search::after {
     position: absolute;
     top: calc(-8px - 1rem);
     width: 0;
@@ -18561,6 +18281,269 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
     border-right: 8px solid transparent;
     border-bottom: 8px solid #63ABB7;
     content: '';
+  }
+}
+
+/* line 94, resources/assets/styles/layouts/_header.scss */
+
+.banner .cta-link {
+  padding: 0;
+  text-align: left;
+}
+
+/* line 98, resources/assets/styles/layouts/_header.scss */
+
+.banner .cta-link a {
+  background-color: #C75300;
+  border-color: #C75300;
+  color: #FFF;
+}
+
+/* line 103, resources/assets/styles/layouts/_header.scss */
+
+.banner .cta-link a:hover,
+.banner .cta-link a:focus {
+  background-color: #FFF;
+  color: #C75300;
+}
+
+@media only screen and (min-width: 993px) {
+  /* line 94, resources/assets/styles/layouts/_header.scss */
+
+  .banner .cta-link {
+    margin-left: 1rem;
+    text-align: right;
+  }
+}
+
+/* line 116, resources/assets/styles/layouts/_header.scss */
+
+.banner .navbar {
+  height: auto;
+  background-color: #414141;
+  padding: 0;
+}
+
+/* line 121, resources/assets/styles/layouts/_header.scss */
+
+.banner .navbar > div {
+  position: relative;
+}
+
+/* line 125, resources/assets/styles/layouts/_header.scss */
+
+.banner .navbar a {
+  width: 100%;
+  text-decoration: none;
+}
+
+/* line 131, resources/assets/styles/layouts/_header.scss */
+
+.banner .sub-menu {
+  width: 100%;
+  max-width: 300px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* line 136, resources/assets/styles/layouts/_header.scss */
+
+.banner .sub-menu a {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.83333rem;
+  line-height: 1.66667rem;
+}
+
+@media only screen and (max-width: 992px) {
+  /* line 143, resources/assets/styles/layouts/_header.scss */
+
+  .banner .flex,
+  .banner .menu-item-has-children {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+/* line 150, resources/assets/styles/layouts/_header.scss */
+
+.nav {
+  position: relative;
+}
+
+/* line 153, resources/assets/styles/layouts/_header.scss */
+
+.nav__primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+/* line 157, resources/assets/styles/layouts/_header.scss */
+
+.nav__primary > .menu-item {
+  height: auto;
+}
+
+/* line 160, resources/assets/styles/layouts/_header.scss */
+
+.nav__primary > .menu-item > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  color: #FFF;
+  padding: 0.5rem 25px;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.77778rem;
+  font-weight: 600;
+}
+
+/* line 174, resources/assets/styles/layouts/_header.scss */
+
+.nav__primary > .menu-item.bg-orange > a {
+  font-size: 1.11111rem;
+  font-weight: normal;
+  text-transform: none;
+  background-color: #C75300;
+  color: white;
+}
+
+/* line 181, resources/assets/styles/layouts/_header.scss */
+
+.nav__primary > .menu-item.bg-orange > a:hover,
+.nav__primary > .menu-item.bg-orange > a:focus {
+  background-color: #9e4200;
+}
+
+/* line 188, resources/assets/styles/layouts/_header.scss */
+
+.nav__primary > .menu-item.bg-green > a {
+  font-size: 1.11111rem;
+  font-weight: normal;
+  text-transform: none;
+  background-color: #8F9D10;
+  color: #FFF;
+}
+
+/* line 195, resources/assets/styles/layouts/_header.scss */
+
+.nav__primary > .menu-item.bg-green > a:hover,
+.nav__primary > .menu-item.bg-green > a:focus {
+  background-color: #6d780c;
+}
+
+/* line 202, resources/assets/styles/layouts/_header.scss */
+
+.nav__primary > .menu-item.bg-blue > a {
+  font-size: 1.11111rem;
+  font-weight: normal;
+  text-transform: none;
+  background-color: #368093;
+  color: white;
+}
+
+/* line 209, resources/assets/styles/layouts/_header.scss */
+
+.nav__primary > .menu-item.bg-blue > a:hover,
+.nav__primary > .menu-item.bg-blue > a:focus {
+  background-color: #2b6675;
+}
+
+@media only screen and (min-width: 993px) {
+  /* line 153, resources/assets/styles/layouts/_header.scss */
+
+  .nav__primary {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    z-index: 0;
+  }
+
+  /* line 221, resources/assets/styles/layouts/_header.scss */
+
+  .nav__primary.nav {
+    padding: 0 15px;
+  }
+
+  /* line 225, resources/assets/styles/layouts/_header.scss */
+
+  .nav__primary > .menu-item {
+    height: 100%;
+  }
+}
+
+/* line 231, resources/assets/styles/layouts/_header.scss */
+
+.nav__secondary {
+  position: relative;
+}
+
+/* line 234, resources/assets/styles/layouts/_header.scss */
+
+.nav__secondary > .menu-item {
+  padding: 0;
+  margin-right: 2rem;
+}
+
+/* line 238, resources/assets/styles/layouts/_header.scss */
+
+.nav__secondary > .menu-item > a {
+  border: 0;
+  padding: 0;
+  color: #007485;
+  font-size: 0.77778rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* line 246, resources/assets/styles/layouts/_header.scss */
+
+.nav__secondary > .menu-item > a:hover,
+.nav__secondary > .menu-item > a:focus {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 993px) {
+  /* line 257, resources/assets/styles/layouts/_header.scss */
+
+  .utility-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: -4rem;
+    right: 0;
+  }
+
+  /* line 264, resources/assets/styles/layouts/_header.scss */
+
+  .utility-wrapper__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
