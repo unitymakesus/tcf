@@ -25,16 +25,25 @@ function modify_blog_query($query) {
     /**
      * Main blog (+ stories).
      */
-    if ($query->is_home() && isset($_GET['filter'])) {
-      $tax_query = [
-        [
-          'taxonomy' => 'tcf_post_type',
-          'field'    => 'slug',
-          'terms'    => $_GET['filter'],
-        ]
+    if ($query->is_home()) {
+      $orderby = [
+        'date' => 'DESC',
+        'ID'   => 'ASC'
       ];
 
-      $query->set('tax_query', $tax_query);
+      $query->set('orderby', $orderby);
+
+      if (isset($_GET['filter'])) {
+        $tax_query = [
+          [
+            'taxonomy' => 'tcf_post_type',
+            'field'    => 'slug',
+            'terms'    => $_GET['filter'],
+          ]
+        ];
+
+        $query->set('tax_query', $tax_query);
+      }
     }
 
     /**
