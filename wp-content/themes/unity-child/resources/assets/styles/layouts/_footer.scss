@@ -30,6 +30,10 @@
   }
 }
 
+.page-footer #menu-social-links li {
+  margin-right: 0;
+}
+
 .page-footer .footer-content {
   padding: 3rem 0;
 }
@@ -56,24 +60,29 @@
     display: block;
     margin-top: 1rem;
   }
-}
 
-// Utility Navigation
-.page-footer .menu {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 
-  li {
-    margin: 0.5rem;
+    li {
+      margin: 0.5rem;
+    }
   }
 
-  a {
-    text-decoration: underline;
+  .cf-accredited {
+    position: relative;
 
-    &:hover,
-    &:focus {
-      text-decoration: underline;
+    img {
+      width: 65px;
+      opacity: 0.6;
+
+      @media #{$large-and-up} {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
   }
 }
@@ -83,7 +92,7 @@
     padding-top: 2.5rem;
   }
 
-  .page-footer .menu {
+  .page-footer .footer-copyright .menu {
     flex-direction: row;
     justify-content: center;
 

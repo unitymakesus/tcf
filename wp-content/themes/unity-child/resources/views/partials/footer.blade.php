@@ -23,7 +23,7 @@
             <img src="@asset('images/logos/logo-footer.svg')" alt="{{ get_bloginfo('name', 'display') }}" />
           </div>
         </div>
-        <div class="col s12 m9 l7">
+        <div class="col s12 m9">
           @if ($address = get_field('footer_address', 'option'))
           <address>
             {!! $address !!}
@@ -32,7 +32,7 @@
 
           <div class="row">
             @if ($phone = get_field('footer_phone', 'option'))
-              <div class="col s6 m4">
+              <div class="col s6 m3">
                 <dl>
                   <dt class="text-uppercase">{{ __('Phone', 'sage') }}</dt>
                   <dd><a href="tel:{{ $phone }}">{{ $phone }}</a></dd>
@@ -40,7 +40,7 @@
               </div>
             @endif
             @if ($donor_services = get_field('footer_donor_services', 'option'))
-            <div class="col s6 m4">
+            <div class="col s6 m3">
               <dl>
                 <dt class="text-uppercase">{{ __('Donor Services', 'sage') }}</dt>
                 <dd><a href="tel:{{ $donor_services }}">{{ $donor_services }}</a></dd>
@@ -48,12 +48,20 @@
             </div>
             @endif
             @if ($fax = get_field('footer_fax', 'option'))
-            <div class="col s6 m4">
+            <div class="col s6 m3">
               <dl>
                 <dt class="text-uppercase">{{ __('Fax', 'sage') }}</dt>
                 <dd><a href="tel:{{ $fax }}">{{ $fax }}</a></dd>
               </dl>
             </div>
+            @endif
+            @if (has_nav_menu('social_links'))
+              <div class="col s6 m3">
+                <div class="mt-4 mb-4">
+                  <strong class="text-uppercase">Follow Us</strong>
+                  {!! wp_nav_menu(['theme_location' => 'social_links']) !!}
+                </div>
+              </div>
             @endif
           </div>
         </div>
@@ -65,6 +73,9 @@
     <div class="container-wide">
       <div class="row">
         <div class="col s12">
+          <div class="cf-accredited">
+            <img src="@asset('images/logos/cf-seal-logo.svg')" alt="Accredited Community Foundation" />
+          </div>
           @php dynamic_sidebar('footer-utility') @endphp
           @if ($copyright = get_field('footer_copyright_text', 'option'))
             <span class="footer-copyright__text">

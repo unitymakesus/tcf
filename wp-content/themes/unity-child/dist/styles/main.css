@@ -15984,18 +15984,24 @@ address {
 
 /* line 27, resources/assets/styles/common/_global.scss */
 
+dl {
+  margin: 1rem 0;
+}
+
+/* line 31, resources/assets/styles/common/_global.scss */
+
 dt,
 dd {
   margin: 0;
 }
 
-/* line 32, resources/assets/styles/common/_global.scss */
+/* line 36, resources/assets/styles/common/_global.scss */
 
 sup {
   top: -0.25em;
 }
 
-/* line 36, resources/assets/styles/common/_global.scss */
+/* line 40, resources/assets/styles/common/_global.scss */
 
 *:focus {
   outline: none;
@@ -16003,13 +16009,13 @@ sup {
           box-shadow: inset 0 0 0 3px #63ABB7;
 }
 
-/* line 41, resources/assets/styles/common/_global.scss */
+/* line 45, resources/assets/styles/common/_global.scss */
 
 figure {
   margin: 1rem 0 2rem;
 }
 
-/* line 44, resources/assets/styles/common/_global.scss */
+/* line 48, resources/assets/styles/common/_global.scss */
 
 figure figcaption {
   font-style: italic;
@@ -18604,11 +18610,17 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
 
 /* line 33, resources/assets/styles/layouts/_footer.scss */
 
+.page-footer #menu-social-links li {
+  margin-right: 0;
+}
+
+/* line 37, resources/assets/styles/layouts/_footer.scss */
+
 .page-footer .footer-content {
   padding: 3rem 0;
 }
 
-/* line 37, resources/assets/styles/layouts/_footer.scss */
+/* line 41, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-logo img {
   width: 100%;
@@ -18616,14 +18628,14 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   margin-bottom: 2rem;
 }
 
-/* line 43, resources/assets/styles/layouts/_footer.scss */
+/* line 47, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-content,
 .page-footer .footer-copyright {
   font-size: 0.83333rem;
 }
 
-/* line 48, resources/assets/styles/layouts/_footer.scss */
+/* line 52, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-copyright {
   background-color: rgba(0, 0, 0, 0.3);
@@ -18633,16 +18645,16 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   font-size: 0.77778rem;
 }
 
-/* line 55, resources/assets/styles/layouts/_footer.scss */
+/* line 59, resources/assets/styles/layouts/_footer.scss */
 
 .page-footer .footer-copyright__text {
   display: block;
   margin-top: 1rem;
 }
 
-/* line 62, resources/assets/styles/layouts/_footer.scss */
+/* line 64, resources/assets/styles/layouts/_footer.scss */
 
-.page-footer .menu {
+.page-footer .footer-copyright .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18653,35 +18665,45 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
   margin: 0;
 }
 
-/* line 67, resources/assets/styles/layouts/_footer.scss */
+/* line 69, resources/assets/styles/layouts/_footer.scss */
 
-.page-footer .menu li {
+.page-footer .footer-copyright .menu li {
   margin: 0.5rem;
-}
-
-/* line 71, resources/assets/styles/layouts/_footer.scss */
-
-.page-footer .menu a {
-  text-decoration: underline;
 }
 
 /* line 74, resources/assets/styles/layouts/_footer.scss */
 
-.page-footer .menu a:hover,
-.page-footer .menu a:focus {
-  text-decoration: underline;
+.page-footer .footer-copyright .cf-accredited {
+  position: relative;
+}
+
+/* line 77, resources/assets/styles/layouts/_footer.scss */
+
+.page-footer .footer-copyright .cf-accredited img {
+  width: 65px;
+  opacity: 0.6;
+}
+
+@media only screen and (min-width: 993px) {
+  /* line 77, resources/assets/styles/layouts/_footer.scss */
+
+  .page-footer .footer-copyright .cf-accredited img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 }
 
 @media (min-width: 768px) {
-  /* line 82, resources/assets/styles/layouts/_footer.scss */
+  /* line 91, resources/assets/styles/layouts/_footer.scss */
 
   .page-footer .footer-call-to-action {
     padding-top: 2.5rem;
   }
 
-  /* line 86, resources/assets/styles/layouts/_footer.scss */
+  /* line 95, resources/assets/styles/layouts/_footer.scss */
 
-  .page-footer .menu {
+  .page-footer .footer-copyright .menu {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -18691,21 +18713,21 @@ div[class*="fl-node-"] .uabb-gf-style .gform_wrapper .gform_footer .search-wrapp
             justify-content: center;
   }
 
-  /* line 90, resources/assets/styles/layouts/_footer.scss */
+  /* line 99, resources/assets/styles/layouts/_footer.scss */
 
-  .page-footer .menu li {
+  .page-footer .footer-copyright .menu li {
     margin: 0;
   }
 
-  /* line 94, resources/assets/styles/layouts/_footer.scss */
+  /* line 103, resources/assets/styles/layouts/_footer.scss */
 
-  .page-footer .menu li:not(:last-of-type) {
+  .page-footer .footer-copyright .menu li:not(:last-of-type) {
     margin-right: 1rem;
   }
 
-  /* line 98, resources/assets/styles/layouts/_footer.scss */
+  /* line 107, resources/assets/styles/layouts/_footer.scss */
 
-  .page-footer .menu a {
+  .page-footer .footer-copyright .menu a {
     font-weight: 600;
   }
 }
