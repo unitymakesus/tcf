@@ -106,37 +106,26 @@ export default {
       document.cookie = 'data_contrast=' + contrast + ';max-age=31536000;path=/';
     });
 
-    // Show mobile nav
-    function showMobileNav() {
-      $('body').addClass('mobilenav-active');
-      $('#menu-trigger + label i').attr('aria-label', 'Hide navigation menu');
+    /**
+     * Mobile menu toggle behavior.
+     */
+    $('#mobile-menu-toggle').on('click', function() {
+      $('body').toggleClass('mobilenav-active');
 
-      // Enable focus of nav items using tabindex
-      $('.navbar-menu').each(function() {
-        var el = $(this);
-        $('a', el).attr('tabindex', '0');
+      // Toggle aria-expanded value.
+      $(this).attr('aria-expanded', (i, attr) => {
+        return attr == 'false' ? 'true' : 'false';
       });
-    }
 
-    // Hide mobile nav
-    function hideMobileNav() {
-      $('body').removeClass('mobilenav-active');
-      $('#menu-trigger + label i').attr('aria-label', 'Show navigation menu');
-
-      // Disable focus of nav items using tabindex
-      $('.navbar-menu').each(function() {
-        var el = $(this);
-        $('a', el).attr('tabindex', '-1');
+      // Toggle icon.
+      $(this).find('i').text((i, text) => {
+        return text == 'menu' ? 'close' : 'menu';
       });
-    }
 
-    // Toggle mobile nav
-    $('#menu-trigger').on('change focusout', function() {
-      if ($(this).prop('checked')) {
-        showMobileNav();
-      } else {
-        hideMobileNav();
-      }
+      // Toggle aria-label text.
+      $(this).attr('aria-label', (i, attr) => {
+        return attr == 'Show navigation menu' ? 'Hide navigation menu' : 'Show navigation menu';
+      });
     });
 
     // Only show mobile nav if an element inside is receiving focus
@@ -148,14 +137,14 @@ export default {
       }).on('focusout', function() {
         $(this).parents('li').removeClass('hover');
 
-        if (smDown.matches) {
-          setTimeout(function () {
-            if ($(':focus').closest('#menu-main-menu').length == 0) {
-              $('#menu-trigger').prop('checked', false);
-              hideMobileNav();
-            }
-          }, 200);
-        }
+        // if (smDown.matches) {
+          // setTimeout(function () {
+            // if ($(':focus').closest('#menu-main-menu').length == 0) {
+            //   $('#menu-trigger').prop('checked', false);
+            //   hideMobileNav();
+            // }
+          // }, 200);
+        // }
       });
     });
   },

@@ -63,6 +63,18 @@ a.btn--grey {
   }
 }
 
+// Menu toggle
+.btn-toggle {
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+
+  > i {
+    font-size: inherit;
+  }
+}
+
 // Beaver Builder
 .fl-builder-content a.fl-button {
   @extend .btn;

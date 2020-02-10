@@ -17,14 +17,23 @@ nav {
     padding: 0 15px;
     text-decoration: none;
 
-    @media #{$medium-and-down} {
-      min-height: 0;
-    }
     @media #{$large-and-up} {
       font-size: 1.7rem;
       max-width: 460px;
       margin: 2rem 0;
       letter-spacing: -2px;
+    }
+  }
+
+  @media #{$medium-and-down} {
+    > .container-wide {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      min-height: 0;
     }
   }
 
@@ -125,6 +134,10 @@ nav {
     a {
       width: 100%;
       text-decoration: none;
+
+      &:focus {
+        outline-offset: 0;
+      }
     }
   }
 
@@ -143,6 +156,16 @@ nav {
   .flex, .menu-item-has-children {
     @media #{$medium-and-down} {
       flex-wrap: wrap;
+    }
+  }
+}
+
+@media #{$large-and-down} {
+  .navbar-menu {
+    display: none;
+
+    .mobilenav-active & {
+      display: block;
     }
   }
 }
@@ -168,6 +191,10 @@ nav {
         text-transform: uppercase;
         font-size: rem-calc(14);
         font-weight: 600;
+      }
+
+      &-has-children a {
+        cursor: pointer !important;
       }
 
       // Giving
