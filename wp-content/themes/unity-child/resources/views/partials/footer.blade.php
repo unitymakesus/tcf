@@ -35,7 +35,7 @@
               <div class="col s6 m3">
                 <dl>
                   <dt class="text-uppercase">{{ __('Phone', 'sage') }}</dt>
-                  <dd><a href="tel:{{ $phone }}">{{ $phone }}</a></dd>
+                  <dd>{{ $phone }}</dd>
                 </dl>
               </div>
             @endif
@@ -43,7 +43,7 @@
             <div class="col s6 m3">
               <dl>
                 <dt class="text-uppercase">{{ __('Donor Services', 'sage') }}</dt>
-                <dd><a href="tel:{{ $donor_services }}">{{ $donor_services }}</a></dd>
+                <dd>{{ $donor_services }}</dd>
               </dl>
             </div>
             @endif
@@ -51,7 +51,7 @@
             <div class="col s6 m3">
               <dl>
                 <dt class="text-uppercase">{{ __('Fax', 'sage') }}</dt>
-                <dd><a href="tel:{{ $fax }}">{{ $fax }}</a></dd>
+                <dd>{{ $fax }}</dd>
               </dl>
             </div>
             @endif

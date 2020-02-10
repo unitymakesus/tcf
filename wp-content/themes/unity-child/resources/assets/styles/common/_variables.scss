@@ -27,5 +27,5 @@ $brand-secondary:   $color-orange;
 $sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 $sans-condensed: "Open Sans Condensed", $sans-serif;
 
-// Misc
-$focus-box-shadow: inset 0 0 0 4px $color-teal-light;
+// Grid
+$large-and-down: 'only screen and (max-width: 993px)';
