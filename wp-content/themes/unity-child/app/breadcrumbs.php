@@ -3,6 +3,31 @@
 namespace App;
 
 /**
+ * Override default Breadcrumbs args.
+ *
+ * @param array $args
+ */
+add_filter('breadcrumb_trail_args', function($args) {
+  $args = [
+    'container'     => 'nav',
+    'before'        => '',
+    'after'         => '',
+    'browse_tag'    => 'div',
+    'list_tag'      => 'ul',
+    'item_tag'      => 'li',
+    'show_on_front' => true,
+    'network'       => false,
+    'show_title'    => true,
+    'show_browse'   => true,
+    'labels'        => [],
+    'post_taxonomy' => [],
+    'echo'          => true,
+  ];
+
+  return $args;
+});
+
+/**
  * Customize Breadcrumbs plugin
  */
 add_filter('breadcrumb_trail_object', function($args) {
@@ -37,22 +62,4 @@ add_filter('breadcrumb_trail_object', function($args) {
   }
 
   return $breadcrumbs;
-
-  function __construct( $args = [] ) {
-    $defaults = [
-      'container'       => 'nav',
-      'before'          => '',
-      'after'           => '',
-      'browse_tag'      => 'div',
-      'list_tag'        => 'ul',
-      'item_tag'        => 'li',
-      'show_on_front'   => true,
-      'network'         => false,
-      'show_title'      => true,
-      'show_browse'     => true,
-      'labels'          => [],
-      'post_taxonomy'   => [],
-      'echo'            => true
-    ];
-  };
 });
