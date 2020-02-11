@@ -82,6 +82,13 @@ a.btn--grey {
   }
 }
 
+// Sub-menu toggle buttons
+.btn-toggle--sub-menu {
+  @media #{$large-and-up} {
+    display: none;
+  }
+}
+
 // Beaver Builder
 .fl-builder-content a.fl-button {
   @extend .btn;

@@ -128,6 +128,16 @@ export default {
       });
     });
 
+    /**
+     * Sub-menu toggles (mobile only)
+     */
+    $('.btn-toggle--sub-menu').on('click', function() {
+      // Toggle aria-expanded value.
+      $(this).attr('aria-expanded', (i, attr) => {
+        return attr == 'false' ? 'true' : 'false';
+      });
+    });
+
     // Only show mobile nav if an element inside is receiving focus
     $('.navbar-menu').each(function () {
       var el = $(this);

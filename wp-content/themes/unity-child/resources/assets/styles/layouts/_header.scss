@@ -168,6 +168,16 @@ nav {
       display: block;
     }
   }
+
+  .sub-menu {
+    display: none;
+  }
+
+  .btn-toggle--sub-menu[aria-expanded="true"] + .sub-menu {
+    display: block;
+    height: auto;
+    max-height: 100em !important;
+  }
 }
 
 .nav {
@@ -183,7 +193,6 @@ nav {
       > a {
         display: flex;
         align-items: center;
-        height: 100%;
         color: $color-white;
         padding: 0.5rem 25px;
         line-height: 1.5;
@@ -251,6 +260,10 @@ nav {
 
       > .menu-item {
         height: 100%;
+
+        > a {
+          height: 100%;
+        }
       }
     }
   }
