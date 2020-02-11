@@ -5,6 +5,7 @@
 .page-header {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
   background-size: cover;
   background-position: center;
