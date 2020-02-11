@@ -37,7 +37,15 @@ add_filter('breadcrumb_trail_object', function($args) {
   $post_type = $post->post_type ?? '';
 
   if ($post_type == "simple-team") {
-    array_splice($breadcrumbs->items, 1, 0, '<a href="/team/">Team</a>');
+    // Replace archive page for people with a "staff" page matching their category slug.
+    $team_page = '';
+    if ($category = get_the_terms($post->ID, 'simple-team-category')) {
+      $category_slug = $category[0]->slug;
+      $team_page = get_page_by_path($category_slug, OBJECT, 'page');
+    }
+    if ($team_page) {
+      $breadcrumbs->items[1] = '<a href="' . get_the_permalink($team_page) . '">' . $team_page->post_title . '</a>';
+    }
   } elseif ($post_type == "event") {
     array_splice($breadcrumbs->items, 1, 0, '<a href="/events/">Events</a>');
   } elseif ($post_type == "post") {
