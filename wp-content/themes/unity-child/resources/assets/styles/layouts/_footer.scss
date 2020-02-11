@@ -1,6 +1,10 @@
 .page-footer {
   background-color: darken($brand-primary, 5);
   padding: 0;
+
+  a:focus {
+    outline-color: inherit;
+  }
 }
 
 .page-footer .footer-call-to-action {

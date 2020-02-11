@@ -49,8 +49,9 @@
         @endif
       </a>
       <div class="menu-trigger-wrapper hide-on-large-only">
-        <input type="checkbox" name="menu-trigger" id="menu-trigger" value="true" />
-        <label for="menu-trigger"><i class="material-icons" aria-label="Show navigation menu">menu</i></label>
+        <button class="btn btn-small btn-toggle" id="mobile-menu-toggle" aria-expanded="false" aria-label="Show navigation menu">
+          <i class="material-icons" aria-hidden="true">menu</i>
+        </button>
       </div>
     </div>
     <nav class="navbar navbar-menu" role="navigation">

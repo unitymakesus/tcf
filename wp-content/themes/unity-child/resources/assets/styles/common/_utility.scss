@@ -13,13 +13,14 @@
 }
 
 // Used for accessible link wrapper. Requires a relative parent.
-.link-wrap::after {
+.a11y-link-wrap::after {
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   content: '';
+  z-index: -1;
 }
 
 // Margin utilities
