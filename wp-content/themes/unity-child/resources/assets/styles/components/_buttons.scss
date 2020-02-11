@@ -3,13 +3,8 @@ a[role="button"],
 a[role="tab"],
 .btn {
   &:focus {
-    outline-offset: 0;
+    box-shadow: 0 0 0 2px rgba($brand-primary, 0.25);
   }
-}
-
-button:focus {
-  outline: 2px solid #63ABB7;
-  outline-offset: 3px;
 }
 
 .btn,

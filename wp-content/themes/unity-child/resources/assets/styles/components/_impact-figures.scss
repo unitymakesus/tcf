@@ -30,6 +30,11 @@
       &:focus::after {
         outline: 2px solid currentColor;
         outline-offset: 3px;
+        box-shadow: 0;
+      }
+
+      &::after {
+        z-index: -1;
       }
     }
 

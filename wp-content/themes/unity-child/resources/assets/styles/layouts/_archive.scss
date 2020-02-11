@@ -50,6 +50,11 @@
     color: $color-beige-darker;
     text-decoration: none;
 
+    &:hover:not(.active),
+    &:focus:not(.active) {
+      background-color: lighten($color-beige-med, 10%);
+    }
+
     &.active {
       background-color: $color-white;
     }

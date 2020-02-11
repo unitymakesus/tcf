@@ -38,8 +38,8 @@ sup {
 }
 
 *:focus {
-  outline: 2px solid #63ABB7;
-  outline-offset: 3px;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba($brand-primary, 0.25);
 }
 
 figure {
