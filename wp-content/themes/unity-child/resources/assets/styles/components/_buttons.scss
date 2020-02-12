@@ -3,7 +3,7 @@ a[role="button"],
 a[role="tab"],
 .btn {
   &:focus {
-    box-shadow: 0 0 0 2px rgba($brand-primary, 0.25);
+    box-shadow: 0 0 0 2px rgba($brand-primary, 0.25) !important;
   }
 }
 
@@ -70,7 +70,7 @@ a.btn--grey {
   padding: 0.5rem 0.75rem;
   border: 0;
   font-size: 1.5rem;
-  margin-right: 1rem;
+  margin-right: 2px;
 
   > i {
     font-size: inherit;
@@ -79,6 +79,34 @@ a.btn--grey {
 
 // Sub-menu toggle buttons
 .btn-toggle--sub-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: $color-white;
+
+  i {
+    line-height: 0;
+    font-size: rem-calc(32) !important;
+    transform: rotate(0);
+  }
+
+  &[aria-expanded="true"] i {
+    transform: rotate(180deg);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-white;
+
+    i {
+      color: $color-grey-dark;
+    }
+  }
+
   @media #{$large-and-up} {
     display: none;
   }
