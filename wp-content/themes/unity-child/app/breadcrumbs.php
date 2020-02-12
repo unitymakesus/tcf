@@ -37,14 +37,19 @@ add_filter('breadcrumb_trail_object', function($args) {
   $post_type = $post->post_type ?? '';
 
   if ($post_type == "simple-team") {
-    // Replace archive page for people with a "staff" page matching their category slug.
     $team_page = '';
     if ($category = get_the_terms($post->ID, 'simple-team-category')) {
-      $category_slug = $category[0]->slug;
-      $team_page = get_page_by_path($category_slug, OBJECT, 'page');
+      $category_name = $category[0]->name;
+      $team_page = get_page_by_title($category_name, OBJECT, 'page');
     }
+    // Replace the People archive page with a "staff" page title matching the category title / slug.
     if ($team_page) {
-      $breadcrumbs->items[1] = '<a href="' . get_the_permalink($team_page) . '">' . $team_page->post_title . '</a>';
+      if ($parent = wp_get_post_parent_id($team_page)) {
+        array_splice($breadcrumbs->items, 1, 0, '<a href="'. get_the_permalink($parent) .'">'. get_the_title($parent) .'</a>');
+        $breadcrumbs->items[2] = '<a href="' . get_the_permalink($team_page) . '">' . $team_page->post_title . '</a>';
+      } else {
+        $breadcrumbs->items[1] = '<a href="' . get_the_permalink($team_page) . '">' . $team_page->post_title . '</a>';
+      }
     }
   } elseif ($post_type == "event") {
     array_splice($breadcrumbs->items, 1, 0, '<a href="/events/">Events</a>');
