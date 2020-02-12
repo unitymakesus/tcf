@@ -1,6 +1,7 @@
 @php
-  $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($page_id), 'x-large');
-  $icon = get_field('page_header_icon', $page_id);
+  $the_id = $page_id ?? get_the_ID();
+  $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($the_id), 'x-large');
+  $icon = get_field('page_header_icon', $the_id);
 @endphp
 
 <header class="page-header {{ $icon ? 'page-header--w-icon' : '' }} {{ $bg_img ? 'page-header--has-img' : '' }}" style="background-image: url('<?= $bg_img[0]; ?>')">
