@@ -164,10 +164,16 @@
 
       &:first-child {
         padding-left: 0;
+        padding-right: 0;
+
+        @media #{$medium-and-up} {
+          padding-right: 0.75rem;
+        }
       }
     }
 
     .thumbnail-container {
+      min-height: 300px;
       height: 100%;
       background-size: cover;
       background-position: center;

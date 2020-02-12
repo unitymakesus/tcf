@@ -1,8 +1,10 @@
 .single-entry {
+  position: relative;
   background-color: $color-beige-light;
   border: 2px solid transparent;
   margin-bottom: 1.5rem;
   padding: 1.5rem;
+  transition: box-shadow 0.3s ease-in-out;
 
   &__label {
     @extend .h4;
@@ -25,6 +27,10 @@
 
     a {
       color: inherit;
+
+      &:focus {
+        box-shadow: none;
+      }
     }
   }
 
@@ -63,58 +69,6 @@
     }
   }
 
-  // &[data-cat="environmental-conservation"] {
-  //   background-color: $color-teal-light;
-  //
-  //   h2 {
-  //     color: $color-blue;
-  //   }
-  //
-  //   .single-entry__label {
-  //     background-color: $color-blue;
-  //     color: $color-teal-light;
-  //   }
-  // }
-  //
-  // &[data-cat="regional-cultural-arts"] {
-  //   background-color: $color-orange-light;
-  //
-  //   h2 {
-  //     color: $color-orange-a11y;
-  //   }
-  //
-  //   .single-entry__label {
-  //     background-color: $color-orange-a11y;
-  //     color: $color-orange-light;
-  //   }
-  // }
-  //
-  // &[data-cat="youth-literacy"] {
-  //   background-color: $color-green-light;
-  //
-  //   h2 {
-  //     color: $color-green-a11y;
-  //   }
-  //
-  //   .single-entry__label {
-  //     background-color: $color-green-a11y;
-  //     color: $color-green-light;
-  //   }
-  // }
-  //
-  // &[data-cat="community-development"] {
-  //   background-color: $color-beige;
-  //
-  //   h2 {
-  //     color: $color-beige-darker;
-  //   }
-  //
-  //   .single-entry__label {
-  //     background-color: $color-beige-darker;
-  //     color: $color-beige-light;
-  //   }
-  // }
-
   a.read-more {
     display: block;
     font-style: italic;
@@ -134,6 +88,11 @@
       padding-top: 0;
       max-width: 320px;
       width: 100%;
+    }
+
+    &:hover,
+    &:focus-within {
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
     }
   }
 }

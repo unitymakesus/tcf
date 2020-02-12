@@ -6,8 +6,7 @@
   $type_slug = !empty($type) ? $type[0]->slug : '';
 @endphp
 
-<article
-  class="single-entry" data-cat="{{ $cat_slug }}" data-type="{{ $type_slug }}">
+<article class="single-entry" data-cat="{{ $cat_slug }}" data-type="{{ $type_slug }}">
   <div class="single-entry__summary" itemprop="description">
     @if ($primary && $type_slug === 'stories')
       <span class="single-entry__label">Stories: {!! $primary->name !!}</span>
@@ -15,7 +14,7 @@
       <span class="single-entry__label">Blog: Triangle Community Foundation</span>
     @endif
     <h2 class="single-entry__title mt-4" itemprop="name">
-      <a href="{{ get_the_permalink() }}">{!! get_the_title() !!}</h2></a>
+      <a class="a11y-link-wrap" href="{{ get_the_permalink() }}">{!! get_the_title() !!}</h2></a>
     <div class="single-entry__meta">
       @include('partials/entry-meta')
     </div>
