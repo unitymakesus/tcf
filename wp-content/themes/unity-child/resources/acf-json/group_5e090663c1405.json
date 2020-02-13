@@ -36,9 +36,9 @@
             "sub_fields": [
                 {
                     "key": "field_5e0908a35e267",
-                    "label": "Percentage",
-                    "name": "percentage",
-                    "type": "number",
+                    "label": "Data",
+                    "name": "data",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -50,10 +50,8 @@
                     "default_value": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "%",
-                    "min": "",
-                    "max": "",
-                    "step": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5e0908a35e268",
@@ -170,9 +168,9 @@
                 },
                 {
                     "key": "field_5e09077bc0075",
-                    "label": "Percentage",
-                    "name": "percentage",
-                    "type": "number",
+                    "label": "Data",
+                    "name": "data",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -184,10 +182,8 @@
                     "default_value": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "%",
-                    "min": "",
-                    "max": "",
-                    "step": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5e09078fc0076",
@@ -304,9 +300,9 @@
                 },
                 {
                     "key": "field_5e0907c61b10b",
-                    "label": "Percentage",
-                    "name": "percentage",
-                    "type": "number",
+                    "label": "Data",
+                    "name": "data",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -318,10 +314,8 @@
                     "default_value": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "%",
-                    "min": "",
-                    "max": "",
-                    "step": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5e0907c61b10c",
@@ -438,9 +432,9 @@
                 },
                 {
                     "key": "field_5e0907d81b110",
-                    "label": "Percentage",
-                    "name": "percentage",
-                    "type": "number",
+                    "label": "Data",
+                    "name": "data",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -452,10 +446,8 @@
                     "default_value": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "%",
-                    "min": "",
-                    "max": "",
-                    "step": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5e0907d81b111",
@@ -572,9 +564,9 @@
                 },
                 {
                     "key": "field_5e0907f11b115",
-                    "label": "Percentage",
-                    "name": "percentage",
-                    "type": "number",
+                    "label": "Data",
+                    "name": "data",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -586,10 +578,8 @@
                     "default_value": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "%",
-                    "min": "",
-                    "max": "",
-                    "step": ""
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5e0907f11b116",
@@ -666,5 +656,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578627365
+    "modified": 1581630448
 }
