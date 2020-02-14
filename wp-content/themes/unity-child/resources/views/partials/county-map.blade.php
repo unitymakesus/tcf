@@ -9,7 +9,7 @@
 <div class="county-map">
   <div class="container">
     <div class="js-map">
-      @svg('images/north-carolina-county-map')
+      {{ App\svg_image('north-carolina-county-map') }}
     </div>
     <div class="js-accordion" data-accordion-prefix-classes="tcf" data-accordion-multiselectable="none">
       <div class="js-accordion__panel" data-accordion-opened="true">
