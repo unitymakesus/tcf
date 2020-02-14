@@ -19,9 +19,10 @@
           <div>
             @include('partials.category-nav', [
               'categories' => get_categories([
-                'exclude' => 1,
+                'exclude'    => 1,
                 'hide_empty' => true,
-              ])
+              ]),
+              'label' => __('Filter by:', 'sage'),
             ])
           </div>
         </div>
