@@ -4939,11 +4939,6 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-focus-within-polyfill@^5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/focus-within-polyfill/-/focus-within-polyfill-5.0.6.tgz#d3ab92c4482abe595054e2c183d1db7f15c0b112"
-  integrity sha512-xzp/BD+j806tO+u7QDDApdtfOKkIpfeaqQrveMJVUL5KSuQYEEb6jy0bnLteYHvczYkB1MP6PuwE1nJ4iSFGhA==
-
 follow-redirects@1.5.10:
   version "1.5.10"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"

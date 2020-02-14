@@ -1,5 +1,12 @@
+import dropdownToggle from '../components/dropdownToggle';
+
 export default {
   init() {
+    /**
+     * Initalize custom dropdown toggles.
+     */
+    dropdownToggle();
+
     /**
      * Set aria labels for current navigation items
      */

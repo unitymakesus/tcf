@@ -86,7 +86,6 @@
   "dependencies": {
     "axios": "^0.19.0",
     "custom-event-polyfill": "^1.0.7",
-    "focus-within-polyfill": "^5.0.6",
     "jquery": "^3.3.1",
     "jquery-accessible-accordion-aria": "^2.6.1",
     "macy": "^2.3.1",

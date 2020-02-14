@@ -1,5 +1,4 @@
 import 'custom-event-polyfill';
-import 'focus-within-polyfill';
 import 'picturefill';
 
 /** Import autoloaded dependencies */

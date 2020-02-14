@@ -9,6 +9,7 @@
   justify-content: flex-end;
   background-size: cover;
   background-position: center;
+  width: 100%;
 
   @media #{$medium-and-up} {
     background-color: darken($brand-primary, 5%);
