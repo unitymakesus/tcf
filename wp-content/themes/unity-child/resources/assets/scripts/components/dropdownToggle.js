@@ -1,4 +1,9 @@
 const dropdownToggles = () => {
+  // missing forEach on NodeList for IE11
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
+
   let dropdownToggles = document.querySelectorAll('.dropdown__toggle');
   if (dropdownToggles.length) {
     dropdownToggles.forEach(toggle => {

@@ -145,6 +145,7 @@
       margin-bottom: 0;
 
       input[type="search"] {
+        -webkit-appearance: none;
         border-color: transparent;
       }
 
@@ -184,7 +185,7 @@
     position: relative;
 
     a {
-      cursor: pointer;
+      cursor: pointer !important;
     }
   }
 

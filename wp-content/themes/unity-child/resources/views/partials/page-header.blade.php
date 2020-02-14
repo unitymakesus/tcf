@@ -5,7 +5,10 @@
 @endphp
 
 <header class="flex flex-direction-column">
-  <div class="page-header {{ $icon ? 'page-header--w-icon' : '' }} {{ $bg_img ? 'page-header--has-img' : '' }}" style="background-image: url('<?= $bg_img[0]; ?>')">
+<div class="page-header {{ $icon ? 'page-header--w-icon' : '' }} {{ $bg_img ? 'page-header--has-bg-img' : '' }}">
+    @if ($bg_img)
+      <div class="page-header__bg-cover" style="background-image:url({{ $bg_img[0] }});"></div>
+    @endif
     <div class="container">
       @if (!empty($icon))
         <div class="page-header__icon">
