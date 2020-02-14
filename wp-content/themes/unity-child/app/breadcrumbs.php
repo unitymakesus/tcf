@@ -3,6 +3,11 @@
 namespace App;
 
 /**
+ * Remove Breadcrumbs inline styles.
+ */
+add_filter('breadcrumb_trail_inline_style', '__return_false');
+
+/**
  * Override default Breadcrumbs args.
  *
  * @param array $args
