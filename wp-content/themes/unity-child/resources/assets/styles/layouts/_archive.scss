@@ -103,6 +103,10 @@
 
     margin-left: calc(2rem + 10px);
     margin-bottom: 0.5rem;
+
+    a {
+      text-decoration: underline;
+    }
   }
 
   &__wrap {
