@@ -3,6 +3,28 @@
     "title": "County Map",
     "fields": [
         {
+            "key": "field_5e4beed6eef17",
+            "label": "Display County Map",
+            "name": "county_map_display",
+            "type": "post_object",
+            "instructions": "Select which page the county map should display on.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "page"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
             "key": "field_5e0906a961da5",
             "label": "North Carolina",
             "name": "",
@@ -656,5 +678,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1581630448
+    "modified": 1582035076
 }

@@ -5,7 +5,7 @@
     <article {!! post_class() !!}>
       @include('partials.page-header')
       @include('partials.content-page')
-      @if (is_page('why-the-triangle'))
+      @if (get_the_ID() === get_field('county_map_display', 'options'))
         @include('partials.county-map')
       @endif
       @include('partials.page-footer-contact')
