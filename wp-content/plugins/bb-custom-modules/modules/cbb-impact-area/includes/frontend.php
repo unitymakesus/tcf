@@ -11,7 +11,7 @@
     <?php endif; ?>
     <?php if (!empty($settings->title)) : ?>
       <div class="impact-figure__title">
-        <a href="<?php echo esc_attr($settings->link); ?>" class="h4">
+        <a href="<?php echo esc_attr($settings->link); ?>" class="h4 a11y-link-wrap">
           <?php echo $settings->title; ?>
         </a>
       </div>

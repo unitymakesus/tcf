@@ -21,7 +21,7 @@ $first_name = get_field('first_name');
           @endif
 
           <div class="hide-on-med-and-up">
-            {!! get_the_post_thumbnail(get_the_ID(), 'large') !!}
+            {!! get_the_post_thumbnail(get_the_ID(), 'medium') !!}
           </div>
 
           <dl class="mt-10">
@@ -49,7 +49,7 @@ $first_name = get_field('first_name');
     </div>
     <div class="col s12 m4 pull-m8">
       <div class="hide-on-small-only">
-        {!! get_the_post_thumbnail(get_the_ID(), 'large') !!}
+        {!! get_the_post_thumbnail(get_the_ID(), 'large', ['class' => 'w-100']) !!}
       </div>
 
       @if (have_rows('hobbies'))

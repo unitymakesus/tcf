@@ -61,9 +61,8 @@ select:not(.browser-default) {
     border-color: $color-beige-med;
     background-color: $color-white;
     color: $color-beige-darker;
-    height: 30px;
+    height: 42px;
     width: 100%;
-    max-width: 275px;
     padding-right: 40px;
     margin: 0;
 
@@ -78,16 +77,22 @@ select:not(.browser-default) {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 1px;
-    right: 1px;
+    top: 0;
+    right: 0;
     padding: 0;
     border: 0;
-    width: 30px;
-    height: 30px;
-    color: $color-beige-darker;
+    width: 44px;
+    height: 44px;
+    background-color: $brand-primary;
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      background-color: $color-blue-dark;
+    }
 
     .material-icons {
-      font-size: rem-calc(24px);
+      font-size: rem-calc(24);
       line-height: 0;
     }
   }

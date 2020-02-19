@@ -1,9 +1,10 @@
 @php
-  $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($page_id), 'medium');
+  $the_id = $page_id ?? get_the_ID();
+  $bg_img = wp_get_attachment_image_src( get_post_thumbnail_id($the_id), 'medium');
 @endphp
 
 <header class="page-header--w-intro">
-@if (has_post_thumbnail($page_id))
+@if (has_post_thumbnail($the_id))
   <div class="row flex">
     <div class="col s12 m4">
       <div class="thumbnail-container" style="background-image: url('<?= $bg_img[0]; ?>')"></div>

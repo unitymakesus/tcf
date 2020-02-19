@@ -1,6 +1,10 @@
 .page-footer {
   background-color: darken($brand-primary, 5);
   padding: 0;
+
+  a:focus {
+    box-shadow: 0 0 0 3px rgba($color-white, 0.5);
+  }
 }
 
 .page-footer .footer-call-to-action {

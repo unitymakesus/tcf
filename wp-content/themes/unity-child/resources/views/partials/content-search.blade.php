@@ -1,7 +1,7 @@
 <article class="single-entry">
   <div class="single-entry__summary" itemprop="description">
     <h2 class="single-entry__title" itemprop="name">
-      <a href="{{ get_the_permalink() }}">{!! get_the_title() !!}</a>
+      <a class="a11y-link-wrap" href="{{ get_the_permalink() }}">{!! get_the_title() !!}</a>
     </h2>
     @php the_excerpt() @endphp
   </div>

@@ -8,6 +8,7 @@
     padding: 0;
     margin: 0;
     z-index: 0;
+    transition: box-shadow 0.3s ease-in-out;
 
     &__title {
       max-width: 325px;
@@ -21,21 +22,15 @@
       text-decoration: none !important;
       color: white;
 
-      &:hover,
-      &:focus {
+      &:hover {
         text-decoration: none !important;
       }
 
+      &:focus::after {
+        box-shadow: 0 0 0 2px rgba($brand-primary, 0.25);
+      }
+
       &::after {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: '';
         z-index: -1;
       }
     }
@@ -46,6 +41,17 @@
       width: 140px;
       z-index: 10;
       pointer-events: none;
+      transform: translateY(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover,
+    &:focus-within {
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+
+      img {
+        transform: translateY(-10px);
+      }
     }
   }
 }
@@ -59,7 +65,7 @@
     background-color: #00525F;
 
     a::after {
-      background-color: rgba(#00525F, 0.25);
+      background-color: rgba(#00525F, 0.75);
     }
   }
 }
@@ -73,7 +79,7 @@
     background-color: #859002;
 
     a::after {
-      background-color: rgba(#859002, 0.25);
+      background-color: rgba(#859002, 0.75);
     }
   }
 }
@@ -87,7 +93,7 @@
     background-color: #C75300;
 
     a::after {
-      background-color: rgba(#C75300, 0.25);
+      background-color: rgba(#C75300, 0.75);
     }
   }
 }
@@ -101,7 +107,7 @@
     background-color: #716557;
 
     a::after {
-      background-color: rgba(#716557, 0.25);
+      background-color: rgba(#716557, 0.75);
     }
   }
 }
@@ -115,7 +121,7 @@
     background-color: #414141;
 
     a::after {
-      background-color: rgba(#414141, 0.25);
+      background-color: rgba(#414141, 0.75);
     }
   }
 }

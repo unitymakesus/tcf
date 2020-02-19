@@ -3,6 +3,36 @@
 namespace App;
 
 /**
+ * Remove Breadcrumbs inline styles.
+ */
+add_filter('breadcrumb_trail_inline_style', '__return_false');
+
+/**
+ * Override default Breadcrumbs args.
+ *
+ * @param array $args
+ */
+add_filter('breadcrumb_trail_args', function($args) {
+  $args = [
+    'container'     => 'nav',
+    'before'        => '',
+    'after'         => '',
+    'browse_tag'    => 'div',
+    'list_tag'      => 'ul',
+    'item_tag'      => 'li',
+    'show_on_front' => true,
+    'network'       => false,
+    'show_title'    => true,
+    'show_browse'   => true,
+    'labels'        => [],
+    'post_taxonomy' => [],
+    'echo'          => true,
+  ];
+
+  return $args;
+});
+
+/**
  * Customize Breadcrumbs plugin
  */
 add_filter('breadcrumb_trail_object', function($args) {
@@ -12,7 +42,20 @@ add_filter('breadcrumb_trail_object', function($args) {
   $post_type = $post->post_type ?? '';
 
   if ($post_type == "simple-team") {
-    array_splice($breadcrumbs->items, 1, 0, '<a href="/team/">Team</a>');
+    $team_page = '';
+    if ($category = get_the_terms($post->ID, 'simple-team-category')) {
+      $category_name = $category[0]->name;
+      $team_page = get_page_by_title($category_name, OBJECT, 'page');
+    }
+    // Replace the People archive page with a "staff" page title matching the category title / slug.
+    if ($team_page) {
+      if ($parent = wp_get_post_parent_id($team_page)) {
+        array_splice($breadcrumbs->items, 1, 0, '<a href="'. get_the_permalink($parent) .'">'. get_the_title($parent) .'</a>');
+        $breadcrumbs->items[2] = '<a href="' . get_the_permalink($team_page) . '">' . $team_page->post_title . '</a>';
+      } else {
+        $breadcrumbs->items[1] = '<a href="' . get_the_permalink($team_page) . '">' . $team_page->post_title . '</a>';
+      }
+    }
   } elseif ($post_type == "event") {
     array_splice($breadcrumbs->items, 1, 0, '<a href="/events/">Events</a>');
   } elseif ($post_type == "post") {
@@ -37,22 +80,4 @@ add_filter('breadcrumb_trail_object', function($args) {
   }
 
   return $breadcrumbs;
-
-  function __construct( $args = [] ) {
-    $defaults = [
-      'container'       => 'nav',
-      'before'          => '',
-      'after'           => '',
-      'browse_tag'      => 'div',
-      'list_tag'        => 'ul',
-      'item_tag'        => 'li',
-      'show_on_front'   => true,
-      'network'         => false,
-      'show_title'      => true,
-      'show_browse'     => true,
-      'labels'          => [],
-      'post_taxonomy'   => [],
-      'echo'            => true
-    ];
-  };
 });

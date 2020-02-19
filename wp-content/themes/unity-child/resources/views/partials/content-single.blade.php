@@ -18,7 +18,7 @@
       @else
         <span class="entry-primary-term h4">Blog: Triangle Community Foundation</span>
       @endif
-      <h1 class="entry-title">{!! get_the_title() !!}</h1>
+      <h1 class="entry-title mb-0 page-header__title">{!! get_the_title() !!}</h1>
       @include('partials/entry-meta')
     </div>
   </header>

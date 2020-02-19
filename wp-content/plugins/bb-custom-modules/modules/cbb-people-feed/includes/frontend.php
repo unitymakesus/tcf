@@ -11,7 +11,7 @@
         </div>
         <div class="details">
           <?php if (get_field('about', $person)) : ?>
-          <a class="link-wrap" href="<?= get_the_permalink($person); ?>">
+          <a class="a11y-link-wrap" href="<?= get_the_permalink($person); ?>">
             <div class="details__name"><?= $person->post_title; ?></div>
           </a>
           <?php else : ?>

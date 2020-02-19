@@ -25,7 +25,8 @@ add_action('wp_enqueue_scripts', function () {
 
   // Awards app.
   if (basename(get_page_template()) == 'template-awards.blade.php') {
-    wp_enqueue_script('sage/awards.js', asset_path('scripts/awards.js'), [], null, true);
+    wp_enqueue_script('sage/js-polyfill', 'https://cdn.polyfill.io/v2/polyfill.min.js?features=Promise', [], null, true);
+    wp_enqueue_script('sage/awards.js', asset_path('scripts/awards.js'), ['sage/js-polyfill'], null, true);
   }
 
   // Set array of theme customizations for JS
@@ -155,4 +156,4 @@ array_map(function ($file) use ($sage_error) {
   if (!locate_template($file, true, true)) {
     $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
   }
-}, ['archive', 'admin', 'child-helpers', 'wp-api']);
+}, ['archive', 'admin', 'child-helpers', 'nav', 'wp-api']);

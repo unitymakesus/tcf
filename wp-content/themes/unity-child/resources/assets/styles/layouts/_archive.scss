@@ -35,10 +35,12 @@
 
 .archive-filters {
   &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 1rem 1rem 0 1rem;
     width: 100%;
+
+    .dropdown {
+      margin: 1rem 0;
+    }
   }
 
   &__filter {
@@ -50,6 +52,11 @@
     color: $color-beige-darker;
     text-decoration: none;
 
+    &:hover:not(.active),
+    &:focus:not(.active) {
+      background-color: lighten($color-beige-med, 10%);
+    }
+
     &.active {
       background-color: $color-white;
     }
@@ -57,6 +64,19 @@
 
   .btn {
     margin-right: 0;
+  }
+
+  @media #{$medium-and-up} {
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+
+      .dropdown {
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -83,6 +103,10 @@
 
     margin-left: calc(2rem + 10px);
     margin-bottom: 0.5rem;
+
+    a {
+      text-decoration: underline;
+    }
   }
 
   &__wrap {

@@ -65,7 +65,11 @@
               @endif
             </div>
             <div class="event-grouping__image">
-              <img src="@asset('images/textures/texture-triangles-gray.svg')" alt="" />
+              @if ($img = get_sub_field('event_grouping_image'))
+                <img src="{{ $img['sizes']['medium'] }}" alt="{{ $img['alt'] }}" />
+              @else
+                <img src="@asset('images/textures/texture-triangles-gray.svg')" alt="" />
+              @endif
             </div>
           </div>
           @if ($term_id = get_sub_field('event_grouping_upcoming_events'))
@@ -95,7 +99,11 @@
               @endif
             </div>
             <div class="event-grouping__image">
-              <img src="@asset('images/textures/texture-triangles-gray.svg')" alt="" />
+              @if ($img = get_sub_field('event_grouping_image'))
+                <img src="{{ $img['sizes']['medium'] }}" alt="{{ $img['alt'] }}" />
+              @else
+                <img src="@asset('images/textures/texture-triangles-gray.svg')" alt="" />
+              @endif
             </div>
           </div>
           @if ($term_id = get_sub_field('event_grouping_upcoming_events'))

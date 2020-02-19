@@ -103,7 +103,7 @@ class AwardsList extends Component {
   }
 
   render() {
-    let { headers, rows, sortDir, sortedBy } = this.state;
+    let { headers, rows, sortDir, sortedBy, isLoading } = this.state;
 
     return (
       <Fragment>
@@ -115,6 +115,9 @@ class AwardsList extends Component {
           sortedBy={sortedBy}
           handleTableSort={this.handleTableSort}
         />
+        {rows.length < 1 && !isLoading &&
+          <div>No results found.</div>
+        }
       </Fragment>
     );
   }
