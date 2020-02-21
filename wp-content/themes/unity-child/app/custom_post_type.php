@@ -167,22 +167,7 @@ function create_taxonomies() {
 			'name' => __( 'Categories' ),
 			'singular_name' => __( 'Category' )
 		),
-		'publicly_queryable' => true,
-		'show_ui' => true,
-    'show_admin_column' => true,
-		'show_in_nav_menus' => false,
-		'show_in_rest' => true,
-		'hierarchical' => true,
-		'rewrite' => false
-	);
-  register_taxonomy('event_category', 'event', $argsEventCategories);
-
-  $argsEventCategories = array(
-		'labels' => array(
-			'name' => __( 'Categories' ),
-			'singular_name' => __( 'Category' )
-		),
-		'publicly_queryable' => true,
+		'publicly_queryable' => false,
 		'show_ui' => true,
     'show_admin_column' => true,
 		'show_in_nav_menus' => false,
@@ -197,7 +182,7 @@ function create_taxonomies() {
 			'name' => __( 'Categories' ),
 			'singular_name' => __( 'Category' )
 		),
-		'publicly_queryable' => true,
+		'publicly_queryable' => false,
 		'show_ui' => true,
     'show_admin_column' => true,
 		'show_in_nav_menus' => false,
@@ -212,7 +197,7 @@ function create_taxonomies() {
 			'name' => __( 'Categories' ),
 			'singular_name' => __( 'Category' )
 		),
-		'publicly_queryable' => true,
+		'publicly_queryable' => false,
 		'show_ui' => true,
     'show_admin_column' => true,
 		'show_in_nav_menus' => false,
@@ -227,7 +212,7 @@ function create_taxonomies() {
 			'name' => __( 'Types' ),
 			'singular_name' => __( 'Type' )
 		),
-		'publicly_queryable' => true,
+		'publicly_queryable' => false,
 		'show_ui' => true,
     'show_admin_column' => true,
 		'show_in_nav_menus' => false,
