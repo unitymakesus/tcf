@@ -14,7 +14,8 @@
       <span class="single-entry__label">Blog: Triangle Community Foundation</span>
     @endif
     <h2 class="single-entry__title mt-4" itemprop="name">
-      <a class="a11y-link-wrap" href="{{ get_the_permalink() }}">{!! get_the_title() !!}</h2></a>
+      <a class="a11y-link-wrap" href="{{ get_the_permalink() }}">{!! get_the_title() !!}</a>
+    </h2>
     <div class="single-entry__meta">
       @include('partials/entry-meta')
     </div>

@@ -1,5 +1,5 @@
 ---
 deployment:
  tasks:
-  - export DEPLOYPATH=/home/trianglecfbeta/public_html/
+  - export DEPLOYPATH=/home/trianglecf/public_html/
   - /bin/cp -R * $DEPLOYPATH

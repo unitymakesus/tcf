@@ -72,7 +72,6 @@
         </div>
       </div>
     </nav>
-  </div>
 </header>
 
 @if ( !is_front_page() && function_exists( 'breadcrumb_trail' ) )
