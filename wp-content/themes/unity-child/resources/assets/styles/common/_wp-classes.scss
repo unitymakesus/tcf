@@ -23,6 +23,11 @@
   height: auto;
 }
 
+.alignwide {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 @media #{$medium-and-up} {
   .alignleft {
     float: left;
