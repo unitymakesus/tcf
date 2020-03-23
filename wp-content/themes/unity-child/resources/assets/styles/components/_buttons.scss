@@ -122,3 +122,11 @@ a.btn--grey {
   border-width: 1px;
   font-size: rem-calc(14);
 }
+
+// Gutenberg
+.wp-block-button {
+  &__link {
+    @extend .btn;
+    @extend .btn--orange;
+  }
+}
