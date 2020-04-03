@@ -5,9 +5,9 @@ Plugin URI: https://wppopupmaker.com/?utm_capmaign=Readme&utm_source=readme-head
 Donate link:
 Tags:  marketing, popup, popups, optin, advertising, conversion, responsive popups, promotion, popover, pop-up, pop over, lightbox, conversion, modal
 Requires at least: 4.1
-Tested up to: 5.3
+Tested up to: 5.4
 Requires PHP: 5.6
-Stable tag: 1.9.1
+Stable tag: 1.9.2
 License: GPLv2 or later
 License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ Everything you need to create unique popup user experiences. Insert forms & othe
 = Create Effective Popups For WordPress =
 [Popup Maker](https://wppopupmaker.com)™ is the **best popup plugin WordPress** has to offer. It is incredibly versatile & flexible. Bend it to create any type of popup, modal, or content overlay for your WordPress website.
 
-Easily create email opt-in popups, contact form popups, announcements, [EU cookie notices](https://ninjaforms.com/eu-cookie-notices-ninja-forms/), slide-ins, & more. Check out some examples in our video below:
+Easily create email opt-in popups, contact form popups, Coronavirus/COVID-19 announcements, [EU cookie notices](https://ninjaforms.com/eu-cookie-notices-ninja-forms/), slide-ins, & more. Check out some examples in our video below:
 
 https://www.youtube.com/watch?v=PomnMganMVM
 
@@ -27,7 +27,7 @@ https://www.youtube.com/watch?v=PomnMganMVM
 Create unlimited popups of every type you need and customize every facet of each of your popups from theme and position, to targeting and cookies.
 
  = Trusted by many people just like you! =
-Popup Maker is used on over 400,000 websites and has received over 3,100 5-star reviews just like this one:
+Popup Maker is used on over 500,000 websites and has received over 3,500 5-star reviews just like this one:
 
 > **Great product – best I’ve used!**
 > "I’ve tried many different popup programs, but I must say I find this one the best!" ~[@jessefjosserand](https://wordpress.org/support/topic/great-product-best-ive-used/)
@@ -36,11 +36,11 @@ Popup Maker is used on over 400,000 websites and has received over 3,100 5-star 
 
 * This popup plugin has limitless potential with no restrictions. If you can’t get the functionality you’re after, we’ll be happy to help you! Just ask at [https://wppopupmaker.com/support/](https://wppopupmaker.com/support/).
 * Slide Out Popups, Banner Bars, Floating Sticky Popups, Notification Popups, Loading Screen Popups, Video Lightboxes, and Opt-In Form Popups.
-* Our popups support the most popular form building plugins available: Ninja Forms, Gravity Forms, Contact Form 7, & More.
+* Our popups support the most popular form building plugins available: Ninja Forms, Gravity Forms, Contact Form 7 (CF7), Caldera Forms, WPForms, Mailchimp for WordPress (MC4WP), & More.
 * We support every list building form, including but not limited to: MailChimp, AWeber, InfusionSoft, GetResponse, Constant Contact, Mail Poet, Mad Mimi, Hubspot, and Emma.
 * Use our unique **Popup Editor** to build any content you can imagine inside of our popups, plus control popup sizing, position, animation, and so much more.
 * **Conditions** allow you to target exactly who will (and will not) see your popups. Target any WordPress content such as: posts, pages, and 26 more!
-* We have included specific conditions for popular plugins such as WooCommerce.
+* Create WooCommerce popups easily with built in targeting rules for Products & Shop pages.
 * Dictate the frequency at which users see your popups using **Cookies**, and edit how the cookies are created using Cookie Creation Events.
 * **Click Triggers** allows you to trigger a popup on click of menu items, sidebars, buttons, images, or any other content on your site. We have various methods allowing you to integrate our click triggers with nearly any plugin or theme.
 * **Auto Open Triggers** allows you to set a **timed delay**, then the popup will display according to your preference.
@@ -124,6 +124,9 @@ There are several common causes for this, check [this guide for help](https://do
 == Changelog ==
 
 View our [complete changelog](https://github.com/PopupMaker/Popup-Maker/blob/master/CHANGELOG.md) for up-to-date information on what has been going on with the development of Popup Maker.
+
+= v1.9.2 - 03/26/2020 =
+* Tweak: Add support for WP 5.4's new method of adding custom fields to the nav menu editor.
 
 = v1.9.1 - 02/13/2020 =
 * Fix: JS error when MailChimp for WordPress was active but no forms on the page.

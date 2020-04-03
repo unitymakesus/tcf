@@ -1,12 +1,8 @@
-### 4.6.3 | 2019-08-15
+### 4.7 | 2020-03-24
+- Added translations for Hebrew, Hindi, Japanese, and Turkish.
 - Added support for feed duplication.
-
-
-### 4.6.2 | 2019-08-02
+- Updated stylesheets to use minified versions.
 - Updated strings containing MailChimp to Mailchimp and list(s) to audience(s).
-
-
-### 4.6.1 | 2019-07-08
 - Fixed a PHP error which could occur when using the http_request_timeout filter with WP 5.1+.
 
 
