@@ -49,13 +49,17 @@ class UABB_Init {
 
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_uabb_admin_notice_js' ) );
 
-			add_action( 'wp_ajax_dismissed_notice_handler', array( $this, 'load_uabb_ajax_notice_handler' ) );
+			if ( current_user_can( 'manage_options' ) ) {
 
-			add_action( 'wp_ajax_dismissed_login_notice_handler', array( $this, 'load_uabb_ajax_login_notice_handler' ) );
+				add_action( 'wp_ajax_dismissed_notice_handler', array( $this, 'load_uabb_ajax_notice_handler' ) );
 
-			add_action( 'wp_ajax_uabb_batch_dismiss_notice', array( $this, 'uabb_batch_dismiss_notice_handler' ) );
+				add_action( 'wp_ajax_dismissed_login_notice_handler', array( $this, 'load_uabb_ajax_login_notice_handler' ) );
 
-			add_action( 'wp_ajax_uabb_batch_dismiss_complete_notice', array( $this, 'uabb_batch_dismiss_complete_notice' ) );
+				add_action( 'wp_ajax_uabb_batch_dismiss_notice', array( $this, 'uabb_batch_dismiss_notice_handler' ) );
+
+				add_action( 'wp_ajax_uabb_batch_dismiss_complete_notice', array( $this, 'uabb_batch_dismiss_complete_notice' ) );
+
+			}
 
 			add_filter( 'fl_builder_style_fields', array( $this, 'uabb_copy_style_fields' ) );
 
@@ -194,6 +198,7 @@ class UABB_Init {
 
 		require_once BB_ULTIMATE_ADDON_DIR . 'classes/batch-process/class-uabb-batch-process.php';
 		require_once BB_ULTIMATE_ADDON_DIR . 'lib/notices/class-astra-notices.php';
+		require_once BB_ULTIMATE_ADDON_DIR . 'admin/bsf-analytics/class-bsf-analytics.php';
 
 		// Load the appropriate text-domain.
 		$this->load_plugin_textdomain();

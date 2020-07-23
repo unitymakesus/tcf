@@ -1954,6 +1954,12 @@ if ( ! $version_bb_check ) {
 	}
 <?php } ?>
 
+/***************************** Accordion **********************************/
+<?php if ( 'default' === $settings->creative_mobile_menu_type && isset( $settings->collapse_menu ) && 'yes' === $settings->collapse_menu ) { ?>
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-creative-menu .menu {
+		display: none;
+	}
+<?php } ?>
 
 /***************************** Off Canvas **********************************/
 <?php if ( 'off-canvas' === $settings->creative_mobile_menu_type ) { ?>

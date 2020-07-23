@@ -1,4 +1,41 @@
-### Unreleased Changes
+### v1.11.0 - 06/25/2020
+* Feature: Add new floating bar theme.
+* Feature: New guided tour of popup editor for first time users.
+* Feature: New href attribute on the popup_close shortcode for when setting the shortcode to use the `a` tag.
+* Fix: Shortcode popup_close tag attribute not functioning properly.
+* Tweak: Change popup_close tag setting to use a drop-down for more easily selecting which tag to use.
+* Tweak: Improve explanation of cookies in new trigger modal.
+* Tweak: Ensure all admin pages have visible page headings.
+* Tweak: Simplify name and title fields in popup editor.
+* Tweak: Add popup ID to quick links on All Popups.
+* Tweak: Move CSS and JS for our admin bar node to external file.
+* Tweak: Add our new optional telemetry system.
+
+### v1.10.2 - 06/09/2020
+* Fix: Popup Settings not working when WP Forms is active without forms
+* Fix: Missing closing div in new [popup_cookie] shortcode.
+* Fix: Shortcode popup_close tag attribute not functioning properly.
+
+### v1.10.1 - 04/21/2020
+* Fix: Typo in filter name caused extra p tags.
+* Fix: Add wp version check to prevent calling block functions on older versions or classicpress.
+* Fix: Font Awesome support now works for v4 fonts.
+
+### v1.10.0 - 04/20/2020
+* Feature: Display presets for top bar, bottom right slide-ins, full-screen popups & bottom left notifications to make it simple to get common setups done much quicker
+* Feature: Popup Trigger inline text format for the block editor.   
+* Feature: Turn any block in Gutenberg block editor into a popup trigger.
+* Feature: Font Awesome support added to close button text setting.
+* Feature: Play a sound when a popup is opened. Choose from 5 included sounds or upload your own.
+* Feature: Insert customizable [popup_cookie] shortcode on thank you pages when using non-integrated forms.
+* Tweak: Add option to disable or adjust the padding-right added to body.
+* Tweak: Remove Freemius integration from Popup Maker.
+* Improvement: Detect file permission issues with Asset Caching functionality.
+* Fix: Prevent popups from going off the screen when using center position for a tall popup.
+* Fix: Bug in slide animation origin positioning for bottom or right origins.
+* Fix: Bug where Middle Center caused tall popups to hang off the screen on small screens.
+* Fix: Typo in admin editor CSS path.
+* Fix: Bug on fresh installs where default theme's close position is wrong.
 
 ### v1.9.2 - 03/26/2020
 * Tweak: Add support for WP 5.4's new method of adding custom fields to the nav menu editor.

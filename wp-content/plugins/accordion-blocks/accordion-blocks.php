@@ -2,11 +2,13 @@
 
 /**
  * Plugin Name: Accordion Blocks
+ * Plugin URI: https://github.com/philbuchanan/Accordion-Blocks
  * Description: Gutenberg blocks for creating responsive accordion drop-downs.
- * Version: 1.1.1
+ * Version: 1.1.4
+ * Requires at least: 5.0
  * Author: Phil Buchanan
  * Author URI: https://philbuchanan.com
- * Text Domain: pb
+ * License: GPLv2 or later
  */
 
 // Make sure to not redeclare the class
@@ -24,15 +26,12 @@ class PB_Accordion_Blocks {
 
 	/**
 	 * Class constructor
-	 * Sets up the plugin, including: textdomain and registering scripts.
+	 * Sets up the plugin, including registering scripts.
 	 */
 	function __construct() {
 		$basename = plugin_basename(__FILE__);
 
 		$this->plugin_version = $this->get_plugin_version();
-
-		// Load text domain
-		load_plugin_textdomain('accordion_blocks', false, dirname($basename) . '/languages/');
 
 		// Register block
 		add_action('init', array($this, 'register_block'));
@@ -78,9 +77,9 @@ class PB_Accordion_Blocks {
 
 		wp_register_style(
 			'pb-accordion-blocks-style',
-			plugins_url('css/accordion-blocks.css', __FILE__),
+			plugins_url('build/index.css', __FILE__),
 			array(),
-			$this->plugin_version
+			$asset_file['version']
 		);
 
 		register_block_type('pb/accordion-item', array(
@@ -114,7 +113,7 @@ class PB_Accordion_Blocks {
 	public function add_documentation_link($links) {
 		array_push($links, sprintf('<a href="%s">%s</a>',
 			'http://wordpress.org/plugins/accordion-blocks/',
-			_x('Documentation', 'link to documentation on wordpress.org site', 'pb')
+			_x('Documentation', 'link to documentation on wordpress.org site', 'accordion-blocks')
 		));
 
 		return $links;

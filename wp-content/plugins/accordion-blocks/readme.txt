@@ -2,10 +2,10 @@
 Contributors: philbuchanan
 Author URI: https://philbuchanan.com/
 Donate Link: https://philbuchanan.com/
-Tags: accordion, accordions, gutenberg, blocks, responsive accordions, accordions plugin, jquery accordions, accordions plugin wordpress, accordions plugin jquery
+Tags: accordion, accordions, gutenberg, blocks, responsive
 Requires at least: 5.0
-Tested up to: 5.4
-Stable tag: 1.1.1
+Tested up to: 5.5
+Stable tag: 1.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,7 @@ The accordions should blend seamlessly with your theme. However, you may want to
 * Manually close items by clicking the title again.
 * Scroll page to title when it's clicked open (including setting a scroll offset position).
 * Set the HTML heading tag for the title element (h1–h4, button).
+* Set defaults to be applied to all new accordion items or reset a specific accordion item to the defaults.
 
 = Output =
 
@@ -86,6 +87,17 @@ For bug reports or feature requests or if you'd like to contribute to the plugin
 2. Accordion block in the editor
 
 == Changelog ==
+= 1.1.4 =
+* Added: Support for WordPress 5.5
+* Fixed: no-js styles are now specific to the accordion item block
+
+= 1.1.3 =
+* Fixed: When typing backspace on a button title, it would delete the entire accordion item instead of backspacing a character
+
+= 1.1.2 =
+* Fixed: Accordion titles once again support bold and italic formats
+* Fixed: Translation should now be possible via WordPress translation site
+
 = 1.1.1 =
 * Fixed: An issue where, on some sites, accordion content would not smoothly animate open, instead just appearing instantly after a short delay
 * Fixed: Duplicated accordion items now have unique IDs which should resolve the issue where clicking on the duplicate title opens the original block
@@ -119,6 +131,15 @@ For bug reports or feature requests or if you'd like to contribute to the plugin
 * All new plugin to support the new WordPress Gutenberg editor.
 
 == Upgrade Notice ==
+= 1.1.4 =
+Added support for WordPress 5.5 and made no-js styles specific to the accordion item block.
+
+= 1.1.3 =
+Fixed an issue where typing backspace on a button title type would delete the entire accordion item instead of backspacing a character.
+
+= 1.1.2 =
+Restored bold and italic formatting of accordion titles and fixed translation strings.
+
 = 1.1.1 =
 Fixed a couple small bugs accidentally introduced in version 1.1.0 of the plugin.
 
