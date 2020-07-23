@@ -6,11 +6,13 @@
     </div>
     @php the_content() @endphp
   </div>
-  <div class="single-entry__image">
-    @if (has_post_thumbnail())
-      {!! the_post_thumbnail('small') !!}
-    @else
-      <img src="@asset('images/textures/texture-triangles-gray.svg')" alt="" />
-    @endif
-  </div>
+  @if (get_field('press_disable_image') == false)
+    <div class="single-entry__image">
+      @if (has_post_thumbnail())
+        {!! the_post_thumbnail('small') !!}
+      @else
+        <img src="@asset('images/textures/texture-triangles-gray.svg')" alt="" />
+      @endif
+    </div>
+  @endif
 </article>

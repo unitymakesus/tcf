@@ -37,6 +37,25 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_5f15eceae8a47",
+            "label": "Disable Image",
+            "name": "press_disable_image",
+            "type": "true_false",
+            "instructions": "Enable this setting to hide the Featured Image (or fallback image) for this Press item.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -56,5 +75,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1579728369
+    "modified": 1595272484
 }
