@@ -223,3 +223,15 @@ function create_taxonomies() {
 	register_taxonomy('tcf_post_type', 'post', $argsTypes);
 }
 add_action( 'init', __NAMESPACE__.'\\create_taxonomies' );
+
+/**
+ * Redirect all single Press posts to the archive template.
+ */
+add_action('template_redirect', function () {
+    if (!is_singular('press')) {
+        return;
+    }
+
+    wp_redirect(get_post_type_archive_link('press'), 301);
+    exit;
+});
