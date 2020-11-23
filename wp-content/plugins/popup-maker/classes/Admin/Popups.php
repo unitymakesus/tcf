@@ -18,6 +18,10 @@ class PUM_Admin_Popups {
 	 * Hook the initialize method to the WP init action.
 	 */
 	public static function init() {
+
+		// Adds ID to top of popup editor.
+		add_action( 'edit_form_top', array( __CLASS__, 'add_popup_id' ) );
+
 		// Change title to popup name.
 		add_filter( 'enter_title_here', array( __CLASS__, '_default_title' ) );
 
@@ -27,7 +31,7 @@ class PUM_Admin_Popups {
 		// Add Contextual help to post_name field.
 		add_action( 'edit_form_before_permalink', array( __CLASS__, 'popup_post_title_contextual_message' ) );
 
-		// Regitster Metaboxes
+		// Register Metaboxes.
 		add_action( 'add_meta_boxes', array( __CLASS__, 'meta_box' ) );
 
 		// Process meta saving.
@@ -41,16 +45,57 @@ class PUM_Admin_Popups {
 		add_filter( 'manage_edit-popup_columns', array( __CLASS__, 'dashboard_columns' ) );
 		add_action( 'manage_posts_custom_column', array( __CLASS__, 'render_columns' ), 10, 2 );
 		add_filter( 'manage_edit-popup_sortable_columns', array( __CLASS__, 'sortable_columns' ) );
+		add_filter( 'default_hidden_columns', array( __CLASS__, 'hide_columns' ), 10, 2 );
 		add_action( 'load-edit.php', array( __CLASS__, 'load' ), 9999 );
 		add_action( 'restrict_manage_posts', array( __CLASS__, 'add_popup_filters' ), 100 );
 		add_filter( 'post_row_actions', array( __CLASS__, 'add_id_row_actions' ), 2, 100 );
+
+		add_action( 'post_submitbox_misc_actions', array( __CLASS__, 'add_enabled_toggle_editor' ), 10, 1 );
+	}
+
+	/**
+	 * Adds our enabled state toggle to the "Publish" meta box.
+	 *
+	 * @since 1.12
+	 * @param WP_POST $post The current post (i.e. the popup).
+	 */
+	public static function add_enabled_toggle_editor( $post ) {
+		if ( 'publish' !== $post->post_status || 'popup' !== $post->post_type ) {
+			return;
+		}
+		$popup   = pum_get_popup( $post->ID );
+		$enabled = $popup->is_enabled();
+		$nonce   = wp_create_nonce( "pum_save_enabled_state_{$popup->ID}" );
+		?>
+		<div class="misc-pub-section" style="display:flex;">
+			<span style="font-weight: bold; margin-right: 10px;">Popup Enabled </span>
+			<div class="pum-toggle-button">
+				<input id="pum-enabled-toggle-<?php echo esc_attr( $popup->ID ); ?>" type="checkbox" <?php checked( true, $enabled ); ?> class="pum-enabled-toggle-button" data-nonce="<?php echo esc_attr( $nonce ); ?>" data-popup-id="<?php echo esc_attr( $popup->ID ); ?>">
+				<label for="pum-enabled-toggle-<?php echo esc_attr( $popup->ID ); ?>" aria-label="Switch to enable popup"></label>
+			</div>
+		</div>
+
+		<?php
+	}
+
+	/**
+	 * Adds the Popup ID right under the "Edit Popup" heading
+	 *
+	 * @param WP_Post $post Post object.
+	 * @since 1.12.0
+	 */
+	public static function add_popup_id( $post ) {
+		if ( 'popup' === $post->post_type ) {
+			?>
+			<p style="margin:0;font-size:12px;">ID: <span id="popup-id" data-popup-id="<?php echo esc_attr( $post->ID ); ?>"><?php echo esc_html( $post->ID ); ?></span></p>
+			<?php
+		}
 	}
 
 	/**
 	 * Change default "Enter title here" input
 	 *
-	 * @param string $title Default title placeholder text
-	 *
+	 * @param string $title Default title placeholder text.
 	 * @return string $title New placeholder text
 	 */
 	public static function _default_title( $title ) {
@@ -61,12 +106,12 @@ class PUM_Admin_Popups {
 
 		$screen = get_current_screen();
 
-		if ( 'popup_theme' == $screen->post_type ) {
-			$label = $screen->post_type == 'popup' ? __( 'Popup', 'popup-maker' ) : __( 'Popup Theme', 'popup-maker' );
-			$title = sprintf( __( '%s Name', 'popup-maker' ), $label );
+		if ( 'popup_theme' === $screen->post_type ) {
+			$label = 'popup' === $screen->post_type ? __( 'Popup', 'popup-maker' ) : __( 'Popup Theme', 'popup-maker' );
+			$title = sprintf( '%s Name', $label );
 		}
 
-		if ( 'popup' == $screen->post_type ) {
+		if ( 'popup' === $screen->post_type ) {
 			$title = __( 'Popup Name', 'popup-maker' );
 		}
 
@@ -92,10 +137,10 @@ class PUM_Admin_Popups {
 			<div id="popup-titlediv" class="pum-form">
 				<div id="popup-titlewrap">
 					<label class="screen-reader-text" id="popup-title-prompt-text" for="popup-title">
-						<?php _e( 'Popup Title', 'popup-maker' ); ?>
+						<?php esc_html_e( 'Popup Title', 'popup-maker' ); ?>
 					</label>
-					<input tabindex="2" name="popup_title" size="30" value="<?php echo esc_attr( get_post_meta( $post->ID, 'popup_title', true ) ); ?>" id="popup-title" autocomplete="off" placeholder="<?php _e( 'Popup Title', 'popup-maker' ); ?>" />
-					<p class="pum-desc"><?php echo '(' . __( 'Optional', 'popup-maker' ) . ') ' . __( 'Shown as headline inside the popup. Can be left blank.', 'popup-maker' ); ?></p>
+					<input tabindex="2" name="popup_title" size="30" value="<?php echo esc_attr( get_post_meta( $post->ID, 'popup_title', true ) ); ?>" id="popup-title" autocomplete="off" placeholder="<?php esc_html_e( 'Popup Title', 'popup-maker' ); ?>" />
+					<p class="pum-desc"><?php echo '(' . esc_html__( 'Optional', 'popup-maker' ) . ') ' . esc_html__( 'Shown as headline inside the popup. Can be left blank.', 'popup-maker' ); ?></p>
 				</div>
 				<div class="inside"></div>
 			</div>
@@ -119,7 +164,7 @@ class PUM_Admin_Popups {
 		}
 
 		if ( 'popup' == $typenow && in_array( $pagenow, array( 'post-new.php', 'post.php' ) ) ) { ?>
-			<p class="pum-desc"><?php echo '(' . __( 'Required', 'popup-maker' ) . ') ' . __( 'Enter a name to help you remember what this popup is about. Only you will see this.', 'popup-maker' ); ?></p>
+			<p class="pum-desc"><?php echo '(' . esc_html__( 'Required', 'popup-maker' ) . ') ' . esc_html__( 'Enter a name to help you remember what this popup is about. Only you will see this.', 'popup-maker' ); ?></p>
 			<?php
 		}
 	}
@@ -135,11 +180,10 @@ class PUM_Admin_Popups {
 	/**
 	 * Ensures integrity of values.
 	 *
-	 * @param array $values
-	 *
+	 * @param array $values Array of settings.
 	 * @return array
 	 */
-	public static function parse_values( $values = [] ) {
+	public static function parse_values( $values = array() ) {
 		$defaults = self::defaults();
 
 		if ( empty( $values ) ) {
@@ -183,7 +227,7 @@ class PUM_Admin_Popups {
 
 		<div id="pum-popup-settings-container" class="pum-popup-settings-container">
 			<div class="pum-no-js" style="padding: 0 12px;">
-				<p><?php printf( __( 'If you are seeing this, the page is still loading or there are Javascript errors on this page. %sView troubleshooting guide%s', 'popup-maker' ), '<a href="https://docs.wppopupmaker.com/article/373-checking-for-javascript-errors" target="_blank">', '</a>' ); ?></p>
+				<p><?php printf( esc_html__( 'If you are seeing this, the page is still loading or there are Javascript errors on this page. %sView troubleshooting guide%s', 'popup-maker' ), '<a href="https://docs.wppopupmaker.com/article/373-checking-for-javascript-errors" target="_blank">', '</a>' ); ?></p>
 			</div>
 		</div>
 		<?php
@@ -686,7 +730,7 @@ class PUM_Admin_Popups {
 						),
 						'position_from_trigger' => array(
 							'label'    => __( 'Position from Trigger', 'popup-maker' ),
-							'desc'     => sprintf( __( 'This will position the popup in relation to the %sClick Trigger%s.', 'popup-maker' ), '<a target="_blank" href="https://docs.wppopupmaker.com/article/144-trigger-click-open?utm_medium=inline-doclink&utm_campaign=ContextualHelp&utm_source=plugin-popup-editor&utm_content=position-from-trigger">', '</a>' ),
+							'desc'     => sprintf( __( 'This will position the popup in relation to the %sClick Trigger%s.', 'popup-maker' ), '<a target="_blank" href="https://docs.wppopupmaker.com/article/395-trigger-click-open-overview-methods?utm_campaign=contextual-help&utm_medium=inline-doclink&utm_source=plugin-popup-editor&utm_content=position-from-trigger">', '</a>' ),
 							'type'     => 'checkbox',
 							'std'      => false,
 							'priority' => 40,
@@ -1022,15 +1066,16 @@ class PUM_Admin_Popups {
 	public static function render_analytics_meta_box() {
 		global $post;
 
-		$popup = pum_get_popup( $post->ID ); ?>
+		$popup = pum_get_popup( $post->ID );
+		?>
 		<div id="pum-popup-analytics" class="pum-meta-box">
 
 			<?php do_action( 'pum_popup_analytics_metabox_before', $post->ID ); ?>
 
 			<?php
-			$opens = $popup->get_event_count( 'open', 'current' );
-			//$conversions     = $popup->get_event_count( 'conversion', 'current' );
-			//$conversion_rate = $opens > 0 && $opens >= $conversions ? $conversions / $opens * 100 : false;
+			$opens           = $popup->get_event_count( 'open' );
+			$conversions     = $popup->get_event_count( 'conversion' );
+			$conversion_rate = $opens > 0 && $opens >= $conversions ? $conversions / $opens * 100 : 0;
 			?>
 
 			<div id="pum-popup-analytics" class="pum-popup-analytics">
@@ -1038,42 +1083,38 @@ class PUM_Admin_Popups {
 				<table class="form-table">
 					<tbody>
 					<tr>
-						<td><?php _e( 'Opens', 'popup-maker' ); ?></td>
-						<td><?php echo $opens; ?></td>
+						<td><?php esc_html_e( 'Opens', 'popup-maker' ); ?></td>
+						<td><?php echo esc_html( $opens ); ?></td>
 					</tr>
-					<?php /* if ( $conversion_rate > 0 ) : ?>
-						<tr>
-							<td><?php _e( 'Conversions', 'popup-maker' ); ?></td>
-							<td><?php echo $conversions; ?></td>
-						</tr>
-					<?php endif; */ ?>
-					<?php /* if ( $conversion_rate > 0 ) : ?>
-						<tr>
-							<td><?php _e( 'Conversion Rate', 'popup-maker' ); ?></td>
-							<td><?php echo round( $conversion_rate, 2 ); ?>%</td>
-						</tr>
-					<?php endif; */ ?>
+					<tr>
+						<td><?php esc_html_e( 'Conversions', 'popup-maker' ); ?></td>
+						<td><?php echo esc_html( $conversions ); ?></td>
+					</tr>
+					<tr>
+						<td><?php esc_html_e( 'Conversion Rate', 'popup-maker' ); ?></td>
+						<td><?php echo esc_html( round( $conversion_rate, 2 ) ); ?>%</td>
+					</tr>
 					<tr class="separator">
 						<td colspan="2">
 							<label> <input type="checkbox" name="popup_reset_counts" id="popup_reset_counts" value="1" />
-								<?php _e( 'Reset Counts', 'popup-maker' ); ?>
+								<?php esc_html_e( 'Reset Counts', 'popup-maker' ); ?>
 							</label>
 							<?php if ( ( $reset = $popup->get_last_count_reset() ) ) : ?><br />
 								<small>
-									<strong><?php _e( 'Last Reset', 'popup-maker' ); ?>:</strong> <?php echo date( 'm-d-Y H:i', $reset['timestamp'] ); ?>
-									<br /> <strong><?php _e( 'Previous Opens', 'popup-maker' ); ?>:</strong> <?php echo $reset['opens']; ?>
+									<strong><?php esc_html_e( 'Last Reset', 'popup-maker' ); ?>:</strong> <?php echo esc_html( date( 'm-d-Y H:i', $reset['timestamp'] ) ); ?>
+									<br /> <strong><?php esc_html_e( 'Previous Opens', 'popup-maker' ); ?>:</strong> <?php echo esc_html( $reset['opens'] ); ?>
 
-									<?php /* if ( $reset['conversions'] > 0 ) : ?>
+									<?php if ( $reset['conversions'] > 0 ) : ?>
 										<br />
-										<strong><?php _e( 'Previous Conversions', 'popup-maker' ); ?>:</strong> <?php echo $reset['conversions']; ?>
-									<?php endif; */ ?>
+										<strong><?php esc_html_e( 'Previous Conversions', 'popup-maker' ); ?>:</strong> <?php echo esc_html( $reset['conversions'] ); ?>
+									<?php endif; ?>
 
-									<br /> <strong><?php _e( 'Lifetime Opens', 'popup-maker' ); ?>:</strong> <?php echo $popup->get_event_count( 'open', 'total' ); ?>
+									<br /> <strong><?php esc_html_e( 'Lifetime Opens', 'popup-maker' ); ?>:</strong> <?php echo esc_html( $popup->get_event_count( 'open', 'total' ) ); ?>
 
-									<?php /* if ( $popup->get_event_count( 'conversion', 'total' ) > 0 ) : ?>
+									<?php if ( $popup->get_event_count( 'conversion', 'total' ) > 0 ) : ?>
 										<br />
-										<strong><?php _e( 'Lifetime Conversions', 'popup-maker' ); ?>:</strong> <?php echo $popup->get_event_count( 'conversion', 'total' ); ?>
-									<?php endif; */ ?>
+										<strong><?php esc_html_e( 'Lifetime Conversions', 'popup-maker' ); ?>:</strong> <?php echo esc_html( $popup->get_event_count( 'conversion', 'total' ) ); ?>
+									<?php endif; ?>
 								</small>
 							<?php endif; ?>
 						</td>
@@ -1148,14 +1189,15 @@ class PUM_Admin_Popups {
 		$columns = array(
 			'cb'          => '<input type="checkbox"/>',
 			'title'       => __( 'Name', 'popup-maker' ),
+			'enabled'     => __( 'Enabled', 'popup-maker' ),
 			'popup_title' => __( 'Title', 'popup-maker' ),
-			'class'       => __( 'CSS Classes', 'popup-maker' ),
+			'class'       => __( 'CSS Class', 'popup-maker' ),
 			'opens'       => __( 'Opens', 'popup-maker' ),
-			//'conversions'     => __( 'Conversions', 'popup-maker' ),
-			//'conversion_rate' => __( 'Conversion Rate', 'popup-maker' ),
+			'conversions'     => __( 'Conversions', 'popup-maker' ),
+			'conversion_rate' => __( 'Conversion Rate', 'popup-maker' ),
 		);
 
-		// Add the date column preventing our own translation
+		// Add the date column preventing our own translation.
 		if ( ! empty( $_columns['date'] ) ) {
 			$columns['date'] = $_columns['date'];
 		}
@@ -1181,10 +1223,10 @@ class PUM_Admin_Popups {
 	 * @param int    $post_id     (Post) ID
 	 */
 	public static function render_columns( $column_name, $post_id ) {
-		if ( get_post_type( $post_id ) == 'popup' ) {
+		$post = get_post( $post_id );
+		if ( 'popup' === $post->post_type ) {
 
 			$popup = pum_get_popup( $post_id );
-			//setup_postdata( $popup );
 
 			/**
 			 * Uncomment if need to check for permissions on certain columns.
@@ -1197,6 +1239,22 @@ class PUM_Admin_Popups {
 				case 'popup_title':
 					echo esc_html( $popup->get_title() );
 					break;
+				case 'enabled':
+					if ( 'publish' === $post->post_status ) {
+						$enabled = $popup->is_enabled();
+						$nonce   = wp_create_nonce( "pum_save_enabled_state_{$popup->ID}" );
+						?>
+						<div class="pum-toggle-button">
+							<input id="pum-enabled-toggle-<?php echo esc_attr( $popup->ID ); ?>" type="checkbox" <?php checked( true, $enabled ); ?> class="pum-enabled-toggle-button" data-nonce="<?php echo esc_attr( $nonce ); ?>" data-popup-id="<?php echo esc_attr( $popup->ID ); ?>">
+							<label for="pum-enabled-toggle-<?php echo esc_attr( $popup->ID ); ?>" aria-label="Switch to enable popup"></label>
+						</div>
+						<?php
+					} else {
+						?>
+						<p>Popup not published</p>
+						<?php
+					}
+					break;
 				case 'popup_category':
 					echo get_the_term_list( $post_id, 'popup_category', '', ', ', '' );
 					break;
@@ -1205,33 +1263,47 @@ class PUM_Admin_Popups {
 					break;
 				case 'class':
 					echo '<pre style="display:inline-block;margin:0;"><code>popmake-' . absint( $post_id ) . '</code></pre>';
-					if ( $popup->post_name != $popup->ID ) {
-						echo '|';
-						echo '<pre style="display:inline-block;margin:0;"><code>popmake-' . $popup->post_name . '</code></pre>';
-					}
 					break;
 				case 'opens':
 					if ( ! pum_extension_enabled( 'popup-analytics' ) ) {
-						echo $popup->get_event_count( 'open' );
+						echo esc_html( $popup->get_event_count( 'open' ) );
 					}
 					break;
-
-				/*
-				 case 'conversions':
+				case 'conversions':
 					if ( ! pum_extension_enabled( 'popup-analytics' ) ) {
-						echo $popup->get_event_count( 'conversion' );
+						echo esc_html( $popup->get_event_count( 'conversion' ) );
 					}
 					break;
 				case 'conversion_rate':
-					$views       = $popup->get_event_count( 'view', 'current' );
-					$conversions = $popup->get_event_count( 'conversion', 'current' );
+					if ( ! pum_extension_enabled( 'popup-analytics' ) ) {
+						$opens       = $popup->get_event_count( 'open' );
+						$conversions = $popup->get_event_count( 'conversion' );
 
-					$conversion_rate = $views > 0 && $views >= $conversions ? $conversions / $views * 100 : __( 'N/A', 'popup-maker' );
-					echo round( $conversion_rate, 2 ) . '%';
+						if ( $opens > 0 && $opens >= $conversions ) {
+							$conversion_rate = round( $conversions / $opens * 100, 2 );
+						} else {
+							$conversion_rate = 0;
+						}
+						echo esc_html( $conversion_rate . '%' );
+					}
 					break;
-				*/
 			}
 		}
+	}
+
+	/**
+	 * Hide some of our columns by default
+	 *
+	 * @param array     $hidden Array of IDs of columns hidden by default.
+	 * @param WP_Screen $screen WP_Screen object of the current screen.
+	 * @return array Updated $hidden
+	 */
+	public static function hide_columns( $hidden, $screen ) {
+		if ( isset( $screen->id ) && 'edit-popup' === $screen->id ) {
+			$hidden[] = 'popup_title';
+			$hidden[] = 'date';
+		}
+		return $hidden;
 	}
 
 	/**
@@ -1244,8 +1316,7 @@ class PUM_Admin_Popups {
 	public static function sortable_columns( $columns ) {
 		$columns['popup_title'] = 'popup_title';
 		$columns['opens']       = 'opens';
-
-		// $columns['conversions'] = 'conversions';
+		$columns['conversions'] = 'conversions';
 
 		return $columns;
 	}
@@ -1277,7 +1348,6 @@ class PUM_Admin_Popups {
 							) );
 						}
 						break;
-					/*
 					case 'conversions':
 						if ( ! pum_extension_enabled( 'popup-analytics' ) ) {
 							$vars = array_merge( $vars, array(
@@ -1286,7 +1356,6 @@ class PUM_Admin_Popups {
 							) );
 						}
 						break;
-					*/
 				}
 			}
 		}

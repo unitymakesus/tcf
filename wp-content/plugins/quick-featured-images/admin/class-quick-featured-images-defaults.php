@@ -233,7 +233,7 @@ class Quick_Featured_Images_Defaults {
 				$msg = 'Changes saved.';
 				$class = 'updated';
 			} else {
-				$msg = 'Error while saving the changes.';
+				$msg = 'Error while saving.';
 				$class = 'error';
 			}
 			printf ( '<div class="%s"><p><strong>%s</strong></p></div>', $class, esc_html__( $msg ) );
@@ -384,10 +384,10 @@ class Quick_Featured_Images_Defaults {
 	public function add_action_links( $links ) {
 		$url = sprintf( 'admin.php?page=%s', $this->page_slug );
 		return array_merge(
-			$links,
 			array(
 				'defaults' => sprintf( '<a href="%s">%s</a>', esc_url( admin_url( $url ) ), esc_html( $this->get_page_headline() ) )
-			)
+			),
+			$links
 		);
 
 	}

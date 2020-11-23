@@ -985,7 +985,7 @@ class GFFormDisplay {
                         <div class='gform_heading'>";
 				if ( $display_title ) {
 					$form_string .= "
-                            <h3 class='gform_title'>" . $form['title'] . '</h3>';
+                            <h3 class='gform_title'>" . esc_html( $form['title'] ) . '</h3>';
 				}
 				if ( $display_description ) {
 					$form_string .= "
@@ -1403,13 +1403,28 @@ class GFFormDisplay {
 		return $page;
 	}
 
+	/**
+	 * Creates the honeypot field object for the given form.
+	 *
+	 * @since unknown
+	 *
+	 * @param array $form The form the honeypot field is to be created for.
+	 *
+	 * @return GF_Field
+	 */
 	private static function get_honeypot_field( $form ) {
 		$max_id     = self::get_max_field_id( $form );
 		$labels     = self::get_honeypot_labels();
-		$properties = array( 'type' => 'honeypot', 'label' => $labels[ rand( 0, 3 ) ], 'id' => $max_id + 1, 'cssClass' => 'gform_validation_container', 'description' => __( 'This field is for validation purposes and should be left unchanged.', 'gravityforms' ) );
-		$field      = GF_Fields::create( $properties );
+		$properties = array(
+			'type'        => 'honeypot',
+			'label'       => $labels[ rand( 0, 3 ) ],
+			'id'          => $max_id + 1,
+			'cssClass'    => 'gform_validation_container',
+			'description' => __( 'This field is for validation purposes and should be left unchanged.', 'gravityforms' ),
+			'formId'      => absint( $form['id'] ),
+		);
 
-		return $field;
+		return GF_Fields::create( $properties );
 	}
 
 	/**
@@ -1886,15 +1901,21 @@ class GFFormDisplay {
 	 * Determines if the supplied field is suitable for validation.
 	 *
 	 * @since 2.4.19
+	 * @since 2.4.20 Added the second param.
 	 *
-	 * @param GF_Field $field The field being processed.
+	 * @param GF_Field $field           The field being processed.
+	 * @param bool     $type_check_only Indicates if only the field type property should be evaluated.
 	 *
 	 * @return bool
 	 */
-	public static function is_field_validation_supported( $field ) {
-		$invalid_types = array( 'html', 'page', 'section' );
+	public static function is_field_validation_supported( $field, $type_check_only = false ) {
+		$is_valid_type = ! in_array( $field->type, array( 'html', 'page', 'section' ) );
 
-		return ! ( in_array( $field->type, $invalid_types ) || $field->is_administrative() || $field->visibility === 'hidden' );
+		if ( ! $is_valid_type || $type_check_only ) {
+			return $is_valid_type;
+		}
+
+		return ! ( $field->is_administrative() || $field->visibility === 'hidden' );
 	}
 
 	/**
@@ -1910,7 +1931,7 @@ class GFFormDisplay {
 	public static function is_form_empty( $form ) {
 
 		foreach ( $form['fields'] as $field ) {
-			if ( self::is_field_validation_supported( $field ) && ! $field->is_field_hidden && ! self::is_empty( $field, $form['id'] ) ) {
+			if ( self::is_field_validation_supported( $field, true ) && ! $field->is_field_hidden && ! self::is_empty( $field, $form['id'] ) ) {
 				return false;
 			}
 		}
