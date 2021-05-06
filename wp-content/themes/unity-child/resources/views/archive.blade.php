@@ -14,6 +14,7 @@
             <a href="{{ get_post_type_archive_link('press') }}" class="archive-filters__filter {{ $active_filter ? '' : 'active' }}">All</a>
             <a href="{{ get_post_type_archive_link('press') . '?filter=press-releases' }}" class="archive-filters__filter {{ $active_filter && $_GET['filter'] === 'press-releases' ? 'active' : '' }}">Press</a>
             <a href="{{ get_post_type_archive_link('press') . '?filter=media' }}" class="archive-filters__filter {{ $active_filter && $_GET['filter'] === 'media' ? 'active' : '' }}">Media</a>
+            <a href="{{ get_post_type_archive_link('press') . '?filter=newsletter' }}" class="archive-filters__filter {{ $active_filter && $_GET['filter'] === 'newsletter' ? 'active' : '' }}">Newsletters</a>
           </div>
         </div>
       </div>

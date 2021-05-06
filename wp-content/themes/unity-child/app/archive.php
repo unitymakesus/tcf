@@ -6,7 +6,7 @@ namespace App;
  * Update the archive title.
  */
 add_filter('get_the_archive_title', function ($title) {
-  if (is_post_type_archive('press')) {
+  if (is_post_type_archive('press') || is_post_type_archive('newsletter')) {
     return __('Press / Media', 'sage');
   }
 
@@ -47,20 +47,26 @@ function modify_blog_query($query) {
     }
 
     /**
-     * Press.
+     * Press + Newsletters.
      */
     if (is_post_type_archive('press')) {
       $query->set('posts_per_page', -1);
+      $query->set('post_type', ['press', 'newsletter']);
 
       if (isset($_GET['filter'])) {
-        $tax_query = [
-          [
-            'taxonomy' => 'press_category',
-            'field'    => 'slug',
-            'terms'    => 'publications',
-            'operator' => $_GET['filter'] === 'media' ? 'IN' : 'NOT IN',
-          ]
-        ];
+        if ($_GET['filter'] === 'newsletter') {
+            $query->set('post_type', ['newsletter']);
+        } else {
+            $query->set('post_type', ['press']);
+            $tax_query = [
+                [
+                    'taxonomy' => 'press_category',
+                    'field'    => 'slug',
+                    'terms'    => 'publications',
+                    'operator' => $_GET['filter'] === 'media' ? 'IN' : 'NOT IN',
+                ],
+            ];
+        }
 
         $query->set('tax_query', $tax_query);
       }
