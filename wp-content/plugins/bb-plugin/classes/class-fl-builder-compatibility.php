@@ -49,6 +49,8 @@ final class FLBuilderCompatibility {
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'fix_woocommerce_products_filter' ), 12 );
 		add_action( 'pre_get_posts', array( __CLASS__, 'fix_woo_archive_loop' ), 99 );
 		add_action( 'pre_get_posts', array( __CLASS__, 'fix_tribe_events_hide_from_listings_archive' ) );
+		add_action( 'fl_builder_menu_module_before_render', array( __CLASS__, 'fix_menu_module_before_render' ) );
+		add_action( 'fl_builder_menu_module_after_render', array( __CLASS__, 'fix_menu_module_after_render' ) );
 
 		// Filters
 		add_filter( 'fl_builder_is_post_editable', array( __CLASS__, 'bp_pages_support' ), 11, 2 );
@@ -74,6 +76,8 @@ final class FLBuilderCompatibility {
 		add_filter( 'fl_builder_loop_rewrite_rules', array( __CLASS__, 'fix_polylang_pagination_rule' ) );
 		add_filter( 'fl_builder_loop_query_args', array( __CLASS__, 'fix_tribe_events_hide_from_listings' ) );
 		add_filter( 'tribe_events_rewrite_rules_custom', array( __CLASS__, 'fix_tribe_events_pagination_rule' ), 10, 3 );
+		add_filter( 'aioseo_conflicting_shortcodes', array( __CLASS__, 'aioseo_conflicting_shortcodes' ) );
+		add_filter( 'fl_builder_responsive_ignore', array( __CLASS__, 'fix_real_media_library_lite' ) );
 	}
 
 	/**
@@ -155,12 +159,13 @@ final class FLBuilderCompatibility {
 	 * @since 2.3
 	 */
 	public static function fa_kit_support() {
-		if ( FLBuilder::fa5_pro_enabled() && '' !== get_option( '_fl_builder_kit_fa_pro' ) ) {
+		$kit_url = FLBuilder::fa5_kit_url();
+		if ( FLBuilder::fa5_pro_enabled() && '' !== $kit_url ) {
 			wp_dequeue_style( 'font-awesome' );
 			wp_dequeue_style( 'font-awesome-5' );
 			wp_deregister_style( 'font-awesome' );
 			wp_deregister_style( 'font-awesome-5' );
-			wp_enqueue_script( 'fa5-kit', get_option( '_fl_builder_kit_fa_pro' ) );
+			wp_enqueue_script( 'fa5-kit', $kit_url );
 		}
 	}
 
@@ -547,7 +552,7 @@ final class FLBuilderCompatibility {
 	/**
 	 * Disable support Buddypress pages since it's causing conflicts with `the_content` filter
 	 *
-	 * @param bool $is_editable Wether the post is editable or not
+	 * @param bool $is_editable Whether the post is editable or not
 	 * @param $post The post to check from
 	 * @return bool
 	 */
@@ -955,8 +960,10 @@ final class FLBuilderCompatibility {
 			return;
 		}
 
-		if ( ( $query->is_main_query() && is_post_type_archive( 'tribe_events' ) ) || ( 'fl-theme-layout' == get_post_type() ) ) {
-			$query->set( 'post__not_in', Tribe__Events__Query::getHideFromUpcomingEvents() );
+		if ( ( $query->is_main_query() && is_post_type_archive( 'tribe_events' ) ) || ( 'fl-theme-layout' === get_post_type() ) ) {
+			$hide_upcoming_events = Tribe__Events__Query::getHideFromUpcomingEvents();
+			$current_post_not_in  = $query->get( 'post__not_in' );
+			$query->set( 'post__not_in', array_merge( $current_post_not_in, $hide_upcoming_events ) );
 		}
 	}
 
@@ -975,8 +982,15 @@ final class FLBuilderCompatibility {
 			return $args;
 		}
 
-		if ( 'tribe_events' == $args['settings']->post_type && 'custom_query' == $args['settings']->data_source ) {
-			$args['post__not_in'] = Tribe__Events__Query::getHideFromUpcomingEvents();
+		if ( 'tribe_events' !== $args['settings']->post_type || 'custom_query' !== $args['settings']->data_source ) {
+			return $args;
+		}
+
+		$hide_upcoming_events = Tribe__Events__Query::getHideFromUpcomingEvents();
+		if ( isset( $args['post__not_in'] ) ) {
+			$args['post__not_in'] = array_merge( $args['post__not_in'], $hide_upcoming_events );
+		} else {
+			$args['post__not_in'] = $hide_upcoming_events;
 		}
 
 		return $args;
@@ -990,6 +1004,41 @@ final class FLBuilderCompatibility {
 		if ( class_exists( 'WOOF' ) && isset( $_GET['fl_builder'] ) ) {
 			remove_action( 'init', array( $GLOBALS['WOOF'], 'init' ), 1 );
 		}
+	}
+
+	/**
+	 * Fix submenu toggle button showing on menu module when using Twenty Twenty-one theme.
+	 * @since 2.4.1
+	 */
+	public static function fix_menu_module_before_render() {
+		if ( function_exists( 'twenty_twenty_one_add_sub_menu_toggle' ) ) {
+			remove_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_add_sub_menu_toggle', 10, 4 );
+		}
+	}
+	/**
+	 * Reset Twenty Twenty-one submenu toggle button filter.
+	 * @since 2.4.1
+	 */
+	public static function fix_menu_module_after_render() {
+		if ( function_exists( 'twenty_twenty_one_add_sub_menu_toggle' ) ) {
+			add_filter( 'walker_nav_menu_start_el', 'twenty_twenty_one_add_sub_menu_toggle', 10, 4 );
+		}
+	}
+
+	/**
+	 * AIOSEO tries to render the layout shortcode too early.
+	 * @since 2.4.2
+	 */
+	public static function aioseo_conflicting_shortcodes( $shortcodes ) {
+		$shortcodes['Beaver Builder'] = '[fl_builder_insert_layout';
+		return $shortcodes;
+	}
+	/**
+	 * @since 2.4.2
+	 */
+	public static function fix_real_media_library_lite( $ignore ) {
+		$ignore[] = 'real-media-library-lite';
+		return $ignore;
 	}
 }
 FLBuilderCompatibility::init();

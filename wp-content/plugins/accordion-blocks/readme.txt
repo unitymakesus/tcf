@@ -2,10 +2,10 @@
 Contributors: philbuchanan
 Author URI: https://philbuchanan.com/
 Donate Link: https://philbuchanan.com/donate/
-Tags: accordion, accordions, gutenberg, blocks, responsive
-Requires at least: 5.4
-Tested up to: 5.5
-Stable tag: 1.1.6
+Tags: accordion, accordions, gutenberg, block, responsive
+Requires at least: 5.5
+Tested up to: 5.7
+Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,6 +23,7 @@ The accordions should blend seamlessly with your theme. However, you may want to
 * Supports multiple accordions with individual settings for each accordion item.
 * Fully responsive.
 * Support for item IDs and direct links.
+* Supports nesting accordions.
 * Accessible (for users requiring tabbed keyboard navigation control).
 
 = Optional Features =
@@ -31,7 +32,7 @@ The accordions should blend seamlessly with your theme. However, you may want to
 * Disable auto closing of accordion items.
 * Manually close items by clicking the title again.
 * Scroll page to title when it's clicked open (including setting a scroll offset position).
-* Set the HTML heading tag for the title element (h1–h4, button).
+* Set the HTML heading tag for the title element (h1–h6, button).
 * Set defaults to be applied to all new accordion items or reset a specific accordion item to the defaults.
 * Supports adding custom block styles using `wp.blocks.registerBlockStyle`.
 
@@ -88,6 +89,38 @@ For bug reports or feature requests or if you'd like to contribute to the plugin
 2. Accordion block in the editor
 
 == Changelog ==
+= 1.3.4 =
+* Fixed: Made turning off global loading of scripts and styles an explicit setting. You can turn off this off in Settings > Accordion Blocks.
+
+= 1.3.3 =
+* Fixed: Rolled back deprecated `registerStore` with `register` change since it only applies to WordPress 5.7+.
+
+= 1.3.2 =
+* New: Visual indicator of bottom of block when the block is selected.
+* New: Only load plugin assets when the page contains an accordion block.
+* Fixed: Replaced deprecated `registerStore` with `register`.
+
+= 1.3.1 =
+* Added support for WordPress 5.7.
+* New method for generating uuids that should be more reliable.
+
+= 1.3.0 =
+* New: Added h5 and h6 as options for title tag.
+* New: Only users with the role of Editor or Administrator can set new default settings. All users can restore settings to defaults. This lays the groundwork for the ability to make this user definable in a settings page which may come in a future release.
+* Fixed: New accordions added by Authors wouldn't function properly.
+
+= 1.2.2 =
+* Fixed: Unique IDs were not set for new accordion items for sites that didn't already have default options stored in the database.
+
+= 1.2.1 =
+* Fixed PHP error that slipped through.
+
+= 1.2.0 =
+* Added support for WordPress 5.6, including fixing jQuery Migrate issues.
+* Added support for grouping accordion items.
+* Added support for nested accordion items.
+* Removed accordion settings API for getting and setting defaults in favour of use useEntityProp.
+
 = 1.1.6 =
 * Fixed: Use sample content (instead of real content) to preview custom blocks styles in the editor.
 * Fixed: Bumped required version to WordPress 5.4.
@@ -139,8 +172,32 @@ For bug reports or feature requests or if you'd like to contribute to the plugin
 * All new plugin to support the new WordPress Gutenberg editor.
 
 == Upgrade Notice ==
+= 1.3.4 =
+Made turning off global loading of scripts and styles an explicit setting. You can turn off this off in Settings > Accordion Blocks.
+
+= 1.3.3 =
+Rolled back deprecated `registerStore` with `register` change since it only applies to WordPress 5.7+.
+
+= 1.3.2 =
+Only load assets on pages that use the block. Added visual indicator to show bottom of block.
+
+= 1.3.1 =
+Support for WordPress 5.7 and a new method for generating uuids that should be more reliable.
+
+= 1.3.0 =
+Added h5 and h6 options for the title tag and fixed a bug where Authors may not be able to create functioning accordions.
+
+= 1.2.2 =
+Fixed an issue where all accordion item titles would open the first accordion only.
+
+= 1.2.1 =
+Fixed PHP error that slipped through in 1.2.0. Sorry about that.
+
+= 1.2.0 =
+Adds support for WordPress 5.6. Also adds support for nested and grouped accordion items.
+
 = 1.1.6 =
-* Accordions now use sample content (instead of real content) to preview custom blocks styles in the editor. This should resolved slow performance in the editor if an accordion using custom block styles and has a lot of content.
+Accordions now use sample content (instead of real content) to preview custom blocks styles in the editor. This should resolved slow performance in the editor if an accordion using custom block styles and has a lot of content.
 
 = 1.1.5 =
 Fixed PHP notice for API.
