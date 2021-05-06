@@ -474,6 +474,7 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				'uabb-how-to'              => 'How To',
 				'uabb-faq'                 => 'FAQ Schema',
 				'uabb-devices'             => 'Devices',
+				'uabb-search'              => 'Search',
 			);
 
 			/* Include Contact form styler */
@@ -496,10 +497,14 @@ if ( ! class_exists( 'BB_Ultimate_Addon_Helper' ) ) {
 				$modules_array['uabb-woo-products']    = 'Woo - Products';
 				$modules_array['uabb-woo-categories']  = 'Woo - Categories';
 				$modules_array['uabb-woo-add-to-cart'] = 'Woo - Add To Cart';
+				$modules_array['uabb-woo-mini-cart']   = 'Woo - Mini Cart';
 			}
 			/* Include Caldera Forms Styler */
 			if ( class_exists( 'Caldera_Forms' ) || class_exists( 'Caldera_Forms_Forms' ) ) {
-				$modules_array['uabb-caldera-form-styler'] = 'Caldera Forms Styler';
+				$forms = \Caldera_Forms_Forms::get_forms( true );
+				if ( ! empty( $forms ) ) {
+					$modules_array['uabb-caldera-form-styler'] = 'Caldera Forms Styler';
+				}
 			}
 			natcasesort( $modules_array );
 			return $modules_array;

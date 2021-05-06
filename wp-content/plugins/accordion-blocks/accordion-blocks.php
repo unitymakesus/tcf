@@ -4,8 +4,8 @@
  * Plugin Name: Accordion Blocks
  * Plugin URI: https://github.com/philbuchanan/Accordion-Blocks
  * Description: Gutenberg blocks for creating responsive accordion drop-downs.
- * Version: 1.1.6
- * Requires at least: 5.4
+ * Version: 1.3.4
+ * Requires at least: 5.5
  * Author: Phil Buchanan
  * Author URI: https://philbuchanan.com
  * License: GPLv2 or later
@@ -36,16 +36,30 @@ class PB_Accordion_Blocks {
 		// Register block
 		add_action('init', array($this, 'register_block'));
 
-		// Register frontend JavaScript
+		// Enqueue editor assets
+		add_action('enqueue_block_editor_assets', array($this, 'enqueue_editor_assets'));
+
+		// Enqueue frontend assets
 		add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_assets'));
+
+		// Tell WordPress which JavaScript files contain translations
+		add_action('init', array($this, 'set_script_translations'));
 
 		if (is_admin()) {
 			// Add link to documentation on plugin page
 			add_filter("plugin_action_links_$basename", array($this, 'add_documentation_link'));
 		}
 
-		// Add API endpoint to get defaults
+		// Register defaults site setting
+		add_action('rest_api_init', array($this, 'register_settings'));
+		add_action('admin_init', array($this, 'register_settings'));
+
+		// Add API endpoint to get and set settings
 		add_action('rest_api_init', array($this, 'register_rest_routes'));
+
+		// Add settings page
+		add_action('admin_menu', array($this, 'add_settings_menu'));
+		add_action('admin_init', array($this, 'settings_api_init'));
 	}
 
 
@@ -65,27 +79,31 @@ class PB_Accordion_Blocks {
 	 * Register the block's assets for the editor
 	 */
 	public function register_block() {
+		register_block_type('pb/accordion-item');
+	}
+
+
+
+	/**
+	 * Enqueue the block's assets for the editor
+	 */
+	public function enqueue_editor_assets() {
 		// Automatically load dependencies and version
 		$asset_file = include(plugin_dir_path(__FILE__) . 'build/index.asset.php');
 
-		wp_register_script(
-			'pb-accordion-blocks-script',
+		wp_enqueue_script(
+			'pb-accordion-blocks-editor-script',
 			plugins_url('build/index.js', __FILE__),
 			$asset_file['dependencies'],
 			$asset_file['version']
 		);
 
-		wp_register_style(
-			'pb-accordion-blocks-style',
+		wp_enqueue_style(
+			'pb-accordion-blocks-editor-style',
 			plugins_url('build/index.css', __FILE__),
 			array(),
 			$asset_file['version']
 		);
-
-		register_block_type('pb/accordion-item', array(
-			'editor_script' => 'pb-accordion-blocks-script',
-			'style'         => 'pb-accordion-blocks-style',
-		));
 	}
 
 
@@ -94,15 +112,154 @@ class PB_Accordion_Blocks {
 	 * Enqueue the block's assets for the frontend
 	 */
 	public function enqueue_frontend_assets() {
-		$min = (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? '' : '.min';
+		$load_scripts_globablly = get_option('accordion_blocks_load_scripts_globablly');
 
-		wp_enqueue_script(
-			'pb-accordion-blocks-frontend-script',
-			plugins_url("js/accordion-blocks$min.js", __FILE__),
-			array('jquery'),
-			$this->plugin_version,
-			true
+		if ($load_scripts_globablly || has_block('pb/accordion-item', get_the_ID())) {
+			$min = (defined('SCRIPT_DEBUG') && SCRIPT_DEBUG) ? '' : '.min';
+
+			wp_enqueue_script(
+				'pb-accordion-blocks-frontend-script',
+				plugins_url("js/accordion-blocks$min.js", __FILE__),
+				array('jquery'),
+				$this->plugin_version,
+				true
+			);
+
+			wp_enqueue_style(
+				'pb-accordion-blocks-style',
+				plugins_url('build/index.css', __FILE__),
+				array(),
+				$this->plugin_version
+			);
+		}
+	}
+
+
+
+	/**
+	 * Tell WordPress which JavaScript files contain translations
+	 */
+	function set_script_translations() {
+		wp_set_script_translations('pb-accordion-blocks-script', 'accordion-blocks');
+	}
+
+
+
+	/**
+	 * Register accordion defaults site setting
+	 */
+	public function register_settings() {
+		register_setting(
+			'general',
+			'accordion_blocks_defaults',
+			array(
+				'type' => 'object',
+				'show_in_rest' => array(
+					'schema' => array(
+						'type' => 'object',
+						'properties' => array(
+							'initiallyOpen'  => array(
+								'type' => 'boolean',
+							),
+							'clickToClose' => array(
+								'type' => 'boolean',
+							),
+							'autoClose' => array(
+								'type' => 'boolean',
+							),
+							'scroll' => array(
+								'type' => 'boolean',
+							),
+							'scrollOffset' => array(
+								'type' => 'integer',
+							),
+						),
+					),
+				),
+				'default' => array(
+					'initiallyOpen' => false,
+					'clickToClose'  => true,
+					'autoClose'     => true,
+					'scroll'        => false,
+					'scrollOffset'  => 0,
+				),
+			)
 		);
+
+		register_setting(
+			'accordion_blocks_settings',
+			'accordion_blocks_load_scripts_globablly',
+			array(
+				'type' => 'boolean',
+				'default' => true,
+			)
+		);
+	}
+
+
+
+	/**
+	 * Register rest endpoint to get and set plugin defaults
+	 */
+	public function register_rest_routes() {
+		register_rest_route('accordion-blocks/v1', '/defaults', array(
+			'methods' => WP_REST_Server::READABLE,
+			'callback' => array($this, 'api_get_defaults'),
+			'permission_callback' => function() {
+				return current_user_can('edit_posts');
+			}
+		));
+
+		register_rest_route('accordion-blocks/v1', '/defaults', array(
+			'methods' => WP_REST_Server::EDITABLE,
+			'callback' => array($this, 'api_set_defaults'),
+			'permission_callback' => function() {
+				return current_user_can('publish_pages');
+			}
+		));
+	}
+
+
+
+	/**
+	 * Get accordion block default settings
+	 *
+	 * @return object Default accordion block settings object
+	 */
+	public function api_get_defaults(WP_REST_Request $request) {
+		$response = new WP_REST_Response(get_option('accordion_blocks_defaults'));
+		$response->set_status(200);
+
+		return $response;
+	}
+
+
+
+	/**
+	 * Set accordion block default settings
+	 *
+	 * @param data object The date passed from the API
+	 * @return object Default accordion block settings object
+	 */
+	public function api_set_defaults($request) {
+		$old_defaults = get_option('accordion_blocks_defaults');
+
+		$new_defaults = json_decode($request->get_body());
+
+		$new_defaults = (object) array(
+			'initiallyOpen' => isset($new_defaults->initiallyOpen) ? $new_defaults->initiallyOpen : $old_defaults->initiallyOpen,
+			'clickToClose'  => isset($new_defaults->clickToClose)  ? $new_defaults->clickToClose  : $old_defaults->clickToClose,
+			'autoClose'     => isset($new_defaults->autoClose)     ? $new_defaults->autoClose     : $old_defaults->autoClose,
+			'scroll'        => isset($new_defaults->scroll)        ? $new_defaults->scroll        : $old_defaults->scroll,
+			'scrollOffset'  => isset($new_defaults->scrollOffset)  ? $new_defaults->scrollOffset  : $old_defaults->scrollOffset,
+		);
+
+		$updated = update_option('accordion_blocks_defaults', $new_defaults);
+
+		$response = new WP_REST_Response($new_defaults);
+		$response->set_status($updated ? 201 : 500);
+
+		return $response;
 	}
 
 
@@ -127,110 +284,104 @@ class PB_Accordion_Blocks {
 
 
 	/**
-	 * Register rest endpoint to get plugin defaults
+	 * Add the admin menu settings page
 	 */
-	public function register_rest_routes() {
-		register_rest_route('accordion-blocks/v1', '/defaults', array(
-			'methods' => WP_REST_Server::READABLE,
-			'callback' => array($this, 'api_get_defaults'),
-			'permission_callback' => array($this, 'check_permissions'),
-		));
-
-		register_rest_route('accordion-blocks/v1', '/defaults', array(
-			'methods' => WP_REST_Server::EDITABLE,
-			'callback' => array($this, 'api_set_defaults'),
-			'permission_callback' => array($this, 'check_permissions'),
-		));
+	public function add_settings_menu() {
+		add_options_page(
+			__('Accordion Blocks Settings', 'accordion-blocks'),
+			__('Accordion Blocks', 'accordion-blocks'),
+			'manage_options',
+			'accordion_blocks_settings',
+			array($this, 'render_settings_page')
+		);
 	}
 
 
 
 	/**
-	 * Get accordion block default settings
-	 *
-	 * @return object Default accordion block settings object
+	 * Render the settings page
 	 */
-	public function api_get_defaults() {
-		$defaults = $this->get_defaults();
+	public function render_settings_page() {
+		if (!current_user_can('manage_options')) {
+			wp_die(__('You do not have sufficient permissions to access this page.', 'accordion-blocks'));
+		} ?>
 
-		/*
-		 * If there are no defaults set yet, set them now
-		 * This will likely only happen when users upgrade from an older version
-		 * of the plugin.
-		 */
-		if (!$defaults) {
-			$defaults = (object) array(
-				'initiallyOpen' => false,
-				'clickToClose'  => true,
-				'autoClose'     => true,
-				'scroll'        => false,
-				'scrollOffset'  => 0,
-			);
-
-			$this->set_defaults($defaults);
-		}
-
-		$response = new WP_REST_Response($defaults);
-		$response->set_status(200);
-
-		return $response;
-	}
+		<div class="wrap">
+			<h2><?php _e('Accordion Blocks Settings', 'accordion-blocks'); ?></h2>
+			<form method="POST" action="options.php">
+				<?php
+					settings_fields('accordion_blocks_settings');
+					do_settings_sections('accordion_blocks_settings');
+					submit_button();
+				?>
+			</form>
+		</div>
+	<?php }
 
 
 
 	/**
-	 * Set accordion block default settings
-	 *
-	 * @param data object The date passed from the API
-	 * @return object Default accordion block settings object
+	 * Register setting sections and individual settings
 	 */
-	public function api_set_defaults($request) {
-		$old_defaults = $this->get_defaults();
-
-		$new_defaults = json_decode($request->get_body());
-
-		$new_defaults = (object) array(
-			'initiallyOpen' => isset($new_defaults->initiallyOpen) ? $new_defaults->initiallyOpen : $old_defaults->initiallyOpen,
-			'clickToClose'  => isset($new_defaults->clickToClose)  ? $new_defaults->clickToClose  : $old_defaults->clickToClose,
-			'autoClose'     => isset($new_defaults->autoClose)     ? $new_defaults->autoClose     : $old_defaults->autoClose,
-			'scroll'        => isset($new_defaults->scroll)        ? $new_defaults->scroll        : $old_defaults->scroll,
-			'scrollOffset'  => isset($new_defaults->scrollOffset)  ? $new_defaults->scrollOffset  : $old_defaults->scrollOffset,
+	public function settings_api_init() {
+		add_settings_section(
+			'accordion_blocks_global_settings_section',
+			__('Global Settings', 'accordion-blocks'),
+			array($this, 'accordion_blocks_global_settings_section_callback'),
+			'accordion_blocks_settings'
 		);
 
-		$this->set_defaults($new_defaults);
-
-		$response = new WP_REST_Response($new_defaults);
-		$response->set_status(201);
-
-		return $response;
+		add_settings_field(
+			'accordion_blocks_load_scripts_globablly',
+			__('Scripts and Styles', 'accordion-blocks'),
+			array($this, 'load_scripts_globablly_setting_callback'),
+			'accordion_blocks_settings',
+			'accordion_blocks_global_settings_section',
+			array(
+				'label_for' => 'accordion_blocks_load_scripts_globablly',
+			)
+		);
 	}
 
 
 
 	/**
-	 * Ensure user has permission to set defaults
+	 * Callback function for Accordion Blocks global settings section
+	 * Add section intro copy here (if necessary)
 	 */
-	public function check_permissions() {
-		return current_user_can('edit_posts');
-	}
+	public function accordion_blocks_global_settings_section_callback() {}
 
 
 
 	/**
-	 * Get default settings from `wp_options` table
+	 * Callback function for load scripts globally setting
 	 */
-	private function get_defaults() {
-		return get_option('accordion_blocks_defaults');
-	}
-
-
-
-	/**
-	 * Save default settings in `wp_options` table
-	 */
-	private function set_defaults($settings) {
-		return update_option('accordion_blocks_defaults', $settings);
-	}
+	public function load_scripts_globablly_setting_callback() {
+		$load_scripts_globablly = get_option('accordion_blocks_load_scripts_globablly'); ?>
+		<fieldset>
+			<legend class="screen-reader-text">
+				<span><?php _e('Scripts and Styles', 'accordion-blocks'); ?></span>
+			</legend>
+			<label for="accordion_blocks_load_scripts_globablly">
+				<input
+					type="checkbox"
+					id="accordion_blocks_load_scripts_globablly"
+					name="accordion_blocks_load_scripts_globablly"
+					aria-describedby="load-scripts-globablly"
+					<?php checked($load_scripts_globablly == 'on'); ?>
+				>
+				<?php _e('Load scripts and styles globablly', 'accordion-blocks'); ?>
+			</label>
+			<div id="load-scripts-globablly">
+				<p class="description">
+					<?php _e('Turning this off may cause accordions to stop working in some instances.', 'accordion-blocks'); ?>
+				</p>
+				<p class="description">
+					<?php _e('Leave this on if you use accordions outside of the main content editor, or are adding accordions programatically.', 'accordion-blocks'); ?>
+				</p>
+			</div>
+		</fieldset>
+	<?php }
 
 }
 

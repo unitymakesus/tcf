@@ -50,7 +50,10 @@ $settings->masonary_border_size               = ( '' !== $settings->masonary_bor
 $settings->masonary_color_border              = UABB_Helper::uabb_colorpicker( $settings, 'masonary_color_border' );
 $settings->masonary_active_color_border       = UABB_Helper::uabb_colorpicker( $settings, 'masonary_active_color_border' );
 
-$settings->overlay_color = UABB_Helper::uabb_colorpicker( $settings, 'overlay_color', true );
+$settings->overlay_color    = UABB_Helper::uabb_colorpicker( $settings, 'overlay_color', true );
+$settings->term_color       = UABB_Helper::uabb_colorpicker( $settings, 'term_color', true );
+$settings->term_hover_color = UABB_Helper::uabb_colorpicker( $settings, 'term_hover_color', true );
+$settings->term_bg_color    = UABB_Helper::uabb_colorpicker( $settings, 'term_bg_color', true );
 
 $settings->title_margin_top    = ( isset( $settings->title_margin_top ) ) ? $settings->title_margin_top : '';
 $settings->title_margin_bottom = ( isset( $settings->title_margin_bottom ) ) ? $settings->title_margin_bottom : '';
@@ -72,14 +75,6 @@ if ( 'top' === $settings->blog_image_position ) {
 .fl-node-<?php echo esc_attr( $id ); ?> .uabb-post-wrapper .uabb-post-thumbnail {
 	text-align: <?php echo esc_attr( $settings->overall_alignment ); ?>;
 }
-	<?php
-}
-
-if ( 'yes' === $settings->equal_height_box && 'background' === $settings->blog_image_position ) {
-	?>
-	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-thumbnail-position-background {
-		height: 100%;
-	}
 	<?php
 }
 
@@ -572,9 +567,21 @@ if ( '' !== $settings->meta_color || '' !== $settings->meta_hover_color ) {
 		color: <?php echo esc_attr( $settings->meta_color ); ?>;
 	}
 
-	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-post-content .uabb-post-meta a:hover {
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-post-content .uabb-post-meta a:hover,
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-post-element-link:hover ~ .uabb-blog-posts-shadow .uabb-blog-post-content .uabb-post-meta span a {
 		color: <?php echo esc_attr( $settings->meta_hover_color ); ?>;
 	}
+	<?php
+}
+
+if ( isset( $settings->meta_space ) && '' !== $settings->meta_space ) {
+	?>
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-post-content .uabb-post-meta span.uabb-posted-by,
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-post-content .uabb-post-meta span.uabb-meta-date,
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-post-content .uabb-post-meta .uabb-cat-links.uabb-last-cat,
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-post-content .uabb-post-meta .uabb-tag-links.uabb-last-tag {
+	margin-right: <?php echo esc_attr( $settings->meta_space ); ?>px;
+}
 	<?php
 }
 
@@ -796,7 +803,8 @@ if ( 'carousel' === $settings->is_carousel ) {
 	}
 	?>
 
-.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list {
+.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list,
+.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .slick-list {
 	<?php
 	if ( 1 === $settings->post_per_grid_desktop ) {
 		?>
@@ -1474,7 +1482,8 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .uabb-post-wrapper {
 			padding: 0;
 		}
-		.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list {
+		.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .slick-list {
 			margin: 0;
 		}
 			<?php
@@ -1486,7 +1495,8 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 			echo ( '' !== $settings->element_space ) ? 'padding-right: ' . esc_attr( $settings->element_space / 2 ) . 'px;' : 'padding-right: 7.5px;';
 			?>
 		}
-		.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list {
+		.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list,
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .slick-list {
 			margin: 0 -<?php echo ( '' !== $settings->element_space ) ? esc_attr( $settings->element_space / 2 ) : '7.5'; ?>px;
 		}
 			<?php
@@ -1619,7 +1629,8 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 				echo ( '' !== $settings->element_space ) ? 'padding-right: ' . esc_attr( $settings->element_space / 2 ) . 'px;' : 'padding-right: 7.5px;';
 				?>
 			}
-			.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list {
+			.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list,
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .slick-list {
 				margin: 0 -<?php echo ( '' !== $settings->element_space ) ? ( esc_attr( $settings->element_space / 2 ) ) : '7.5'; ?>px;
 			}
 				<?php
@@ -1797,13 +1808,15 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 			/*.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .uabb-post-wrapper {
 				padding: 0;
 			}*/
-			.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list {
+			.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list,
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .slick-list {
 				margin: 0;
 			}
 				<?php
 			} else {
 				?>
-			.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list {
+			.fl-node-<?php echo esc_attr( $id ); ?> .fl-node-content .slick-list,
+			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .slick-list {
 				margin: 0 -<?php echo ( '' !== $settings->element_space ) ? ( esc_attr( $settings->element_space / 2 ) ) : '7.5'; ?>px;
 			}
 			.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .uabb-post-wrapper {
@@ -1841,4 +1854,82 @@ if ( $global_settings->responsive_enabled ) { // Global Setting If started.
 	}
 	<?php
 }
+
+/* Taxonomy Badge Style */
+
+if ( ! empty( $settings->taxonomy_badge ) && 'enable' === $settings->taxonomy_badge ) {
+	?>
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .uabb-post__terms .uabb-listing__terms-link:not(:last-child):after {
+		content: '<?php echo esc_attr( $settings->term_divider ); ?>';
+		margin: 0 0.4em;
+	}
+	<?php
+	if ( class_exists( 'FLBuilderCSS' ) ) {
+		FLBuilderCSS::dimension_field_rule(
+			array(
+				'settings'     => $settings,
+				'setting_name' => 'term_padding',
+				'selector'     => ".fl-node-$id .uabb-blog-posts .uabb-post__terms-wrap .uabb-post__terms",
+				'unit'         => 'px',
+				'props'        => array(
+					'padding-top'    => 'term_padding_top',
+					'padding-right'  => 'term_padding_right',
+					'padding-bottom' => 'term_padding_bottom',
+					'padding-left'   => 'term_padding_left',
+				),
+			)
+		);
+
+		FLBuilderCSS::responsive_rule(
+			array(
+				'settings'     => $settings,
+				'setting_name' => 'term_alignment',
+				'selector'     => ".fl-node-$id .uabb-blog-posts .uabb-post__terms-wrap",
+				'prop'         => 'text-align',
+			)
+		);
+
+		FLBuilderCSS::typography_field_rule(
+			array(
+				'settings'     => $settings,
+				'setting_name' => 'term_font_typo',
+				'selector'     => ".fl-node-$id .uabb-blog-posts .uabb-post__terms-wrap .uabb-post__terms",
+			)
+		);
+	}
+	?>
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .uabb-post__terms-wrap .uabb-post__terms {
+		<?php
+		echo ( '' !== $settings->term_border_radius ) ? 'border-radius: ' . esc_attr( $settings->term_border_radius ) . 'px;' : '';
+		echo ( '' !== $settings->term_color ) ? 'color: ' . esc_attr( $settings->term_color ) . ';' : '';
+		echo ( '' !== $settings->term_bg_color ) ? 'background-color: ' . esc_attr( $settings->term_bg_color ) . ';' : '';
+		?>
+	}
+
+	<?php if ( isset( $settings->term_hover_color ) && '' !== $settings->term_hover_color ) { ?>
+		.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .uabb-post__terms-wrap .uabb-post__terms a:hover {
+			color: <?php echo esc_attr( $settings->term_hover_color ); ?>;
+		}
+	<?php } ?>
+
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .uabb-post__terms-wrap {
+		margin-bottom: <?php echo esc_attr( $settings->term_spacing ); ?>px;
+	}
+	<?php
+}
+
+if ( 'yes' === $settings->show_title && isset( $settings->title_bottom_spacing ) && '' !== $settings->title_bottom_spacing ) {
+	?>
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .uabb-post-heading {
+		margin-bottom: <?php echo esc_attr( $settings->title_bottom_spacing ); ?>px;
+	}
+	<?php
+}
+
+if ( 'yes' === $settings->show_meta && isset( $settings->meta_bottom_spacing ) && '' !== $settings->meta_bottom_spacing ) {
+	?>
+	.fl-node-<?php echo esc_attr( $id ); ?> .uabb-blog-posts .uabb-post-meta {
+		margin-bottom: <?php echo esc_attr( $settings->meta_bottom_spacing ); ?>px;
+	}
+<?php }
 ?>

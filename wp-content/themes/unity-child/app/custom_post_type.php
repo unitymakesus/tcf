@@ -142,6 +142,39 @@ function create_post_type() {
     'has_archive' => true,
   );
   register_post_type( 'press', $argsPress );
+
+    $argsNewsletter = array(
+        'labels' => array(
+            'name'               => 'Newsletters',
+            'singular_name'      => 'Newsletter',
+            'add_new'            => 'Add New',
+            'add_new_item'       => 'Add New Newsletter',
+            'edit'               => 'Edit',
+            'edit_item'          => 'Edit Newsletter',
+            'new_item'           => 'New Newsletter',
+            'view_item'          => 'View Newsletter',
+            'search_items'       => 'Search Newsletter',
+            'not_found'          => 'Nothing found in the Database.',
+            'not_found_in_trash' => 'Nothing found in Trash',
+            'parent_item_colon'  => ''
+        ),
+        'public'             => true,
+        'publicly_queryable' => false,
+        'has_archive'        => false,
+        'show_ui'            => true,
+        'show_in_nav_menus'  => true,
+        'menu_position'      => 20,
+        'menu_icon'          => 'dashicons-megaphone',
+        'capability_type'    => 'page',
+        'hierarchical'       => false,
+        'show_in_rest'       => true,
+        'supports'            => array(
+            'title',
+            'editor',
+            'thumbnail',
+        ),
+    );
+    register_post_type( 'newsletter', $argsNewsletter );
 }
 add_action( 'init', __NAMESPACE__.'\\create_post_type' );
 

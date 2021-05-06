@@ -1,0 +1,79 @@
+{
+    "key": "group_6090ba9e57ba7",
+    "title": "Newsletter Info",
+    "fields": [
+        {
+            "key": "field_6090ba9e5ca66",
+            "label": "Newsletter Date",
+            "name": "newsletter_date",
+            "type": "date_picker",
+            "instructions": "Required to assist with ordering on the main Press page. Can be overridden visually with the \"Newsletter Date Display\" field.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_6090ba9e5ca7e",
+            "label": "Newsletter Date Display",
+            "name": "newsletter_date_display",
+            "type": "text",
+            "instructions": "Handy override for the newsletteer date field. Allows for flexible text such as \"March 2020\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6090ba9e5ca93",
+            "label": "Disable Image",
+            "name": "newsletter_disable_image",
+            "type": "true_false",
+            "instructions": "Enable this setting to hide the Featured Image (or fallback image) for this Press item.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "newsletter"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1620097749
+}
